@@ -5,7 +5,7 @@
 {
     "name": "Export Invoice CSV",
     "version": "9.0.1.0.0",
-    "depends": ["account"],
+    "depends": ["account", "csv_export_base"],
     "author": "Coop IT Easy SCRLfs",
     "summary": "Export your invoices as CSV flat files",
     "website": "http://www.coopiteasy.be",
