@@ -46,7 +46,7 @@
         'resource_activity',
         'web_readonly_bypass',
     ],
-    "author": "Coop IT Easy - Robin Keunen <robin@coopiteasy.be>",
+    "author": "Coop IT Easy SCRLfs",
     "license": "AGPL-3",
     "category": "",
     "website": "www.coopiteasy.be",
