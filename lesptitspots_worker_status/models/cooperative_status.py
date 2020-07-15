@@ -7,4 +7,4 @@ from odoo import models
 
 class CooperativeStatus(models.Model):
     _inherit = "cooperative.status"
-    _period = 3
+    _period = 91  # 13 weeks (4 / year)
