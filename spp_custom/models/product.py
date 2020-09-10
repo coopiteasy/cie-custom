@@ -4,7 +4,7 @@
 
 import logging
 
-from odoo import _, api, models
+from odoo import _, api, fields, models
 from odoo.exceptions import ValidationError
 
 _logger = logging.getLogger(__name__)
@@ -12,6 +12,69 @@ _logger = logging.getLogger(__name__)
 
 class ProductTemplate(models.Model):
     _inherit = "product.template"
+
+    name = fields.Char(track_visibility="onchange")
+    list_price = fields.Float(track_visibility="onchange")
+    uom_id = fields.Many2one(track_visibility="onchange")
+    uom_po_id = fields.Many2one(track_visibility="onchange")
+    default_code = fields.Char(track_visibility="onchange")
+    sale_ok = fields.Boolean(track_visibility="onchange")
+    available_in_pos = fields.Boolean(track_visibility="onchange")
+
+    @api.multi
+    def write(self, vals):
+        # Custom track visibility for
+        # taxes_id (M2M), seller_ids (M2M, supplier_taxes_id (O2M)
+        for rec in self:
+            taxes_id_old = ""
+            supplier_taxes_id_old = ""
+            seller_ids_old = ""
+            if "taxes_id" in vals:
+                taxes_id_old = ", ".join([tax.name for tax in rec.taxes_id])
+            if "supplier_taxes_id" in vals:
+                supplier_taxes_id_old = ", ".join(
+                    [tax.name for tax in rec.supplier_taxes_id]
+                )
+            if "seller_ids" in vals:
+                seller_ids_old = ", ".join(
+                    [
+                        s.name.name + " (" + str(s.price) + ")"
+                        for s in rec.seller_ids
+                    ]
+                )
+            res = super(ProductTemplate, self).write(vals)
+            if "taxes_id" in vals:
+                taxes_id_new = ", ".join([tax.name for tax in rec.taxes_id])
+                rec.message_post(
+                    body="Customer Taxes: "
+                    + taxes_id_old
+                    + " → "
+                    + taxes_id_new
+                )
+            if "supplier_taxes_id" in vals:
+                supplier_taxes_id_new = ", ".join(
+                    [tax.name for tax in rec.supplier_taxes_id]
+                )
+                rec.message_post(
+                    body="Vendor Taxes: "
+                    + supplier_taxes_id_old
+                    + " → "
+                    + supplier_taxes_id_new
+                )
+            if "seller_ids" in vals:
+                seller_ids_new = ", ".join(
+                    [
+                        s.name.name + " (" + str(s.price) + ")"
+                        for s in rec.seller_ids
+                    ]
+                )
+                rec.message_post(
+                    body="Vendor Pricelist: "
+                    + seller_ids_old
+                    + " → "
+                    + seller_ids_new
+                )
+        return res
 
     @api.multi
     def generate_ref_code(self, prefix, sequence):
