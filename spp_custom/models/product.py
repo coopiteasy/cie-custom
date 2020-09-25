@@ -24,55 +24,63 @@ class ProductTemplate(models.Model):
     @api.multi
     def write(self, vals):
         # Custom track visibility for
-        # taxes_id (M2M), seller_ids (M2M, supplier_taxes_id (O2M)
+        # taxes_id (M2M), seller_ids (M2M), supplier_taxes_id (O2M)
+        taxes_id_old = {
+            rec.id: ", ".join([tax.name for tax in rec.taxes_id])
+            for rec in self
+        }
+        supplier_taxes_id_old = {
+            rec.id: ", ".join([tax.name for tax in rec.supplier_taxes_id])
+            for rec in self
+        }
+        seller_ids_old = {
+            rec.id: ", ".join(
+                [
+                    s.name.name + " (" + str(s.price) + ")"
+                    for s in rec.seller_ids
+                ]
+            )
+            for rec in self
+        }
+        res = super(ProductTemplate, self).write(vals)
+        taxes_id_new = {
+            rec.id: ", ".join([tax.name for tax in rec.taxes_id])
+            for rec in self
+        }
+        supplier_taxes_id_new = {
+            rec.id: ", ".join([tax.name for tax in rec.supplier_taxes_id])
+            for rec in self
+        }
+        seller_ids_new = {
+            rec.id: ", ".join(
+                [
+                    s.name.name + " (" + str(s.price) + ")"
+                    for s in rec.seller_ids
+                ]
+            )
+            for rec in self
+        }
         for rec in self:
-            taxes_id_old = ""
-            supplier_taxes_id_old = ""
-            seller_ids_old = ""
             if "taxes_id" in vals:
-                taxes_id_old = ", ".join([tax.name for tax in rec.taxes_id])
-            if "supplier_taxes_id" in vals:
-                supplier_taxes_id_old = ", ".join(
-                    [tax.name for tax in rec.supplier_taxes_id]
-                )
-            if "seller_ids" in vals:
-                seller_ids_old = ", ".join(
-                    [
-                        s.name.name + " (" + str(s.price) + ")"
-                        for s in rec.seller_ids
-                    ]
-                )
-            res = super(ProductTemplate, self).write(vals)
-            if "taxes_id" in vals:
-                taxes_id_new = ", ".join([tax.name for tax in rec.taxes_id])
                 rec.message_post(
                     body="Customer Taxes: "
-                    + taxes_id_old
+                    + taxes_id_old[rec.id]
                     + " → "
-                    + taxes_id_new
+                    + taxes_id_new[rec.id]
                 )
             if "supplier_taxes_id" in vals:
-                supplier_taxes_id_new = ", ".join(
-                    [tax.name for tax in rec.supplier_taxes_id]
-                )
                 rec.message_post(
                     body="Vendor Taxes: "
-                    + supplier_taxes_id_old
+                    + supplier_taxes_id_old[rec.id]
                     + " → "
-                    + supplier_taxes_id_new
+                    + supplier_taxes_id_new[rec.id]
                 )
             if "seller_ids" in vals:
-                seller_ids_new = ", ".join(
-                    [
-                        s.name.name + " (" + str(s.price) + ")"
-                        for s in rec.seller_ids
-                    ]
-                )
                 rec.message_post(
                     body="Vendor Pricelist: "
-                    + seller_ids_old
+                    + seller_ids_old[rec.id]
                     + " → "
-                    + seller_ids_new
+                    + seller_ids_new[rec.id]
                 )
         return res
 
