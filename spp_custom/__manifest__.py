@@ -8,7 +8,7 @@
     "author": "Coop IT Easy SCRLfs",
     "license": "AGPL-3",
     "category": "",
-    "website": "www.coopiteasy.be",
+    "website": "https://www.coopiteasy.be",
     "summary": """
         Specifics customizations for SPP
     """,
