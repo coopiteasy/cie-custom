@@ -13,7 +13,6 @@ _logger = logging.getLogger(__name__)
 class ProductTemplate(models.Model):
     _inherit = "product.template"
 
-    name = fields.Char(track_visibility="onchange")
     list_price = fields.Float(track_visibility="onchange")
     uom_id = fields.Many2one(track_visibility="onchange")
     uom_po_id = fields.Many2one(track_visibility="onchange")
@@ -25,6 +24,9 @@ class ProductTemplate(models.Model):
     def write(self, vals):
         # Custom track visibility for
         # taxes_id (M2M), seller_ids (M2M), supplier_taxes_id (O2M)
+        name_old = {
+            rec.id: self.with_context(lang="fr_CH").name for rec in self
+        }
         taxes_id_old = {
             rec.id: ", ".join([tax.name for tax in rec.taxes_id])
             for rec in self
@@ -43,6 +45,9 @@ class ProductTemplate(models.Model):
             for rec in self
         }
         res = super(ProductTemplate, self).write(vals)
+        name_new = {
+            rec.id: self.with_context(lang="fr_CH").name for rec in self
+        }
         taxes_id_new = {
             rec.id: ", ".join([tax.name for tax in rec.taxes_id])
             for rec in self
@@ -61,6 +66,10 @@ class ProductTemplate(models.Model):
             for rec in self
         }
         for rec in self:
+            if "name" in vals:
+                rec.message_post(
+                    body="Name: " + name_old[rec.id] + " → " + name_new[rec.id]
+                )
             if "taxes_id" in vals:
                 rec.message_post(
                     body="Customer Taxes: "
