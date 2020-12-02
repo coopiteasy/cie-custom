@@ -13,6 +13,10 @@
     "summary": """
         Specifics customizations for SPP
     """,
-    "data": ["data/product_sequence.xml", "views/product.xml"],
+    "data": [
+        "data/product_sequence.xml",
+        "views/product.xml",
+        "views/res_partner.xml",
+    ],
     "installable": True,
 }
