@@ -16,6 +16,7 @@
     "data": [
         "data/product_sequence.xml",
         "views/product.xml",
+        "views/product_supplierinfo_vendor_code_view.xml",
         "views/res_partner.xml",
     ],
     "installable": True,
