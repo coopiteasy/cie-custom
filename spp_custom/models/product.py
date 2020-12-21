@@ -25,7 +25,7 @@ class ProductTemplate(models.Model):
         # Custom track visibility for
         # taxes_id (M2M), seller_ids (M2M), supplier_taxes_id (O2M)
         name_old = {
-            rec.id: self.with_context(lang="fr_CH").name for rec in self
+            rec.id: rec.with_context(lang="fr_CH").name for rec in self
         }
         taxes_id_old = {
             rec.id: ", ".join([tax.name for tax in rec.taxes_id])
@@ -46,7 +46,7 @@ class ProductTemplate(models.Model):
         }
         res = super(ProductTemplate, self).write(vals)
         name_new = {
-            rec.id: self.with_context(lang="fr_CH").name for rec in self
+            rec.id: rec.with_context(lang="fr_CH").name for rec in self
         }
         taxes_id_new = {
             rec.id: ", ".join([tax.name for tax in rec.taxes_id])
