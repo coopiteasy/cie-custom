@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<openerp>
-    <data>
+<odoo>
         <template id="report_delivery_document" inherit_id="stock.report_delivery_document">
 
             <xpath expr="//table[@t-if='not o.pack_operation_ids']/thead/tr/th[last()]" position="after">
@@ -117,5 +116,4 @@
             </xpath>
 
         </template>
-    </data>
-</openerp>
+</odoo>
