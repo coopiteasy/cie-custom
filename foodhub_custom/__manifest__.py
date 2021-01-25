@@ -10,6 +10,11 @@
     "website": "http://www.coopiteasy.be",
     "license": "AGPL-3",
     "category": "Account",
-    "depends": ["sale_stock", "sale_order_volume"],
+    "depends": [
+        "sale",
+        "sale_stock",
+        "website_sale_stock",
+        "sale_order_volume",
+    ],
     "data": ["reports/report_deliveryslip.xml", "views/templates.xml"],
 }
