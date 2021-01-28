@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright 2020 Coop IT Easy
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
+-->
+<odoo>
+
+    <record id="view_invoice_line_form" model="ir.ui.view">
+        <field name="name">account.invoice.line.form</field>
+        <field name="model">account.invoice.line</field>
+        <field name="inherit_id" ref="account.view_invoice_line_form"/>
+        <field name="arch" type="xml">
+            <field name="product_id" position="attributes">
+                <attribute name="context">{
+                    'partner_id': parent.partner_id,
+                    'form_view_ref': 'beesdoo_product.beesdoo_product_form'
+                    }
+                </attribute>
+            </field>
+        </field>
+    </record>
+</odoo>
