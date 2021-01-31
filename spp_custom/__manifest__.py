@@ -17,6 +17,7 @@
         "data/product_sequence.xml",
         "views/account_invoice.xml",
         "views/product.xml",
+        "views/product_supplierinfo_views.xml",
         "views/purchase_order.xml",
         "views/res_partner.xml",
         "views/sale_order.xml",
