@@ -24,4 +24,4 @@ class StockMoveLine(models.Model):
             order_line = sale_order.order_line.filtered(
                 lambda line: line.product_id == move_line.product_id
             )
-            move_line.order_line_id = order_line
+            move_line.order_line_id = order_line[0] if order_line else order_line
