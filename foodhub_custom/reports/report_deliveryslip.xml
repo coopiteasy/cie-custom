@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="report_delivery_document"
+              inherit_id="stock.report_delivery_document">
+        <!-- sorry for the dark xpath magic, Odoo SA does not name its html element -->
+
+
+        <!-- picking in state done -->
+        <!-- add column headers for price, tax and total -->
+        <xpath expr="//tr[@t-foreach='o.move_line_ids']/../../thead/tr/th[last()]"
+               position="after">
+            <t t-if="o.picking_type_code == 'outgoing'">
+                <th>
+                    <strong>Unit Price</strong>
+                </th>
+                <th>
+                    <strong>Taxes</strong>
+                </th>
+                <th>
+                    <strong>Total</strong>
+                </th>
+            </t>
+        </xpath>
+
+        <!-- add td for price, tax and total -->
+        <xpath expr="//tr[@t-foreach='o.move_line_ids']/td[last()]"
+               position="after">
+            <t t-if="o.picking_type_code == 'outgoing'">
+                <t t-set="order_line" t-value="move_line.order_line_id"/>
+                <td>
+                    <span t-field="order_line.price_unit"/>
+                </td>
+                <td>
+                    <span t-field="order_line.tax_id.name"/>
+                </td>
+                <td>
+                    <span t-field="order_line.price_subtotal"/>
+                </td>
+            </t>
+        </xpath>
+
+        <!--  add product description to product name-->
+        <xpath expr="//span[@t-field='move_line.product_id.sudo().description_pickingout']"
+               position="replace">
+            <span t-field="move_line.product_id.description_sale"/>
+        </xpath>
+
+
+        <!-- picking in state _not_ done -->
+        <!-- add column headers for price, tax and total -->
+        <xpath expr="//tr[@t-foreach='lines']/../../thead/tr/th[last()]"
+               position="after">
+            <t t-if="o.picking_type_code == 'outgoing'">
+                <th>
+                    <strong>Unit Price</strong>
+                </th>
+                <th>
+                    <strong>Taxes</strong>
+                </th>
+                <th>
+                    <strong>Total</strong>
+                </th>
+            </t>
+        </xpath>
+
+        <!-- add td for price, tax and total -->
+        <xpath expr="//tr[@t-foreach='lines']/td[last()]" position="after">
+            <t t-if="o.picking_type_code == 'outgoing'">
+                <t t-set="order_line" t-value="move.order_line_id"/>
+                <td>
+                    <span t-field="order_line.price_unit"/>
+                </td>
+                <td>
+                    <span t-field="order_line.tax_id.name"/>
+                </td>
+                <td>
+                    <span t-field="order_line.price_subtotal"/>
+                </td>
+            </t>
+        </xpath>
+
+        <!--  add product description to product name-->
+        <xpath expr="//span[@t-field='move.product_id.sudo().description_pickingout']"
+               position="replace">
+            <span t-field="move.product_id.description_sale"/>
+        </xpath>
+
+        <!-- add price and taxes summary table  -->
+        <xpath expr="//table[last()]" position="after">
+            <t t-if="o.picking_type_code == 'outgoing'">
+                <t t-set="sale_order" t-value="o.sale_order_id"/>
+                <div class="row justify-content-end" name="total">
+                    <div class="col-xs-4">
+                        <table class="table table-condensed">
+                            <tr class="border-black">
+                                <td>
+                                    <strong>Total Without Taxes</strong>
+                                </td>
+                                <td class="text-right">
+                                    <span t-field="sale_order.amount_untaxed"
+                                          t-field-options='{"widget": "monetary", "display_currency": "so.pricelist_id.currency_id"}'/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Taxes</td>
+                                <td class="text-right">
+                                    <span t-field="sale_order.amount_tax"
+                                          t-field-options='{"widget": "monetary", "display_currency": "so.pricelist_id.currency_id"}'/>
+                                </td>
+                            </tr>
+                            <tr class="border-black">
+                                <td>
+                                    <strong>Total</strong>
+                                </td>
+                                <td class="text-right">
+                                    <span t-field="sale_order.amount_total"
+                                          t-field-options='{"widget": "monetary", "display_currency": "so.pricelist_id.currency_id"}'/>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- add volume summary table -->
+                <div class="row " name="volume_per_category_table">
+                    <table class="table table-condensed"
+                           name="volume-per-category">
+                        <thead>
+                            <tr>
+                                <th>Category</th>
+                                <th class="text-right">Volume (m³)</th>
+                            </tr>
+                        </thead>
+                        <tbody class="sale_tbody">
+                            <t t-foreach="sale_order.volume_per_category"
+                               t-as="volume_line">
+                                <tr>
+                                    <td>
+                                        <span t-field="volume_line.category_id"/>
+                                    </td>
+                                    <td class="text-right">
+                                        <span t-field="volume_line.volume"/>
+                                    </td>
+                                </tr>
+                            </t>
+                            <tr class="border-black">
+                                <td>
+                                    <strong>Total</strong>
+                                </td>
+                                <td class="text-right">
+                                    <strong>
+                                        <span t-field="o.volume"/>
+                                    </strong>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </t>
+        </xpath>
+
+    </template>
+</odoo>
