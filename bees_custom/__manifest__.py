@@ -6,6 +6,7 @@
     "version": "12.0.1.0.1",
     "depends": [
         "beesdoo_account",
+        "beesdoo_product_info_screen",
     ],
     "author": "Coop IT Easy SCRLfs",
     "license": "AGPL-3",
@@ -16,6 +17,7 @@
     """,
     "data": [
         "views/account_invoice.xml",
+        "views/products.xml",
     ],
     "installable": True,
 }
