@@ -12,6 +12,9 @@
             <field name="default_code" position="attributes">
                 <attribute name="string">Product Location</attribute>
             </field>
+            <field name="uom_po_id" position="after">
+                <field name="consignment_ids" widget="many2many_tags"/>
+            </field>
         </field>
     </record>
 
