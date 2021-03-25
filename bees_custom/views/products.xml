@@ -15,6 +15,11 @@
             <field name="uom_po_id" position="after">
                 <field name="consignment_ids" widget="many2many_tags"/>
             </field>
+            <xpath expr="//header[@name='product_info_header']/button" position="after">
+                <button name="create_request_label_printing_wizard"
+                        string="Request label printing"
+                        type="object"/>
+            </xpath>
         </field>
     </record>
 
