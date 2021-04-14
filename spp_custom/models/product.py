@@ -13,12 +13,13 @@ _logger = logging.getLogger(__name__)
 class ProductTemplate(models.Model):
     _inherit = "product.template"
 
-    list_price = fields.Float(track_visibility="onchange")
+    list_price = fields.Float(track_visibility="onchange", copy=False)
     uom_id = fields.Many2one(track_visibility="onchange")
     uom_po_id = fields.Many2one(track_visibility="onchange")
     default_code = fields.Char(track_visibility="onchange")
     sale_ok = fields.Boolean(track_visibility="onchange")
     available_in_pos = fields.Boolean(track_visibility="onchange")
+    description = fields.Text(copy=False)
 
     @api.multi
     def write(self, vals):
