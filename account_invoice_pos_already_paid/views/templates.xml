@@ -1,0 +1,15 @@
+<odoo>
+    <data>
+        <template id="account_invoice_already_paid" inherit_id="account.report_invoice_document">
+
+            <p t-if="o.reference" position="replace">
+                <p t-if="o.reference and not o.journal_id.used_for_pos_invoice and o.type == 'out_invoice'">
+                Please use the following communication for your payment :
+                    <b>
+                        <span t-field="o.reference"/>
+                    </b>
+                </p>
+            </p>
+        </template>
+    </data>
+</odoo>
