@@ -3,12 +3,12 @@
         <template id="account_invoice_already_paid" inherit_id="account.report_invoice_document">
             <p t-if="o.reference" position="after">
                 <p t-if="o.journal_id.used_for_pos_invoice and o.type == 'out_invoice'">
-                    Deze factuur werd reeds betaald.
+                    This invoice has already been paid.
                 </p>
             </p>
             <p t-if="o.reference" position="replace">
                 <p t-if="o.reference and not o.journal_id.used_for_pos_invoice and o.type == 'out_invoice'">
-                Please use the following communication for your payment :
+                Please use the following communication for your payment:
                     <b>
                         <span t-field="o.reference"/>
                     </b>
