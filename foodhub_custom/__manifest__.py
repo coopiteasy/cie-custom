@@ -13,7 +13,6 @@
     "depends": [
         "sale",
         "sale_stock",
-        "website_sale",
         "website_sale_stock",
         "sale_order_volume",
     ],
