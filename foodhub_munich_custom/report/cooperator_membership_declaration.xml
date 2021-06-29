@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="cooperator_membership_declaration_document">
+        <t t-call="web.external_layout">
+            <div class="page">
+                <!-- Declaration of participation in the cooperative -->
+                <h2>
+                    <span t-field="o.company_id"/>
+                </h2>
+                <h3>
+                    Declaration of participation in the cooperative
+                </h3>
+                <p><span t-field="o.lastname"/>,
+                    <span t-field="o.firstname"/>
+                </p>
+                <p>Name, first name / or company represented by: Name, first name</p>
+
+                <p>
+                    <span t-field="o.address"/>
+                </p>
+                <p>Address</p>
+
+                <p><span t-field="o.zip_code"/>,
+                    <span t-field="o.city"/>
+                </p>
+                <p>Postcode, city</p>
+
+                <p>
+                    <span t-field="o.birthdate"/>
+                </p>
+                <p>Born on the</p>
+
+                <p>
+                    <span t-field="o.email"/>
+                </p>
+                <p>e-mail</p>
+
+                <p>
+                    <strong>Please tick and fill in: Note: Each member must have at least five business shares at
+                        <span t-field="o.share_unit_price"/>
+                        €, so no less than 180 € in total in the cooperative. A maximum of 50 cooperative shares are
+                        possible (see Section 13, Paragraph 1 of the Articles of Association)
+                    </strong>
+                </p>
+
+                <p>
+                    <!-- TODO: to improve-->
+                    <input type="checkbox"
+                           t-att-checked="'checked' if o.share_short_name == 'Genossenschaftsanteil' else None"/>
+                    I hereby apply for admission to the<span t-field="o.company_id"/>. I would like to participate in
+                    the registered cooperative with a total of 5 shares. I undertake to make the payments of 36 €
+                    per share in the cooperative as stipulated by the statutes and by law. In total, I therefore
+                    undertake to pay 180 €.
+                    The articles of association of
+                    <span t-field="o.company_id"/>
+                    are available on the Internet at
+                    <span t-field="o.company_id.website"/>
+                    . This will also be handed over on request.
+                </p>
+
+                <p>
+                    <strong>I acknowledge that the articles of association stipulate a notice period of two years for
+                        the end of the financial year
+                    </strong>
+                </p>
+
+                <p>
+                    <!-- TODO: to improve-->
+                    <input type="checkbox"
+                           t-att-checked="checked"/>
+                    I would like to participate in the registered cooperative with
+                    <span t-field="o.ordered_parts"/>
+                    further shares. I undertake to make the payments of €
+                    <span t-field="o.share_unit_price"/>
+                    per share in the cooperative, as stipulated by the statutes and by law. In total, I therefore
+                    undertake to pay €
+                    <span t-esc="o.share_unit_price * o.ordered_parts"/>
+                </p>
+
+                <p>
+                    <!-- TODO: to improve-->
+                    <input type="checkbox"
+                           t-att-checked="checked"/>
+                    I apply to the board of directors of the cooperative for the option under the articles of
+                    association (Section 13 (2)) to allow payment in installments for the payment of the shares.
+                    <strong>Note:
+                        In this case, we will contact you to agree on the exact terms of the installment payment.
+                    </strong>
+                </p>
+
+                <p>
+                    <!-- TODO: to improve-->
+                    <input type="checkbox"
+                           t-att-checked="checked"/>
+                    I hereby apply for admission to the
+                    <span t-field="o.company_id"/>
+                    . For social reasons, I would
+                    like to participate in the registered cooperative with 1 share. I undertake to make the payments of
+                    €
+                    <span t-field="o.share_unit_price"/>
+                    per share in
+                    the cooperative, as stipulated by the statutes and by law. The articles of association of
+                    <span t-field="o.company_id"/>
+                    can be found on the Internet at
+                    <span t-field="o.company_id.website"/>
+                    . This will also be handed
+                    over on request. <strong>Note: In this case, we will contact you to clarify the conditions for the
+                    social
+                    tariff.
+                </strong> I acknowledge that the articles of association stipulate a notice period of two years for
+                    the end of the financial year. After approval you will receive an email from us asking you to
+                    transfer your shares to the following account:
+                </p>
+
+                <p>
+                    <span t-field="o.company_id"/>
+                    - IBAN: - BIC:
+                </p>
+                <p>
+                    <strong>Purpose: membership, surname and first name</strong>
+                </p>
+
+                <br/>
+                <p>
+                    <strong>Data protection</strong>
+                </p>
+                <p>
+                    Responsible for data processing is: FoodHub München Market eG, Munich.
+                    Data protection officer: Quentin Orain
+                    The name and address are required for the membership list of the cooperative (Art. 6 Para. 1c GDPR
+                </p>
+                <p style="page-break-after:always"></p>
+
+                <!-- General Conditions -->
+                <h2>
+                    <span t-field="o.company_id"/>
+                </h2>
+                <p>
+                    In conjunction with Section 30 (1) Sentence 1 No. 1 GEnG). The tax identification number and the
+                    date of birth are required in order to be able to pay the withholding tax in the event of a profit
+                    distribution. (Art. 6 Paragraph 1c GDPR in conjunction with Section 45 d Paragraph 1 EStG) and to be
+                    able to carry out the legally required queries on the church tax attribute. (Art. 6 Paragraph 1c in
+                    conjunction with Section 51a Paragraph 2c, 2e EStG). You will be invited to meetings by the
+                    cooperative via the address, if applicable the e-mail address (Art. 6 Paragraph 1c GDPR) in
+                    conjunction with Section 46 Paragraph 1 Sentence 1 GenG in conjunction with Section 6 No. 4 GenG),
+                    beyond that Informed about offers of the cooperative within the framework of membership (Art. 6
+                    Paragraph 1b GDPR) in conjunction with Section 1 Paragraph 1 in conjunction with the Articles of
+                    Association. The cooperative has a legitimate interest in uncomplicated and legally secure
+                    fulfillment of its obligations. The provision of personal data is required by law or by the articles
+                    of association. Failure to provide it would mean that membership cannot be established. The personal
+                    data will not be passed on to third parties unless consent has been given in individual cases.
+                    However, we are legally obliged to allow access to personal data in some cases. This affects, for
+                    example, other members, the statutory auditing association and authorities, especially the tax
+                    office. The data is stored in different ways. All tax-relevant information is kept for ten years
+                    (§147 AO). The data in the list of members (name and address in accordance with Section 30,
+                    Paragraph 2, Clause 1, No. 3 GenG) will not be deleted even after leaving. (Section 30, Paragraph 2,
+                    Clause 1, No. 3 GenG). You have the right to information from the person responsible about the
+                    relevant personal data as well as to correction or deletion or restriction of processing (unless
+                    this is contrary to a legal regulation). A data transfer can also be requested if the signatory
+                    wishes his data to be transferred to a third party.
+                </p>
+                <p>In addition, you have the right to lodge a complaint with the supervisory authority (state
+                    commissioner for data protection).
+                </p>
+                <br/>
+                <p>Place, date:</p>
+                <p>Signature member:</p>
+                <br/>
+                <p>Approval by the cooperative: The application is granted:</p>
+                <br/>
+                <p>Place, date:</p>
+                <p>Signature of the board of directors:</p>
+                <p style="page-break-after:always"></p>
+
+                <!-- Declaration of membership -->
+                <h2>Declaration of membership</h2>
+
+                <p>I hereby declare that I am a member of the association</p>
+                <p><strong><span t-field="o.company_id"/></strong> with effect from <span t-field="o.date"/></p>
+                <p>Surname: <span t-field="o.lastname"/></p>
+                <p>First name: <span t-field="o.firstname"/></p>
+                <p>Address: <span t-field="o.address"/></p>
+                <p>Postcode / City: <span t-field="o.zip_code"/> <span t-field="o.city"/></p>
+                <p>E-mail: <span t-field="o.email"/></p>
+                <p>Phone number: <span t-field="o.phone"/></p>
+
+                <p>
+                    By providing my email address, I agree to receive communications from the association by email. The
+                    email address will never be passed on to third parties. I can revoke this declaration at any time.
+                    The dispatch of information relevant to the association (e.g. invitation to the general meeting)
+                    cannot be ruled out with the opt-out decision.
+                </p>
+
+                <p>I have taken note of the statutes.</p>
+                <p>I pay <strong>10 euros</strong> as an annual fee</p>
+                <p>
+                    The annual fee for the current year is due and payable immediately in full. I will transfer the
+                    contribution to the club account at
+                    <strong> GLS Bank - IBAN DE60 430 609 671 075 937 900 - BIC GENODEM1GLS.
+                    </strong>
+                </p>
+
+                <p>
+                    In the following years it is due and payable on January 15th. I will pay this contribution annually
+                    to the above-mentioned association account. Membership is automatically extended by 1 year if it is
+                    not canceled 6 weeks before the end of the year.
+                </p>
+                <br/>
+
+                <p>Place, date:</p>
+                <p>Signature:</p>
+
+                <!-- TODO: t-field -->
+                <p>
+                    Foodhub e. V. Munich, c / o Impact HUB, Gotzinger Straße 8, 81371 Munich VR 208582 District Court
+                    Munich Bank details: GLS Community Bank eGIBAN DE60 430 609 671 075 937 900 - BIC GENODEM1GL
+                </p>
+
+                <p><strong>Please send at:</strong></p>
+                <!-- TODO: t-field -->
+                <p>Foodhub e. V. Munich Kristin Mansmann c / o Impact HUB - Gotzinger Strasse 8, 81371 Munich</p>
+            </div>
+        </t>
+
+    </template>
+
+    <template id="cooperator_membership_declaration">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                <t t-call="foodhub_munich_custom.cooperator_membership_declaration_document"
+                   t-lang="o.partner_id.lang"/>
+            </t>
+        </t>
+    </template>
+
+</odoo>
