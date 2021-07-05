@@ -25,6 +25,7 @@ Foodhub Custom
 * link picking to sale order
 * link moves and move lines to sale order line
 * hide product terms from website sale product page
+* website: shop page accessible only for logged in users
 
 **Table of contents**
 
@@ -71,7 +72,10 @@ Authors
 Contributors
 ~~~~~~~~~~~~
 
-* Robin Keunen <robin@coopiteasy.be>
+* `Coop IT Easy SCRLfs <https://coopiteasy.be>`_:
+    * Robin Keunen <robin@coopiteasy.be>
+    * Grégoire Leeuwerck <gregoire@coopiteasy.be>
+    * Vincent Van Rossem <vincent@coopiteasy.be>
 
 Maintainers
 ~~~~~~~~~~~
