@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="view_hotel_reservation_form_lignon_costum" model="ir.ui.view">
+        <field name="name">hotel.reservation.form.lignon.custom</field>
+        <field name="model">hotel.reservation</field>
+        <field name="inherit_id" ref="hotel_reservation.view_hotel_reservation_form"/>
+        <field name="arch" type="xml">
+            <field name="open" position="before">
+                <field name="linked_to_event_hall_rental"/>
+            </field>
+        </field>
+    </record>
+</odoo>
