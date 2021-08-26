@@ -3,7 +3,7 @@
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
 {
     "name": "Foodhub Custom",
-    "version": "12.0.1.0.0",
+    "version": "12.0.1.1.0",
     "summary": """
         Foodhub customizations""",
     "author": "Coop IT Easy SCRL fs",
