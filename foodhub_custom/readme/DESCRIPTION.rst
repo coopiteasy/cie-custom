@@ -4,4 +4,4 @@
 * link picking to sale order
 * link moves and move lines to sale order line
 * hide product terms from website sale product page
-* website: shop page accessible only for logged in users
+* website: shop & product page accessible only for logged in users
