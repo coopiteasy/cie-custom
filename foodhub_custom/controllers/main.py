@@ -32,3 +32,10 @@ class WebsiteSale(WebsiteSale):
         return super().product(
             product, category=category, search=search, **kwargs
         )
+
+    @http.route(
+        ["/shop/cart"], type="http", auth="user", website=True, sitemap=False
+    )
+    def cart(self, access_token=None, revive="", **post):
+        """Change `auth` value from `public` to `user`"""
+        return super().cart(access_token=access_token, revive=revive, **post)
