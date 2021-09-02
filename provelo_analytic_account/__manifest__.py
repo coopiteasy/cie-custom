@@ -1,21 +1,6 @@
-##############################################################################
-#
-#    Copyright (C) 2017- Coop IT Easy.
-#
-#    This program is free software: you can redistribute it and/or modify
-#    it under the terms of the GNU Affero General Public License as
-#    published by the Free Software Foundation, either version 3 of the
-#    License, or (at your option) any later version.
-#
-#    This program is distributed in the hope that it will be useful,
-#    but WITHOUT ANY WARRANTY; without even the implied warranty of
-#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#    GNU Affero General Public License for more details.
-#
-#    You should have received a copy of the GNU Affero General Public License
-#    along with this program.  If not, see <http://www.gnu.org/licenses/>.
-#
-##############################################################################
+# Copyright 2021 Coop IT Easy SCRL fs
+#   Robin Keunen <robin@coopiteasy.be>
+# License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl.html).
 {
     "name": "Provelo Analytic Account",
     "version": "12.0.1.0.0",
@@ -27,18 +12,18 @@
     "author": "Coop IT Easy SCRLfs",
     "license": "AGPL-3",
     "category": "",
-    "website": "www.coopiteasy.be",
-    "description": """
+    "website": "https://coopiteasy.be",
+    "summary": """
         Match BOB analytical accounts.
     """,
     "data": [
         "security/ir.model.access.csv",
-        "views/hr_department.xml",
-        "views/provelo_financing.xml",
-        "views/provelo_project.xml",
-        "views/resource_location.xml",
-        "views/account_invoice.xml",
-        "views/resource_activity_type.xml",
+        "views/hr_department_views.xml",
+        "views/provelo_financing_views.xml",
+        "views/provelo_project_views.xml",
+        "views/resource_location_views.xml",
+        "views/account_invoice_views.xml",
+        "views/resource_activity_type_views.xml",
         "views/actions.xml",
         "views/menus.xml",
     ],

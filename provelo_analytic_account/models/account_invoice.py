@@ -2,7 +2,7 @@
 #   Robin Keunen <robin@coopiteasy.be>
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl.html).
 
-from odoo import models, fields, api
+from odoo import api, fields, models
 
 
 class AccountInvoice(models.Model):
@@ -32,9 +32,7 @@ class AccountInvoice(models.Model):
     @api.model
     def create(self, vals):
         invoice = super(AccountInvoice, self).create(vals)
-        sale_order = self.env["sale.order"].search(
-            [("name", "=", invoice.origin)]
-        )
+        sale_order = self.env["sale.order"].search([("name", "=", invoice.origin)])
         if sale_order and sale_order.activity_id:
             activity = sale_order.activity_id
             invoice.activity_id = activity
@@ -47,8 +45,6 @@ class AccountInvoice(models.Model):
         all_financing = self.env["pv.financing"].search([])
         for invoice in self:
             if invoice.project_id and invoice.project_id.allowed_financing_ids:
-                invoice.allowed_financing_ids = (
-                    invoice.project_id.allowed_financing_ids
-                )
+                invoice.allowed_financing_ids = invoice.project_id.allowed_financing_ids
             else:
                 invoice.allowed_financing_ids = all_financing
