@@ -12,12 +12,15 @@
 
             <xpath expr="//field[@name='date_invoice']/.." position="after">
                 <group name="provelo_aa">
-                    <field name="activity_id"/>
-                    <field name="allowed_financing_ids" invisible="1"/>
-                    <field name="financing_id" domain="[('id', 'in', allowed_financing_ids[0][2])]"/>
-                    <field name="project_id"/>
-                    <field name="location_id"/>
-                    <field name="department_id"/>
+                    <field name="activity_id" />
+                    <field name="allowed_financing_ids" invisible="1" />
+                    <field
+                        name="financing_id"
+                        domain="[('id', 'in', allowed_financing_ids)]"
+                    />
+                    <field name="project_id" />
+                    <field name="location_id" />
+                    <field name="department_id" />
                 </group>
 
             </xpath>
