@@ -10,10 +10,13 @@ class AccountInvoice(models.Model):
     _inherit = "account.invoice"
 
     activity_id = fields.Many2one(
-        comodel_name="resource.activity", string="Activity",
+        comodel_name="resource.activity",
+        string="Activity",
     )
     project_id = fields.Many2one(
-        comodel_name="pv.project", string="Project", store=True,
+        comodel_name="pv.project",
+        string="Project",
+        store=True,
     )
     location_id = fields.Many2one(related="project_id.location_id")
     department_id = fields.Many2one(related="project_id.department_id")
@@ -22,7 +25,9 @@ class AccountInvoice(models.Model):
         comodel_name="pv.financing", compute="_compute_allowed_financing"
     )
     financing_id = fields.Many2one(
-        comodel_name="pv.financing", string="Financing", required=False,
+        comodel_name="pv.financing",
+        string="Financing",
+        required=False,
     )
 
     @api.model
