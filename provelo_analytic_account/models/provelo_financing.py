@@ -7,6 +7,7 @@ from odoo import fields, models
 
 class ProVeloFinancing(models.Model):
     _name = "pv.financing"
+    _description = "Pro Velo Financing"
 
     name = fields.Char()
     bob_code = fields.Char(string="Bob Code")
