@@ -9,7 +9,7 @@
     ],
     "author": "Coop IT Easy SCRLfs",
     "category": "Resource",
-    "website": "www.coopiteasy.be",
+    "website": "https://coopiteasy.be",
     "license": "AGPL-3",
     "summary": """
         Reports for resource activities

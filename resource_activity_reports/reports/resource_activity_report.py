@@ -1,5 +1,4 @@
-from odoo import tools
-from odoo import models, fields
+from odoo import fields, models, tools
 
 
 class ResourceActivityReport(models.Model):
@@ -62,9 +61,7 @@ class ResourceActivityReport(models.Model):
     need_delivery = fields.Boolean(string="Need Delivery?", readonly=True)
     need_guide = fields.Boolean(string="Need Guide?", readonly=True)
     languages = fields.Char(string="Languages", readonly=True)
-    nb_participants = fields.Integer(
-        string="Number of participants", readonly=True
-    )
+    nb_participants = fields.Integer(string="Number of participants", readonly=True)
     nb_bikes = fields.Integer(
         string="Number of bikes",
         readonly=True,
@@ -84,9 +81,7 @@ class ResourceActivityReport(models.Model):
     renting_hours = fields.Float("Renting Hours", readonly=True)
     renting_days = fields.Integer("Renting Days", readonly=True)
     total_taxed_amount = fields.Float("Total Amount incl. tax", readonly=True)
-    total_untaxed_amount = fields.Float(
-        "Total Amount excl. tax", readonly=True
-    )
+    total_untaxed_amount = fields.Float("Total Amount excl. tax", readonly=True)
 
     def init(self, cr):
         tools.drop_view_if_exists(cr, self._table)
@@ -153,7 +148,7 @@ FROM resource_activity a
          LEFT JOIN sale_orders so ON so.activity_id = a.id
          LEFT JOIN langs l ON l.activity_id = a.id
 ORDER BY id
-            )""" % (
+            )""" % (  # noqa
             self._table
         )
         cr.execute(report_query)

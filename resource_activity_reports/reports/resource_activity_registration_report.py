@@ -4,8 +4,7 @@
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl.html).
 
 
-from odoo import tools
-from odoo import models, fields
+from odoo import fields, models, tools
 
 
 class ResourceActivityRegistrationReport(models.Model):
@@ -81,9 +80,7 @@ class ResourceActivityRegistrationReport(models.Model):
         readonly=True,
     )
     nb_bikes = fields.Integer(string="Number of Bikes", readonly=True)
-    nb_accessories = fields.Integer(
-        string="Number of Accessories", readonly=True
-    )
+    nb_accessories = fields.Integer(string="Number of Accessories", readonly=True)
     nb_participants = fields.Integer(
         string="Number of Participants",
         readonly=True,
@@ -150,7 +147,7 @@ FROM resource_activity_registration rar
          LEFT JOIN product_product pp ON rar.product_id = pp.id
          LEFT JOIN product_template pt ON pp.product_tmpl_id = pt.id
 )
-        """
+        """  # noqa
             % self._table
         )
 
