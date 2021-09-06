@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8" ?>
 <!--
      Copyright 2020 Coop IT Easy
      License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
@@ -7,10 +7,12 @@
     <record id="view_picking_form" model="ir.ui.view">
         <field name="name">stock.picking.form</field>
         <field name="model">stock.picking</field>
-        <field name="inherit_id" ref="stock.view_picking_form"/>
+        <field name="inherit_id" ref="stock.view_picking_form" />
         <field name="arch" type="xml">
-            <xpath expr="//field[@name='move_ids_without_package']/tree"
-                   position="attributes">
+            <xpath
+                expr="//field[@name='move_ids_without_package']/tree"
+                position="attributes"
+            >
                 <attribute name="limit">200</attribute>
             </xpath>
         </field>
@@ -19,7 +21,7 @@
     <record id="view_move_picking_form" model="ir.ui.view">
         <field name="name">stock.move.form</field>
         <field name="model">stock.move</field>
-        <field name="inherit_id" ref="stock.view_move_picking_form"/>
+        <field name="inherit_id" ref="stock.view_move_picking_form" />
         <field name="arch" type="xml">
             <field name="product_id" position="attributes">
                 <attribute name="context">{
@@ -34,7 +36,7 @@
 
         <field name="name">stock.move.form</field>
         <field name="model">stock.move</field>
-        <field name="inherit_id" ref="stock.view_move_form"/>
+        <field name="inherit_id" ref="stock.view_move_form" />
         <field name="arch" type="xml">
             <field name="product_id" position="attributes">
                 <attribute name="context">{
