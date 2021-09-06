@@ -29,13 +29,9 @@ class WebsiteSale(WebsiteSale):
     )
     def product(self, product, category="", search="", **kwargs):
         """Change `auth` value from `public` to `user`"""
-        return super().product(
-            product, category=category, search=search, **kwargs
-        )
+        return super().product(product, category=category, search=search, **kwargs)
 
-    @http.route(
-        ["/shop/cart"], type="http", auth="user", website=True, sitemap=False
-    )
+    @http.route(["/shop/cart"], type="http", auth="user", website=True, sitemap=False)
     def cart(self, access_token=None, revive="", **post):
         """Change `auth` value from `public` to `user`"""
         return super().cart(access_token=access_token, revive=revive, **post)
