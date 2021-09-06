@@ -13,17 +13,13 @@ class StockPicking(models.Model):
         string="Sale Order",
         compute="_compute_sale_order_id",
     )
-    volume = fields.Float(
-        string="Order Volume (m³)", compute="_compute_sale_order_id"
-    )
+    volume = fields.Float(string="Order Volume (m³)", compute="_compute_sale_order_id")
 
     @api.model
     @api.depends("origin")
     def _compute_sale_order_id(self):
         for picking in self:
-            sale_order = self.env["sale.order"].search(
-                [("name", "=", picking.origin)]
-            )
+            sale_order = self.env["sale.order"].search([("name", "=", picking.origin)])
             # trigger
             sale_order._compute_order_volume()
             sale_order.compute_product_category_volumes()
