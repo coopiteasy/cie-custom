@@ -25,12 +25,9 @@ class ProductTemplate(models.Model):
     def write(self, vals):
         # Custom track visibility for
         # taxes_id (M2M), seller_ids (M2M), supplier_taxes_id (O2M)
-        name_old = {
-            rec.id: rec.with_context(lang="fr_CH").name for rec in self
-        }
+        name_old = {rec.id: rec.with_context(lang="fr_CH").name for rec in self}
         taxes_id_old = {
-            rec.id: ", ".join([tax.name for tax in rec.taxes_id])
-            for rec in self
+            rec.id: ", ".join([tax.name for tax in rec.taxes_id]) for rec in self
         }
         supplier_taxes_id_old = {
             rec.id: ", ".join([tax.name for tax in rec.supplier_taxes_id])
@@ -38,20 +35,14 @@ class ProductTemplate(models.Model):
         }
         seller_ids_old = {
             rec.id: ", ".join(
-                [
-                    s.name.name + " (" + str(s.price) + ")"
-                    for s in rec.seller_ids
-                ]
+                [s.name.name + " (" + str(s.price) + ")" for s in rec.seller_ids]
             )
             for rec in self
         }
         res = super(ProductTemplate, self).write(vals)
-        name_new = {
-            rec.id: rec.with_context(lang="fr_CH").name for rec in self
-        }
+        name_new = {rec.id: rec.with_context(lang="fr_CH").name for rec in self}
         taxes_id_new = {
-            rec.id: ", ".join([tax.name for tax in rec.taxes_id])
-            for rec in self
+            rec.id: ", ".join([tax.name for tax in rec.taxes_id]) for rec in self
         }
         supplier_taxes_id_new = {
             rec.id: ", ".join([tax.name for tax in rec.supplier_taxes_id])
@@ -59,10 +50,7 @@ class ProductTemplate(models.Model):
         }
         seller_ids_new = {
             rec.id: ", ".join(
-                [
-                    s.name.name + " (" + str(s.price) + ")"
-                    for s in rec.seller_ids
-                ]
+                [s.name.name + " (" + str(s.price) + ")" for s in rec.seller_ids]
             )
             for rec in self
         }
@@ -122,9 +110,7 @@ class ProductTemplate(models.Model):
 
     @api.multi
     def generate_ref_code_pp(self):
-        sequence = self.env.ref(
-            "spp_custom.seq_ean_product_internal_ref_weight_pp"
-        )
+        sequence = self.env.ref("spp_custom.seq_ean_product_internal_ref_weight_pp")
         self.generate_ref_code("01", sequence)
 
     @api.multi

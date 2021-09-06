@@ -7,4 +7,3 @@ Specifics customizations for SPP
 * on customer invoice, supplier invoice, sale order, purchase order and picking:
   - display full product view
   - display 200 lines by defaut on line lists
-

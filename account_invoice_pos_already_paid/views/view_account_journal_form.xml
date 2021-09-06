@@ -1,9 +1,13 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+     Copyright 2021 Coop IT Easy
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
+-->
 <odoo>
     <record id="view_account_journal_form_inherit" model="ir.ui.view">
         <field name="name">Used for POS invoices</field>
         <field name="model">account.journal</field>
-        <field name="inherit_id" ref="account.view_account_journal_form"/>
+        <field name="inherit_id" ref="account.view_account_journal_form" />
         <field name="arch" type="xml">
             <field name="post_at_bank_rec" position="after">
                 <field name="used_for_pos_invoice" />
