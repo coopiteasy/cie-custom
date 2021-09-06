@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8" ?>
 <!--
      Copyright 2020 Coop IT Easy
      License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
@@ -8,7 +8,7 @@
     <record id="view_invoice_line_form" model="ir.ui.view">
         <field name="name">account.invoice.line.form</field>
         <field name="model">account.invoice.line</field>
-        <field name="inherit_id" ref="account.view_invoice_line_form"/>
+        <field name="inherit_id" ref="account.view_invoice_line_form" />
         <field name="arch" type="xml">
             <field name="product_id" position="attributes">
                 <attribute name="context">{
@@ -23,7 +23,7 @@
     <record id="invoice_supplier_form" model="ir.ui.view">
         <field name="name">account.invoice.supplier.form</field>
         <field name="model">account.invoice</field>
-        <field name="inherit_id" ref="account.invoice_supplier_form"/>
+        <field name="inherit_id" ref="account.invoice_supplier_form" />
         <field name="arch" type="xml">
             <xpath expr="//field[@name='invoice_line_ids']/tree" position="attributes">
                 <attribute name="limit">200</attribute>
@@ -34,7 +34,7 @@
     <record id="invoice_form" model="ir.ui.view">
         <field name="name">account.invoice.form</field>
         <field name="model">account.invoice</field>
-        <field name="inherit_id" ref="account.invoice_form"/>
+        <field name="inherit_id" ref="account.invoice_form" />
         <field name="arch" type="xml">
             <xpath expr="//field[@name='invoice_line_ids']/tree" position="attributes">
                 <attribute name="limit">200</attribute>

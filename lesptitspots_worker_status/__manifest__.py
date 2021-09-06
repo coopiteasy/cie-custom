@@ -6,7 +6,7 @@
     "summary": """
         Worker status management specific to Les P'tit Pots.""",
     "author": "Coop IT Easy SCRLfs",
-    "website": "https://github.com/coopiteasy/cie-custom",
+    "website": "https://coopiteasy.be",
     "category": "Cooperative management",
     "version": "12.0.1.0.0",
     "depends": ["beesdoo_worker_status"],

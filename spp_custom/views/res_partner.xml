@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8" ?>
 <!--
      Copyright 2020 Coop IT Easy
      License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
@@ -7,11 +7,10 @@
     <record model="ir.ui.view" id="beesdoo_partner_form_view">
         <field name="name">beesdoo.partner.form.view</field>
         <field name="model">res.partner</field>
-        <field name="inherit_id"
-               ref="base.view_partner_form"/>
+        <field name="inherit_id" ref="base.view_partner_form" />
         <field name="arch" type="xml">
             <field name="function" position="after">
-                <field name="skills"/>
+                <field name="skills" />
             </field>
         </field>
     </record>

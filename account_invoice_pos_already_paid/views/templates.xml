@@ -1,22 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+     Copyright 2021 Coop IT Easy
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
+-->
 <odoo>
     <data>
-        <template id="account_invoice_already_paid" inherit_id="account.report_invoice_document">
+        <template
+            id="account_invoice_already_paid"
+            inherit_id="account.report_invoice_document"
+        >
             <p t-if="o.reference" position="after">
                 <p t-if="o.journal_id.used_for_pos_invoice and o.type == 'out_invoice'">
                     This invoice has already been paid.
                 </p>
             </p>
             <p t-if="o.reference" position="replace">
-                <p t-if="o.reference and not o.journal_id.used_for_pos_invoice and o.type == 'out_invoice'">
+                <p
+                    t-if="o.reference and not o.journal_id.used_for_pos_invoice and o.type == 'out_invoice'"
+                >
                 Please use the following communication for your payment:
                     <b>
-                        <span t-field="o.reference"/>
+                        <span t-field="o.reference" />
                     </b>
                 </p>
             </p>
             <p t-if="o.payment_term_id" position="replace">
-                <p t-if="o.payment_term_id and not o.journal_id.used_for_pos_invoice and o.type == 'out_invoice'" name="payment_term">
-                    <span t-field="o.payment_term_id.note"/>
+                <p
+                    t-if="o.payment_term_id and not o.journal_id.used_for_pos_invoice and o.type == 'out_invoice'"
+                    name="payment_term"
+                >
+                    <span t-field="o.payment_term_id.note" />
                 </p>
             </p>
         </template>
