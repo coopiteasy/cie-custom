@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<openerp>
-    <data>
+<odoo>
         <record id="view_resource_activity_report_pivot" model="ir.ui.view">
             <field name="name">resource.activity.report</field>
             <field name="model">resource.activity.report</field>
@@ -119,5 +118,4 @@
                   action="action_resource_activity_report_stat_all"
                   parent="menu_resource_activity_reports" sequence="10"/>
 
-    </data>
-</openerp>
+</odoo>
