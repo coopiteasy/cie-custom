@@ -20,7 +20,5 @@ class ProductTemplate(models.Model):
     @api.depends("taxes_id")
     def _compute_consignments(self):
         for product in self:
-            consigments = product.taxes_id.filtered(
-                lambda t: "Consigne" in t.name
-            )
+            consigments = product.taxes_id.filtered(lambda t: "Consigne" in t.name)
             product.consignment_ids = consigments
