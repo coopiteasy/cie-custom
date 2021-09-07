@@ -49,21 +49,25 @@
                     <group expand="0" string="Group By">
                         <filter
                         string="Day"
+                        name="group_by_start_date_day"
                         context="{'group_by':'date_start:day'}"
                         help="Group by day of start date"
                     />
                         <filter
                         string="Week"
+                        name="group_by_start_date_week"
                         context="{'group_by':'date_start:week'}"
                         help="Group by week of start date"
                     />
                         <filter
                         string="Month"
+                        name="group_by_start_date_month"
                         context="{'group_by':'date_start:month'}"
                         help="Group by month of start date"
                     />
                         <filter
                         string="Year"
+                        name="group_by_start_date_year"
                         context="{'group_by':'date_start:year'}"
                         help="Group by year of start date"
                     />

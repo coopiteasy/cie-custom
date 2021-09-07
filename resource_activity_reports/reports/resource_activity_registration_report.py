@@ -4,7 +4,7 @@
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl.html).
 
 
-from odoo import fields, models, tools
+from odoo import api, fields, models, tools
 
 
 class ResourceActivityRegistrationReport(models.Model):
@@ -96,8 +96,9 @@ class ResourceActivityRegistrationReport(models.Model):
     renting_hours = fields.Float("Renting Hours", readonly=True)
     renting_days = fields.Float("Renting Days", readonly=True)
 
-    def init(self, cr):
-        tools.drop_view_if_exists(cr, self._table)
+    @api.model_cr
+    def init(self):
+        tools.drop_view_if_exists(self.env.cr, self._table)
         report_query = (
             """
 CREATE OR REPLACE VIEW %s AS (
@@ -151,4 +152,4 @@ FROM resource_activity_registration rar
             % self._table
         )
 
-        cr.execute(report_query)
+        self.env.cr.execute(report_query)

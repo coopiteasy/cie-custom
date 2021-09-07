@@ -5,6 +5,8 @@
     "name": "Resource activity Reports",
     "version": "12.0.1.0.0",
     "depends": [
+        "resource_activity_delivery",
+        "resource_activity_guide",
         "provelo_analytic_account",
     ],
     "author": "Coop IT Easy SCRLfs",

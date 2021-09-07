@@ -1,4 +1,8 @@
-from odoo import fields, models, tools
+# Copyright 2021 Coop IT Easy SCRL fs
+#   Robin Keunen <robin@coopiteasy.be>
+#   Vincent Van Rossem <vincent@coopiteasy.be>
+# License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl.html).
+from odoo import api, fields, models, tools
 
 
 class ResourceActivityReport(models.Model):
@@ -83,8 +87,9 @@ class ResourceActivityReport(models.Model):
     total_taxed_amount = fields.Float("Total Amount incl. tax", readonly=True)
     total_untaxed_amount = fields.Float("Total Amount excl. tax", readonly=True)
 
-    def init(self, cr):
-        tools.drop_view_if_exists(cr, self._table)
+    @api.model_cr
+    def init(self):
+        tools.drop_view_if_exists(self.env.cr, self._table)
         report_query = """
 CREATE or REPLACE VIEW %s as (
 WITH registration_metrics AS (
@@ -151,4 +156,4 @@ ORDER BY id
             )""" % (  # noqa
             self._table
         )
-        cr.execute(report_query)
+        self.env.cr.execute(report_query)
