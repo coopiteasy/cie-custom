@@ -35,8 +35,8 @@ class ResourceActivityRegistration(models.Model):
     def _compute_hour_duration(self):
         self.ensure_one()
         if self.resource_activity_id:
-            start = fields.Datetime.from_string(self.resource_activity_id.date_start)
-            end = fields.Datetime.from_string(self.resource_activity_id.date_end)
+            start = self.resource_activity_id.date_start
+            end = self.resource_activity_id.date_end
             duration_seconds = (end - start).total_seconds()
             return duration_seconds / 3600.0
         else:
