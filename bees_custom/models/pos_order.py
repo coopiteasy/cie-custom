@@ -12,14 +12,14 @@ class PosOrder(models.Model):
     def send_mail_receipt(self, pos_reference, email, body_from_ui, force=True):
         order = self.search([("pos_reference", "=", pos_reference)])
 
-        order.note = "{}\n{} UTC Attempting to send mail receipt ".format(
-            order.note or "", fields.datetime.now()
-        )
+        if order:
+            order.note = "{}\n{} UTC Attempting to send mail receipt ".format(
+                order.note or "", fields.datetime.now()
+            )
 
         return super(PosOrder, self).send_mail_receipt(
-            # fixme forces argument force instead of passing it
             pos_reference,
             email,
             body_from_ui,
-            force=True,
+            force=force,
         )
