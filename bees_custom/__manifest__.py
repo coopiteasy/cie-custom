@@ -7,6 +7,7 @@
     "depends": [
         "beesdoo_account",
         "beesdoo_product_info_screen",
+        "pos_mail_receipt",
     ],
     "author": "Coop IT Easy SCRLfs",
     "license": "AGPL-3",

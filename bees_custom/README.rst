@@ -25,6 +25,7 @@ Specifics customizations for BEES coop
 * label default_code as product location in product info screen
 * add consignment taxes in product info screen
 * request label printing button in product info screen
+* write in pos.order.note that an email was sent
 
 **Table of contents**
 
