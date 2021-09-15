@@ -7,7 +7,7 @@
     <record model="ir.ui.view" id="product_template_only_form_view">
         <field name="name">product.template.product.form</field>
         <field name="model">product.template</field>
-        <field name="inherit_id" ref="product.product_template_only_form_view" />
+        <field name="inherit_id" ref="beesdoo_product.beesdoo_product_form" />
         <field name="arch" type="xml">
             <field name="default_code" position="after">
                 <button
@@ -45,6 +45,10 @@
                     colspan="2"
                     attrs="{'invisible' : [('to_weight','=',False)]}"
                 />
+            </field>
+            <field name="origin_label" position="after">
+                <field name="is_foodprint_label" />
+                <field name="is_gentle_price_label" />
             </field>
         </field>
     </record>
