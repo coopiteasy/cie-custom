@@ -10,6 +10,7 @@ class ProVeloProject(models.Model):
     _description = "Pro Velo Project"
 
     name = fields.Char()
+    active = fields.Boolean(default=True)
     bob_code = fields.Char(string="Bob Code")
     location_id = fields.Many2one(
         comodel_name="resource.location", string="Location", required=True

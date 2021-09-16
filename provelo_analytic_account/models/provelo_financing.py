@@ -10,4 +10,5 @@ class ProVeloFinancing(models.Model):
     _description = "Pro Velo Financing"
 
     name = fields.Char()
+    active = fields.Boolean(default=True)
     bob_code = fields.Char(string="Bob Code")
