@@ -16,3 +16,12 @@ class SaleOrder(models.Model):
             values["journal_id"] = self.location_id.journal_id.id
 
         return values
+
+    def _create_sale_order(self, activity, partner_id):
+        order = super()._create_sale_order(activity, partner_id)
+        order.write(
+            {
+                "project_id": activity.analytic_account.id,
+            }
+        )
+        return order
