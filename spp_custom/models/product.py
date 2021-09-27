@@ -13,6 +13,13 @@ _logger = logging.getLogger(__name__)
 class ProductTemplate(models.Model):
     _inherit = "product.template"
 
+    is_foodprint_label = fields.Boolean(
+        string="FoodPrint Label",
+    )
+    is_gentle_price_label = fields.Boolean(
+        string="Gentle Price Label",
+    )
+
     list_price = fields.Float(track_visibility="onchange", copy=False)
     uom_id = fields.Many2one(track_visibility="onchange")
     uom_po_id = fields.Many2one(track_visibility="onchange")
