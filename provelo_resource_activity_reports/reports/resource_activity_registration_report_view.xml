@@ -28,13 +28,7 @@
                     string="resource category"
                     groups="resource_planning.group_multi_location"
                 />
-
                     <group name="activity_filters" string="Activity">
-                        <filter
-                        name="is_active_activity"
-                        string="Activity: Active"
-                        domain="[('activity_id.active', '=', True)]"
-                    />
                         <filter
                         name="is_not_draft_activity"
                         string="Not Draft"
@@ -160,7 +154,6 @@
             <field name="view_type">form</field>
             <field name="view_mode">pivot</field>
             <field name="context">{
-                "search_default_is_active_activity": 1,
                 "search_default_is_not_draft_activity": 1,
                 "search_default_is_not_cancelled_activity": 1,
                 }</field>
