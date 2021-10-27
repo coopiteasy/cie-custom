@@ -3,13 +3,12 @@
 #   Manuel Claeys Bouuaert <manuel@coopiteasy.be>
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl.html).
 
-from openerp import models, fields
+from openerp import fields, models
 
 
 class AccountPayment(models.Model):
     _inherit = "account.payment"
 
     location_id = fields.Many2one(
-        related="partner_id.resource_location",
-        string="Location"
+        related="partner_id.resource_location", string="Location"
     )

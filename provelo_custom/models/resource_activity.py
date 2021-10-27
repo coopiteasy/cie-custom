@@ -3,7 +3,7 @@
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl.html).
 
 
-from odoo import api, fields, models
+from odoo import api, models
 
 
 class ResourceActivity(models.Model):
@@ -23,7 +23,7 @@ class ResourceActivity(models.Model):
             )
             # warn if in draft and invoiced resources booked
             if activity.state == "draft" and (
-                    registrations or activity.guides or activity.trainers
+                registrations or activity.guides or activity.trainers
             ):
                 action = self.env.ref("resource_activity.action_draft_to_done")
                 return {

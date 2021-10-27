@@ -9,4 +9,3 @@ from openerp import models
 class AnalyticLine(models.Model):
     _inherit = "account.analytic.line"
     _order = "date, time_start, id desc"
-
