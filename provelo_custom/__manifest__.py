@@ -18,7 +18,7 @@
 ##############################################################################
 {
     "name": "Provelo Customization",
-    "version": "9.0.1.2.0",
+    "version": "10.0.1.0.0",
     "depends": [
         "resource_planning",
         # todo watchout for dependencies when splitting modules

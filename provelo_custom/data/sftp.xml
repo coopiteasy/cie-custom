@@ -3,7 +3,7 @@
      Copyright 2020 Coop IT Easy
      License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 -->
-<openerp>
+<odoo>
     <data noupdate="1">
         <record id="sftp_backend_configuration" model="backend.sftp">
             <field name="host">odoo-bob.provelo.org</field>
@@ -30,4 +30,4 @@
             <field name="model_id" ref="csv_export_payment.model_csv_export_payment" />
         </record>
     </data>
-</openerp>
+</odoo>
