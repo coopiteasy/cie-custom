@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 ##############################################################################
 #
 #    Copyright (C) 2017- Coop IT Easy.
@@ -57,7 +56,7 @@
     "author": "Coop IT Easy SCRLfs",
     "license": "AGPL-3",
     "category": "",
-    "website": "https://www.coopiteasy.be",
+    "website": "https://coopiteasy.be",
     "description": """
         * default value on invoice policy to order
         * default value on res_partner out_inv_comm_type to bba

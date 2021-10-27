@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8" ?>
 <odoo>
     <template id="report_invoice_document" inherit_id="account.report_invoice_document">
 
@@ -18,8 +18,10 @@
 
         <xpath expr="//p[@t-if='o.comment']" position="before">
             <p name="location_partner_bank_id" t-if="o.location_id.partner_bank_id">
-                Merci de payer cette facture sur le compte de notre implantation de <span t-field="o.location_id"/> :
-                <span t-field="o.location_id.partner_bank_id.acc_number"/>
+                Merci de payer cette facture sur le compte de notre implantation de <span
+                    t-field="o.location_id"
+                /> :
+                <span t-field="o.location_id.partner_bank_id.acc_number" />
             </p>
         </xpath>
 
