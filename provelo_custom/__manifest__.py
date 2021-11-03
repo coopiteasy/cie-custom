@@ -17,75 +17,38 @@
 #
 ##############################################################################
 {
-    "name": "Provelo Customization",
-    "version": "10.0.1.0.0",
+    "name": "Provelo Customizations",
+    "version": "12.0.1.0.0",
     "depends": [
-        "resource_planning",
-        # todo watchout for dependencies when splitting modules
-        "resource_activity",
-        "resource_activity_delivery",
-        "resource_activity_guide",
-        "resource_activity_opening_hours",
-        "resource_activity_paid_registrations",
-        "resource_activity_terms",
         "account",
-        "csv_export_invoice",
-        "csv_export_partner",
-        "csv_export_payment",
+        "sale",
+        "resource_activity",
         "hr_holidays",
         "hr_timesheet_sheet",
-        "web_readonly_bypass",
+        "hr_timesheet_activity_begin_end",
         "l10n_be_invoice_bba",
-        "account_archive_journals",
-        "resource_planning",
-        "resource_activity",
-        "analytic",
-        "hr",
-        "hr_contract",
-        "hr_timesheet",
-        "hr_timesheet_auto_creation",
-        "hr_timesheet_default_analytic_account",
-        "hr_timesheet_holiday",
-        "hr_timesheet_overtime",
-        "hr_holidays",
-        "hr_timesheet_sheet",
-        "resource_planning",
-        "resource_activity",
-        "web_readonly_bypass",
+        "csv_export_partner",
+        "csv_export_invoice",
+        "csv_export_payment",
     ],
     "author": "Coop IT Easy SCRLfs",
     "license": "AGPL-3",
     "category": "",
     "website": "https://coopiteasy.be",
-    "description": """
-        * default value on invoice policy to order
-        * default value on res_partner out_inv_comm_type to bba
-        * default value on res_partner out_inv_comm_algorithm to random
-        * automatic validation of invoices
-        * add default values onavailable holidays report
-        * add security rules for hr holydays access
-        * location search  filters
-        * make payments view accessible for 'billing' group
-        * customize holiday, timesheet and res_partner views
-        * constraint on account journal code length
-        * on invoice report: structured reference on one line
-        * on invoice report: mentions when not subjet to vat
-        * on invoice report: mentions bank account of location
-        * on invoice report: hides 'comment' and 'origin' fields
-    """,
+    "summary": "Pro Vélo customizations",
     "data": [
         "views/account_payment_view.xml",
         "views/hr_holidays_view.xml",
         "views/hr_timesheet_sheet_view.xml",
         "views/location_filters.xml",
         "views/res_partner_views.xml",
-        "report/available_holidays_view.xml",
+        # "report/available_holidays_view.xml", fixme
         "report/report_invoice.xml",
         "security/security.xml",
         "security/ir.model.access.csv",
         "wizard/hr_holidays_summary_department_view.xml",
-        "data/sftp.xml",
         "data/data.xml",
+        "data/sftp.xml",
     ],
     "installable": True,
 }

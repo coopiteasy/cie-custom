@@ -9,7 +9,7 @@
         <field name="category_id" ref="base.module_category_usability" />
     </record>
 
-    <!-- Account Analityc Lines -->
+    <!-- Account Analytic Lines -->
     <record id="hr_employee_own_account_analytic_line" model="ir.rule">
         <field name="name">hr_employee_own_account_analytic_line</field>
         <field name="model_id" ref="account.model_account_analytic_line" />
@@ -38,7 +38,7 @@
     <record id="hr_officer_all_account_analytic_line" model="ir.rule">
         <field name="name">hr_officer_all_account_analytic_line</field>
         <field name="model_id" ref="account.model_account_analytic_line" />
-        <field name="groups" eval="[(4, ref('base.group_hr_user'))]" />
+        <field name="groups" eval="[(4, ref('hr.group_hr_user'))]" />
         <field name="perm_read" eval="1" />
         <field name="perm_write" eval="1" />
         <field name="perm_create" eval="1" />
@@ -46,31 +46,30 @@
         <field name="domain_force">[(1, '=', 1)]</field>
     </record>
 
-    <!-- Account Analityc Lines -->
+    <!-- Account Analytic Lines -->
 
     <!-- deactivate standard rules -->
-    <record id="hr_holidays.property_rule_holidays_employee" model="ir.rule">
+    <record id="hr_holidays.hr_leave_rule_employee_update" model="ir.rule">
         <field name="active" eval="False" />
     </record>
-
-    <record id="hr_holidays.property_rule_holidays_employee_write" model="ir.rule">
+    <record id="hr_holidays.hr_leave_rule_officer_update" model="ir.rule">
         <field name="active" eval="False" />
     </record>
 
     <record id="hr_employee_own_leaves" model="ir.rule">
         <field name="name">hr_employee_own_leaves</field>
-        <field name="model_id" ref="hr_holidays.model_hr_holidays" />
+        <field name="model_id" ref="hr_holidays.model_hr_leave" />
         <field name="groups" eval="[(4, ref('base.group_user'))]" />
         <field name="perm_read" eval="1" />
         <field name="perm_write" eval="1" />
         <field name="perm_create" eval="1" />
         <field name="perm_unlink" eval="1" />
-        <field name="domain_force">[('user_id','=',user.id)]</field>
+        <field name="domain_force">[('employee_id.user_id','=',user.id)]</field>
     </record>
 
     <record id="department_manager_department_leaves" model="ir.rule">
         <field name="name">department_manager_department_leaves</field>
-        <field name="model_id" ref="hr_holidays.model_hr_holidays" />
+        <field name="model_id" ref="hr_holidays.model_hr_leave" />
         <field name="groups" eval="[(4, ref('base.group_user'))]" />
         <field name="perm_read" eval="1" />
         <field name="perm_write" eval="1" />
@@ -84,8 +83,8 @@
 
     <record id="hr_officer_all_leaves" model="ir.rule">
         <field name="name">hr_officer_all_leaves</field>
-        <field name="model_id" ref="hr_holidays.model_hr_holidays" />
-        <field name="groups" eval="[(4, ref('base.group_hr_user'))]" />
+        <field name="model_id" ref="hr_holidays.model_hr_leave" />
+        <field name="groups" eval="[(4, ref('hr.group_hr_user'))]" />
         <field name="perm_read" eval="1" />
         <field name="perm_write" eval="1" />
         <field name="perm_create" eval="1" />
