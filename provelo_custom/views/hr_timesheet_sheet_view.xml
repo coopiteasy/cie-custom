@@ -1,48 +1,48 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <odoo>
     <record id="hr_timesheet_sheet_form" model="ir.ui.view">
-        <field name="name">hr.timesheet.sheet.form</field>
-        <field name="model">hr_timesheet_sheet.sheet</field>
+        <field name="name">hr_timesheet.sheet.form</field>
+        <field name="model">hr_timesheet.sheet</field>
         <field name="inherit_id" ref="hr_timesheet_sheet.hr_timesheet_sheet_form" />
         <field name="arch" type="xml">
             <!--
                 Replacing `states` with `attrs` since using the first in combination with the second
                 may lead to unexpected results as domains are combined with a logical AND. (from doc)
             -->
-            <button name="button_confirm" position="replace">
+            <button name="action_timesheet_confirm" position="replace">
                 <button
-                    name="button_confirm"
+                    name="action_timesheet_confirm"
                     attrs="{'invisible': True}"
                     string="Submit to Manager"
                     type="object"
                     class="oe_highlight"
                 />
             </button>
-            <button name="done" position="replace">
+            <button name="action_timesheet_done" position="replace">
                 <button
-                    name="done"
+                    name="action_timesheet_done"
                     attrs="{'invisible': True}"
                     string="Approve"
                     type="workflow"
-                    groups="base.group_hr_user"
+                    groups="hr.group_hr_user"
                     class="oe_highlight"
                 />
             </button>
-            <button name="action_set_to_draft" position="replace">
+            <button name="action_timesheet_draft" position="replace">
                 <button
-                    name="action_set_to_draft"
+                    name="action_timesheet_draft"
                     attrs="{'invisible': True}"
                     string="Set to Draft"
                     type="object"
                 />
             </button>
-            <button name="cancel" position="replace">
+            <button name="action_timesheet_refuse" position="replace">
                 <button
-                    name="cancel"
+                    name="action_timesheet_refuse"
                     attrs="{'invisible': True}"
                     string="Refuse"
                     type="workflow"
-                    groups="base.group_hr_user"
+                    groups="hr.group_hr_user"
                 />
             </button>
 

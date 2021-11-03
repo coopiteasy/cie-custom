@@ -10,10 +10,11 @@ class SaleOrder(models.Model):
 
     @api.multi
     def action_invoice_create(self, grouped=False, final=False):
-        invoice_ids = super(SaleOrder, self).action_invoice_create(
-            grouped=grouped, final=final
-        )
-
+        invoice_ids = super().action_invoice_create(grouped=grouped, final=final)
         invoices = self.env["account.invoice"].browse(invoice_ids)
-        invoices.signal_workflow("invoice_open")
+        immediate_payment_term_id = self.env.ref(
+            "account.account_payment_term_immediate"
+        )
+        invoices.payment_term_id = immediate_payment_term_id
+        invoices.action_invoice_open()
         return invoice_ids
