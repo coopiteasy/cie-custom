@@ -2,7 +2,6 @@
 * default invoice payment term to immediate payment
 * automatic validation of invoices
 * add default values on available holidays report
-* add security rules for hr holidays access
 * location search  filters
 * make payments view accessible for 'billing' group
 * customize holiday, timesheet and res_partner views
