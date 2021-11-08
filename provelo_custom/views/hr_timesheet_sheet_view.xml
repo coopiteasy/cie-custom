@@ -50,17 +50,9 @@
                 <field name="state" invisible="1" />
             </field>
 
-            <xpath expr="//notebook/page[1]" position="replace">
-            </xpath>
-            <xpath expr="//notebook/page[1]" position="after">
-                <page string="Summary">
-                    <widget
-                        type="weekly_timesheet"
-                        attrs="{'readonly': [['state', 'not in', ['new', 'draft']]]}"
-                    >
-                    </widget>
-                </page>
-            </xpath>
+        <xpath expr="//notebook/page[1]" position="before">
+            <xpath expr="//notebook/page[2]" position="move" />
+        </xpath>
 
         </field>
     </record>
