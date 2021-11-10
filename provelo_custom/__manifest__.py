@@ -30,6 +30,7 @@
         "views/hr_timesheet_sheet_view.xml",
         "views/location_filters.xml",
         "views/res_partner_views.xml",
+        "report/layout.xml",
         "report/report_invoice.xml",
         "security/security.xml",
         "security/ir.model.access.csv",
