@@ -50,9 +50,16 @@
                 <field name="state" invisible="1" />
             </field>
 
-        <xpath expr="//notebook/page[1]" position="before">
-            <xpath expr="//notebook/page[2]" position="move" />
-        </xpath>
+            <xpath expr="//notebook/page[1]" position="before">
+                <xpath expr="//notebook/page[2]" position="move" />
+            </xpath>
+
+            <xpath
+                expr="//notebook//field[@name='timesheet_ids']/tree/field[@name='task_id']"
+                position="attributes"
+            >
+                <attribute name="invisible">True</attribute>
+            </xpath>
 
         </field>
     </record>
