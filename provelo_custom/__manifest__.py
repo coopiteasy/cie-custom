@@ -25,10 +25,11 @@
     "data": [
         "views/account_payment_view.xml",
         "views/hr_holidays_view.xml",
+        "views/hr_leave_report_views.xml",
+        "views/hr_leave_views.xml",
         "views/hr_timesheet_sheet_view.xml",
         "views/location_filters.xml",
         "views/res_partner_views.xml",
-        "views/hr_leave_views.xml",
         "report/report_invoice.xml",
         "security/security.xml",
         "security/ir.model.access.csv",
