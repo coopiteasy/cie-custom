@@ -10,3 +10,4 @@
 * on invoice report: mentions when not subject to vat
 * on invoice report: mentions bank account of location
 * on invoice report: hides 'comment' and 'origin' fields
+* make project name translatable
