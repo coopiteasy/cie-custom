@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record model="ir.actions.act_window" id="hr_holidays.action_hr_holidays_dashboard">
+        <field name="context">
+            {
+            'search_default_year': 1,
+            'search_default_group_employee': 1,
+            'search_default_my_leaves': 1,
+            'readonly_by_pass': True,
+            }
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="hr_kanban_view_employees_kanban_inherited">
+        <field name="name">HR - hide current_leave_id</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr_holidays.hr_kanban_view_employees_kanban" />
+        <field name="arch" type="xml">
+
+            <xpath
+                expr="//li[@id='last_login']//field[@name='current_leave_id']"
+                position="attributes"
+            >
+                <attribute name="invisible">True</attribute>
+            </xpath>
+
+        </field>
+    </record>
+
+<!--    <menuitem fixme-->
+<!--        parent="hr_holidays.menu_hr_holidays_my_leaves"-->
+<!--        id="hr_holidays.menu_open_allocation_holidays"-->
+<!--        action="hr_holidays.open_allocation_holidays"-->
+<!--        groups="base.group_hr_manager"-->
+<!--        sequence="40"-->
+<!--    />-->
+
+    <menuitem
+        name="Reports"
+        parent="hr_holidays.menu_hr_holidays_root"
+        id="hr_holidays.menu_hr_holidays_report"
+        groups="base.group_user"
+        sequence="99"
+    />
+</odoo>

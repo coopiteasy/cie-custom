@@ -34,6 +34,10 @@
                         string="Not Draft"
                         domain="[('activity_id.state', '!=', 'draft')]"
                     />
+                        <!-- this separator is needed to be able to combine this
+                             filter with an "and" operator (instead of an "or") with
+                             the previous filter. -->
+                        <separator />
                         <filter
                         name="is_not_cancelled_activity"
                         string="Not Cancelled"
