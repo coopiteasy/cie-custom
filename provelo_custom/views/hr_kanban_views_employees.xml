@@ -19,6 +19,12 @@
                     <field name="mobile_phone" />
                 </li>
             </field>
+            <xpath expr='//span[contains(@class, "oe_hr_attendance_status_red")]' position="attributes">
+                <attribute name="invisible">True</attribute>
+            </xpath>
+            <xpath expr='//span[contains(@class, "oe_hr_attendance_status_green")]' position="attributes">
+                <attribute name="invisible">True</attribute>
+            </xpath>
         </field>
     </record>
 </odoo>
