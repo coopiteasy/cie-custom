@@ -42,6 +42,7 @@
         "views/hr_timesheet_sheet_view.xml",
         "views/location_filters.xml",
         "views/res_partner_views.xml",
+        "views/hr_kanban_views_employees.xml",
         # "report/available_holidays_view.xml", fixme
         "report/report_invoice.xml",
         "security/security.xml",
