@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <odoo>
-    <record id="hr_kanban_view_employee_extend" model="ir.ui.view">
+    <record id="hr_kanban_view_employees" model="ir.ui.view">
         <field name="name">hr_kanban_view_phone_mail</field>
         <field name="inherit_id" ref="hr.hr_kanban_view_employees" />
         <field name="model">hr.employee</field>
@@ -10,13 +10,15 @@
                     <i class="fa fa-envelope" />
                     <field name="work_email" />
                 </li>
-                <li t-if="record.work_phone.raw_value">
+                <li>
+                    <span t-if="record.work_phone.raw_value">
                     <i class="fa fa-phone" />
                     <field name="work_phone" />
-                </li>
-                <li t-if="record.mobile_phone.raw_value">
-                    <i class="fa fa-mobile" />
+                </span>
+                <span t-if="record.mobile_phone.raw_value">
+                    <i class="fa fa-mobile ml-2" />
                     <field name="mobile_phone" />
+                </span>
                 </li>
             </field>
         </field>
