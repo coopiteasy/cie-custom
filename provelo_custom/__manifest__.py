@@ -32,6 +32,8 @@
         "views/res_partner_views.xml",
         "report/hr_leave_report.xml",
         "report/layout.xml",
+        "views/hr_kanban_views_employees.xml",
+        # "report/available_holidays_view.xml", fixme
         "report/report_invoice.xml",
         "security/security.xml",
         "security/ir.model.access.csv",
