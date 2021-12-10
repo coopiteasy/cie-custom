@@ -27,19 +27,35 @@
         </field>
     </record>
 
-<!--    <menuitem fixme-->
-<!--        parent="hr_holidays.menu_hr_holidays_my_leaves"-->
-<!--        id="hr_holidays.menu_open_allocation_holidays"-->
-<!--        action="hr_holidays.open_allocation_holidays"-->
-<!--        groups="base.group_hr_manager"-->
-<!--        sequence="40"-->
-<!--    />-->
+    <!--
+        make this menuitem visible to all users, instead of only to leaves
+        managers. the goal is for groups_id to be empty, but simply emptying
+        the group (with a 5 command) would cause any manual change to be lost
+        when the module is updated.
+    -->
+    <record model="ir.ui.menu" id="hr_holidays.menu_hr_holidays_dashboard">
+        <field
+            name="groups_id"
+            eval="[(3, ref('hr_holidays.group_hr_holidays_manager'))]"
+        />
+    </record>
 
-    <menuitem
-        name="Reports"
-        parent="hr_holidays.menu_hr_holidays_root"
-        id="hr_holidays.menu_hr_holidays_report"
-        groups="base.group_user"
-        sequence="99"
-    />
+    <!-- make this menuitem visible only to hr managers -->
+    <record model="ir.ui.menu" id="hr_holidays.menu_open_allocation">
+        <field name="groups_id" eval="[(4, ref('hr.group_hr_manager'))]" />
+    </record>
+
+    <!--
+        make this menuitem visible to all users, instead of only to leaves
+        managers and users. same remark about empty groups_id as above.
+    -->
+    <record model="ir.ui.menu" id="hr_holidays.menu_hr_holidays_report">
+        <field
+            name="groups_id"
+            eval="[
+                (3, ref('hr_holidays.group_hr_holidays_manager')),
+                (3, ref('hr_holidays.group_hr_holidays_user'))
+            ]"
+        />
+    </record>
 </odoo>

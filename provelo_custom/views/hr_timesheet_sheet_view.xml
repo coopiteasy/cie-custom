@@ -63,4 +63,20 @@
 
         </field>
     </record>
+
+    <!--
+        make this menuitem visible to all users, instead of only to timesheet
+        managers. the goal is for groups_id to be empty, but simply emptying
+        the group (with a 5 command) would cause any manual change to be lost
+        when the module is updated.
+    -->
+    <record
+        model="ir.ui.menu"
+        id="hr_timesheet_sheet.menu_act_hr_timesheet_sheet_all_timesheets"
+    >
+        <field
+            name="groups_id"
+            eval="[(3, ref('hr_timesheet.group_timesheet_manager'))]"
+        />
+    </record>
 </odoo>
