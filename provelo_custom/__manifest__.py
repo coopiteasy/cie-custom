@@ -3,8 +3,8 @@
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl.html).
 
 {
-    "name": "Provelo Customizations",
-    "version": "12.0.1.0.0",
+    "name": "Pro Velo Customizations",
+    "version": "12.0.1.0.1",
     "depends": [
         "account",
         "sale",
@@ -21,7 +21,7 @@
     "license": "AGPL-3",
     "category": "",
     "website": "https://coopiteasy.be",
-    "summary": "Pro Vélo customizations",
+    "summary": "Pro Velo customizations",
     "data": [
         "views/account_payment_view.xml",
         "views/hr_holidays_view.xml",

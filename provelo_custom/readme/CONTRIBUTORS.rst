@@ -1,4 +1,8 @@
-* Houssine Bakkali <houssine@coopiteasy.be>
-* Robin Keunen <robin@coopiteasy.be>
-* Vincent Van Rossem <vincent@coopiteasy.be>
-* Rémy Taymans <remy@coopiteasy.be>
+* `Coop IT Easy SCRLfs <https://coopiteasy.be>`_:
+
+  * Houssine Bakkali
+  * Robin Keunen
+  * Vincent Van Rossem
+  * Rémy Taymans
+  * hugues de keyzer
+  * victor champonnois
