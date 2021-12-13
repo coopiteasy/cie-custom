@@ -24,6 +24,11 @@ class Picking(models.Model):
         compute="_compute_too_many_received",
     )
 
+    form_view_url = fields.Char(
+        string="Form View URL", compute="_compute_form_view_url"
+    )
+
+    @api.multi
     @api.depends("move_lines")
     def _compute_zero_received(self):
         for pick in self:
@@ -31,6 +36,7 @@ class Picking(models.Model):
                 lambda move: move.quantity_done == 0 and move.product_qty
             )
 
+    @api.multi
     @api.depends("move_lines")
     def _compute_too_few_received(self):
         for pick in self:
@@ -38,11 +44,22 @@ class Picking(models.Model):
                 lambda move: move.quantity_done < move.product_qty
             )
 
+    @api.multi
     @api.depends("move_lines")
     def _compute_too_many_received(self):
         for pick in self:
             pick.too_many_received_move_ids = pick._filtered_moves().filtered(
                 lambda move: move.quantity_done > move.product_qty
+            )
+
+    @api.multi
+    def _compute_form_view_url(self):
+        for pick in self:
+            pick.form_view_url = (
+                "{}/web#id={}&model=stock.picking&view_type=form".format(
+                    pick.env["ir.config_parameter"].sudo().get_param("web.base.url"),
+                    pick.id,
+                )
             )
 
     @api.multi

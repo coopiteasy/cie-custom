@@ -10,49 +10,43 @@
             </field>
             <field name="subject">Incorrect Delivery (${object.name})</field>
             <field name="partner_to">${ctx.get('company').email|safe}</field>
-            <field name="reply_to">${ctx.get('company').email|safe}</field>
             <field name="model_id" ref="model_stock_picking" />
             <field name="auto_delete" eval="True" />
             <field name="lang">${ctx.get("lang")}</field>
-            <field
-                name="body_html"
-            ><![CDATA[
-<div style="font-family: 'Lucica Grande', Ubuntu, Arial, Verdana, sans-serif; font-size: 12px; color: rgb(34, 34, 34); background-color: #FFF; ">
-
-    <p>Hello</p>
-
+            <field name="body_html" type="html">
+<div>
+    <p>One or several products in <a href="${object.form_view_url}">${object.name}</a> were received in incorrect amounts.</p>
 
     % if object.zero_received_move_ids:
-    <p>Zero</p>
+    <p>Zero received:</p>
     <ul>
         % for move in object.zero_received_move_ids:
-            <li>${move.name} - ${move.quantity_done} / ${move.product_qty}
+            <li>${move.name} --- Received ${move.quantity_done} out of expected ${move.product_qty}</li>
         % endfor
     </ul>
     % endif
 
     % if object.too_few_received_move_ids:
-    <p>Too few</p>
+    <p>Received too few:</p>
     <ul>
         % for move in object.too_few_received_move_ids:
-            <li>${move.name} - ${move.quantity_done} / ${move.product_qty}
+            <li>${move.name} --- Received ${move.quantity_done} out of expected ${move.product_qty}</li>
         % endfor
     </ul>
     % endif
 
     % if object.too_many_received_move_ids:
-    <p>Too many</p>
+    <p>Received too many:</p>
     <ul>
         % for move in object.too_many_received_move_ids:
-            <li>${move.name} - ${move.quantity_done} / ${move.product_qty}
+            <li>${move.name} --- Received ${move.quantity_done} out of expected ${move.product_qty}</li>
         % endfor
     </ul>
     % endif
 
-    <p>Goodbye.</p>
-
+    <p>Please follow up accordingly.</p>
 </div>
-            ]]></field>
+            </field>
         </record>
     </data>
 </odoo>
