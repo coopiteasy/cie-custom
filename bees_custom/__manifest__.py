@@ -5,6 +5,7 @@
     "name": "BEES Customizations",
     "version": "12.0.1.0.1",
     "depends": [
+        "mail",
         "beesdoo_account",
         "beesdoo_product_info_screen",
         "pos_mail_receipt",
@@ -17,6 +18,7 @@
         Specifics customizations for BEES coop.
     """,
     "data": [
+        "data/mail_template.xml",
         "views/account_invoice.xml",
         "views/products.xml",
     ],
