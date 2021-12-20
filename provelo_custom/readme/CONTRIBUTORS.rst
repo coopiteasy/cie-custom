@@ -5,4 +5,4 @@
   * Vincent Van Rossem
   * Rémy Taymans
   * hugues de keyzer
-  * victor champonnois
+  * Victor Champonnois
