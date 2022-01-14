@@ -5,6 +5,7 @@
 * location search filters
 * make payments view accessible for 'billing' group
 * customize holiday, timesheet and res_partner views
+* change the visibility of several leaves and timesheet sheet menu items
 * add the ``allocation_type`` field on ``hr.leave.report`` to allow to filter
   by it
 * add an "allocated" filter on ``hr.leave.report`` and enable it by default
