@@ -7,6 +7,7 @@
     "version": "12.0.1.0.1",
     "depends": [
         "account",
+        "crm",
         "sale",
         "resource_activity",
         "hr_holidays",

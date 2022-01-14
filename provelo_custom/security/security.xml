@@ -1,16 +1,19 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!--
-     Copyright 2017-2018 Coop IT Easy
+     Copyright 2017-2022 Coop IT Easy
      License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 -->
 <odoo>
+    <!-- add a new user group, inheriting from the project manager group -->
     <record id="group_provelo_customizer" model="res.groups">
         <field name="name">Provelo Customizer</field>
         <field name="category_id" ref="base.module_category_usability" />
+        <field name="implied_ids" eval="[(4, ref('project.group_project_manager'))]" />
     </record>
 
-    <!-- Account Analytic Lines -->
+    <!-- account analytic lines -->
 
+    <!-- an employee should have full access to their own account analytic lines -->
     <record id="hr_employee_own_account_analytic_line" model="ir.rule">
         <field name="name">hr_employee_own_account_analytic_line</field>
         <field name="model_id" ref="account.model_account_analytic_line" />
@@ -22,6 +25,10 @@
         <field name="domain_force">[("user_id", "=", user.id)]</field>
     </record>
 
+    <!--
+        a department manager should have full access to the account analytic lines of
+        their subordinates
+    -->
     <record id="department_manager_department_account_analytic_line" model="ir.rule">
         <field name="name">department_manager_department_account_analytic_line</field>
         <field name="model_id" ref="account.model_account_analytic_line" />
@@ -36,6 +43,7 @@
         </field>
     </record>
 
+    <!-- an hr officer should have full access to all account analytic lines -->
     <record id="hr_officer_all_account_analytic_line" model="ir.rule">
         <field name="name">hr_officer_all_account_analytic_line</field>
         <field name="model_id" ref="account.model_account_analytic_line" />
@@ -49,11 +57,7 @@
 
     <!-- timesheet sheets -->
 
-    <!-- deactivate standard rule -->
-    <record id="hr_timesheet_sheet.timesheet_sheet_comp_rule" model="ir.rule">
-        <field name="active" eval="False"/>
-    </record>
-
+    <!-- an employee should have full access to their own timesheet sheets -->
     <record id="hr_employee_own_timesheet_sheet" model="ir.rule">
         <field name="name">hr_employee_own_timesheet_sheet</field>
         <field name="model_id" ref="hr_timesheet_sheet.model_hr_timesheet_sheet" />
@@ -65,6 +69,10 @@
         <field name="domain_force">[("employee_id.user_id", "=", user.id)]</field>
     </record>
 
+    <!--
+        a department manager should have full access to the timesheet sheets of their
+        subordinates
+    -->
     <record id="department_manager_department_timesheet_sheet" model="ir.rule">
         <field name="name">department_manager_department_timesheet_sheet</field>
         <field name="model_id" ref="hr_timesheet_sheet.model_hr_timesheet_sheet" />
@@ -73,9 +81,12 @@
         <field name="perm_write" eval="True" />
         <field name="perm_create" eval="True" />
         <field name="perm_unlink" eval="True" />
-        <field name="domain_force">[("employee_id.parent_id.user_id", "=", user.id)]</field>
+        <field
+            name="domain_force"
+        >[("employee_id.parent_id.user_id", "=", user.id)]</field>
     </record>
 
+    <!-- an hr officer should have full access to all timesheet sheets -->
     <record id="hr_officer_all_timesheet_sheet" model="ir.rule">
         <field name="name">hr_officer_all_timesheet_sheet</field>
         <field name="model_id" ref="hr_timesheet_sheet.model_hr_timesheet_sheet" />
@@ -89,11 +100,12 @@
 
     <!-- leaves -->
 
-    <!-- deactivate standard rule -->
+    <!-- deactivate standard rule: an employee must not be able to access all leaves -->
     <record id="hr_holidays.hr_leave_rule_employee" model="ir.rule">
-        <field name="active" eval="False"/>
+        <field name="active" eval="False" />
     </record>
 
+    <!-- an employee should have read-only access to their own leaves -->
     <record id="hr_employee_own_leave" model="ir.rule">
         <field name="name">hr_employee_own_leave</field>
         <field name="model_id" ref="hr_holidays.model_hr_leave" />
@@ -105,6 +117,9 @@
         <field name="domain_force">[("user_id", "=", user.id)]</field>
     </record>
 
+    <!--
+        a department manager should have full access to the leaves of their subordinates
+    -->
     <record id="department_manager_department_leave" model="ir.rule">
         <field name="name">department_manager_department_leave</field>
         <field name="model_id" ref="hr_holidays.model_hr_leave" />
@@ -113,11 +128,14 @@
         <field name="perm_write" eval="True" />
         <field name="perm_create" eval="True" />
         <field name="perm_unlink" eval="True" />
-        <field name="domain_force">[("employee_id.parent_id.user_id", "=", user.id)]</field>
+        <field
+            name="domain_force"
+        >[("employee_id.parent_id.user_id", "=", user.id)]</field>
     </record>
 
     <!-- leave reports -->
 
+    <!-- an employee should have read-only access to their own leave reports -->
     <record id="hr_employee_own_leave_report" model="ir.rule">
         <field name="name">hr_employee_own_leave_report</field>
         <field name="model_id" ref="hr_holidays.model_hr_leave_report" />
@@ -129,6 +147,10 @@
         <field name="domain_force">[("employee_id.user_id", "=", user.id)]</field>
     </record>
 
+    <!--
+        a department manager should have read-only access to the leave reports of their
+        subordinates
+    -->
     <record id="department_manager_department_leave_report" model="ir.rule">
         <field name="name">department_manager_department_leave_report</field>
         <field name="model_id" ref="hr_holidays.model_hr_leave_report" />
@@ -137,9 +159,12 @@
         <field name="perm_write" eval="False" />
         <field name="perm_create" eval="False" />
         <field name="perm_unlink" eval="False" />
-        <field name="domain_force">[("employee_id.parent_id.user_id", "=", user.id)]</field>
+        <field
+            name="domain_force"
+        >[("employee_id.parent_id.user_id", "=", user.id)]</field>
     </record>
 
+    <!-- an hr officer should have read-only access to all leave reports -->
     <record id="hr_officer_all_leave_report" model="ir.rule">
         <field name="name">hr_officer_all_leave_report</field>
         <field name="model_id" ref="hr_holidays.model_hr_leave_report" />
@@ -149,6 +174,24 @@
         <field name="perm_create" eval="False" />
         <field name="perm_unlink" eval="False" />
         <field name="domain_force">[]</field>
+    </record>
+
+    <!-- leaves allocations -->
+
+    <!--
+        deactivate standard rule: an employee must not be able to access their own
+        leaves allocations
+    -->
+    <record id="hr_holidays.hr_leave_allocation_rule_employee" model="ir.rule">
+        <field name="active" eval="False" />
+    </record>
+
+    <!--
+        deactivate standard rule: an employee must not be able to create/write/unlink
+        their own not validated leaves allocations
+    -->
+    <record id="hr_holidays.hr_leave_allocation_rule_employee_update" model="ir.rule">
+        <field name="active" eval="False" />
     </record>
 
 </odoo>
