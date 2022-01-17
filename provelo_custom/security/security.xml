@@ -194,4 +194,21 @@
         <field name="active" eval="False" />
     </record>
 
+    <!-- contracts -->
+
+    <!--
+        add a new user group, inheriting from the contracts manager group. note that in
+        provelo's db, for some reason, all employees are members of the
+        hr_contract.group_hr_contract_manager, but here we define another contracts
+        manager group, which only people that should be able to manage contracts are a
+        part of.
+    -->
+    <record id="group_hr_contract_manager" model="res.groups">
+        <field name="name">Manager (Pro Velo)</field>
+        <field name="category_id" ref="base.module_category_hr_contract" />
+        <field
+            name="implied_ids"
+            eval="[(4, ref('hr_contract.group_hr_contract_manager'))]"
+        />
+    </record>
 </odoo>
