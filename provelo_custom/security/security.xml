@@ -130,7 +130,7 @@
         <field name="perm_unlink" eval="True" />
         <field
             name="domain_force"
-        >[("employee_id.parent_id.user_id", "=", user.id)]</field>
+        >[("employee_id", "child_of", user.employee_ids.id)]</field>
     </record>
 
     <!-- leave reports -->
@@ -161,7 +161,7 @@
         <field name="perm_unlink" eval="False" />
         <field
             name="domain_force"
-        >[("employee_id.parent_id.user_id", "=", user.id)]</field>
+        >[("employee_id", "child_of", user.employee_ids.id)]</field>
     </record>
 
     <!-- an hr officer should have read-only access to all leave reports -->
