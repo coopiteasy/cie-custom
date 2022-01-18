@@ -37,7 +37,9 @@
         <field name="perm_write" eval="True" />
         <field name="perm_create" eval="True" />
         <field name="perm_unlink" eval="True" />
-        <field name="domain_force">[("employee_id", "child_of", user.employee_ids.mapped("id"))]
+        <field
+            name="domain_force"
+        >[("employee_id", "child_of", user.employee_ids.mapped("id"))]
         </field>
     </record>
 
