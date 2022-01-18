@@ -37,9 +37,7 @@
         <field name="perm_write" eval="True" />
         <field name="perm_create" eval="True" />
         <field name="perm_unlink" eval="True" />
-        <field name="domain_force">[
-            ("user_id.employee_ids.parent_id", "=", user.employee_ids.id)
-            ]
+        <field name="domain_force">[("employee_id", "child_of", user.employee_ids.mapped("id"))]
         </field>
     </record>
 
@@ -83,7 +81,7 @@
         <field name="perm_unlink" eval="True" />
         <field
             name="domain_force"
-        >[("employee_id", "child_of", user.employee_ids.id)]</field>
+        >[("employee_id", "child_of", user.employee_ids.mapped("id"))]</field>
     </record>
 
     <!-- an hr officer should have full access to all timesheet sheets -->
@@ -130,7 +128,7 @@
         <field name="perm_unlink" eval="True" />
         <field
             name="domain_force"
-        >[("employee_id", "child_of", user.employee_ids.id)]</field>
+        >[("employee_id", "child_of", user.employee_ids.mapped("id"))]</field>
     </record>
 
     <!-- leave reports -->
@@ -161,7 +159,7 @@
         <field name="perm_unlink" eval="False" />
         <field
             name="domain_force"
-        >[("employee_id", "child_of", user.employee_ids.id)]</field>
+        >[("employee_id", "child_of", user.employee_ids.mapped("id"))]</field>
     </record>
 
     <!-- an hr officer should have read-only access to all leave reports -->
