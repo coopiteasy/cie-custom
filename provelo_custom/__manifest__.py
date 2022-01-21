@@ -36,6 +36,7 @@
         "views/location_filters.xml",
         "views/res_partner_views.xml",
         "report/hr_leave_report.xml",
+        "report/hr_employee_overtime_report.xml",
         "report/layout.xml",
         "views/hr_kanban_views_employees.xml",
         # "report/available_holidays_view.xml", fixme
