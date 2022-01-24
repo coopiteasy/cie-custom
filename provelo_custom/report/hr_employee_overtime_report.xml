@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <odoo>
     <data>
-        <record id="act_employee_overtime_report" model="ir.actions.act_window">
+        <record id="hr_employee_action_overtime" model="ir.actions.act_window">
             <field name="name">Overtime by Employee</field>
             <field name="res_model">hr.employee</field>
             <field name="view_mode">pivot</field>
@@ -24,7 +24,7 @@
             </field>
         </record>
 
-        <record id="view_filter_employee_overtime_report" model="ir.ui.view">
+        <record id="hr_employee_report_view_search" model="ir.ui.view">
             <field name="model">hr.employee</field>
             <field name="arch" type="xml">
               <search>
@@ -43,9 +43,9 @@
           </record>
 
         <menuitem
-            id="menu_employee_overtime_report"
+            id="hr_employee_menu"
             parent="hr_timesheet.menu_timesheets_reports"
-            action="act_employee_overtime_report"
+            action="hr_employee_action_overtime"
             name="Overtime by employee"
             sequence="999"
         />
