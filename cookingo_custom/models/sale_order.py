@@ -51,7 +51,11 @@ class SaleOrder(models.Model):
         is big enough to hold 600*2+400)``.
         """
         self.ensure_one()
-        containers = self.env["product.template"].search([("is_container", "=", True)]).sorted(key="container_volume")
+        containers = (
+            self.env["product.template"]
+            .search([("is_container", "=", True)])
+            .sorted(key="container_volume")
+        )
         container_1 = None
         container_2 = None
         for container in containers:
