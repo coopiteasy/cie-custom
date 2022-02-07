@@ -1,19 +1,18 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <odoo>
     <data>
-        <record id="hr_employee_action_overtime" model="ir.actions.act_window">
+        <record id="hr_timesheet_sheet_action_overtime" model="ir.actions.act_window">
             <field name="name">Overtime by Employee</field>
-            <field name="res_model">hr.employee</field>
+            <field name="res_model">hr_timesheet.sheet</field>
             <field name="view_mode">pivot</field>
         </record>
 
-        <record id="view_overtime_pivot" model="ir.ui.view">
-            <field name="name">hr.employee.pivot</field>
-            <field name="model">hr.employee</field>
+        <record id="hr_timesheet_sheet_view_pivot" model="ir.ui.view">
+            <field name="name">hr_timesheet.sheet.pivot</field>
+            <field name="model">hr_timesheet.sheet</field>
             <field name="arch" type="xml">
                 <pivot string="Overtime">
-                    <field name="department_id" type="row" />
-                    <field name="name" type="row" />
+                    <field name="employee_id" type="row" />
                     <field
                         name="total_overtime"
                         type="measure"
@@ -24,8 +23,8 @@
             </field>
         </record>
 
-        <record id="hr_employee_report_view_search" model="ir.ui.view">
-            <field name="model">hr.employee</field>
+        <record id="hr_timesheet_sheet_view_search" model="ir.ui.view">
+            <field name="model">hr_timesheet.sheet</field>
             <field name="arch" type="xml">
               <search>
                 <filter
@@ -36,16 +35,16 @@
                 <filter
                         name="group_user"
                         string="By Employee"
-                        context="{'group_by': 'name'}"
+                        context="{'group_by': 'id'}"
                     />
               </search>
             </field>
           </record>
 
         <menuitem
-            id="hr_employee_menu"
+            id="hr_timesheet_sheet_menu"
             parent="hr_timesheet.menu_timesheets_reports"
-            action="hr_employee_action_overtime"
+            action="hr_timesheet_sheet_action_overtime"
             name="Overtime by employee"
             sequence="999"
         />
