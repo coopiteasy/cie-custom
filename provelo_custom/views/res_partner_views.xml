@@ -16,4 +16,21 @@
 
         </field>
     </record>
+
+    <record model="ir.ui.view" id="view_res_partner_filter">
+        <field name="name">res.partner.select.inherit.archived</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_res_partner_filter" />
+        <field name="arch" type="xml">
+
+            <filter name="filter_my_partners" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </filter>
+            <filter name="inactive" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </filter>
+
+        </field>
+    </record>
+
 </odoo>
