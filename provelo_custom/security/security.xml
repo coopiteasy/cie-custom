@@ -52,7 +52,7 @@
         <field name="perm_write" eval="True" />
         <field name="perm_create" eval="True" />
         <field name="perm_unlink" eval="True" />
-        <field name="domain_force">[]</field>
+        <field name="domain_force" eval="False" />
     </record>
 
     <!-- timesheet sheets -->
@@ -95,7 +95,7 @@
         <field name="perm_write" eval="True" />
         <field name="perm_create" eval="True" />
         <field name="perm_unlink" eval="True" />
-        <field name="domain_force">[]</field>
+        <field name="domain_force" eval="False" />
     </record>
 
     <!-- leaves -->
@@ -173,7 +173,7 @@
         <field name="perm_write" eval="False" />
         <field name="perm_create" eval="False" />
         <field name="perm_unlink" eval="False" />
-        <field name="domain_force">[]</field>
+        <field name="domain_force" eval="False" />
     </record>
 
     <!-- leaves allocations -->
@@ -211,4 +211,48 @@
             eval="[(4, ref('hr_contract.group_hr_contract_manager'))]"
         />
     </record>
+
+    <!-- employees -->
+
+    <!-- an employee should have read-write access to their own employee record -->
+    <record id="hr_employee_own_employee" model="ir.rule">
+        <field name="name">hr_employee_own_employee</field>
+        <field name="model_id" ref="hr.model_hr_employee" />
+        <field name="groups" eval="[(4, ref('base.group_user'))]" />
+        <field name="perm_read" eval="True" />
+        <field name="perm_write" eval="True" />
+        <field name="perm_create" eval="False" />
+        <field name="perm_unlink" eval="False" />
+        <field name="domain_force">[("user_id", "=", user.id)]</field>
+    </record>
+
+    <!--
+        an employee should have read-only access to other employee records, including
+        those not linked to a user
+    -->
+    <record id="hr_employee_other_employee" model="ir.rule">
+        <field name="name">hr_employee_other_employee</field>
+        <field name="model_id" ref="hr.model_hr_employee" />
+        <field name="groups" eval="[(4, ref('base.group_user'))]" />
+        <field name="perm_read" eval="True" />
+        <field name="perm_write" eval="False" />
+        <field name="perm_create" eval="False" />
+        <field name="perm_unlink" eval="False" />
+        <field
+            name="domain_force"
+        >["|", ("user_id", "=", False), ("user_id", "!=", user.id)]</field>
+    </record>
+
+    <!-- an hr officer should have full access to all employee records -->
+    <record id="hr_officer_all_employee" model="ir.rule">
+        <field name="name">hr_officer_all_employee</field>
+        <field name="model_id" ref="hr.model_hr_employee" />
+        <field name="groups" eval="[(4, ref('hr.group_hr_user'))]" />
+        <field name="perm_read" eval="True" />
+        <field name="perm_write" eval="True" />
+        <field name="perm_create" eval="True" />
+        <field name="perm_unlink" eval="True" />
+        <field name="domain_force" eval="False" />
+    </record>
+
 </odoo>
