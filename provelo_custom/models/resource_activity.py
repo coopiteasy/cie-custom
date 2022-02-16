@@ -37,4 +37,4 @@ class ResourceActivity(models.Model):
                     "res_model": action.res_model,
                 }
             elif activity.state in ("draft", "sale"):
-                activity.state = "done"
+                activity.set_activity_as_done()
