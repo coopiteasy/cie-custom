@@ -8,9 +8,7 @@
         <field
             name="domain"
         >[('product_id.is_container', '=', True), ('not_returned', '>', 0)]</field>
-        <field name="context">
-            <!-- TODO -->
-        </field>
+        <field name="context" /> <!-- TODO -->
         <field name="help" type="html">
             <p class="o_view_nocontent_smiling_face">
                 No orders with unreturned containers found
