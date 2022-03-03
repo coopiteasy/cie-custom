@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template id="product" inherit_id="website_sale.product">
+        <xpath
+            expr="//div[@id='product_details']/../div[hasclass('col-md-6', 'col-xl-8')]/t"
+            position="before"
+        >
+            <xpath expr="//p[@id='product_public_description']/.." position="move" />
+        </xpath>
+    </template>
+</odoo>
