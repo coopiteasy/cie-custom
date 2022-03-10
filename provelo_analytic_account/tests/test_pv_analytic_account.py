@@ -5,9 +5,7 @@
 
 from datetime import datetime, timedelta
 
-from odoo.addons.resource_activity.tests.test_base import (
-    TestResourceActivityBase,
-)
+from odoo.addons.resource_activity.tests.test_base import TestResourceActivityBase
 
 
 class TestProVeloBobCodes(TestResourceActivityBase):
