@@ -8,8 +8,8 @@ class WebsiteSale(WebsiteSale):
         [
             """/shop""",
             """/shop/page/<int:page>""",
-            """/shop/category/<model("product.public.category", "[('website_id', 'in', (False, current_website_id))]"):category>""",  # noqa: B950 (line too long)
-            """/shop/category/<model("product.public.category", "[('website_id', 'in', (False, current_website_id))]"):category>/page/<int:page>""",  # noqa: B950 (line too long)
+            """/shop/category/<model("product.public.category", "[('website_id', 'in', (False, current_website_id))]"):category>""",  # noqa: E501
+            """/shop/category/<model("product.public.category", "[('website_id', 'in', (False, current_website_id))]"):category>/page/<int:page>""",  # noqa: E501
         ],
         type="http",
         auth="user",

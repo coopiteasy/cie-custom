@@ -6,7 +6,7 @@
     "version": "12.0.1.1.0",
     "summary": """
         Foodhub customizations""",
-    "author": "Coop IT Easy SCRL fs",
+    "author": "Coop IT Easy SCRLfs",
     "website": "https://coopiteasy.be",
     "license": "AGPL-3",
     "category": "Account",
