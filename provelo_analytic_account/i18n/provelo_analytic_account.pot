@@ -1,0 +1,210 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* provelo_analytic_account
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: provelo_analytic_account
+#: model:ir.model.fields,field_description:provelo_analytic_account.field_pv_financing__active
+#: model:ir.model.fields,field_description:provelo_analytic_account.field_pv_project__active
+msgid "Active"
+msgstr ""
+
+#. module: provelo_analytic_account
+#: model:ir.model.fields,field_description:provelo_analytic_account.field_account_invoice__activity_id
+msgid "Activity"
+msgstr ""
+
+#. module: provelo_analytic_account
+#: model:ir.model.fields,field_description:provelo_analytic_account.field_account_invoice__allowed_financing_ids
+#: model:ir.model.fields,field_description:provelo_analytic_account.field_pv_project__allowed_financing_ids
+#: model_terms:ir.ui.view,arch_db:provelo_analytic_account.provelo_project_view_form
+msgid "Allowed Financing"
+msgstr ""
+
+#. module: provelo_analytic_account
+#: model:ir.ui.menu,name:provelo_analytic_account.provelo_project_menu
+msgid "Analytic Projects"
+msgstr ""
+
+#. module: provelo_analytic_account
+#: model:ir.ui.menu,name:provelo_analytic_account.pv_analytic_configuration_menu
+msgid "Analytics"
+msgstr ""
+
+#. module: provelo_analytic_account
+#: model_terms:ir.ui.view,arch_db:provelo_analytic_account.provelo_financing_view_filter
+#: model_terms:ir.ui.view,arch_db:provelo_analytic_account.provelo_project_view_filter
+msgid "Archived"
+msgstr ""
+
+#. module: provelo_analytic_account
+#: model:ir.model.fields,field_description:provelo_analytic_account.field_hr_department__bob_code
+#: model:ir.model.fields,field_description:provelo_analytic_account.field_pv_financing__bob_code
+#: model:ir.model.fields,field_description:provelo_analytic_account.field_pv_project__bob_code
+#: model:ir.model.fields,field_description:provelo_analytic_account.field_resource_location__bob_code
+msgid "Bob Code"
+msgstr ""
+
+#. module: provelo_analytic_account
+#: model:ir.model.fields,field_description:provelo_analytic_account.field_pv_financing__create_uid
+#: model:ir.model.fields,field_description:provelo_analytic_account.field_pv_project__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: provelo_analytic_account
+#: model:ir.model.fields,field_description:provelo_analytic_account.field_pv_financing__create_date
+#: model:ir.model.fields,field_description:provelo_analytic_account.field_pv_project__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: provelo_analytic_account
+#: model:ir.model.fields,field_description:provelo_analytic_account.field_resource_location__journal_id
+msgid "Default Sale Journal"
+msgstr ""
+
+#. module: provelo_analytic_account
+#: model:ir.model.fields,field_description:provelo_analytic_account.field_account_invoice__department_id
+#: model:ir.model.fields,field_description:provelo_analytic_account.field_pv_project__department_id
+msgid "Department"
+msgstr ""
+
+#. module: provelo_analytic_account
+#: model:ir.model.fields,field_description:provelo_analytic_account.field_pv_financing__display_name
+#: model:ir.model.fields,field_description:provelo_analytic_account.field_pv_project__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: provelo_analytic_account
+#: model:ir.model.fields,field_description:provelo_analytic_account.field_account_invoice__financing_id
+#: model_terms:ir.ui.view,arch_db:provelo_analytic_account.provelo_financing_view_filter
+msgid "Financing"
+msgstr ""
+
+#. module: provelo_analytic_account
+#: model:ir.actions.act_window,name:provelo_analytic_account.provelo_financing_action
+#: model:ir.ui.menu,name:provelo_analytic_account.provelo_financing_menu
+msgid "Financing Sources"
+msgstr ""
+
+#. module: provelo_analytic_account
+#: model:ir.model,name:provelo_analytic_account.model_hr_department
+msgid "HR Department"
+msgstr ""
+
+#. module: provelo_analytic_account
+#: model:ir.model.fields,field_description:provelo_analytic_account.field_pv_financing__id
+#: model:ir.model.fields,field_description:provelo_analytic_account.field_pv_project__id
+msgid "ID"
+msgstr ""
+
+#. module: provelo_analytic_account
+#: model:ir.model,name:provelo_analytic_account.model_account_invoice
+msgid "Invoice"
+msgstr ""
+
+#. module: provelo_analytic_account
+#: model:ir.model.fields,field_description:provelo_analytic_account.field_pv_financing____last_update
+#: model:ir.model.fields,field_description:provelo_analytic_account.field_pv_project____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: provelo_analytic_account
+#: model:ir.model.fields,field_description:provelo_analytic_account.field_pv_financing__write_uid
+#: model:ir.model.fields,field_description:provelo_analytic_account.field_pv_project__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: provelo_analytic_account
+#: model:ir.model.fields,field_description:provelo_analytic_account.field_pv_financing__write_date
+#: model:ir.model.fields,field_description:provelo_analytic_account.field_pv_project__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: provelo_analytic_account
+#: model:ir.model.fields,field_description:provelo_analytic_account.field_account_invoice__location_id
+#: model:ir.model.fields,field_description:provelo_analytic_account.field_pv_project__location_id
+msgid "Location"
+msgstr ""
+
+#. module: provelo_analytic_account
+#: model:ir.model.fields,field_description:provelo_analytic_account.field_pv_financing__name
+#: model:ir.model.fields,field_description:provelo_analytic_account.field_pv_project__name
+msgid "Name"
+msgstr ""
+
+#. module: provelo_analytic_account
+#: model:ir.model,name:provelo_analytic_account.model_pv_financing
+msgid "Pro Velo Financing"
+msgstr ""
+
+#. module: provelo_analytic_account
+#: model:ir.model,name:provelo_analytic_account.model_pv_project
+msgid "Pro Velo Project"
+msgstr ""
+
+#. module: provelo_analytic_account
+#: model:ir.actions.act_window,name:provelo_analytic_account.provelo_project_action
+msgid "Pro Velo Projects"
+msgstr ""
+
+#. module: provelo_analytic_account
+#: model:ir.model.fields,field_description:provelo_analytic_account.field_account_invoice__project_id
+#: model:ir.model.fields,field_description:provelo_analytic_account.field_resource_activity_type__project_id
+msgid "Project"
+msgstr ""
+
+#. module: provelo_analytic_account
+#: model_terms:ir.ui.view,arch_db:provelo_analytic_account.provelo_project_view_filter
+msgid "Projects"
+msgstr ""
+
+#. module: provelo_analytic_account
+#: model:ir.model,name:provelo_analytic_account.model_resource_location
+msgid "Resource Location"
+msgstr ""
+
+#. module: provelo_analytic_account
+#: model:ir.model,name:provelo_analytic_account.model_resource_activity_type
+msgid "Resource Type"
+msgstr ""
+
+#. module: provelo_analytic_account
+#: model:ir.model.fields,help:provelo_analytic_account.field_pv_project__allowed_financing_ids
+msgid "Restricts allowed financing for this project on the invoice."
+msgstr ""
+
+#. module: provelo_analytic_account
+#: model:ir.model,name:provelo_analytic_account.model_sale_order
+msgid "Sale Order"
+msgstr ""
+
+#. module: provelo_analytic_account
+#: model_terms:ir.ui.view,arch_db:provelo_analytic_account.provelo_financing_view_form
+msgid "provelo_financing_form"
+msgstr ""
+
+#. module: provelo_analytic_account
+#: model_terms:ir.ui.view,arch_db:provelo_analytic_account.provelo_financing_view_tree
+msgid "provelo_financing_tree"
+msgstr ""
+
+#. module: provelo_analytic_account
+#: model_terms:ir.ui.view,arch_db:provelo_analytic_account.provelo_project_view_form
+msgid "provelo_project_form"
+msgstr ""
+
+#. module: provelo_analytic_account
+#: model_terms:ir.ui.view,arch_db:provelo_analytic_account.provelo_project_view_tree
+msgid "provelo_project_tree"
+msgstr ""
+
