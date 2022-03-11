@@ -1,0 +1,156 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* spp_custom
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: spp_custom
+#: model:ir.model.fields,field_description:spp_custom.field_product_product__available_in_pos
+#: model:ir.model.fields,field_description:spp_custom.field_product_template__available_in_pos
+msgid "Available in POS"
+msgstr ""
+
+#. module: spp_custom
+#: model:ir.model.fields,field_description:spp_custom.field_product_product__sale_ok
+#: model:ir.model.fields,field_description:spp_custom.field_product_template__sale_ok
+msgid "Can be Sold"
+msgstr ""
+
+#. module: spp_custom
+#: model:ir.model.fields,help:spp_custom.field_product_product__available_in_pos
+#: model:ir.model.fields,help:spp_custom.field_product_template__available_in_pos
+msgid "Check if you want this product to appear in the Point of Sale."
+msgstr ""
+
+#. module: spp_custom
+#: model:ir.model,name:spp_custom.model_res_partner
+msgid "Contact"
+msgstr ""
+
+#. module: spp_custom
+#: model:ir.model.fields,help:spp_custom.field_product_product__uom_id
+#: model:ir.model.fields,help:spp_custom.field_product_template__uom_id
+msgid "Default unit of measure used for all stock operations."
+msgstr ""
+
+#. module: spp_custom
+#: model:ir.model.fields,help:spp_custom.field_product_product__uom_po_id
+#: model:ir.model.fields,help:spp_custom.field_product_template__uom_po_id
+msgid "Default unit of measure used for purchase orders. It must be in the same category as the default unit of measure."
+msgstr ""
+
+#. module: spp_custom
+#: model:ir.model.fields,field_description:spp_custom.field_product_product__description
+#: model:ir.model.fields,field_description:spp_custom.field_product_template__description
+msgid "Description"
+msgstr ""
+
+#. module: spp_custom
+#: model:ir.model.fields,field_description:spp_custom.field_product_product__is_foodprint_label
+#: model:ir.model.fields,field_description:spp_custom.field_product_template__is_foodprint_label
+msgid "FoodPrint Label"
+msgstr ""
+
+#. module: spp_custom
+#: model:ir.model.fields,field_description:spp_custom.field_product_product__is_gentle_price_label
+#: model:ir.model.fields,field_description:spp_custom.field_product_template__is_gentle_price_label
+msgid "Gentle Price Label"
+msgstr ""
+
+#. module: spp_custom
+#: model:ir.model.fields,help:spp_custom.field_stock_inventory__filter
+msgid "If you do an entire inventory, you can choose 'All Products' and it will prefill the inventory with the current stock.  If you only do some products  (e.g. Cycle Counting) you can choose 'Manual Selection of Products' and the system won't propose anything.  You can also let the system propose for a single product / lot /... "
+msgstr ""
+
+#. module: spp_custom
+#: model:ir.model.fields,field_description:spp_custom.field_product_template__default_code
+msgid "Internal Reference"
+msgstr ""
+
+#. module: spp_custom
+#: model:ir.model,name:spp_custom.model_stock_inventory
+msgid "Inventory"
+msgstr ""
+
+#. module: spp_custom
+#: model:ir.model.fields,field_description:spp_custom.field_stock_inventory__filter
+msgid "Inventory of"
+msgstr ""
+
+#. module: spp_custom
+#: model_terms:ir.ui.view,arch_db:spp_custom.product_template_only_form_view
+msgid "Nouveau numéro PP"
+msgstr ""
+
+#. module: spp_custom
+#: model_terms:ir.ui.view,arch_db:spp_custom.product_template_only_form_view
+msgid "Nouveau numéro fournisseurs BIO"
+msgstr ""
+
+#. module: spp_custom
+#: model_terms:ir.ui.view,arch_db:spp_custom.product_template_only_form_view
+msgid "Nouveau numéro non-BIO"
+msgstr ""
+
+#. module: spp_custom
+#: model_terms:ir.ui.view,arch_db:spp_custom.product_template_only_form_view
+msgid "Nouveau numéro non-alimentaire"
+msgstr ""
+
+#. module: spp_custom
+#: model_terms:ir.ui.view,arch_db:spp_custom.product_template_only_form_view
+msgid "Nouveau numéro producteurs BIO"
+msgstr ""
+
+#. module: spp_custom
+#: model:ir.model.fields,help:spp_custom.field_product_product__list_price
+#: model:ir.model.fields,help:spp_custom.field_product_template__list_price
+msgid "Price at which the product is sold to customers."
+msgstr ""
+
+#. module: spp_custom
+#: model:ir.model,name:spp_custom.model_product_template
+msgid "Product Template"
+msgstr ""
+
+#. module: spp_custom
+#: model:ir.model.fields,field_description:spp_custom.field_product_product__uom_po_id
+#: model:ir.model.fields,field_description:spp_custom.field_product_template__uom_po_id
+msgid "Purchase Unit of Measure"
+msgstr ""
+
+#. module: spp_custom
+#: model:ir.model.fields,field_description:spp_custom.field_product_product__list_price
+#: model:ir.model.fields,field_description:spp_custom.field_product_template__list_price
+msgid "Sales Price"
+msgstr ""
+
+#. module: spp_custom
+#: model:ir.model.fields,field_description:spp_custom.field_res_partner__skills
+#: model:ir.model.fields,field_description:spp_custom.field_res_users__skills
+msgid "Skills"
+msgstr ""
+
+#. module: spp_custom
+#: model:ir.model.fields,field_description:spp_custom.field_product_product__uom_id
+#: model:ir.model.fields,field_description:spp_custom.field_product_template__uom_id
+msgid "Unit of Measure"
+msgstr ""
+
+#. module: spp_custom
+#: code:addons/spp_custom/models/product.py:108
+#, python-format
+msgid "You have reached the limit for default code generation. Please contact your system administrator.\n"
+"\n"
+"%s"
+msgstr ""
+
