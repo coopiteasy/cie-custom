@@ -1,0 +1,413 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* provelo_resource_activity_reports
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: provelo_resource_activity_reports
+#: model:ir.model.fields,field_description:provelo_resource_activity_reports.field_resource_activity_registration__nb_accessories
+msgid "Accessory Registrations"
+msgstr ""
+
+#. module: provelo_resource_activity_reports
+#: model:ir.model.fields,field_description:provelo_resource_activity_reports.field_resource_activity_report__active
+msgid "Active"
+msgstr ""
+
+#. module: provelo_resource_activity_reports
+#: model:ir.model,name:provelo_resource_activity_reports.model_resource_activity_report
+msgid "Activities Analysis"
+msgstr ""
+
+#. module: provelo_resource_activity_reports
+#: model:ir.model.fields,field_description:provelo_resource_activity_reports.field_resource_activity_registration_report__activity_id
+#: model:ir.model.fields,field_description:provelo_resource_activity_reports.field_resource_activity_report__name
+#: model:ir.ui.menu,name:provelo_resource_activity_reports.menu_resource_activity_report_all
+#: model_terms:ir.ui.view,arch_db:provelo_resource_activity_reports.view_resource_activity_registration_report_search
+#: model_terms:ir.ui.view,arch_db:provelo_resource_activity_reports.view_resource_activity_report_form
+#: model_terms:ir.ui.view,arch_db:provelo_resource_activity_reports.view_resource_activity_report_pivot
+#: model_terms:ir.ui.view,arch_db:provelo_resource_activity_reports.view_resource_activity_report_search
+#: model_terms:ir.ui.view,arch_db:provelo_resource_activity_reports.view_resource_activity_report_tree
+msgid "Activity"
+msgstr ""
+
+#. module: provelo_resource_activity_reports
+#: model:ir.actions.act_window,name:provelo_resource_activity_reports.action_resource_activity_report_stat_all
+msgid "Activity Analysis"
+msgstr ""
+
+#. module: provelo_resource_activity_reports
+#: model_terms:ir.ui.view,arch_db:provelo_resource_activity_reports.view_resource_activity_registration_report_form
+#: model_terms:ir.ui.view,arch_db:provelo_resource_activity_reports.view_resource_activity_registration_report_pivot
+#: model_terms:ir.ui.view,arch_db:provelo_resource_activity_reports.view_resource_activity_registration_report_tree
+msgid "Activity Registrations"
+msgstr ""
+
+#. module: provelo_resource_activity_reports
+#: model:ir.actions.act_window,name:provelo_resource_activity_reports.action_resource_activity_registration_report_stat_all
+msgid "Activity Registrations Analysis"
+msgstr ""
+
+#. module: provelo_resource_activity_reports
+#: model:ir.model,name:provelo_resource_activity_reports.model_resource_activity_registration_report
+msgid "Activity Registrations Report"
+msgstr ""
+
+#. module: provelo_resource_activity_reports
+#: model:ir.model.fields,field_description:provelo_resource_activity_reports.field_resource_activity_registration_report__activity_state
+msgid "Activity State"
+msgstr ""
+
+#. module: provelo_resource_activity_reports
+#: model:ir.model.fields,field_description:provelo_resource_activity_reports.field_resource_activity_registration_report__activity_theme_id
+#: model:ir.model.fields,field_description:provelo_resource_activity_reports.field_resource_activity_report__activity_theme_id
+msgid "Activity Theme"
+msgstr ""
+
+#. module: provelo_resource_activity_reports
+#: model:ir.model.fields,field_description:provelo_resource_activity_reports.field_resource_activity_registration_report__activity_type_id
+#: model:ir.model.fields,field_description:provelo_resource_activity_reports.field_resource_activity_report__activity_type_id
+msgid "Activity Type"
+msgstr ""
+
+#. module: provelo_resource_activity_reports
+#: model:ir.model.fields,field_description:provelo_resource_activity_reports.field_resource_activity_registration_report__analytic_account_id
+#: model:ir.model.fields,field_description:provelo_resource_activity_reports.field_resource_activity_report__analytic_account_id
+msgid "Analytic Account"
+msgstr ""
+
+#. module: provelo_resource_activity_reports
+#: model:ir.model.fields,field_description:provelo_resource_activity_reports.field_resource_activity_registration__nb_bikes
+msgid "Bike Registrations"
+msgstr ""
+
+#. module: provelo_resource_activity_reports
+#: selection:resource.activity,registration_state:0
+#: selection:resource.activity.registration.report,registration_state:0
+#: selection:resource.activity.report,registration_state:0
+msgid "Booked"
+msgstr ""
+
+#. module: provelo_resource_activity_reports
+#: model:ir.model.fields,help:provelo_resource_activity_reports.field_resource_activity__registration_state
+msgid "Booked if all registrations are booked, waiting otherwise"
+msgstr ""
+
+#. module: provelo_resource_activity_reports
+#: selection:resource.activity.registration.report,activity_state:0
+#: selection:resource.activity.report,state:0
+msgid "Cancelled"
+msgstr ""
+
+#. module: provelo_resource_activity_reports
+#: model:ir.model.fields,field_description:provelo_resource_activity_reports.field_resource_activity_registration_report__date_start
+#: model:ir.model.fields,field_description:provelo_resource_activity_reports.field_resource_activity_report__date_start
+msgid "Date Start"
+msgstr ""
+
+#. module: provelo_resource_activity_reports
+#: model_terms:ir.ui.view,arch_db:provelo_resource_activity_reports.view_resource_activity_registration_report_search
+#: model_terms:ir.ui.view,arch_db:provelo_resource_activity_reports.view_resource_activity_report_search
+msgid "Day"
+msgstr ""
+
+#. module: provelo_resource_activity_reports
+#: model:ir.model.fields,field_description:provelo_resource_activity_reports.field_resource_activity_registration_report__display_name
+#: model:ir.model.fields,field_description:provelo_resource_activity_reports.field_resource_activity_report__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: provelo_resource_activity_reports
+#: selection:resource.activity.registration.report,activity_state:0
+#: selection:resource.activity.report,state:0
+msgid "Done"
+msgstr ""
+
+#. module: provelo_resource_activity_reports
+#: selection:resource.activity.registration.report,activity_state:0
+#: selection:resource.activity.report,state:0
+msgid "Draft"
+msgstr ""
+
+#. module: provelo_resource_activity_reports
+#: model_terms:ir.ui.view,arch_db:provelo_resource_activity_reports.view_resource_activity_registration_report_search
+#: model_terms:ir.ui.view,arch_db:provelo_resource_activity_reports.view_resource_activity_report_search
+msgid "Group By"
+msgstr ""
+
+#. module: provelo_resource_activity_reports
+#: model_terms:ir.ui.view,arch_db:provelo_resource_activity_reports.view_resource_activity_registration_report_search
+#: model_terms:ir.ui.view,arch_db:provelo_resource_activity_reports.view_resource_activity_report_search
+msgid "Group by day of start date"
+msgstr ""
+
+#. module: provelo_resource_activity_reports
+#: model_terms:ir.ui.view,arch_db:provelo_resource_activity_reports.view_resource_activity_registration_report_search
+#: model_terms:ir.ui.view,arch_db:provelo_resource_activity_reports.view_resource_activity_report_search
+msgid "Group by month of start date"
+msgstr ""
+
+#. module: provelo_resource_activity_reports
+#: model_terms:ir.ui.view,arch_db:provelo_resource_activity_reports.view_resource_activity_registration_report_search
+#: model_terms:ir.ui.view,arch_db:provelo_resource_activity_reports.view_resource_activity_report_search
+msgid "Group by week of start date"
+msgstr ""
+
+#. module: provelo_resource_activity_reports
+#: model_terms:ir.ui.view,arch_db:provelo_resource_activity_reports.view_resource_activity_registration_report_search
+#: model_terms:ir.ui.view,arch_db:provelo_resource_activity_reports.view_resource_activity_report_search
+msgid "Group by year of start date"
+msgstr ""
+
+#. module: provelo_resource_activity_reports
+#: model:ir.model.fields,field_description:provelo_resource_activity_reports.field_resource_activity_registration_report__id
+#: model:ir.model.fields,field_description:provelo_resource_activity_reports.field_resource_activity_report__id
+msgid "ID"
+msgstr ""
+
+#. module: provelo_resource_activity_reports
+#: model:ir.model.fields,field_description:provelo_resource_activity_reports.field_resource_activity_report__languages
+msgid "Languages"
+msgstr ""
+
+#. module: provelo_resource_activity_reports
+#: model:ir.model.fields,field_description:provelo_resource_activity_reports.field_resource_activity_registration_report____last_update
+#: model:ir.model.fields,field_description:provelo_resource_activity_reports.field_resource_activity_report____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: provelo_resource_activity_reports
+#: model:ir.model.fields,field_description:provelo_resource_activity_reports.field_resource_activity_registration_report__location_id
+#: model:ir.model.fields,field_description:provelo_resource_activity_reports.field_resource_activity_report__location_id
+msgid "Location"
+msgstr ""
+
+#. module: provelo_resource_activity_reports
+#: model_terms:ir.ui.view,arch_db:provelo_resource_activity_reports.view_resource_activity_registration_report_search
+#: model_terms:ir.ui.view,arch_db:provelo_resource_activity_reports.view_resource_activity_report_search
+msgid "Month"
+msgstr ""
+
+#. module: provelo_resource_activity_reports
+#: model:ir.model.fields,field_description:provelo_resource_activity_reports.field_resource_activity_registration_report__need_delivery
+#: model:ir.model.fields,field_description:provelo_resource_activity_reports.field_resource_activity_report__need_delivery
+msgid "Need Delivery?"
+msgstr ""
+
+#. module: provelo_resource_activity_reports
+#: model:ir.model.fields,field_description:provelo_resource_activity_reports.field_resource_activity_registration_report__need_guide
+#: model:ir.model.fields,field_description:provelo_resource_activity_reports.field_resource_activity_report__need_guide
+msgid "Need Guide?"
+msgstr ""
+
+#. module: provelo_resource_activity_reports
+#: model_terms:ir.ui.view,arch_db:provelo_resource_activity_reports.view_resource_activity_registration_report_search
+#: model_terms:ir.ui.view,arch_db:provelo_resource_activity_reports.view_resource_activity_report_search
+msgid "Not Cancelled"
+msgstr ""
+
+#. module: provelo_resource_activity_reports
+#: model_terms:ir.ui.view,arch_db:provelo_resource_activity_reports.view_resource_activity_registration_report_search
+#: model_terms:ir.ui.view,arch_db:provelo_resource_activity_reports.view_resource_activity_report_search
+msgid "Not Draft"
+msgstr ""
+
+#. module: provelo_resource_activity_reports
+#: model:ir.model.fields,field_description:provelo_resource_activity_reports.field_resource_activity_registration_report__nb_accessories
+msgid "Number of Accessories"
+msgstr ""
+
+#. module: provelo_resource_activity_reports
+#: model:ir.model.fields,field_description:provelo_resource_activity_reports.field_resource_activity_registration_report__nb_bikes
+msgid "Number of Bikes"
+msgstr ""
+
+#. module: provelo_resource_activity_reports
+#: model:ir.model.fields,field_description:provelo_resource_activity_reports.field_resource_activity_registration_report__nb_participants
+msgid "Number of Participants"
+msgstr ""
+
+#. module: provelo_resource_activity_reports
+#: model:ir.model.fields,field_description:provelo_resource_activity_reports.field_resource_activity_registration_report__nb_participants_bringing_bike
+msgid "Number of Participants Bringing Bike"
+msgstr ""
+
+#. module: provelo_resource_activity_reports
+#: model:ir.model.fields,field_description:provelo_resource_activity_reports.field_resource_activity_registration_report__nb_participants_renting_bike
+msgid "Number of Participants Renting Bike"
+msgstr ""
+
+#. module: provelo_resource_activity_reports
+#: model:ir.model.fields,field_description:provelo_resource_activity_reports.field_resource_activity_report__nb_accessories
+msgid "Number of accessories"
+msgstr ""
+
+#. module: provelo_resource_activity_reports
+#: model:ir.model.fields,field_description:provelo_resource_activity_reports.field_resource_activity_report__nb_bikes
+msgid "Number of bikes"
+msgstr ""
+
+#. module: provelo_resource_activity_reports
+#: model:ir.model.fields,field_description:provelo_resource_activity_reports.field_resource_activity_report__nb_participants
+msgid "Number of participants"
+msgstr ""
+
+#. module: provelo_resource_activity_reports
+#: selection:resource.activity.registration.report,registration_state:0
+msgid "Option"
+msgstr ""
+
+#. module: provelo_resource_activity_reports
+#: model:ir.model.fields,field_description:provelo_resource_activity_reports.field_resource_activity_report__nb_participants_bringing_bike
+msgid "Participants bringing bikes"
+msgstr ""
+
+#. module: provelo_resource_activity_reports
+#: model:ir.model.fields,field_description:provelo_resource_activity_reports.field_resource_activity_report__nb_participants_renting_bike
+msgid "Participants renting bikes"
+msgstr ""
+
+#. module: provelo_resource_activity_reports
+#: model:ir.model.fields,field_description:provelo_resource_activity_reports.field_resource_activity_registration_report__product_id
+msgid "Product"
+msgstr ""
+
+#. module: provelo_resource_activity_reports
+#: model:ir.model.fields,field_description:provelo_resource_activity_reports.field_resource_activity_registration_report__product_categ_id
+msgid "Product Category"
+msgstr ""
+
+#. module: provelo_resource_activity_reports
+#: model:ir.model.fields,field_description:provelo_resource_activity_reports.field_resource_activity_registration_report__project_id
+#: model:ir.model.fields,field_description:provelo_resource_activity_reports.field_resource_activity_report__project_id
+msgid "Project"
+msgstr ""
+
+#. module: provelo_resource_activity_reports
+#: selection:resource.activity.registration.report,activity_state:0
+#: selection:resource.activity.report,state:0
+msgid "Quotation"
+msgstr ""
+
+#. module: provelo_resource_activity_reports
+#: model:ir.model.fields,field_description:provelo_resource_activity_reports.field_resource_activity_registration_report__name
+msgid "Registration"
+msgstr ""
+
+#. module: provelo_resource_activity_reports
+#: model:ir.model.fields,field_description:provelo_resource_activity_reports.field_resource_activity__registration_state
+#: model:ir.model.fields,field_description:provelo_resource_activity_reports.field_resource_activity_registration_report__registration_state
+#: model:ir.model.fields,field_description:provelo_resource_activity_reports.field_resource_activity_report__registration_state
+msgid "Registration State"
+msgstr ""
+
+#. module: provelo_resource_activity_reports
+#: model:ir.ui.menu,name:provelo_resource_activity_reports.menu_resource_activity_registration_report_all
+msgid "Registrations"
+msgstr ""
+
+#. module: provelo_resource_activity_reports
+#: model:ir.model.fields,field_description:provelo_resource_activity_reports.field_resource_activity_registration__renting_days
+#: model:ir.model.fields,field_description:provelo_resource_activity_reports.field_resource_activity_registration_report__renting_days
+#: model:ir.model.fields,field_description:provelo_resource_activity_reports.field_resource_activity_report__renting_days
+msgid "Renting Days"
+msgstr ""
+
+#. module: provelo_resource_activity_reports
+#: model:ir.model.fields,field_description:provelo_resource_activity_reports.field_resource_activity_registration__renting_hours
+#: model:ir.model.fields,field_description:provelo_resource_activity_reports.field_resource_activity_registration_report__renting_hours
+#: model:ir.model.fields,field_description:provelo_resource_activity_reports.field_resource_activity_report__renting_hours
+msgid "Renting Hours"
+msgstr ""
+
+#. module: provelo_resource_activity_reports
+#: model:ir.ui.menu,name:provelo_resource_activity_reports.menu_resource_activity_reports
+msgid "Reports"
+msgstr ""
+
+#. module: provelo_resource_activity_reports
+#: model:ir.model,name:provelo_resource_activity_reports.model_resource_activity
+msgid "Resource Activity"
+msgstr ""
+
+#. module: provelo_resource_activity_reports
+#: model:ir.model,name:provelo_resource_activity_reports.model_resource_activity_registration
+msgid "Resource Activity Registration"
+msgstr ""
+
+#. module: provelo_resource_activity_reports
+#: model:ir.model.fields,field_description:provelo_resource_activity_reports.field_resource_activity_registration_report__resource_categ_id
+msgid "Resource Category"
+msgstr ""
+
+#. module: provelo_resource_activity_reports
+#: selection:resource.activity.registration.report,activity_state:0
+#: selection:resource.activity.report,state:0
+msgid "Sale"
+msgstr ""
+
+#. module: provelo_resource_activity_reports
+#: model:ir.model.fields,field_description:provelo_resource_activity_reports.field_resource_activity_report__state
+msgid "Status"
+msgstr ""
+
+#. module: provelo_resource_activity_reports
+#: model:ir.model.fields,field_description:provelo_resource_activity_reports.field_resource_activity_report__total_untaxed_amount
+msgid "Total Amount excl. tax"
+msgstr ""
+
+#. module: provelo_resource_activity_reports
+#: model:ir.model.fields,field_description:provelo_resource_activity_reports.field_resource_activity_report__total_taxed_amount
+msgid "Total Amount incl. tax"
+msgstr ""
+
+#. module: provelo_resource_activity_reports
+#: selection:resource.activity,registration_state:0
+#: selection:resource.activity.report,registration_state:0
+msgid "Waiting"
+msgstr ""
+
+#. module: provelo_resource_activity_reports
+#: model_terms:ir.ui.view,arch_db:provelo_resource_activity_reports.view_resource_activity_registration_report_search
+#: model_terms:ir.ui.view,arch_db:provelo_resource_activity_reports.view_resource_activity_report_search
+msgid "Week"
+msgstr ""
+
+#. module: provelo_resource_activity_reports
+#: model_terms:ir.ui.view,arch_db:provelo_resource_activity_reports.view_resource_activity_registration_report_search
+#: model_terms:ir.ui.view,arch_db:provelo_resource_activity_reports.view_resource_activity_report_search
+msgid "Year"
+msgstr ""
+
+#. module: provelo_resource_activity_reports
+#: model_terms:ir.ui.view,arch_db:provelo_resource_activity_reports.view_resource_activity_registration_report_search
+#: model_terms:ir.ui.view,arch_db:provelo_resource_activity_reports.view_resource_activity_report_search
+msgid "activity type"
+msgstr ""
+
+#. module: provelo_resource_activity_reports
+#: model_terms:ir.ui.view,arch_db:provelo_resource_activity_reports.view_resource_activity_registration_report_search
+#: model_terms:ir.ui.view,arch_db:provelo_resource_activity_reports.view_resource_activity_report_search
+msgid "analytic account"
+msgstr ""
+
+#. module: provelo_resource_activity_reports
+#: model_terms:ir.ui.view,arch_db:provelo_resource_activity_reports.view_resource_activity_registration_report_search
+#: model_terms:ir.ui.view,arch_db:provelo_resource_activity_reports.view_resource_activity_report_search
+msgid "location"
+msgstr ""
+
+#. module: provelo_resource_activity_reports
+#: model_terms:ir.ui.view,arch_db:provelo_resource_activity_reports.view_resource_activity_registration_report_search
+msgid "resource category"
+msgstr ""
+
