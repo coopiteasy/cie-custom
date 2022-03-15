@@ -30,6 +30,7 @@
         "views/hr_timesheet_sheet_view.xml",
         "views/location_filters.xml",
         "views/res_partner_views.xml",
+        "views/sale_order_views.xml",
         "report/hr_leave_report.xml",
         "report/layout.xml",
         "views/hr_kanban_views_employees.xml",
