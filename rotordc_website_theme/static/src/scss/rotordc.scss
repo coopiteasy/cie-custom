@@ -1,0 +1,257 @@
+/* Rotor custom stylesheet */
+
+body,
+p,
+a,
+.text-success {
+    font-family: Open Sans;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+    font-family: Open Sans, Montserrat, "Helvetica Neue", Arial, sans-serif,
+        "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+/*navbar item colors*/
+.o_main_navbar {
+    height: 46px;
+    border-bottom: 1px solid #d58622;
+    background-color: #565656;
+}
+a.nav-link {
+    font-family: Montserrat, Open sans, arial, sans serif;
+}
+#oe_main_menu_navbar .o_menu_systray > li > a[data-action="edit"],
+#oe_main_menu_navbar .o_menu_systray > li > a[data-action="translate"],
+#oe_main_menu_navbar .o_menu_systray > li > a.css_edit_dynamic {
+    color: #ffffff;
+    background-color: #d58622;
+    border-color: #d58622;
+}
+.o_main_navbar > ul > li > a:hover,
+.o_main_navbar > ul > li > label:hover,
+#oe_main_menu_navbar .o_menu_systray > li > a[data-action="edit"]:hover {
+    background-color: gold;
+}
+
+/* cleaner scrolls for mobile */
+@media (max-width: 767.92px) {
+    .pagination li {
+        display: block;
+        margin: 15px auto;
+    }
+}
+
+.fa {
+    font: normal normal normal 14px/1 FontAwesome;
+}
+/* icons in general ..  trashcan and phone are too small !! individual styling ? */
+
+/* Header & Nav */
+header .navbar-brand.logo img {
+    height: 5rem;
+}
+
+.text-primary {
+    color: #d58622 !important;
+} /*left nav arrow bullets*/
+.text-success {
+    color: grey !important;
+} /* attention catch - nolink */
+
+a {
+    color: #d58622;
+}
+a:hover {
+    color: #d58622;
+}
+
+/*prevnext bar in thumb display mode*/
+.page-link {
+    color: #d58622;
+}
+.page-item.active .page-link {
+    background-color: #d58622;
+    border-color: #d58622;
+}
+
+.o_form_view .oe_button_box .oe_stat_button .o_button_icon {
+    color: grey;
+} /* globe in wire transfer page*/
+
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+    color: #ffffff;
+    background-color: #d58622;
+}
+
+.btn-primary {
+    color: #ffffff;
+    background-color: #d58622;
+    border-color: #d58622;
+} /*big buttons */
+.btn-primary.disabled,
+.btn-primary:disabled {
+    color: #fff;
+    background-color: #d58622;
+    border-color: #d58622;
+}
+.btn-primary:hover,
+.btn-primary.disabled:hover {
+    color: #ffffff;
+    background-color: grey;
+    border-color: grey;
+}
+.btn-secondary {
+    color: #ffffff;
+    background-color: #d58622;
+    border-color: #d58622;
+} /* small buttons/actions*/
+
+.btn-secondary:hover {
+    color: #ffffff;
+    background-color: gold;
+    border-color: gold;
+}
+.btn-gamma {
+    color: #ffffff;
+    background-color: #d58622;
+    border-color: #d58622;
+} /* taking control of the gamma color :/ */
+.btn-gamma:hover {
+    color: #ffffff;
+    background-color: gold;
+    border-color: gold;
+}
+.badge-primary,
+.o_mail_systray_item .o_notification_counter {
+    color: #ffffff;
+    background-color: #d58622;
+} /*icon buttons*/
+.badge-secondary {
+    color: #ffffff;
+    background-color: grey;
+} /*text bits*/
+
+.btn-link {
+    color: grey;
+    background-color: transparent; /* plus, minus actions */
+}
+.btn-link:hover {
+    color: gold;
+}
+
+/* product list styling */
+/*nonfull images ?*/
+.oe_product .oe_product_image {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    text-align: center;
+}
+/*full images*/
+.oe_product .oe_product_image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 4;
+    max-width: 100%;
+    max-height: 100%;
+    margin: auto;
+}
+/*full images on mobile >=400px*/
+@media (max-width: 400px) {
+    #products_grid .oe_product.oe_grid {
+        height: 350px;
+    }
+}
+/*table cell borders*/
+.oe_product {
+    border: 0px solid #eeeeee;
+}
+/*table cell height for height 2 (dirty...) */
+@media (min-width: 1200px) {
+    .oe-height-2 {
+        height: 350px !important;
+    }
+}
+@media (min-width: 767.98px) {
+    .oe-height-2 {
+        height: 300px !important;
+    }
+}
+/*text overlay on thumbnail */
+.oe_product section {
+    background-color: #fff;
+}
+/*mobile specific*/
+@media (max-width: 767.98px) {
+    #products_grid .oe_product.oe_grid section {
+        background: #fff;
+        width: 320px;
+        margin: 0 auto;
+        display: block;
+        bottom: -1.5em;
+    }
+}
+/*dropdown sortby*/
+.btn-secondary:not(:disabled):not(.disabled):active,
+.btn-secondary:not(:disabled):not(.disabled).active,
+.show > .btn-secondary.dropdown-toggle {
+    color: #ffffff;
+    background-color: #d58622;
+    border-color: #d58622;
+}
+
+/*cart progress wizard styling*/
+.progress-wizard
+    .progress-wizard-step.complete:hover:not(.disabled)
+    .progress-wizard-steplabel {
+    color: gold;
+}
+.progress-wizard .progress-wizard-step.complete .progress-wizard-steplabel,
+.progress-wizard .progress-wizard-step.complete .progress-wizard-dot::after,
+.progress-wizard
+    .progress-wizard-step.complete:hover:not(.disabled)
+    .progress-wizard-dot::after {
+    background: white;
+    color: gold;
+}
+.progress-wizard .progress-wizard-step.active .progress-wizard-dot {
+    background: #d58622;
+    box-shadow: 0 0 0 0.1875rem white, 0 0 0 0.25rem #d58622;
+}
+
+/*card payment specifics*/
+.bg-info {
+    background-color: grey !important;
+    color: #ffffff;
+}
+.bg-info-light {
+    background-color: #eee;
+}
+.alert-info {
+    color: white;
+    background-color: #d58622;
+    border-color: #d58622enrod;
+}
+
+/* weird but necessary fixes*/
+
+/*'pay with' items */
+.o_payment_form .payment_option_name {
+    font-family: Montserrat;
+}
