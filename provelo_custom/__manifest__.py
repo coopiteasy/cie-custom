@@ -7,8 +7,10 @@
     "version": "12.0.1.0.1",
     "depends": [
         "account",
+        "crm",
         "sale",
         "resource_activity",
+        "hr_contract",
         "hr_holidays",
         "hr_timesheet_sheet",
         "hr_timesheet_activity_begin_end",
@@ -23,7 +25,10 @@
     "website": "https://coopiteasy.be",
     "summary": "Pro Velo customizations",
     "data": [
+        "security/security.xml",
+        "security/ir.model.access.csv",
         "views/account_payment_view.xml",
+        "views/hr_contract_views.xml",
         "views/hr_holidays_view.xml",
         "views/hr_leave_report_views.xml",
         "views/hr_leave_views.xml",
@@ -35,8 +40,6 @@
         "views/hr_kanban_views_employees.xml",
         # "report/available_holidays_view.xml", fixme
         "report/report_invoice.xml",
-        "security/security.xml",
-        "security/ir.model.access.csv",
         "wizard/hr_holidays_summary_department_view.xml",
         "data/data.xml",
         "data/sftp.xml",
