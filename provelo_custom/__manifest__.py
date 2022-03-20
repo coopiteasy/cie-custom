@@ -4,7 +4,7 @@
 
 {
     "name": "Pro Velo Customizations",
-    "version": "12.0.1.0.1",
+    "version": "12.0.1.1.0",
     "depends": [
         "account",
         "crm",
