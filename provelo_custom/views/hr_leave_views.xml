@@ -19,4 +19,22 @@
         <field name="view_mode">pivot</field>
         <field name="view_id" ref="hr_holidays.view_holiday_pivot" />
     </record>
+
+    <record model="ir.ui.view" id="view_hr_holidays_filter">
+        <field name="name">hr.holidays.filter</field>
+        <field name="model">hr.leave</field>
+        <field name="inherit_id" ref="hr_holidays.view_hr_holidays_filter" />
+        <field name="arch" type="xml">
+
+            <filter name="activities_overdue" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </filter>
+            <filter name="activities_today" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </filter>
+            <filter name="activities_upcoming_all" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </filter>
+        </field>
+    </record>
 </odoo>
