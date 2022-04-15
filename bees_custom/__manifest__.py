@@ -5,7 +5,7 @@
     "name": "BEES Customizations",
     "version": "12.0.1.0.1",
     "depends": [
-        "beesdoo_account",
+        "account_invoice_date_required",
         "beesdoo_product_info_screen",
         "pos_mail_receipt",
     ],
