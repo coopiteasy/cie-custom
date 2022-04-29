@@ -21,9 +21,7 @@ class AccountAnalyticAccount(models.Model):
         # may lead to performance issues. See with time.
         for account in self:
             one_month_ago = date.today() - timedelta(days=30)
-            recent_lines = account.line_ids.filtered(
-                lambda l: l.date >= one_month_ago
-            )
+            recent_lines = account.line_ids.filtered(lambda l: l.date >= one_month_ago)
             account.line_count = len(recent_lines)
 
     @api.model
