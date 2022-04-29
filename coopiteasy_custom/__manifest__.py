@@ -10,7 +10,7 @@
     "author": "Coop IT Easy SCRLfs",
     "license": "AGPL-3",
     "category": "",
-    "website": "www.coopiteasy.be",
+    "website": "https://coopiteasy.be",
     "summary": """
         Specifics customizations for Coop IT Easy
     """,
