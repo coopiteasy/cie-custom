@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+     Copyright 2019 Coop IT Easy
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
+-->
+<odoo>
+    <record id="cie_compute_aaa_line_count_cron" model="ir.cron">
+        <field name="name">Compute line on analytic account (over last month)</field>
+        <field name="model_id" ref="model_account_analytic_account" />
+        <field name="active" eval="True" />
+        <field name="interval_number">1</field>
+        <field name="interval_type">days</field>
+        <field name="numbercall">-1</field> <!-- don't limit the number of calls -->
+        <field name="doall" eval="False" />
+        <field name="code">model.cron_compute_line_count()</field>
+        <field name="args">()</field>
+    </record>
+</odoo>
