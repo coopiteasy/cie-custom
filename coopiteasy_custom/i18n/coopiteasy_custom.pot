@@ -1,0 +1,68 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* coopiteasy_custom
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: coopiteasy_custom
+#: model:ir.model,name:coopiteasy_custom.model_account_analytic_account
+msgid "Analytic Account"
+msgstr ""
+
+#. module: coopiteasy_custom
+#: model:ir.model.fields,field_description:coopiteasy_custom.field_project_task__author_id
+msgid "Author"
+msgstr ""
+
+#. module: coopiteasy_custom
+#: model:ir.actions.server,name:coopiteasy_custom.cie_compute_aaa_line_count_cron_ir_actions_server
+#: model:ir.cron,cron_name:coopiteasy_custom.cie_compute_aaa_line_count_cron
+#: model:ir.cron,name:coopiteasy_custom.cie_compute_aaa_line_count_cron
+msgid "Compute line on analytic account (over last month)"
+msgstr ""
+
+#. module: coopiteasy_custom
+#: model:ir.model.fields,field_description:coopiteasy_custom.field_account_analytic_account__line_count
+msgid "Line Count"
+msgstr ""
+
+#. module: coopiteasy_custom
+#: model:ir.model.fields,field_description:coopiteasy_custom.field_project_task__link_task_ids
+#: model_terms:ir.ui.view,arch_db:coopiteasy_custom.view_task_form2
+msgid "Linked Tasks"
+msgstr ""
+
+#. module: coopiteasy_custom
+#: model:ir.model.fields,field_description:coopiteasy_custom.field_project_task__pr_uri
+msgid "PR URI"
+msgstr ""
+
+#. module: coopiteasy_custom
+#: model:ir.model.fields,field_description:coopiteasy_custom.field_project_task__int_priority
+msgid "Priority"
+msgstr ""
+
+#. module: coopiteasy_custom
+#: model:ir.model.fields,field_description:coopiteasy_custom.field_project_task__reviewer_id
+msgid "Reviewer"
+msgstr ""
+
+#. module: coopiteasy_custom
+#: model:ir.model,name:coopiteasy_custom.model_project_task
+msgid "Task"
+msgstr ""
+
+#. module: coopiteasy_custom
+#: model:ir.model.fields,field_description:coopiteasy_custom.field_project_task__tester_id
+msgid "Tester"
+msgstr ""
+
