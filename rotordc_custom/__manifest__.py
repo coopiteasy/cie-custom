@@ -11,10 +11,12 @@
     "license": "AGPL-3",
     "application": False,
     "depends": [
+        "product",
         "website_sale",
     ],
     "excludes": [],
     "data": [
+        "report/productlabel.xml",
         "views/templates.xml",
     ],
     "demo": [],
