@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template id="optional_product_items" inherit_id="sale.optional_product_items">
+        <xpath expr="//td[hasclass('td-img')]" position="inside">
+            <input
+                type="hidden"
+                class="product_categ_id"
+                t-att-value="product.categ_id.id"
+            />
+        </xpath>
+    </template>
+</odoo>
