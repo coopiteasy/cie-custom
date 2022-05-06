@@ -14,6 +14,26 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. module: rotordc_custom
+#: model_terms:ir.ui.view,arch_db:rotordc_custom.report_simple_label_rotor
+msgid "<span class=\"text-muted\">No barcode available</span>"
+msgstr ""
+
+#. module: rotordc_custom
+#: model_terms:ir.ui.view,arch_db:rotordc_custom.report_simple_label_rotor
+msgid "<strong>Price:</strong>"
+msgstr ""
+
+#. module: rotordc_custom
+#: model_terms:ir.ui.view,arch_db:rotordc_custom.report_simple_label_rotor
+msgid "Barcode"
+msgstr ""
+
+#. module: rotordc_custom
+#: model:ir.actions.report,name:rotordc_custom.report_product_label_rotor
+msgid "Rotor Product Label (PDF)"
+msgstr ""
+
+#. module: rotordc_custom
 #: model_terms:ir.ui.view,arch_db:rotordc_custom.product
 msgid "barcode:"
 msgstr ""
