@@ -17,7 +17,24 @@ Custom modules for Coop IT Easy's clients.
 
 [//]: # (addons)
 
-This part will be replaced when running the oca-gen-addons-table script from OCA/maintainer-tools.
+Available addons
+----------------
+addon | version | maintainers | summary
+--- | --- | --- | ---
+[account_invoice_pos_already_paid](account_invoice_pos_already_paid/) | 12.0.1.0.0 |  | Remove sentence about payment communication from invoice based on the account journal
+[bablmarket_custom](bablmarket_custom/) | 12.0.1.0.0 |  | Specifics customizations for Bablmarket
+[bees_custom](bees_custom/) | 12.0.1.0.1 |  | Specifics customizations for BEES coop.
+[coopiteasy_custom](coopiteasy_custom/) | 12.0.1.0.0 |  | Specifics customizations for Coop IT Easy
+[foodhub_custom](foodhub_custom/) | 12.0.1.1.0 |  | Foodhub customizations
+[foodhub_label_custom](foodhub_label_custom/) | 12.0.1.0.0 |  | Additional fields for product labels
+[lesptitspots_worker_status](lesptitspots_worker_status/) | 12.0.1.0.0 |  | Worker status management specific to Les P'tit Pots.
+[provelo_analytic_account](provelo_analytic_account/) | 12.0.1.0.0 |  | Match BOB analytical accounts.
+[provelo_custom](provelo_custom/) | 12.0.1.3.0 |  | Pro Velo customizations
+[provelo_resource_activity_reports](provelo_resource_activity_reports/) | 12.0.1.0.0 |  | Reports for resource activities
+[rotordc_custom](rotordc_custom/) | 12.0.1.1.0 |  | Customization for RotorDC
+[rotordc_report_picking_huge_sale_order](rotordc_report_picking_huge_sale_order/) | 12.0.1.0.0 |  | At the bottom of the Picking Operations report, display the sale order in huge text.
+[rotordc_website_theme](rotordc_website_theme/) | 12.0.1.0.0 |  | Website theme for RotorDC.
+[spp_custom](spp_custom/) | 12.0.1.0.1 |  | Specifics customizations for SPP
 
 [//]: # (end addons)
 
