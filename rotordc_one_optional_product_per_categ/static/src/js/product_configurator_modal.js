@@ -7,15 +7,6 @@ odoo.define("rotordc_one_optional_product_per_categ.o_p_modal", function (requir
         _getCategId: function ($element) {
             return $element.find("input.product_categ_id").val();
         },
-        _categIdFromProductId: function (product_id) {
-            var $product = this.$modal.find(`input.product_id[value=${product_id}]`);
-            if ($product === null) {
-                // FIXME: error handling idk
-                return undefined;
-            }
-            $product = $product.parents(".js_product:first");
-            return this._getCategId($product);
-        },
         _onAddOption: function ($modal, $parent, productTemplateId) {
             var categ_id = this._getCategId($parent);
             var self = this;
