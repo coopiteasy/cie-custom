@@ -19,6 +19,7 @@
     "data": [
         "views/assets.xml",
         "views/sale_product_configurator_templates.xml",
+        "views/templates.xml",
     ],
     "demo": [],
     "qweb": [],

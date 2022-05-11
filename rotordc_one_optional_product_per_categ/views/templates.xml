@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template id="missing_categories" name="Incomplete order">
+        <t t-call="website.layout">
+            <div id="wrap">
+                <div class="container oe_website_sale">
+                    <h2 class="o_page_header mt8">Your order is incomplete</h2>
+                    <p
+                    >The order checkout was interrupted because your order is not complete. You added one or more products to your cart that are not completely configured. The products are listed below together with the configurations that are missing.</p>
+                    <t t-foreach="order_line_unused_map" t-as="line">
+                        <div>
+                            <t t-call="website_sale.cart_line_product_link">
+                                <strong t-field="line.name_short" />
+                            </t>
+                            <br />
+                            Missing categories:
+                            <ul>
+                                <t t-foreach="line_value" t-as="categ">
+                                    <li><t t-esc="categ.name" /></li>
+                                </t>
+                            </ul>
+                            <br />
+                        </div>
+                    </t>
+                    <p>In order to rectify this problem, take the following steps:</p>
+                    <ol>
+                        <li>Go to <a
+                                href="/shop/cart/"
+                            >your cart</a> and remove the above listed products.</li>
+                        <li
+                        >Re-add the products. When you do, make sure to also add any available 'Optional Products'.</li>
+                        <li>Try checking out again.</li>
+                    </ol>
+                    <p>If this problem persists, please contact us.</p>
+                </div>
+            </div>
+
+        </t>
+    </template>
+
+</odoo>
