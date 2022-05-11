@@ -14,6 +14,7 @@
     "depends": [
         "sale",
         "web",
+        "website_sale",
     ],
     "excludes": [],
     "data": [
