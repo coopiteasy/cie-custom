@@ -2,9 +2,9 @@
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
 {
-    "name": "RotorDC One Optional Product Per Category",
+    "name": "RotorDC Optional Product",
     "summary": """
-        Only allow one optional product in the eCommerce per internal category.""",
+        Custom modifications regarding RotorDC's use of optional products.""",
     "version": "12.0.1.0.0",
     "category": "Sales",
     "website": "https://coopiteasy.be",
