@@ -1,4 +1,4 @@
-odoo.define("rotordc_one_optional_product_per_categ.o_p_modal", function (require) {
+odoo.define("rotordc_optional_product.OptionalProductsModal", function (require) {
     "use strict";
 
     var OptionalProductsModal = require("sale.OptionalProductsModal");

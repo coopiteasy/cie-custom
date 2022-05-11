@@ -53,7 +53,7 @@ class WebsiteSaleDelivery(WebsiteSale):
 
         if result:
             return request.render(
-                "rotordc_one_optional_product_per_categ.missing_categories",
+                "rotordc_optional_product.missing_categories",
                 {
                     "order_line_unused_map": result,
                 },

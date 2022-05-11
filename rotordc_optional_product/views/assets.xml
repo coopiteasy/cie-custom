@@ -8,7 +8,7 @@
         <xpath expr="script[last()]" position="after">
             <script
                 type="text/javascript"
-                src="/rotordc_one_optional_product_per_categ/static/src/js/product_configurator_modal.js"
+                src="/rotordc_optional_product/static/src/js/product_configurator_modal.js"
             />
         </xpath>
     </template>
