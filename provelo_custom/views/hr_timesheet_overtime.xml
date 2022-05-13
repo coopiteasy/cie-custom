@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+    Copyright 2022 Coop IT Easy SCRLfs
+    License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
+-->
+<odoo>
+    <record model="ir.ui.view" id="hr_timesheet_overtime_form_view">
+        <field name="name">hr.timesheet.overtime.form (in one_to_one_test)</field>
+        <field name="model">hr.timesheet.overtime</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field
+                            name="employee_id"
+                            attrs="{'readonly': [('id', '!=', False)]}"
+                        />
+                        <field name="initial_overtime" widget="float_time" />
+                        <field name="total_overtime" widget="float_time" />
+                        <field name="overtime_start_date" />
+                    </group>
+                </sheet>
+                <div class="oe_chatter" />
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="hr_timesheet_overtime_search_view">
+        <field name="name">hr.timesheet.overtime.search (in one_to_one_test)</field>
+        <field name="model">hr.timesheet.overtime</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="employee_id" />
+            </search>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="hr_timesheet_overtime_tree_view">
+        <field name="name">hr.timesheet.overtime.tree (in one_to_one_test)</field>
+        <field name="model">hr.timesheet.overtime</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="employee_id" />
+                <field name="initial_overtime" widget="float_time" />
+                <field name="total_overtime" widget="float_time" />
+                <field name="overtime_start_date" />
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="hr_timesheet_overtime_act_window">
+        <field name="name">Overtime</field>
+        <field name="res_model">hr.timesheet.overtime</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[]</field>
+        <field name="context">{}</field>
+    </record>
+
+    <record model="ir.ui.menu" id="hr_timesheet_overtime_menu">
+        <field name="name">Overtime per Employee</field>
+        <field
+            name="parent_id"
+            ref="hr_timesheet_overtime.menu_hr_timesheet_overtime"
+        />
+        <field name="action" ref="hr_timesheet_overtime_act_window" />
+        <field name="sequence" eval="16" />
+    </record>
+</odoo>
