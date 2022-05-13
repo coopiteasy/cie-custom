@@ -4,7 +4,7 @@
 
 {
     "name": "Pro Velo Customizations",
-    "version": "12.0.1.3.0",
+    "version": "12.0.1.4.0",
     "depends": [
         "account",
         "crm",
@@ -12,8 +12,9 @@
         "resource_activity",
         "hr_contract",
         "hr_holidays",
-        "hr_timesheet_sheet",
         "hr_timesheet_activity_begin_end",
+        "hr_timesheet_overtime",
+        "hr_timesheet_sheet",
         "l10n_be_invoice_bba",
         "csv_export_partner",
         "csv_export_invoice",
@@ -32,6 +33,7 @@
         "views/hr_holidays_view.xml",
         "views/hr_leave_report_views.xml",
         "views/hr_leave_views.xml",
+        "views/hr_timesheet_overtime.xml",
         "views/hr_timesheet_sheet_view.xml",
         "views/location_filters.xml",
         "views/res_partner_views.xml",

@@ -15,3 +15,6 @@
 * on invoice report: mentions bank account of location
 * on invoice report: hides 'comment' and 'origin' fields
 * make project name translatable
+* define the ``hr.timesheet.overtime`` model and views to allow to list and
+  edit overtime properties with custom record rules, allowing supervisors to
+  access these values for their subordinates.
