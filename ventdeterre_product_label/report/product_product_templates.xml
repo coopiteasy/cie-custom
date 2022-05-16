@@ -11,6 +11,17 @@
         <xpath expr="//tbody//img[3]" position="attributes">
             <attribute name="style">display: none;</attribute>
         </xpath>
+        <xpath expr="//*[@t-field='product.default_code']/../.." position="replace">
+            <td style="border: 2px solid black;width: 2.63in;" colspan="2" class="col-xs-8 danger">
+                <strong t-field="product.name" name="name" />
+            </td>
+        </xpath>
+        <xpath expr="//tbody//span[@t-field='product.barcode']" position="attributes">
+            <attribute name="style">display: none;</attribute>
+        </xpath>
+        <xpath expr="//tbody//span[@t-field='product.barcode']" position="after">
+            <span t-field="product.default_code" name="default_code" />
+        </xpath>
     </template>
 
 </odoo>
