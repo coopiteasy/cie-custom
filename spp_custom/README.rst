@@ -30,6 +30,7 @@ Specifics customizations for SPP
   - display 200 lines by defaut on line lists
 * track_visibility on product.template fields: list_price, uom_id, uom_po_id, default_code, sale_ok, available_in_pos, description
 * boolean fields is_foodprint_label, is_gentle_price_label
+* show product flagged as is_foodprint_label on the PosTicket
 
 **Table of contents**
 
@@ -57,7 +58,11 @@ Authors
 Contributors
 ~~~~~~~~~~~~
 
-* Robin Keunen <robin@coopiteasy.be>
+* `Coop IT Easy SCRLfs <https://coopiteasy.be>`_:
+
+  * Robin Keunen <robin@coopiteasy.be>
+  * Rémy Taymans <remy@coopiteasy.be>
+
 * Christian Grigis <cgrigis@ieee.org>
 
 Maintainers
