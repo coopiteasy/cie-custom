@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates id="template" xml:space="preserve">
+
+    <t t-extend="PosTicket">
+        <t t-jquery=".receipt-orderlines tr td:first-child" t-operation="append">
+            <span
+                class="is_foodprint_label"
+                t-if="orderline.get_product().is_foodprint_label"
+            >[F]</span>
+        </t>
+        <t t-jquery=".receipt-total" t-operation="after">
+            <table class="receipt-total-foodprint">
+                <tr>
+                    <td>Including Foodprint [F] products:</td>
+                    <td class="pos-right-align">
+                        <t
+                            t-esc="widget.format_currency(order.get_total_foodprint_amount())"
+                        />
+                    </td>
+                </tr>
+            </table>
+        </t>
+    </t>
+
+    <t t-extend="XmlReceipt">
+        <t t-jquery=".orderlines line left" t-operation="append">
+            <t
+                class="is_foodprint_label"
+                t-if="orderline.get_product().is_foodprint_label"
+            >[F]</t>
+        </t>
+        <t t-jquery="total" t-operation="after">
+            <line class="total_foodprint_amount">
+                <left>Including Foodprint [F] products:</left>
+                <right><t
+                        t-esc="widget.format_currency(receipt.total_foodprint_amount)"
+                    /></right>
+            </line>
+        </t>
+    </t>
+
+</templates>

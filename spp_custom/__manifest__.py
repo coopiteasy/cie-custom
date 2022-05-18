@@ -4,7 +4,7 @@
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl.html).
 {
     "name": "SPP Customizations",
-    "version": "12.0.1.0.1",
+    "version": "12.0.1.1.0",
     "depends": ["beesdoo_base", "beesdoo_product"],
     "author": "Coop IT Easy SCRLfs",
     "license": "AGPL-3",
@@ -15,6 +15,7 @@
     """,
     "data": [
         "data/product_sequence.xml",
+        "templates/pos_templates.xml",
         "views/account_invoice.xml",
         "views/product.xml",
         "views/product_supplierinfo_views.xml",
@@ -23,5 +24,6 @@
         "views/sale_order.xml",
         "views/stock_picking.xml",
     ],
+    "qweb": ["static/src/xml/pos.xml"],
     "installable": True,
 }
