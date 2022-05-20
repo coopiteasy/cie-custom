@@ -34,6 +34,12 @@ msgid "<strong>Unit Price</strong>"
 msgstr ""
 
 #. module: foodhub_custom
+#: model:ir.model.fields,help:foodhub_custom.field_product_product__description_sale
+#: model:ir.model.fields,help:foodhub_custom.field_product_template__description_sale
+msgid "A description of the Product that you want to communicate to your customers. This description will be copied to every Sales Order, Delivery Order and Customer Invoice/Credit Note"
+msgstr ""
+
+#. module: foodhub_custom
 #: model_terms:ir.ui.view,arch_db:foodhub_custom.report_delivery_document
 msgid "Category"
 msgstr ""
@@ -49,9 +55,20 @@ msgid "Product Moves (Stock Move Line)"
 msgstr ""
 
 #. module: foodhub_custom
+#: model:ir.model,name:foodhub_custom.model_product_template
+msgid "Product Template"
+msgstr ""
+
+#. module: foodhub_custom
 #: model:ir.model.fields,field_description:foodhub_custom.field_stock_move__order_line_id
 #: model:ir.model.fields,field_description:foodhub_custom.field_stock_move_line__order_line_id
 msgid "Related Sale Line"
+msgstr ""
+
+#. module: foodhub_custom
+#: model:ir.model.fields,field_description:foodhub_custom.field_product_product__description_sale
+#: model:ir.model.fields,field_description:foodhub_custom.field_product_template__description_sale
+msgid "Sale Description"
 msgstr ""
 
 #. module: foodhub_custom
