@@ -10,6 +10,7 @@ class HrEmployee(models.Model):
 
     @api.model
     def create(self, vals):
+        # only employees linked to a user can have timesheets.
         create_overtime = vals.get("user_id")
         result = super().create(vals)
         if create_overtime:
@@ -22,6 +23,7 @@ class HrEmployee(models.Model):
 
     @api.multi
     def write(self, vals):
+        # only employees linked to a user can have timesheets.
         create_overtime = vals.get("user_id") and not self.user_id
         result = super().write(vals)
         overtime_model = self.env["hr.timesheet.overtime"]
