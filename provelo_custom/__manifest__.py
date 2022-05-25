@@ -29,6 +29,7 @@
     "data": [
         "security/security.xml",
         "security/ir.model.access.csv",
+        "views/account_analytic_line_views.xml",
         "views/account_payment_view.xml",
         "views/hr_contract_views.xml",
         "views/hr_holidays_view.xml",
