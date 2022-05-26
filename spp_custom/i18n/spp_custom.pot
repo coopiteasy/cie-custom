@@ -72,6 +72,14 @@ msgid "If you do an entire inventory, you can choose 'All Products' and it will 
 msgstr ""
 
 #. module: spp_custom
+#. openerp-web
+#: code:addons/spp_custom/static/src/xml/pos.xml:14
+#: code:addons/spp_custom/static/src/xml/pos.xml:34
+#, python-format
+msgid "Including Foodprint [F] products:"
+msgstr ""
+
+#. module: spp_custom
 #: model:ir.model.fields,field_description:spp_custom.field_product_template__default_code
 msgid "Internal Reference"
 msgstr ""
