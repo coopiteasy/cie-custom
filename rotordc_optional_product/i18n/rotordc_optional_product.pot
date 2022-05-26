@@ -1,0 +1,66 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* rotordc_optional_product
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: rotordc_optional_product
+#: model_terms:ir.ui.view,arch_db:rotordc_optional_product.missing_categories
+msgid "<br/>\n"
+"                            Missing categories:"
+msgstr ""
+
+#. module: rotordc_optional_product
+#: model_terms:ir.ui.view,arch_db:rotordc_optional_product.missing_categories
+msgid "Go to"
+msgstr ""
+
+#. module: rotordc_optional_product
+#: model_terms:ir.ui.view,arch_db:rotordc_optional_product.missing_categories
+msgid "If this problem persists, please contact us."
+msgstr ""
+
+#. module: rotordc_optional_product
+#: model_terms:ir.ui.view,arch_db:rotordc_optional_product.missing_categories
+msgid "In order to rectify this problem, take the following steps:"
+msgstr ""
+
+#. module: rotordc_optional_product
+#: model_terms:ir.ui.view,arch_db:rotordc_optional_product.missing_categories
+msgid "Re-add the products. When you do, make sure to also add any available 'Optional Products'."
+msgstr ""
+
+#. module: rotordc_optional_product
+#: model_terms:ir.ui.view,arch_db:rotordc_optional_product.missing_categories
+msgid "The order checkout was interrupted because your order is not complete. You added one or more products to your cart that are not completely configured. The products are listed below together with the configurations that are missing."
+msgstr ""
+
+#. module: rotordc_optional_product
+#: model_terms:ir.ui.view,arch_db:rotordc_optional_product.missing_categories
+msgid "Try checking out again."
+msgstr ""
+
+#. module: rotordc_optional_product
+#: model_terms:ir.ui.view,arch_db:rotordc_optional_product.missing_categories
+msgid "Your order is incomplete"
+msgstr ""
+
+#. module: rotordc_optional_product
+#: model_terms:ir.ui.view,arch_db:rotordc_optional_product.missing_categories
+msgid "and remove the above listed products."
+msgstr ""
+
+#. module: rotordc_optional_product
+#: model_terms:ir.ui.view,arch_db:rotordc_optional_product.missing_categories
+msgid "your cart"
+msgstr ""
+
