@@ -15,6 +15,7 @@
     """,
     "data": [
         "data/product_sequence.xml",
+        "templates/pos_templates.xml",
         "views/account_invoice.xml",
         "views/product.xml",
         "views/product_supplierinfo_views.xml",
@@ -23,5 +24,6 @@
         "views/sale_order.xml",
         "views/stock_picking.xml",
     ],
+    "qweb": ["static/src/xml/pos.xml"],
     "installable": True,
 }
