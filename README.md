@@ -32,6 +32,7 @@ addon | version | maintainers | summary
 [provelo_custom](provelo_custom/) | 12.0.1.4.0 |  | Pro Velo customizations
 [provelo_resource_activity_reports](provelo_resource_activity_reports/) | 12.0.1.0.0 |  | Reports for resource activities
 [rotordc_custom](rotordc_custom/) | 12.0.1.1.0 |  | Customization for RotorDC
+[rotordc_optional_product](rotordc_optional_product/) | 12.0.1.0.0 |  | Custom modifications regarding RotorDC's use of optional products.
 [rotordc_report_picking_huge_sale_order](rotordc_report_picking_huge_sale_order/) | 12.0.1.0.0 |  | At the bottom of the Picking Operations report, display the sale order in huge text.
 [rotordc_website_theme](rotordc_website_theme/) | 12.0.1.0.0 |  | Website theme for RotorDC.
 [spp_custom](spp_custom/) | 12.0.1.0.1 |  | Specifics customizations for SPP
