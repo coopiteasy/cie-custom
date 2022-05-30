@@ -29,7 +29,7 @@ addon | version | maintainers | summary
 [foodhub_label_custom](foodhub_label_custom/) | 12.0.1.0.0 |  | Additional fields for product labels
 [lesptitspots_worker_status](lesptitspots_worker_status/) | 12.0.1.0.0 |  | Worker status management specific to Les P'tit Pots.
 [provelo_analytic_account](provelo_analytic_account/) | 12.0.1.0.0 |  | Match BOB analytical accounts.
-[provelo_custom](provelo_custom/) | 12.0.1.4.0 |  | Pro Velo customizations
+[provelo_custom](provelo_custom/) | 12.0.1.5.0 |  | Pro Velo customizations
 [provelo_resource_activity_reports](provelo_resource_activity_reports/) | 12.0.1.0.0 |  | Reports for resource activities
 [rotordc_custom](rotordc_custom/) | 12.0.1.1.0 |  | Customization for RotorDC
 [rotordc_optional_product](rotordc_optional_product/) | 12.0.1.0.0 |  | Custom modifications regarding RotorDC's use of optional products.
