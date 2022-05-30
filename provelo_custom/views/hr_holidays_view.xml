@@ -45,17 +45,11 @@
         <field name="groups_id" eval="[(4, ref('hr.group_hr_manager'))]" />
     </record>
 
-    <!--
-        make this menuitem visible to all users, instead of only to leaves
-        managers and users. same remark about empty groups_id as above.
-    -->
+    <!-- make this menuitem visible to employees with subordinates -->
     <record model="ir.ui.menu" id="hr_holidays.menu_hr_holidays_report">
         <field
             name="groups_id"
-            eval="[
-                (3, ref('hr_holidays.group_hr_holidays_manager')),
-                (3, ref('hr_holidays.group_hr_holidays_user'))
-            ]"
+            eval="[(4, ref('hr_auto_manager_group_membership.group_employee_manager'))]"
         />
     </record>
 </odoo>
