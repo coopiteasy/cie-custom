@@ -14,12 +14,15 @@
         Specific customizations for Coop IT Easy
     """,
     "depends": [
-        "hr_timesheet",
+        "hr_timesheet_sheet",
+        "hr_timesheet_task_change_project",
         "project_status",
     ],
     "data": [
         "data/cron.xml",
         "views/account_analytic_line.xml",
+        "views/hr_timesheet_sheet.xml",
+        "views/project_task.xml",
         "views/project_view.xml",
     ],
     "installable": True,
