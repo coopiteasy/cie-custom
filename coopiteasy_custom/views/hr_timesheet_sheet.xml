@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+    Copyright 2022 Coop IT Easy SCRLfs
+    License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
+-->
+<odoo>
+    <!-- limit timesheet activity projects selection to open projects -->
+
+    <record model="ir.ui.view" id="hr_timesheet_sheet_form_view">
+        <field name="name">hr_timesheet.sheet.form (in coopiteasy_custom)</field>
+        <field name="model">hr_timesheet.sheet</field>
+        <field name="inherit_id" ref="hr_timesheet_sheet.hr_timesheet_sheet_form" />
+        <field name="arch" type="xml">
+            <xpath
+                expr="//field[@name='timesheet_ids']//field[@name='project_id']"
+                position="attributes"
+            >
+                <attribute
+                    name="domain"
+                >[("project_status.is_closed", "=", False)]</attribute>
+            </xpath>
+        </field>
+    </record>
+</odoo>
