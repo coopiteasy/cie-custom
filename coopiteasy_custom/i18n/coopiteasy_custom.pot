@@ -14,31 +14,26 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. module: coopiteasy_custom
-#: model:ir.model,name:coopiteasy_custom.model_account_analytic_account
-msgid "Analytic Account"
-msgstr ""
-
-#. module: coopiteasy_custom
 #: model:ir.model.fields,field_description:coopiteasy_custom.field_project_task__author_id
 msgid "Author"
 msgstr ""
 
 #. module: coopiteasy_custom
-#: model:ir.actions.server,name:coopiteasy_custom.cie_compute_aaa_line_count_cron_ir_actions_server
-#: model:ir.cron,cron_name:coopiteasy_custom.cie_compute_aaa_line_count_cron
-#: model:ir.cron,name:coopiteasy_custom.cie_compute_aaa_line_count_cron
-msgid "Compute line on analytic account (over last month)"
-msgstr ""
-
-#. module: coopiteasy_custom
-#: model:ir.model.fields,field_description:coopiteasy_custom.field_account_analytic_account__line_count
-msgid "Line Count"
+#: model:ir.actions.server,name:coopiteasy_custom.cie_compute_project_recent_timesheet_line_count_cron_ir_actions_server
+#: model:ir.cron,cron_name:coopiteasy_custom.cie_compute_project_recent_timesheet_line_count_cron
+#: model:ir.cron,name:coopiteasy_custom.cie_compute_project_recent_timesheet_line_count_cron
+msgid "Compute number of recent timesheet lines on projects"
 msgstr ""
 
 #. module: coopiteasy_custom
 #: model:ir.model.fields,field_description:coopiteasy_custom.field_project_task__link_task_ids
 #: model_terms:ir.ui.view,arch_db:coopiteasy_custom.view_task_form2
 msgid "Linked Tasks"
+msgstr ""
+
+#. module: coopiteasy_custom
+#: model:ir.model.fields,field_description:coopiteasy_custom.field_project_project__recent_timesheet_line_count
+msgid "Number of Recent Timesheet Lines"
 msgstr ""
 
 #. module: coopiteasy_custom
@@ -49,6 +44,11 @@ msgstr ""
 #. module: coopiteasy_custom
 #: model:ir.model.fields,field_description:coopiteasy_custom.field_project_task__int_priority
 msgid "Priority"
+msgstr ""
+
+#. module: coopiteasy_custom
+#: model:ir.model,name:coopiteasy_custom.model_project_project
+msgid "Project"
 msgstr ""
 
 #. module: coopiteasy_custom
