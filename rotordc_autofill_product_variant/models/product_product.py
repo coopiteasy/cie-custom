@@ -13,6 +13,11 @@ class ProductProduct(models.Model):
     @api.model_create_multi
     def create(self, vals_list):
         """Copy some field from the product template to the new variant"""
+        # Be mindful that this method is also entered during the creation of a
+        # product_template.product_variant_id.
+
+        # Enter this loop once for every product.template. `group_vals` is an
+        # iterator of vals for each product that has the same template.
         for tmpl_id, group_vals in groupby(
             vals_list, lambda elem: elem.get("product_tmpl_id", None)
         ):
