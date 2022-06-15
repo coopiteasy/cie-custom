@@ -26,6 +26,12 @@ class TestProductProduct(common.TransactionCase):
             "product.product_attribute_value_4"
         )
 
+        self.default_code = "AAA"
+        self.weight = 50.0
+        self.product_length = 2.0
+        self.product_width = 1.0
+        self.product_height = 1.0
+
     def _set_value_on_product_tmpl(
         self, default_code, weight, product_length, product_width, product_height
     ):
@@ -40,17 +46,12 @@ class TestProductProduct(common.TransactionCase):
         )
 
     def test_autofill_when_creating_new_variant(self):
-        default_code = "AAA"
-        weight = 50.0
-        product_length = 2.0
-        product_width = 1.0
-        product_height = 1.0
         self._set_value_on_product_tmpl(
-            default_code=default_code,
-            weight=weight,
-            product_length=product_length,
-            product_width=product_width,
-            product_height=product_height,
+            default_code=self.default_code,
+            weight=self.weight,
+            product_length=self.product_length,
+            product_width=self.product_width,
+            product_height=self.product_height,
         )
         self.product_tmpl_10.write(
             {
@@ -94,8 +95,56 @@ class TestProductProduct(common.TransactionCase):
         )
 
         for product in self.product_tmpl_10.product_variant_ids:
-            self.assertEqual(product.default_code, default_code)
-            self.assertEqual(product.weight, weight)
-            self.assertEqual(product.product_length, product_length)
-            self.assertEqual(product.product_width, product_width)
-            self.assertEqual(product.product_height, product_height)
+            self.assertEqual(product.default_code, self.default_code)
+            self.assertEqual(product.weight, self.weight)
+            self.assertEqual(product.product_length, self.product_length)
+            self.assertEqual(product.product_width, self.product_width)
+            self.assertEqual(product.product_height, self.product_height)
+
+    def test_autofill_for_new_template(self):
+        product_template = self.env["product.template"].create(
+            {
+                "name": "New product",
+                "default_code": self.default_code,
+                "weight": self.weight,
+                "product_length": self.product_length,
+                "product_width": self.product_width,
+                "product_height": self.product_height,
+            }
+        )
+        for product in product_template.product_variant_ids:
+            self.assertEqual(product.default_code, self.default_code)
+            self.assertEqual(product.weight, self.weight)
+            self.assertEqual(product.product_length, self.product_length)
+            self.assertEqual(product.product_width, self.product_width)
+            self.assertEqual(product.product_height, self.product_height)
+
+        product_template.write(
+            {
+                "attribute_line_ids": [
+                    [
+                        0,
+                        0,
+                        {
+                            "attribute_id": self.product_attribute_1.id,
+                            "value_ids": [
+                                [
+                                    6,
+                                    0,
+                                    [
+                                        self.product_attribute_value_11.id,
+                                        self.product_attribute_value_12.id,
+                                    ],
+                                ]
+                            ],
+                        },
+                    ],
+                ]
+            }
+        )
+        for product in product_template.product_variant_ids:
+            self.assertEqual(product.default_code, self.default_code)
+            self.assertEqual(product.weight, self.weight)
+            self.assertEqual(product.product_length, self.product_length)
+            self.assertEqual(product.product_width, self.product_width)
+            self.assertEqual(product.product_height, self.product_height)
