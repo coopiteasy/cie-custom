@@ -26,10 +26,7 @@
                 <attribute
                     name="decoration-warning"
                 >timesheet_overtime &lt; 0</attribute>
-                <attribute
-                    name="decoration-success"
-                >timesheet_overtime &gt;= 0</attribute>
-                <attribute name="decoration-info" />
+                <attribute name="decoration-info">timesheet_overtime &gt;= 0</attribute>
                 <attribute name="decoration-muted" />
             </xpath>
         </field>
