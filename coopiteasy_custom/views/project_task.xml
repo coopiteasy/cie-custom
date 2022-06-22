@@ -14,13 +14,18 @@
             ref="hr_timesheet_task_change_project.project_task_form_view"
         />
         <field name="arch" type="xml">
+            <xpath expr="//group/field[@name='project_id']" position="attributes">
+                <attribute
+                    name="domain"
+                >[("active", "=", True), ("project_status.is_closed", "=", False)]</attribute>
+            </xpath>
             <xpath
                 expr="//field[@name='timesheet_ids']/tree/field[@name='project_id']"
                 position="attributes"
             >
                 <attribute
                     name="domain"
-                >[("project_status.is_closed", "=", False)]</attribute>
+                >[("active", "=", True), ("project_status.is_closed", "!=", False)]</attribute>
             </xpath>
         </field>
     </record>
