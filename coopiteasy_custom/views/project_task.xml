@@ -17,7 +17,7 @@
             <xpath expr="//group/field[@name='project_id']" position="attributes">
                 <attribute
                     name="domain"
-                >[("active", "=", True), ("project_status.is_closed", "=", False)]</attribute>
+                >[("project_status.is_closed", "=", False)]</attribute>
             </xpath>
             <xpath
                 expr="//field[@name='timesheet_ids']/tree/field[@name='project_id']"
@@ -25,7 +25,7 @@
             >
                 <attribute
                     name="domain"
-                >[("active", "=", True), ("project_status.is_closed", "=", False)]</attribute>
+                >[("project_status.is_closed", "=", False)]</attribute>
             </xpath>
         </field>
     </record>
