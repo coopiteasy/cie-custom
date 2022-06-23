@@ -5,7 +5,7 @@
 
 {
     "name": "Coop IT Easy Customization",
-    "version": "12.0.1.1.0",
+    "version": "12.0.1.2.0",
     "author": "Coop IT Easy SCRLfs",
     "license": "AGPL-3",
     "category": "",
