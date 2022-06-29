@@ -9,7 +9,7 @@
         "beesdoo_product_info_screen",
         "pos_mail_receipt",
     ],
-    "author": "Coop IT Easy SCRLfs",
+    "author": "Coop IT Easy SC",
     "license": "AGPL-3",
     "category": "Custom",
     "website": "https://coopiteasy.be",
