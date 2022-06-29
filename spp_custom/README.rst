@@ -53,12 +53,12 @@ Credits
 Authors
 ~~~~~~~
 
-* Coop IT Easy SCRLfs
+* Coop IT Easy SC
 
 Contributors
 ~~~~~~~~~~~~
 
-* `Coop IT Easy SCRLfs <https://coopiteasy.be>`_:
+* `Coop IT Easy SC <https://coopiteasy.be>`_:
 
   * Robin Keunen <robin@coopiteasy.be>
   * Rémy Taymans <remy@coopiteasy.be>

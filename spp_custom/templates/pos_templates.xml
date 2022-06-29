@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!--
-    Copyright 2022 Coop IT Easy SCRLfs
+    Copyright 2022 Coop IT Easy SC
 -->
 <odoo>
     <template id="assets_frontend" inherit_id="point_of_sale.assets">

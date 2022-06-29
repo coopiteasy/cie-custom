@@ -1,4 +1,4 @@
-// Copyright 2022 Coop IT Easy SCRLfs
+// Copyright 2022 Coop IT Easy SC
 // License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
 odoo.define("rotordc_custom.rotordc_custom", function (require) {

@@ -6,7 +6,7 @@
     "name": "Account invoice already paid",
     "summary": """Remove sentence about payment communication from invoice
     based on the account journal""",
-    "author": "Coop IT Easy SCRLfs",
+    "author": "Coop IT Easy SC",
     "license": "AGPL-3",
     "category": "",
     "website": "https://coopiteasy.be",

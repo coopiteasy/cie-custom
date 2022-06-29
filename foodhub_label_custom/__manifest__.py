@@ -7,7 +7,7 @@
         Additional fields for product labels""",
     "version": "12.0.1.0.0",
     "license": "AGPL-3",
-    "author": "Coop IT Easy SCRLfs",
+    "author": "Coop IT Easy SC",
     "website": "https://coopiteasy.be",
     "depends": [
         "beesdoo_product",
