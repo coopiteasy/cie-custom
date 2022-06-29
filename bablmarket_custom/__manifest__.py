@@ -5,7 +5,7 @@
     "name": "Bablmarket Customizations",
     "version": "12.0.1.0.0",
     "depends": ["point_of_sale"],
-    "author": "Coop IT Easy SCRLfs",
+    "author": "Coop IT Easy SC",
     "license": "AGPL-3",
     "category": "",
     "website": "https://coopiteasy.be",

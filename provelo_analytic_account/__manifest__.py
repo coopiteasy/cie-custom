@@ -9,7 +9,7 @@
         "hr",
         "resource_activity",
     ],
-    "author": "Coop IT Easy SCRLfs",
+    "author": "Coop IT Easy SC",
     "license": "AGPL-3",
     "category": "",
     "website": "https://coopiteasy.be",

@@ -9,7 +9,7 @@
         "resource_activity_guide",
         "provelo_analytic_account",
     ],
-    "author": "Coop IT Easy SCRLfs",
+    "author": "Coop IT Easy SC",
     "category": "Resource",
     "website": "https://coopiteasy.be",
     "license": "AGPL-3",

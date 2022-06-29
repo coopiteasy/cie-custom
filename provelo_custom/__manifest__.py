@@ -21,7 +21,7 @@
         "csv_export_invoice",
         "csv_export_payment",
     ],
-    "author": "Coop IT Easy SCRLfs",
+    "author": "Coop IT Easy SC",
     "license": "AGPL-3",
     "category": "",
     "website": "https://coopiteasy.be",

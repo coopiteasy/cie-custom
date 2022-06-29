@@ -5,7 +5,7 @@
     "name": "Les P'tits Pots Worker Status management",
     "summary": """
         Worker status management specific to Les P'tit Pots.""",
-    "author": "Coop IT Easy SCRLfs",
+    "author": "Coop IT Easy SC",
     "website": "https://coopiteasy.be",
     "category": "Cooperative management",
     "version": "12.0.1.0.0",
