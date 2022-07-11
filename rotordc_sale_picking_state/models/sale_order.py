@@ -12,9 +12,19 @@ class SaleOrder(models.Model):
     @api.model
     def get_picking_state_selection(self):
         return [
+            # No stock picking found.
+            ("none", _("None")),
+            # Multiple conflicting found.
             ("unknown", _("Unknown")),
-            ("unprocessed", _("Unprocessed")),
+            # Same as states on stock.picking.
+            # FIXME: Should we dynamically create these from stock.picking? What
+            # about translations?
+            ("draft", _("Draft")),
+            ("waiting", _("Waiting Another Operation")),
+            ("confirmed", _("Waiting")),
+            ("assigned", _("Ready")),
             ("done", _("Done")),
+            ("cancel", _("Cancelled")),
         ]
 
     @api.depends(
@@ -23,31 +33,32 @@ class SaleOrder(models.Model):
     )
     def _compute_picking_states(self):
         for order in self:
-            # Map picking_type_codes to picking_ids. We should only have one of
-            # each.
+            # Map picking_type_codes to states.
             code_mapping = {}
-            duplicates = set()
+            conflicts = set()
             for picking in order.picking_ids:
-                # picking is first with that picking_type_code
+                # The picking's state is either the first detected state for a
+                # given code, or the same state has been encountered before for
+                # that code.
                 if (
-                    code_mapping.setdefault(picking.picking_type_code, picking)
-                    == picking
+                    code_mapping.setdefault(picking.picking_type_code, picking.state)
+                    == picking.state
                 ):
                     continue
-                # picking_type_code was already used by another picking
+                # picking_type_code has conflicting states.
                 else:
-                    duplicates.add(picking.picking_type_code)
+                    conflicts.add(picking.picking_type_code)
             for code, attr in zip(
                 ("internal", "outgoing"),
                 ("internal_picking_state", "outgoing_picking_state"),
             ):
-                if code in duplicates or code not in code_mapping:
+                if code in conflicts:
                     setattr(order, attr, "unknown")
+                elif code not in code_mapping:
+                    setattr(order, attr, "none")
                 else:
-                    if code_mapping[code].state == "done":
-                        setattr(order, attr, "done")
-                    else:
-                        setattr(order, attr, "unprocessed")
+                    # FIXME: What happens if we try to set an unsupported state?
+                    setattr(order, attr, code_mapping[code])
 
     internal_picking_state = fields.Selection(
         string="Internal Picking State",
