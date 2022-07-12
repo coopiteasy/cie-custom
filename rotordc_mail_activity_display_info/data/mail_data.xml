@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template id="message_activity_done" inherit_id="mail.message_activity_done">
+        <xpath expr="//div[@t-field='activity.note']" position="before">
+            <!-- copied from 'o_thread_message_collapse', slightly tweaked. -->
+            <div class="o_thread_message_collapse">
+                <dl class="dl-horizontal">
+                    <dt>Activity type</dt>
+                    <dd class="mb8">
+                        <t t-esc="activity.activity_type_id.name" />
+                    </dd>
+                    <dt>Created on</dt>
+                    <dd class="mb8">
+                        <t t-esc="activity.create_date" />
+                        by
+                        <b><t t-esc="activity.create_user_id.name" /></b>
+                    </dd>
+                    <dt>Assigned to</dt>
+                    <dd class="mb8">
+                        <b><t t-esc="activity.user_id.name" /></b>
+                        <em>, due on </em><span
+                            t-attf-class="o_activity_color_#{activity.state}"
+                        ><t t-esc="activity.date_deadline" /></span>
+                    </dd>
+                </dl>
+            </div>
+        </xpath>
+    </template>
+
+</odoo>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates xml:space="preserve">
+    <t t-extend="mail.activity_items">
+        <!--
+        FIXME: It would be really nice if we could surgically add/remove
+        classes instead of copy-pasting an entire thing.
+        -->
+        <t t-jquery="a.o_activity_info" t-operation="attributes">
+            <!-- remove 'collapsed' -->
+            <attribute
+                name="class"
+            >btn btn-link btn-info text-muted o_activity_info ml4</attribute>
+            <attribute name="aria-expanded">true</attribute>
+        </t>
+        <t t-jquery="div.o_thread_message_collapse" t-operation="attributes">
+            <!-- add 'show' -->
+            <attribute name="class">o_thread_message_collapse collapse show</attribute>
+        </t>
+    </t>
+</templates>
