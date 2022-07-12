@@ -31,7 +31,7 @@ addon | version | maintainers | summary
 [provelo_analytic_account](provelo_analytic_account/) | 12.0.1.0.0 |  | Match BOB analytical accounts.
 [provelo_custom](provelo_custom/) | 12.0.1.5.0 |  | Pro Velo customizations
 [provelo_resource_activity_reports](provelo_resource_activity_reports/) | 12.0.1.0.0 |  | Reports for resource activities
-[rotordc_autofill_product_variant](rotordc_autofill_product_variant/) | 12.0.1.0.0 |  | Autofill some field of the product variant based on the product template.
+[rotordc_autofill_product_variant](rotordc_autofill_product_variant/) | 12.0.1.0.1 |  | Autofill some field of the product variant based on the product template.
 [rotordc_custom](rotordc_custom/) | 12.0.1.1.0 |  | Customization for RotorDC
 [rotordc_optional_product](rotordc_optional_product/) | 12.0.1.0.0 |  | Custom modifications regarding RotorDC's use of optional products.
 [rotordc_report_picking_huge_sale_order](rotordc_report_picking_huge_sale_order/) | 12.0.1.0.0 |  | At the bottom of the Picking Operations report, display the sale order in huge text.
