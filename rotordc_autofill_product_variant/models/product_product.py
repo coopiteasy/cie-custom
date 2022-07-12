@@ -39,4 +39,4 @@ class ProductProduct(models.Model):
                     vals["product_height"] = product_tmpl_id.product_height
                 if "product_width" not in vals:
                     vals["product_width"] = product_tmpl_id.product_width
-        super().create(vals_list)
+        return super().create(vals_list)
