@@ -2,7 +2,7 @@
 <templates xml:space="preserve">
     <t t-extend="mail.activity_items">
         <!--
-        FIXME: It would be really nice if we could surgically remove
+        FIXME: It would be really nice if we could surgically add/remove
         classes instead of copy-pasting an entire thing.
         -->
         <t t-jquery="a.o_activity_info" t-operation="attributes">
@@ -13,7 +13,8 @@
             <attribute name="aria-expanded">true</attribute>
         </t>
         <t t-jquery="div.o_thread_message_collapse" t-operation="attributes">
-            <attribute name="class" separator=" " add="show" />
+            <!-- add 'show' -->
+            <attribute name="class">o_thread_message_collapse collapse show</attribute>
         </t>
     </t>
 </templates>
