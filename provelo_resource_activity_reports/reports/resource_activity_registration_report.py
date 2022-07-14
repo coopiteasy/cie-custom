@@ -67,7 +67,7 @@ class ResourceActivityRegistrationReport(models.Model):
     need_delivery = fields.Boolean(string="Need Delivery?", readonly=True)
     need_guide = fields.Boolean(string="Need Guide?", readonly=True)
     product_id = fields.Many2one(
-        comodel_name="product.product", string="Product", readonly=True
+        comodel_name="product.template", string="Product", readonly=True
     )
     product_categ_id = fields.Many2one(
         comodel_name="product.category",
