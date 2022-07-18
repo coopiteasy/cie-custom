@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template id="report_picking" inherit_id="stock.report_picking">
+        <xpath
+            expr="//span[@t-field='ml.product_id.description_picking']"
+            position="after"
+        >
+            <t t-if="ml.product_id.storage_location">
+                <br />
+                <span t-field="ml.product_id.storage_location.name" />
+            </t>
+        </xpath>
+    </template>
+</odoo>
