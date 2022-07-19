@@ -6,7 +6,7 @@
             <!-- Ugly custom fix. If invoice reference starts with 'Shop', it's a POS order. -->
             <attribute
                 name="t-if"
-            >o.reference and not o.reference.startswith("Shop")</attribute>
+            >o.reference and "shop" not in o.reference.lower()</attribute>
         </xpath>
     </template>
 
