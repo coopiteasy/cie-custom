@@ -19,9 +19,7 @@
         "sale",
     ],
     "excludes": [],
-    "data": [
-        "views/report_invoice.xml",
-    ],
+    "data": [],
     "demo": [],
     "qweb": [],
 }
