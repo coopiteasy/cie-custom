@@ -12,6 +12,7 @@ class PaymentTransaction(models.Model):
         """When a transaction is set to done, link the account.payment and its
         account.move.lines to the sale order as down payments.
         """
+        self.ensure_one()
         res = super()._post_process_after_done()
         for order in self.sale_order_ids:
             self.payment_id.sale_id = order
