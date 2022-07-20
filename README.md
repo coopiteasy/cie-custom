@@ -31,7 +31,7 @@ addon | version | maintainers | summary
 [provelo_analytic_account](provelo_analytic_account/) | 12.0.1.0.0 |  | Match BOB analytical accounts.
 [provelo_custom](provelo_custom/) | 12.0.1.5.0 |  | Pro Velo customizations
 [provelo_custom_timesheet_ui](provelo_custom_timesheet_ui/) | 12.0.1.0.0 |  | Small modifications to the Timesheets UI
-[provelo_resource_activity_reports](provelo_resource_activity_reports/) | 12.0.1.0.0 |  | Reports for resource activities
+[provelo_resource_activity_reports](provelo_resource_activity_reports/) | 12.0.1.0.1 |  | Reports for resource activities
 [rotordc_autofill_product_variant](rotordc_autofill_product_variant/) | 12.0.1.0.1 |  | Autofill some field of the product variant based on the product template.
 [rotordc_custom](rotordc_custom/) | 12.0.1.1.0 |  | Customization for RotorDC
 [rotordc_invoice_link_down_payment](rotordc_invoice_link_down_payment/) | 12.0.1.0.0 | [![carmenbianca](https://github.com/carmenbianca.png?size=30px)](https://github.com/carmenbianca) | Register payments done through invoices as down payment on sale orders.
