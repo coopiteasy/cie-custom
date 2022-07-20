@@ -30,6 +30,7 @@ addon | version | maintainers | summary
 [lesptitspots_worker_status](lesptitspots_worker_status/) | 12.0.1.0.0 |  | Worker status management specific to Les P'tit Pots.
 [provelo_analytic_account](provelo_analytic_account/) | 12.0.1.0.0 |  | Match BOB analytical accounts.
 [provelo_custom](provelo_custom/) | 12.0.1.5.0 |  | Pro Velo customizations
+[provelo_custom_timesheet_ui](provelo_custom_timesheet_ui/) | 12.0.1.0.0 |  | Small modifications to the Timesheets UI
 [provelo_resource_activity_reports](provelo_resource_activity_reports/) | 12.0.1.0.0 |  | Reports for resource activities
 [rotordc_autofill_product_variant](rotordc_autofill_product_variant/) | 12.0.1.0.1 |  | Autofill some field of the product variant based on the product template.
 [rotordc_custom](rotordc_custom/) | 12.0.1.1.0 |  | Customization for RotorDC
