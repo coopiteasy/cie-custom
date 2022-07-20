@@ -40,13 +40,10 @@ class SaleOrder(models.Model):
                 # The picking's state is either the first detected state for a
                 # given code, or the same state has been encountered before for
                 # that code.
-                if (
-                    code_mapping.setdefault(picking.picking_type_code, picking.state)
-                    == picking.state
-                ):
-                    continue
+                if picking.picking_type_code not in code_mapping:
+                    code_mapping[picking.picking_type_code] = picking.state
                 # picking_type_code has conflicting states.
-                else:
+                if code_mapping[picking.picking_type_code] != picking.state:
                     conflicts.add(picking.picking_type_code)
             for code, attr in zip(
                 ("internal", "outgoing"),
