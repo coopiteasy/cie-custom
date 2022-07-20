@@ -3,7 +3,7 @@
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl.html).
 {
     "name": "Pro Velo Resource Activity Reports",
-    "version": "12.0.1.0.0",
+    "version": "12.0.1.0.1",
     "depends": [
         "resource_activity_delivery",
         "resource_activity_guide",
