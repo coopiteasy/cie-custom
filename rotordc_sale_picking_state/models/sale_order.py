@@ -3,6 +3,7 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
 from odoo import api, fields, models
+from odoo.tools.translate import _
 
 
 class SaleOrder(models.Model):
@@ -12,11 +13,19 @@ class SaleOrder(models.Model):
     def get_picking_state_selection(self):
         return [
             # No stock picking found.
-            ("none", "None"),
+            ("none", _("None")),
             # Multiple conflicting found.
-            ("unknown", "Unknown"),
+            ("unknown", _("Unknown")),
             # Same as states on stock.picking.
-        ] + self.env["stock.picking"]._fields["state"].selection
+            # FIXME: Should we dynamically create these from stock.picking? What
+            # about translations?
+            ("draft", _("Draft")),
+            ("waiting", _("Waiting Another Operation")),
+            ("confirmed", _("Waiting")),
+            ("assigned", _("Ready")),
+            ("done", _("Done")),
+            ("cancel", _("Cancelled")),
+        ]
 
     @api.depends(
         "picking_ids.picking_type_code",
@@ -52,7 +61,6 @@ class SaleOrder(models.Model):
         string="Internal Picking State",
         selection="get_picking_state_selection",
         compute=_compute_picking_states,
-        translate=True,
         store=True,
     )
     outgoing_picking_state = fields.Selection(
