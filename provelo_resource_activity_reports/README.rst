@@ -31,6 +31,16 @@ Adds these metrics:
 .. contents::
    :local:
 
+Changelog
+=========
+
+12.0.1.0.1 (2022-07-20)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+**Bugfixes**
+
+- Product template ids were assigned to product product field. Fixed. (`#74 <https://github.com/coopiteasy/cie-custom/issues/74>`_)
+
 Bug Tracker
 ===========
 
@@ -55,6 +65,11 @@ Contributors
 * `Coop IT Easy <https://coopiteasy.be>`_
     * Robin Keunen <robin@coopiteasy.be>
     * Vincent Van Rossem <vincent@coopiteasy.be>
+
+Other credits
+~~~~~~~~~~~~~
+
+* `Pro Vélo <https://www.provelo.org>`_
 
 Maintainers
 ~~~~~~~~~~~
