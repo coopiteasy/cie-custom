@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<odoo>
+<odoo noupdate="1">
     <template id="contact_name" inherit_id="base.contact_name">
         <xpath expr="//t[@t-if='object.name']" position="replace">
             <t t-if="object.name">
