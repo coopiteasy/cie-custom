@@ -41,6 +41,7 @@ addon | version | maintainers | summary
 [rotordc_product_storage_location](rotordc_product_storage_location/) | 12.0.1.0.0 | [![carmenbianca](https://github.com/carmenbianca.png?size=30px)](https://github.com/carmenbianca) | Select a storage location on products.
 [rotordc_report_picking_huge_sale_order](rotordc_report_picking_huge_sale_order/) | 12.0.1.0.0 |  | At the bottom of the Picking Operations report, display the sale order in huge text.
 [rotordc_sale_address](rotordc_sale_address/) | 12.0.1.0.0 | [![carmenbianca](https://github.com/carmenbianca.png?size=30px)](https://github.com/carmenbianca) | Display full address for invoice and delivery in sale order.
+[rotordc_sale_invoice_comment](rotordc_sale_invoice_comment/) | 12.0.1.0.0 | [![carmenbianca](https://github.com/carmenbianca.png?size=30px)](https://github.com/carmenbianca) | Make sure that the terms & conditions are always set on all invoices, and don't display the reference on POS invoices.
 [rotordc_sale_picking_state](rotordc_sale_picking_state/) | 12.0.1.0.0 | [![carmenbianca](https://github.com/carmenbianca.png?size=30px)](https://github.com/carmenbianca) | Set states for stock pickings on sale orders depending on the stock pickings' types.
 [rotordc_website_theme](rotordc_website_theme/) | 12.0.1.0.0 |  | Website theme for RotorDC.
 [spp_custom](spp_custom/) | 12.0.1.1.0 |  | Specifics customizations for SPP
