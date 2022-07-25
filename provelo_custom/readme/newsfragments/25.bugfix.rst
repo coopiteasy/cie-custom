@@ -1,1 +1,2 @@
-Fix duplicate address in sale order report
+* Display company name in invoice and sale order address
+* Add noupdate to layout template in order to keep it activated when updating the module.
