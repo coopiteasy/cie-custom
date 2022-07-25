@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+     Copyright 2021 Coop IT Easy
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
+-->
+<odoo>
+    <template id="report_invoice_document" inherit_id="account.report_invoice_document">
+        <xpath expr="//t[@t-set='address']" position="inside">
+            <p t-if="doc.partner_id.mobile">
+                <span t-field="doc.partner_id.mobile" />
+            </p>
+            <p t-if="doc.partner_id.phone and not doc.partner_id.mobile">
+                <span t-field="doc.partner_id.phone" />
+            </p>
+        </xpath>
+    </template>
+</odoo>
