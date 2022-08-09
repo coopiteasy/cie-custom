@@ -7,7 +7,7 @@
     "summary": """
         Register payments done with payment acquirers as down payment on sale
         orders.""",
-    "version": "12.0.1.0.0",
+    "version": "12.0.1.0.1",
     "category": "Sales",
     "website": "https://coopiteasy.be",
     "author": "Coop IT Easy SC",
