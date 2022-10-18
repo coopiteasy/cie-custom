@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <record id="report_total_sales" model="sale.reports.config">
+            <field name="name">Total Sales</field>
+            <field
+                name="view"
+            >rotordc_sale_reports.report_total_sales_view_pivot</field>
+            <field name="view_mode">pivot</field>
+            <field name="domain" />
+            <field name="search_view" />
+            <field name="model">sale.report</field>
+        </record>
+        <record id="report_top_sellers" model="sale.reports.config">
+            <field name="name">Top Sellers</field>
+            <field
+                name="view"
+            >rotordc_sale_reports.report_sale_top_sellers_view_pivot</field>
+            <field name="view_mode">pivot</field>
+            <field name="domain" />
+            <field name="search_view" />
+            <field name="model">sale.report</field>
+        </record>
+        <record id="report_quantity_delivered" model="sale.reports.config">
+            <field name="name">Quantity Delivered</field>
+            <field
+                name="view"
+            >rotordc_sale_reports.report_sale_delivered_commands_view_pivot</field>
+            <field name="view_mode">pivot</field>
+            <field name="domain" />
+            <field name="search_view" />
+            <field name="model">sale.report</field>
+        </record>
+        <record id="report_top_orders" model="sale.reports.config">
+            <field name="name">Top Orders</field>
+            <field name="view">rotordc_sale_reports.report_top_orders_view_pivot</field>
+            <field name="view_mode">pivot</field>
+            <field name="domain">[("amount_total", ">=", "1000")]</field>
+            <field name="search_view" />
+            <field name="model">sale.order</field>
+        </record>
+        <record id="report_confirmed_orders" model="sale.reports.config">
+            <field name="name">Confirmed Orders</field>
+            <field name="view">rotordc_sale_reports.report_top_orders_view_pivot</field>
+            <field name="view_mode">pivot</field>
+            <field
+                name="domain"
+            >["|", ("state", "=", "sale"), ("state", "=", "done")]</field>
+            <field name="search_view" />
+            <field name="model">sale.order</field>
+        </record>
+        <!-- <record id="report_quantity_delivered" model="sale.reports.config">
+            <field name="name">Confirmed Orders</field>
+            <field name="view">rotordc_sale_reports.report_top_orders_view_pivot</field>
+            <field name="view_mode">pivot</field>
+            <field name="domain">[("amount_total", ">=", "1000")]</field>
+            <field name="search_view"></field>
+            <field name="model">sale.order</field>
+        </record> -->
+
+    </data>
+</odoo>
