@@ -15,6 +15,7 @@
             parent="sale.menu_sale_report"
             action="action_sale_report_wizard"
         />
+
             <!-- <record id="action_order_report_all" model="ir.actions.act_window">
                 <field name="name">Sales Analysis</field>
                 <field name="res_model">sale.report</field>

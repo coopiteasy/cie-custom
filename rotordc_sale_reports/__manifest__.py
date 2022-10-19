@@ -21,6 +21,7 @@
     "excludes": [],
     "data": [
         "views/menuitem.xml",
+        "views/sale_reports_config_views.xml",
         "wizard/sale_report_wizard.xml",
         "report/report_all_channels_sales_views.xml",
         "security/ir.model.access.csv",

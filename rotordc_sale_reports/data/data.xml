@@ -41,7 +41,9 @@
         </record>
         <record id="report_confirmed_orders" model="sale.reports.config">
             <field name="name">Confirmed Orders</field>
-            <field name="view">rotordc_sale_reports.report_top_orders_view_pivot</field>
+            <field
+                name="view"
+            >rotordc_sale_reports.report_confirmed_orders_view_pivot</field>
             <field name="view_mode">pivot</field>
             <field
                 name="domain"
