@@ -1,12 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<odoo>
-    <template id="contact_name" inherit_id="base.contact_name">
-        <xpath expr="//t[@t-if='object.name']" position="replace">
-            <t t-if="object.name">
-                <span itemprop="name" t-esc="object.name" />
-            </t>
-        </xpath>
-    </template>
+<odoo noupdate="1">
+
 
 <!-- fixme rather define a new pro velo template -->
     <template id="external_layout_standard" inherit_id="web.external_layout_standard">
