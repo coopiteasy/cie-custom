@@ -16,7 +16,7 @@
             <field name="name">Sales by Product Category</field>
             <field
                 name="view"
-            >sale_reports_top_category.report_sales_product_category_view_pivot</field>
+            >rotordc_sale_reports_top_category.report_sales_product_category_view_pivot</field>
             <field name="view_mode">pivot</field>
             <field name="domain" />
             <field name="search_view" />
