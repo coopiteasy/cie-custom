@@ -26,6 +26,7 @@ addon | version | maintainers | summary
 [bees_custom](bees_custom/) | 12.0.1.0.2 |  | Specifics customizations for BEES coop.
 [coopiteasy_custom](coopiteasy_custom/) | 12.0.1.2.0 |  | Specific customizations for Coop IT Easy
 [foodhub_custom](foodhub_custom/) | 12.0.1.1.0 |  | Foodhub customizations
+[foodhub_custom_product_kanban_view](foodhub_custom_product_kanban_view/) | 12.0.1.0.0 | [![remytms](https://github.com/remytms.png?size=30px)](https://github.com/remytms) | Adapt the kanban view for product
 [foodhub_label_custom](foodhub_label_custom/) | 12.0.1.0.0 |  | Additional fields for product labels
 [lesptitspots_worker_status](lesptitspots_worker_status/) | 12.0.1.0.0 |  | Worker status management specific to Les P'tit Pots.
 [provelo_analytic_account](provelo_analytic_account/) | 12.0.1.0.0 |  | Match BOB analytical accounts.
