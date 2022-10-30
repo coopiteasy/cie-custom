@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <!-- Do not show Quantity On Hand in product kanban view -->
+    <record model="ir.ui.view" id="stock.product_template_kanban_stock_view">
+        <field name="active" eval="False" />
+    </record>
+
+</odoo>
