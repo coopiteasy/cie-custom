@@ -6,11 +6,13 @@
 <odoo>
     <template id="report_invoice_document" inherit_id="account.report_invoice_document">
         <xpath expr="//t[@t-set='address']" position="inside">
-            <p t-if="doc.partner_id.mobile">
-                <span t-field="doc.partner_id.mobile" />
+            <p t-if="o.partner_id.mobile">
+                <i class="fa fa-mobile" />
+                <span t-field="o.partner_id.mobile" />
             </p>
-            <p t-if="doc.partner_id.phone and not doc.partner_id.mobile">
-                <span t-field="doc.partner_id.phone" />
+            <p t-if="o.partner_id.phone and not o.partner_id.mobile">
+                <i class="fa fa-phone" />
+                <span t-field="o.partner_id.phone" />
             </p>
         </xpath>
     </template>
