@@ -15,7 +15,11 @@ Custom modules for Coop IT Easy's clients.
 
 [//]: # (addons)
 
-This part will be replaced when running the oca-gen-addons-table script from OCA/maintainer-tools.
+Available addons
+----------------
+addon | version | maintainers | summary
+--- | --- | --- | ---
+[cookingo_custom](cookingo_custom/) | 14.0.1.0.0 |  | Custom modifications for Cookingo.
 
 [//]: # (end addons)
 
