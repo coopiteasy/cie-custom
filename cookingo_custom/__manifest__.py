@@ -6,8 +6,8 @@
     "summary": """Custom modifications for Cookingo.""",
     "version": "14.0.1.0.0",
     "category": "Website",
-    "website": "https://coopiteasy.be",
-    "author": "Coop IT Easy SCRLfs",
+    "website": "https://github.com/coopiteasy/cie-custom",
+    "author": "Coop IT Easy SC",
     "license": "AGPL-3",
     "application": False,
     "depends": [
