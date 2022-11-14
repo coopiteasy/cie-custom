@@ -23,7 +23,7 @@ addon | version | maintainers | summary
 --- | --- | --- | ---
 [account_invoice_pos_already_paid](account_invoice_pos_already_paid/) | 12.0.1.0.0 |  | Remove sentence about payment communication from invoice based on the account journal
 [bablmarket_custom](bablmarket_custom/) | 12.0.1.0.0 |  | Specifics customizations for Bablmarket
-[bees_custom](bees_custom/) | 12.0.1.0.2 |  | Specifics customizations for BEES coop.
+[bees_custom](bees_custom/) | 12.0.1.1.0 |  | Specifics customizations for BEES coop.
 [coopiteasy_custom](coopiteasy_custom/) | 12.0.1.2.0 |  | Specific customizations for Coop IT Easy
 [foodhub_custom](foodhub_custom/) | 12.0.1.1.0 |  | Foodhub customizations
 [foodhub_custom_product_kanban_view](foodhub_custom_product_kanban_view/) | 12.0.1.0.0 | [![remytms](https://github.com/remytms.png?size=30px)](https://github.com/remytms) | Adapt the kanban view for product
