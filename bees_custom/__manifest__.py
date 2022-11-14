@@ -5,6 +5,7 @@
     "name": "BEES Customizations",
     "version": "12.0.1.0.2",
     "depends": [
+        "point_of_sale",
         "account_invoice_date_required",
         "beesdoo_product_info_screen",
         "pos_mail_receipt",
@@ -19,6 +20,7 @@
     "data": [
         "views/account_invoice.xml",
         "views/products.xml",
+        "data/default_barcode_pattern.xml",
     ],
     "installable": True,
 }
