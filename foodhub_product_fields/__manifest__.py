@@ -3,9 +3,9 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
 {
-    "name": "Foodhub Mandatory Fields",
+    "name": "Foodhub Product Fields Customization",
     "summary": """
-        Mandatory Fields in Product""",
+        Set Mandatory and Copy Options to Fields in Product""",
     "version": "12.0.1.0.0",
     "category": "Product",
     "website": "https://coopiteasy.be",

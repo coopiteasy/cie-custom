@@ -4,8 +4,7 @@
 
 {
     "name": "Foodhub Copy Product Fields",
-    "summary": """
-        When duplicating a product, copy more fields over.""",
+    "summary": """Emptied.""",
     "version": "12.0.1.0.0",
     "category": "Uncategorized",
     "website": "https://coopiteasy.be",
@@ -14,8 +13,7 @@
     "license": "AGPL-3",
     "application": False,
     "depends": [
-        "product",
-        "product_harmonized_system",
+        "foodhub_product_fields",
     ],
     "excludes": [],
     "data": [],
