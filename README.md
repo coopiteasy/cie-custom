@@ -31,7 +31,7 @@ addon | version | maintainers | summary
 [foodhub_label_custom](foodhub_label_custom/) | 12.0.1.0.0 |  | Additional fields for product labels
 [lesptitspots_worker_status](lesptitspots_worker_status/) | 12.0.1.0.0 |  | Worker status management specific to Les P'tit Pots.
 [provelo_analytic_account](provelo_analytic_account/) | 12.0.1.0.0 |  | Match BOB analytical accounts.
-[provelo_custom](provelo_custom/) | 12.0.1.5.0 |  | Pro Velo customizations
+[provelo_custom](provelo_custom/) | 12.0.1.6.0 |  | Pro Velo customizations
 [provelo_custom_display_phone](provelo_custom_display_phone/) | 12.0.1.5.0 |  | Display phone number in sale order and invoice reports
 [provelo_custom_timesheet_ui](provelo_custom_timesheet_ui/) | 12.0.1.0.1 |  | Small modifications to the Timesheets UI
 [provelo_resource_activity_reports](provelo_resource_activity_reports/) | 12.0.1.0.1 |  | Reports for resource activities
