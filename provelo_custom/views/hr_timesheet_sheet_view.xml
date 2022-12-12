@@ -74,4 +74,9 @@
             eval="[(4, ref('hr_auto_manager_group_membership.group_employee_manager'))]"
         />
     </record>
+
+    <!-- make this menuitem visible to administrators only. -->
+    <record model="ir.ui.menu" id="hr_timesheet_sheet.menu_hr_to_review">
+        <field name="groups_id" eval="[(4, ref('base.group_system'))]" />
+    </record>
 </odoo>
