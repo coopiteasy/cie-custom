@@ -5,7 +5,7 @@
 {
     "name": "SPP Customizations",
     "version": "12.0.1.1.0",
-    "depends": ["beesdoo_base", "beesdoo_product"],
+    "depends": ["beesdoo_base", "beesdoo_product", "spp_pos_mustard"],
     "author": "Coop IT Easy SC",
     "license": "AGPL-3",
     "category": "",
