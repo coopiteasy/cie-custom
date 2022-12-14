@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template id="assets" inherit_id="pos_shift_partner_can_shop.assets">
+        <xpath expr="." position="inside">
+            <link
+                rel="stylesheet"
+                href="/spp_pos_mustard/static/src/css/pos_shift_partner_can_shop.css"
+            />
+        </xpath>
+    </template>
+</odoo>
