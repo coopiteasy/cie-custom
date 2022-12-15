@@ -10,10 +10,10 @@
     "author": "Coop IT Easy SC",
     "website": "https://coopiteasy.be",
     "depends": [
-        "beesdoo_product",
+        "beesdoo_product_label",
     ],
     "data": [
-        "views/beesdoo_product.xml",
+        "views/product_template.xml",
     ],
     "demo": [],
 }
