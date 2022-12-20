@@ -9,7 +9,7 @@
     "website": "https://coopiteasy.be",
     "category": "Cooperative management",
     "version": "12.0.1.0.0",
-    "depends": ["beesdoo_worker_status"],
+    "depends": ["shift_worker_status"],
     "data": [],
     "license": "AGPL-3",
 }
