@@ -18,7 +18,7 @@
             >
                 <attribute name="context">{
                     'partner_id': parent.partner_id,
-                    'form_view_ref': 'beesdoo_product.beesdoo_product_form'
+                    'form_view_ref': 'product.product_template_only_form_view'
                     }
                 </attribute>
             </xpath>
