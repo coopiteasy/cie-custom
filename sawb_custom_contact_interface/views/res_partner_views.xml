@@ -8,7 +8,7 @@
             ref="partner_industry_secondary.view_partner_form_industry"
         />
         <field name="arch" type="xml">
-            <field name="category_id" position="after">
+            <field name="vat" position="after">
                 <field name="user_id" />
                 <field name="industry_id" position="move" />
                 <field name="secondary_industry_ids" position="move" />
