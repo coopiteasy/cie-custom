@@ -1,2 +1,2 @@
 freezegun
-git+https://github.com/coopiteasy/partner-contact@coopiteasy:16.0-mig-partner_industry_secondary#subdirectory=setup/partner_industry_secondary
+git+https://github.com/coopiteasy/partner-contact@16.0-mig-partner_industry_secondary#subdirectory=setup/partner_industry_secondary
