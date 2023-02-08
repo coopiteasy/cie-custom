@@ -17,7 +17,11 @@ Custom modules for Coop IT Easy's clients.
 
 [//]: # (addons)
 
-This part will be replaced when running the oca-gen-addons-table script from OCA/maintainer-tools.
+Available addons
+----------------
+addon | version | maintainers | summary
+--- | --- | --- | ---
+[sawb_custom_contact_interface](sawb_custom_contact_interface/) | 16.0.1.0.0 | [![victor-champonnois](https://github.com/victor-champonnois.png?size=30px)](https://github.com/victor-champonnois) | SAWB Custom : Contact Interface.
 
 [//]: # (end addons)
 
