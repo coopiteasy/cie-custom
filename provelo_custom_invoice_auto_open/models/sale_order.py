@@ -11,9 +11,9 @@ class SaleOrder(models.Model):
     @api.multi
     def action_invoice_create(self, grouped=False, final=False):
         invoice_ids = super().action_invoice_create(grouped=grouped, final=final)
-        invoices = self.env["account.invoice"].browse(invoice_ids)
-        immediate_payment_term_id = self.env.ref(
-            "account.account_payment_term_immediate"
-        )
-        invoices.payment_term_id = immediate_payment_term_id
+        if self.env.user.has_group(
+            "provelo_custom_invoice_auto_open.account_invoice_auto_open_group"
+        ):
+            invoices = self.env["account.invoice"].browse(invoice_ids)
+            invoices.action_invoice_open()
         return invoice_ids
