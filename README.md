@@ -17,7 +17,40 @@ Custom modules for Coop IT Easy's clients.
 
 [//]: # (addons)
 
-This part will be replaced when running the oca-gen-addons-table script from OCA/maintainer-tools.
+Available addons
+----------------
+addon | version | maintainers | summary
+--- | --- | --- | ---
+[account_invoice_pos_already_paid](account_invoice_pos_already_paid/) | 12.0.1.0.0 |  | Remove sentence about payment communication from invoice based on the account journal
+[bablmarket_custom](bablmarket_custom/) | 12.0.1.0.0 |  | Specifics customizations for Bablmarket
+[bees_custom](bees_custom/) | 12.0.1.1.0 |  | Specifics customizations for BEES coop.
+[coopiteasy_custom](coopiteasy_custom/) | 12.0.1.2.0 |  | Specific customizations for Coop IT Easy
+[demain_purchase_quick](demain_purchase_quick/) | 12.0.1.0.0 |  | Add minimum quantity and purchase UoM fields to purchase order products quick add view
+[foodhub_copy_product_fields](foodhub_copy_product_fields/) | 12.0.1.0.0 | [![carmenbianca](https://github.com/carmenbianca.png?size=30px)](https://github.com/carmenbianca) | When duplicating a product, copy more fields over.
+[foodhub_custom](foodhub_custom/) | 12.0.1.1.0 |  | Foodhub customizations
+[foodhub_custom_product_kanban_view](foodhub_custom_product_kanban_view/) | 12.0.1.0.0 | [![remytms](https://github.com/remytms.png?size=30px)](https://github.com/remytms) | Adapt the kanban view for product
+[foodhub_label_custom](foodhub_label_custom/) | 12.0.1.0.0 |  | Additional fields for product labels
+[lesptitspots_worker_status](lesptitspots_worker_status/) | 12.0.1.0.0 |  | Worker status management specific to Les P'tit Pots.
+[provelo_analytic_account](provelo_analytic_account/) | 12.0.1.0.0 |  | Match BOB analytical accounts.
+[provelo_custom](provelo_custom/) | 12.0.1.6.0 |  | Pro Velo customizations
+[provelo_custom_display_phone](provelo_custom_display_phone/) | 12.0.1.5.0 |  | Display phone number in sale order and invoice reports
+[provelo_custom_invoice_auto_open](provelo_custom_invoice_auto_open/) | 12.0.1.0.0 |  | Invoices are automatically opened for users with 'Automatically Open Invoices' group set.
+[provelo_custom_timesheet_ui](provelo_custom_timesheet_ui/) | 12.0.1.0.1 |  | Small modifications to the Timesheets UI
+[provelo_resource_activity_reports](provelo_resource_activity_reports/) | 12.0.1.0.1 |  | Reports for resource activities
+[rotordc_autofill_product_variant](rotordc_autofill_product_variant/) | 12.0.1.0.1 |  | Autofill some field of the product variant based on the product template.
+[rotordc_custom](rotordc_custom/) | 12.0.1.1.0 |  | Customization for RotorDC
+[rotordc_invoice_link_down_payment](rotordc_invoice_link_down_payment/) | 12.0.1.0.0 | [![carmenbianca](https://github.com/carmenbianca.png?size=30px)](https://github.com/carmenbianca) | Register payments done through invoices as down payment on sale orders.
+[rotordc_mail_activity_display_info](rotordc_mail_activity_display_info/) | 12.0.1.0.0 | [![carmenbianca](https://github.com/carmenbianca.png?size=30px)](https://github.com/carmenbianca) | Display the info of activities by default.
+[rotordc_optional_product](rotordc_optional_product/) | 12.0.1.0.0 |  | Custom modifications regarding RotorDC's use of optional products.
+[rotordc_payment_link_down_payment](rotordc_payment_link_down_payment/) | 12.0.1.0.1 | [![carmenbianca](https://github.com/carmenbianca.png?size=30px)](https://github.com/carmenbianca) | Register payments done with payment acquirers as down payment on sale orders.
+[rotordc_product_storage_location](rotordc_product_storage_location/) | 12.0.1.0.0 | [![carmenbianca](https://github.com/carmenbianca.png?size=30px)](https://github.com/carmenbianca) | Select a storage location on products.
+[rotordc_report_picking_huge_sale_order](rotordc_report_picking_huge_sale_order/) | 12.0.1.0.0 |  | At the bottom of the Picking Operations report, display the sale order in huge text.
+[rotordc_sale_address](rotordc_sale_address/) | 12.0.1.0.0 | [![carmenbianca](https://github.com/carmenbianca.png?size=30px)](https://github.com/carmenbianca) | Display full address for invoice and delivery in sale order.
+[rotordc_sale_invoice_comment](rotordc_sale_invoice_comment/) | 12.0.1.0.0 | [![carmenbianca](https://github.com/carmenbianca.png?size=30px)](https://github.com/carmenbianca) | Make sure that the terms & conditions are always set on all invoices, and don't display the reference on POS invoices.
+[rotordc_sale_picking_state](rotordc_sale_picking_state/) | 12.0.1.0.0 | [![carmenbianca](https://github.com/carmenbianca.png?size=30px)](https://github.com/carmenbianca) | Set states for stock pickings on sale orders depending on the stock pickings' types.
+[rotordc_website_theme](rotordc_website_theme/) | 12.0.1.0.0 |  | Website theme for RotorDC.
+[spp_custom](spp_custom/) | 12.0.1.1.0 |  | Specifics customizations for SPP
+[spp_pos_mustard](spp_pos_mustard/) | 12.0.1.0.0 | [![carmenbianca](https://github.com/carmenbianca.png?size=30px)](https://github.com/carmenbianca) | Make a button in the POS interface mustard-coloured.
 
 [//]: # (end addons)
 
