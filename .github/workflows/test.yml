@@ -19,10 +19,6 @@ jobs:
       matrix:
         include:
           - container: ghcr.io/oca/oca-ci/py3.6-ocb12.0:latest
-            include: "provelo_custom"
-            makepot: "true"
-            name: test with OCB
-          - container: ghcr.io/oca/oca-ci/py3.6-ocb12.0:latest
             exclude: "provelo_custom"
             makepot: "true"
             name: test with OCB
@@ -42,6 +38,8 @@ jobs:
       - uses: actions/checkout@v2
         with:
           persist-credentials: false
+      - name: Temporarily remove provelo_custom
+        run: rm -fr provelo_custom
       - name: Install addons and dependencies
         run: oca_install_addons
       - name: Check licenses
