@@ -1,13 +1,13 @@
-odoo.define("rotordc_optional_product.OptionalProductsModal", function (require) {
+odoo.define("rotordc_optional_product.OptionalProductsModal", function(require) {
     "use strict";
 
     var OptionalProductsModal = require("sale.OptionalProductsModal");
 
     OptionalProductsModal.include({
-        _getCategId: function ($element) {
+        _getCategId: function($element) {
             return $element.find("input.product_categ_id").val();
         },
-        _onAddOption: function ($modal, $parent, productTemplateId) {
+        _onAddOption: function($modal, $parent, productTemplateId) {
             var categ_id = this._getCategId($parent);
             var self = this;
 
@@ -15,7 +15,7 @@ odoo.define("rotordc_optional_product.OptionalProductsModal", function (require)
             // internal category.
             $modal
                 .find(".js_product:not(.in_cart):not(.main_product)")
-                .each(function () {
+                .each(function() {
                     var $item = $(this);
                     var item_product_id = $item.find(".product_id").val();
                     if (
@@ -29,12 +29,12 @@ odoo.define("rotordc_optional_product.OptionalProductsModal", function (require)
 
             this._super($modal, $parent, productTemplateId);
         },
-        _onRemoveOption: function ($modal, $parent, productTemplateId) {
+        _onRemoveOption: function($modal, $parent, productTemplateId) {
             var categ_id = this._getCategId($parent);
             var self = this;
 
             // Re-enable all buttons.
-            $modal.find(".js_product:not(.main_product)").each(function () {
+            $modal.find(".js_product:not(.main_product)").each(function() {
                 var $item = $(this);
                 if (self._getCategId($item) === categ_id) {
                     var $button = $item.find("a.js_add");
