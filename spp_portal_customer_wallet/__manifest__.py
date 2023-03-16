@@ -19,7 +19,9 @@
         "portal",
     ],
     "excludes": [],
-    "data": [],
+    "data": [
+        "views/portal_templates.xml",
+    ],
     "demo": [],
     "qweb": [],
 }
