@@ -48,7 +48,7 @@ class PortalPosOrderAmount(CustomerPortal):
 
         ordered = []
         years = set()
-        for key, value in sorted(per_month.items()):
+        for key, value in sorted(per_month.items(), reverse=True):
             year = key[0]
             month = key[1]
             if year not in years:
