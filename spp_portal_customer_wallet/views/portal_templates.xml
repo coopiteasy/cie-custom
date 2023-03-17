@@ -16,7 +16,7 @@
                 <h3>Customer Wallet</h3>
                 <p>Customer wallet balance: <t
                         t-esc="customer_wallet_balance"
-                        t-esc-options='{"widget": "monetary", "display_currency": "company_currency"}'
+                        t-options='{"widget": "monetary", "display_currency": company_currency}'
                     /></p>
                 <table name="customer_wallet_usage_table" class="table">
                     <tr>
@@ -40,7 +40,7 @@
                             <td>
                                 <t
                                     t-esc="row['amount']"
-                                    t-esc-options='{"widget": "monetary", "display_currency": "company_currency"}'
+                                    t-options='{"widget": "monetary", "display_currency": company_currency}'
                                 />
                             </td>
                         </tr>

@@ -5,7 +5,6 @@
 from collections import defaultdict
 
 from odoo.http import request
-from odoo.tools import float_repr
 from odoo.tools.translate import _
 
 from odoo.addons.portal.controllers.portal import CustomerPortal
@@ -49,14 +48,12 @@ class PortalPosOrderAmount(CustomerPortal):
             year = key[0]
             month = key[1]
             if year not in years:
-                ordered.append(
-                    {"month": str(year), "amount": float_repr(per_year[year], 2)}
-                )
+                ordered.append({"month": str(year), "amount": per_year[year]})
                 years.add(year)
             ordered.append(
                 {
                     "month": f"{translate_month(month)} {year}",
-                    "amount": float_repr(value, 2),
+                    "amount": value,
                 }
             )
 
