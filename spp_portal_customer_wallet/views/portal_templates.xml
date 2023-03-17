@@ -26,6 +26,9 @@
                         <th>
                             Amount
                         </th>
+                        <th>
+                            Of which FoodPrint expenses
+                        </th>
                     </tr>
                     <t t-foreach="customer_wallet_payments_per_month" t-as="row">
                         <t t-set="is_year" t-value="len(row['month']) == 4" />
@@ -40,6 +43,12 @@
                             <td>
                                 <t
                                     t-esc="row['amount']"
+                                    t-options='{"widget": "monetary", "display_currency": company_currency}'
+                                />
+                            </td>
+                            <td>
+                                <t
+                                    t-esc="row['foodprint_amount']"
                                     t-options='{"widget": "monetary", "display_currency": company_currency}'
                                 />
                             </td>

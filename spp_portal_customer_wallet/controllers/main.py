@@ -28,9 +28,9 @@ def translate_month(number):
     return MONTHS[number]
 
 
-def sums_of_years(customer_wallet_payments_per_month):
+def sums_of_years(per_month):
     result = defaultdict(int)
-    for key, value in customer_wallet_payments_per_month.items():
+    for key, value in per_month.items():
         result[key[0]] += value
     return dict(result)
 
@@ -39,21 +39,32 @@ class PortalPosOrderAmount(CustomerPortal):
     def _prepare_portal_layout_values(self):
         values = super(PortalPosOrderAmount, self)._prepare_portal_layout_values()
         user = request.env.user
+        partner_id = user.partner_id
 
-        per_month = user.partner_id.customer_wallet_payments_per_month()
+        per_month = partner_id.customer_wallet_payments_per_month()
         per_year = sums_of_years(per_month)
+        foodprint_per_month = partner_id.foodprint_payments_per_month()
+        foodprint_per_year = sums_of_years(foodprint_per_month)
+
         ordered = []
         years = set()
         for key, value in sorted(per_month.items()):
             year = key[0]
             month = key[1]
             if year not in years:
-                ordered.append({"month": str(year), "amount": per_year[year]})
+                ordered.append(
+                    {
+                        "month": str(year),
+                        "amount": per_year[year],
+                        "foodprint_amount": foodprint_per_year.get(year, 0),
+                    }
+                )
                 years.add(year)
             ordered.append(
                 {
                     "month": f"{translate_month(month)} {year}",
                     "amount": value,
+                    "foodprint_amount": foodprint_per_month.get(key, 0),
                 }
             )
 
@@ -61,5 +72,5 @@ class PortalPosOrderAmount(CustomerPortal):
         values["company_currency"] = (
             request.env["res.company"]._company_default_get().currency_id
         )
-        values["customer_wallet_balance"] = user.partner_id.customer_wallet_balance
+        values["customer_wallet_balance"] = partner_id.customer_wallet_balance
         return values
