@@ -27,23 +27,6 @@ class TestMonthlyBalance(TestCommon):
         )
         cls.regular_product_product = cls.regular_product.product_variant_id
 
-        cls.cash_account = cls.env["account.account"].create(
-            {
-                "name": "Test Cash Account",
-                "code": "654321",
-                "user_type_id": cls.env.ref("account.data_account_type_liquidity").id,
-            }
-        )
-        cls.cash_journal = cls.env["account.journal"].create(
-            {
-                "name": "Test Cash Journal",
-                "code": "CASH",
-                "type": "cash",
-                "journal_user": True,
-                "default_debit_account_id": cls.cash_account.id,
-                "default_credit_account_id": cls.cash_account.id,
-            }
-        )
         cls.pos_config = cls.env.ref("point_of_sale.pos_config_main")
         cls.pos_config.journal_ids += cls.customer_wallet_journal
         cls.pos_config.journal_ids += cls.cash_journal

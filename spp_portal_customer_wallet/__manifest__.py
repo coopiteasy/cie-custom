@@ -17,6 +17,7 @@
         "spp_custom",
         "pos_customer_wallet",
         "portal",
+        "website",
     ],
     "excludes": [],
     "data": [
