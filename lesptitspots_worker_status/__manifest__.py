@@ -8,7 +8,7 @@
     "author": "Coop IT Easy SC",
     "website": "https://coopiteasy.be",
     "category": "Cooperative management",
-    "version": "12.0.1.0.0",
+    "version": "12.0.1.0.1",
     "depends": ["shift_worker_status"],
     "data": [],
     "license": "AGPL-3",
