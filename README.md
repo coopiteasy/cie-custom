@@ -30,7 +30,7 @@ addon | version | maintainers | summary
 [foodhub_custom](foodhub_custom/) | 12.0.1.1.0 |  | Foodhub customizations
 [foodhub_custom_product_kanban_view](foodhub_custom_product_kanban_view/) | 12.0.1.0.0 | [![remytms](https://github.com/remytms.png?size=30px)](https://github.com/remytms) | Adapt the kanban view for product
 [foodhub_label_custom](foodhub_label_custom/) | 12.0.1.0.0 |  | Additional fields for product labels
-[lesptitspots_worker_status](lesptitspots_worker_status/) | 12.0.1.0.0 |  | Worker status management specific to Les P'tit Pots.
+[lesptitspots_worker_status](lesptitspots_worker_status/) | 12.0.1.0.1 |  | Worker status management specific to Les P'tit Pots.
 [provelo_analytic_account](provelo_analytic_account/) | 12.0.1.0.0 |  | Match BOB analytical accounts.
 [provelo_custom](provelo_custom/) | 12.0.1.6.0 |  | Pro Velo customizations
 [provelo_custom_display_phone](provelo_custom_display_phone/) | 12.0.1.5.0 |  | Display phone number in sale order and invoice reports
