@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template id="report_supplier_certificate_document">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                <t t-call="web.external_layout">
+                    <t t-set="o" t-value="o.with_context(lang=o.partner_id.lang)" />
+                    <t t-set="address">
+                        <p id="partner_info">
+                            <strong>Donateur :</strong>
+                        </p>
+                        <div
+                            t-field="o.partner_id"
+                            t-options='{"widget": "contact", "fields": ["address", "name", "phone", "mobile", "fax", "email"], "no_marker": true, "phone_icons": true}'
+                        />
+                        <p t-if="o.partner_id.vat">VAT: <span
+                                t-field="o.partner_id.vat"
+                            /></p>
+                    </t>
+                    <div class="page">
+                        <div class="mt-4" id="title">
+                            <h1>Attestation de donation d'invendus alimentaires</h1>
+                        </div>
+                        <div class="mt-4" id="legal_disclaimer">
+                            <p>
+                                Cette donation a lieu dans le cadre
+                                du marché public T’as de Beaux
+                                Restes mis en place par la commune
+                                d’Ixelles et dans le but d’une
+                                redistribution à des organismes
+                                sociaux.
+                            </p>
+                            <p>
+                                <span
+                                    t-field="res_company.partner_id.name"
+                                /> s’engage :
+                                <ul>
+                                    <li>
+                                        à ne pas utiliser les biens
+                                        reçus à des fins
+                                        commerciales
+                                    </li>
+                                    <li>
+                                        à destiner les biens reçus à
+                                        une action sociale en faveur
+                                        de personnes nécessiteuses
+                                    </li>
+                                    <li>
+                                        à ne réclamer aucune
+                                        contrepartie lors de la
+                                        distribution de ces biens à
+                                        l'exception d'une éventuelle
+                                        contribution financière qui
+                                        ne peut excéder les dépenses
+                                        directement liées à cette
+                                        distribution.
+                                    </li>
+                                </ul>
+                            </p>
+                            <p>
+                                A cette fiche sont jointes en
+                                annexes toutes les listes de dons
+                                ayant eu cours durant la période du
+                                <span t-field="o.start_date" /> au
+                                <span t-field="o.end_date" />.
+                            </p>
+                        </div>
+                        <div class="mt-4" id="purchase_order_list_title">
+                            <h3>Détails des donations</h3>
+                        </div>
+                        <t t-if="not o.purchase_order_ids">
+                             <p>Aucune donation pour la période.</p>
+                        </t>
+                        <t t-else="">
+                            <div
+                                class="row mt-4"
+                                t-foreach="o.purchase_order_ids"
+                                t-as="purchase_order"
+                            >
+                                <div class="col-6">
+                                    <p>
+                                        Nom: <span t-field="purchase_order.name" />
+                                    </p>
+                                </div>
+                                <div class="col-6">
+                                    <p>
+                                        Date d'approbation: <span
+                                            t-field="purchase_order.date_approve"
+                                        />
+                                    </p>
+                                </div>
+                          </div>
+                          <div class="row" id="purchase_order_lines">
+                              <div class="col-12">
+                                  <table class="table table-sm">
+                                      <thead>
+                                          <tr>
+                                              <th>
+                                                  <strong>Description</strong>
+                                              </th>
+                                              <th class="text-right">
+                                                  <strong>Quantité</strong>
+                                              </th>
+                                          </tr>
+                                      </thead>
+                                      <tbody>
+                                          <tr
+                                                t-foreach="purchase_order.order_line"
+                                                t-as="l"
+                                            >
+                                              <td>
+                                                  <span t-field="l.name" />
+                                              </td>
+                                              <td class="text-right">
+                                                  <span t-field="l.product_qty" />
+                                              </td>
+                                          </tr>
+                                      </tbody>
+                                  </table>
+                              </div>
+                          </div>
+                        </t>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+</odoo>
