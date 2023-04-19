@@ -7,7 +7,7 @@
                     <t t-set="o" t-value="o.with_context(lang=o.partner_id.lang)" />
                     <t t-set="address">
                         <p id="partner_info">
-                            <strong>Donateur :</strong>
+                            <strong>Donator:</strong>
                         </p>
                         <div
                             t-field="o.partner_id"
@@ -19,57 +19,52 @@
                     </t>
                     <div class="page">
                         <div class="mt-4" id="title">
-                            <h1>Attestation de donation d'invendus alimentaires</h1>
+                            <h1>Certificate of donation of unsold food</h1>
                         </div>
                         <div class="mt-4" id="legal_disclaimer">
                             <p>
-                                Cette donation a lieu dans le cadre
-                                du marché public T’as de Beaux
-                                Restes mis en place par la commune
-                                d’Ixelles et dans le but d’une
-                                redistribution à des organismes
-                                sociaux.
+                                This donation takes place within the
+                                framework of the public market T'as de
+                                Beaux Restes set up by the municipality
+                                of Ixelles and with the aim of
+                                redistribution to social organizations.
                             </p>
                             <p>
                                 <span
                                     t-field="res_company.partner_id.name"
-                                /> s’engage :
+                                /> undertakes:
                                 <ul>
                                     <li>
-                                        à ne pas utiliser les biens
-                                        reçus à des fins
-                                        commerciales
+                                        not to use the goods received
+                                        for commercial purposes.
                                     </li>
                                     <li>
-                                        à destiner les biens reçus à
-                                        une action sociale en faveur
-                                        de personnes nécessiteuses
+                                        to use the goods received for a
+                                        social action in favor of needy
+                                        people.
                                     </li>
                                     <li>
-                                        à ne réclamer aucune
-                                        contrepartie lors de la
-                                        distribution de ces biens à
-                                        l'exception d'une éventuelle
-                                        contribution financière qui
-                                        ne peut excéder les dépenses
-                                        directement liées à cette
-                                        distribution.
+                                        not to ask for any compensation
+                                        when distributing these goods,
+                                        except for a possible financial
+                                        contribution which cannot exceed
+                                        the expenses directly linked to
+                                        this distribution.
                                     </li>
                                 </ul>
                             </p>
                             <p>
-                                A cette fiche sont jointes en
-                                annexes toutes les listes de dons
-                                ayant eu cours durant la période du
-                                <span t-field="o.start_date" /> au
+                                Attached to this form are all
+                                the lists of donations made during the period from
+                                <span t-field="o.start_date" /> to
                                 <span t-field="o.end_date" />.
                             </p>
                         </div>
                         <div class="mt-4" id="purchase_order_list_title">
-                            <h3>Détails des donations</h3>
+                            <h3>Details of donations</h3>
                         </div>
                         <t t-if="not o.purchase_order_ids">
-                             <p>Aucune donation pour la période.</p>
+                             <p>No donation for this period.</p>
                         </t>
                         <t t-else="">
                             <div
@@ -79,12 +74,12 @@
                             >
                                 <div class="col-6">
                                     <p>
-                                        Nom: <span t-field="purchase_order.name" />
+                                        Name: <span t-field="purchase_order.name" />
                                     </p>
                                 </div>
                                 <div class="col-6">
                                     <p>
-                                        Date d'approbation: <span
+                                        Date of Approval: <span
                                             t-field="purchase_order.date_approve"
                                         />
                                     </p>
@@ -99,7 +94,7 @@
                                                   <strong>Description</strong>
                                               </th>
                                               <th class="text-right">
-                                                  <strong>Quantité</strong>
+                                                  <strong>Quantity</strong>
                                               </th>
                                           </tr>
                                       </thead>
