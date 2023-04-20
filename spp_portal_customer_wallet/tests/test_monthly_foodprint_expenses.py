@@ -4,7 +4,7 @@
 
 import datetime
 
-from .common import TestCommon
+from odoo.addons.portal_customer_wallet.tests.common import TestCommon
 
 
 class TestMonthlyBalance(TestCommon):

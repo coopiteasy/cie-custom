@@ -15,9 +15,8 @@
     "application": False,
     "depends": [
         "spp_custom",
+        "portal_customer_wallet",
         "pos_customer_wallet",
-        "portal",
-        "website",
     ],
     "excludes": [],
     "data": [
