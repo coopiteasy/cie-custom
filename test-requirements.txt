@@ -31,6 +31,7 @@ git+https://github.com/coopiteasy/addons@12.0#subdirectory=setup/sale_order_volu
 git+https://github.com/coopiteasy/addons@12.0#subdirectory=setup/company_supplier_context
 git+https://github.com/coopiteasy/addons@12.0#subdirectory=setup/account_customer_wallet
 git+https://github.com/coopiteasy/addons@12.0#subdirectory=setup/pos_customer_wallet
+git+https://github.com/coopiteasy/addons@12.0-split-spp_portal_customer_wallet#subdirectory=setup/portal_customer_wallet
 # git+https://github.com/coopiteasy/csv-connector@12.0#subdirectory=setup/csv_export_base
 # git+https://github.com/coopiteasy/csv-connector@12.0#subdirectory=setup/sftp_backend
 # git+https://github.com/coopiteasy/csv-connector@12.0#subdirectory=setup/csv_export_invoice
