@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="sale_order_view_form" model="ir.ui.view">
+        <field name="name">sale.order.form.rotordc.sale.related.so</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form" />
+        <field name="arch" type="xml">
+            <field name="payment_term_id" position="after">
+                <field name="origin" readonly="1" />
+            </field>
+            <page name="other_information" position="before">
+                <page string="Related Sale Orders" name="linked_sale_orders">
+                    <button
+                        name="create_related_sale_order"
+                        type="object"
+                        string="Create Related Sale Order"
+                        class="oe_link"
+                    />
+                    <group>
+                        <field name="related_so_ids" nolabel="1">
+                            <tree>
+                                <control>
+                                    <create
+                                        string="Create SO"
+                                        context="{'default_origin': name}"
+                                    />
+                                </control>
+                                <field name="name" />
+                                <field name="confirmation_date" />
+                                <field name="partner_id" />
+                                <field name="user_id" />
+                                <field name="amount_total" />
+                                <field name="state" />
+                                <field name="invoice_status" />
+                            </tree>
+                        </field>
+                    </group>
+                </page>
+            </page>
+        </field>
+    </record>
+
+    <record id="sale_order_view_quotation_tree" model="ir.ui.view">
+        <field name="name">sale.order.tree.rotordc.sale.related.so</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_quotation_tree" />
+        <field name="arch" type="xml">
+            <field name="state" position="before">
+                <field name="related_so_ids" widget="many2many_tags" />
+            </field>
+        </field>
+    </record>
+</odoo>
