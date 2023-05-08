@@ -15,11 +15,13 @@
     "application": False,
     "depends": [
         "sale_stock",
+        "rotordc_report_picking_huge_sale_order",
     ],
     "excludes": [],
     "data": [
         "views/sale_order_views.xml",
         "views/stock_picking_views.xml",
+        "report/report_stockpicking_operations.xml",
         "security/ir.model.access.csv",
     ],
     "demo": [],
