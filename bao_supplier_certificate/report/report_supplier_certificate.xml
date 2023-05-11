@@ -67,53 +67,60 @@
                              <p>No donation for this period.</p>
                         </t>
                         <t t-else="">
-                            <div
-                                class="row mt-4"
-                                t-foreach="o.purchase_order_ids"
-                                t-as="purchase_order"
-                            >
-                                <div class="col-6">
-                                    <p>
-                                        Name: <span t-field="purchase_order.name" />
-                                    </p>
+                            <t t-foreach="o.purchase_order_ids" t-as="purchase_order">
+
+                                <div class="row mt-4">
+                                    <div class="col-6">
+                                        <p>
+                                            Name: <span t-field="purchase_order.name" />
+                                        </p>
+                                    </div>
+                                    <div class="col-6">
+                                        <p>
+                                            Date of Approval: <span
+                                                t-field="purchase_order.date_approve"
+                                            />
+                                        </p>
+                                    </div>
                                 </div>
-                                <div class="col-6">
-                                    <p>
-                                        Date of Approval: <span
-                                            t-field="purchase_order.date_approve"
-                                        />
-                                    </p>
+
+                                <div class="row" id="purchase_order_lines">
+                                  <div class="col-12">
+                                      <table class="table table-sm">
+                                          <thead>
+                                              <tr>
+                                                  <th>
+                                                      <strong>Description</strong>
+                                                  </th>
+                                                  <th class="text-right">
+                                                      <strong>Quantity</strong>
+                                                  </th>
+                                                  <th class="text-right">
+                                                      <strong>Unit</strong>
+                                                  </th>
+                                              </tr>
+                                          </thead>
+                                          <tbody>
+                                              <tr
+                                                    t-foreach="purchase_order.order_line"
+                                                    t-as="l"
+                                                >
+                                                  <td>
+                                                      <span t-field="l.name" />
+                                                  </td>
+                                                  <td class="text-right">
+                                                      <span t-field="l.product_qty" />
+                                                  </td>
+                                                  <td class="text-right">
+                                                      <span t-field="l.product_uom" />
+                                                  </td>
+                                              </tr>
+                                          </tbody>
+                                      </table>
+                                  </div>
                                 </div>
-                          </div>
-                          <div class="row" id="purchase_order_lines">
-                              <div class="col-12">
-                                  <table class="table table-sm">
-                                      <thead>
-                                          <tr>
-                                              <th>
-                                                  <strong>Description</strong>
-                                              </th>
-                                              <th class="text-right">
-                                                  <strong>Quantity</strong>
-                                              </th>
-                                          </tr>
-                                      </thead>
-                                      <tbody>
-                                          <tr
-                                                t-foreach="purchase_order.order_line"
-                                                t-as="l"
-                                            >
-                                              <td>
-                                                  <span t-field="l.name" />
-                                              </td>
-                                              <td class="text-right">
-                                                  <span t-field="l.product_qty" />
-                                              </td>
-                                          </tr>
-                                      </tbody>
-                                  </table>
-                              </div>
-                          </div>
+
+                            </t>
                         </t>
                     </div>
                 </t>
