@@ -17,7 +17,9 @@
     "excludes": [],
     "data": [
         "security/ir.model.access.csv",
+        "views/supplier_certificate_views.xml",
         "views/supplier_certificate_generator_views.xml",
+        "views/supplier_certificate_menus.xml",
         "report/report_supplier_certificate.xml",
         "report/ir_action_report.xml",
         "data/mail_template.xml",

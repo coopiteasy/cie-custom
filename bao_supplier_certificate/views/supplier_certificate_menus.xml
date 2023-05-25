@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <menuitem
+        id="menu_supplier_certificate_root"
+        name="Vendor Certificates"
+        parent="purchase.menu_purchase_root"
+    />
+
+    <menuitem
+        id="menu_supplier_certificate_generator"
+        name="Vendor Certificate Generators"
+        parent="bao_supplier_certificate.menu_supplier_certificate_root"
+        action="bao_supplier_certificate.action_supplier_certificate_generator"
+    />
+
+    <menuitem
+        id="menu_supplier_certificate"
+        name="Vendors Certificates"
+        parent="bao_supplier_certificate.menu_supplier_certificate_root"
+        action="bao_supplier_certificate.action_supplier_certificate"
+    />
+
+</odoo>
