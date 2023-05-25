@@ -86,15 +86,7 @@ class SupplierCertificateGenerator(models.Model):
         for generator in self:
             # Fill in supplier_ids if empty
             if not generator.supplier_ids:
-                purchase_order_ids = self.env["purchase.order"].search(
-                    [
-                        ("state", "in", ["purchase", "done"]),
-                        ("date_approve", ">=", self.start_date),
-                        ("date_approve", "<=", self.end_date),
-                    ]
-                )
-                # Mapped removes duplicates partner_id
-                generator.supplier_ids = purchase_order_ids.mapped("partner_id")
+                generator.supplier_ids = generator.get_supplier_ids()
             val_list = []
             for supplier in generator.supplier_ids:
                 val_list.append(
@@ -125,3 +117,18 @@ class SupplierCertificateGenerator(models.Model):
         for generator in self:
             generator.supplier_certificate_ids.action_cancel()
             generator.state = "cancelled"
+
+    def get_supplier_ids(self):
+        """Return supplier that have at least one purchase order that
+        will be certified by this generator.
+        """
+        self.ensure_one()
+        purchase_order_ids = self.env["purchase.order"].search(
+            [
+                ("state", "in", ["purchase", "done"]),
+                ("date_approve", ">=", self.start_date),
+                ("date_approve", "<=", self.end_date),
+            ]
+        )
+        # mapped() removes duplicates partner_id
+        return purchase_order_ids.mapped("partner_id")
