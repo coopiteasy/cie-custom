@@ -20,24 +20,21 @@
         <field name="body_html" type="html">
 <div style="margin: 0px; padding: 0px;">
     <p style="margin: 0px; padding: 0px; font-size: 13px;">
-        Dear <t t-out="object.partner_id.name or ''">Brandon Freeman</t>
+        Dear <t t-out="object.partner_id.name or ''" />
         <t t-if="object.partner_id.parent_id">
-            (<t t-out="object.partner_id.parent_id.name or ''">Azure Interior</t>)
+            (<t t-out="object.partner_id.parent_id.name or ''" />)
         </t>
         <br /><br />
-        Here is in attachment your donation certificate for the period from
-        <span
-                        style="font-weight:bold;"
-                        t-out="object.start_date or ''"
-                    >start_date</span>
-        to <span style="font-weight:bold;" t-out="object.end_date or ''">end_date</span>
+        Find attached to this email your donation certificate for the period from
+        <span style="font-weight:bold;" t-out="object.start_date or ''" />
+        to <span style="font-weight:bold;" t-out="object.end_date or ''" />
         <br /><br />
         If you have any questions, please do not hesitate to contact us.
         <br /><br />
         Best regards,
         <t t-if="not is_html_empty(user.signature)">
             <br /><br />
-            <t t-out="user.signature or ''">--<br />Mitchell Admin</t>
+            <t t-out="user.signature or ''" />
         </t>
     </p>
 </div></field>
