@@ -25,7 +25,7 @@ class SupplierCertificateGenerator(models.Model):
     )
     sent = fields.Boolean(
         compute="_compute_sent",
-        help="Are all certificates sent ?",
+        help="Are all certificates sent?",
     )
     supplier_ids = fields.Many2many(
         string="Vendors",
