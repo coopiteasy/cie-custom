@@ -50,7 +50,7 @@ addon | version | maintainers | summary
 [rotordc_sale_picking_state](rotordc_sale_picking_state/) | 12.0.1.0.0 | [![carmenbianca](https://github.com/carmenbianca.png?size=30px)](https://github.com/carmenbianca) | Set states for stock pickings on sale orders depending on the stock pickings' types.
 [rotordc_website_theme](rotordc_website_theme/) | 12.0.1.0.0 |  | Website theme for RotorDC.
 [spp_custom](spp_custom/) | 12.0.1.1.0 |  | Specifics customizations for SPP
-[spp_portal_customer_wallet](spp_portal_customer_wallet/) | 12.0.1.0.0 | [![carmenbianca](https://github.com/carmenbianca.png?size=30px)](https://github.com/carmenbianca) | On the user's home page, display information about customer wallet usage.
+[spp_portal_customer_wallet](spp_portal_customer_wallet/) | 12.0.2.0.0 | [![carmenbianca](https://github.com/carmenbianca.png?size=30px)](https://github.com/carmenbianca) | On the user's home page, display information about customer wallet usage.
 [spp_pos_mustard](spp_pos_mustard/) | 12.0.1.0.0 | [![carmenbianca](https://github.com/carmenbianca.png?size=30px)](https://github.com/carmenbianca) | Make a button in the POS interface mustard-coloured.
 
 [//]: # (end addons)
