@@ -6,11 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 16.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-05-17 07:54+0000\n"
-"PO-Revision-Date: 2023-05-17 07:54+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
-"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
@@ -31,12 +28,9 @@ msgid ""
 "            (<t t-out=\"object.partner_id.parent_id.name or ''\"></t>)\n"
 "        </t>\n"
 "        <br><br>\n"
-"        Find attached to this email your donation certificate for the period "
-"from\n"
-"        <span style=\"font-weight:bold;\" t-out=\"object.start_date or "
-"''\"></span>\n"
-"        to <span style=\"font-weight:bold;\" t-out=\"object.end_date or "
-"''\"></span>\n"
+"        Find attached to this email your donation certificate for the period from\n"
+"        <span style=\"font-weight:bold;\" t-out=\"object.start_date or ''\"></span>\n"
+"        to <span style=\"font-weight:bold;\" t-out=\"object.end_date or ''\"></span>\n"
 "        <br><br>\n"
 "        If you have any questions, please do not hesitate to contact us.\n"
 "        <br><br>\n"
@@ -54,27 +48,26 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:bao_supplier_certificate.view_supplier_certificate_generator_form
 msgid "<span class=\"o_form_label\">Vendor Certificate Generator</span>"
 msgstr ""
-"<span class=\"o_form_label\">Générateur d'attestation fournisseurs</span>"
 
 #. module: bao_supplier_certificate
 #: model_terms:ir.ui.view,arch_db:bao_supplier_certificate.report_supplier_certificate_document
 msgid "<strong>Description</strong>"
-msgstr "<strong>Description</strong>"
+msgstr ""
 
 #. module: bao_supplier_certificate
 #: model_terms:ir.ui.view,arch_db:bao_supplier_certificate.report_supplier_certificate_document
 msgid "<strong>Donator:</strong>"
-msgstr "<strong>Donateur:</strong>"
+msgstr ""
 
 #. module: bao_supplier_certificate
 #: model_terms:ir.ui.view,arch_db:bao_supplier_certificate.report_supplier_certificate_document
 msgid "<strong>Quantity</strong>"
-msgstr "<strong>Quantité</strong>"
+msgstr ""
 
 #. module: bao_supplier_certificate
 #: model_terms:ir.ui.view,arch_db:bao_supplier_certificate.report_supplier_certificate_document
 msgid "<strong>Unit</strong>"
-msgstr "<strong>Unité</strong>"
+msgstr ""
 
 #. module: bao_supplier_certificate
 #: model:ir.model.fields,field_description:bao_supplier_certificate.field_bao_supplier_certificate_generator__message_needaction
@@ -110,11 +103,8 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:bao_supplier_certificate.report_supplier_certificate_document
 msgid ""
 "Attached to this form are all\n"
-"                                the lists of donations made during the "
-"period from"
+"                                the lists of donations made during the period from"
 msgstr ""
-"À cette fiche sont jointes en annexes toutes les listes de dons ayant eu "
-"cours durant la période du"
 
 #. module: bao_supplier_certificate
 #: model:ir.model.fields,field_description:bao_supplier_certificate.field_bao_supplier_certificate_generator__message_attachment_count
@@ -143,7 +133,7 @@ msgstr ""
 #: code:addons/bao_supplier_certificate/models/supplier_certificate_generator.py:0
 #, python-format
 msgid "Cannot cancel a certificate that has been already sent."
-msgstr "Impossible d'annuler un certificat qui a déjà été envoyé."
+msgstr ""
 
 #. module: bao_supplier_certificate
 #: model:ir.model.fields,field_description:bao_supplier_certificate.field_bao_supplier_certificate_generator__supplier_certificate_count
@@ -153,7 +143,7 @@ msgstr ""
 #. module: bao_supplier_certificate
 #: model_terms:ir.ui.view,arch_db:bao_supplier_certificate.report_supplier_certificate_document
 msgid "Certificate of donation of unsold food"
-msgstr "Attestation de donation d'invendus alimentaires"
+msgstr ""
 
 #. module: bao_supplier_certificate
 #: model:mail.template,description:bao_supplier_certificate.email_template_supplier_certificate
@@ -164,7 +154,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:bao_supplier_certificate.field_bao_supplier_certificate_generator__supplier_certificate_ids
 #: model_terms:ir.ui.view,arch_db:bao_supplier_certificate.view_supplier_certificate_generator_form
 msgid "Certificates"
-msgstr "Attestations"
+msgstr ""
 
 #. module: bao_supplier_certificate
 #. odoo-python
@@ -191,12 +181,12 @@ msgstr ""
 #. module: bao_supplier_certificate
 #: model_terms:ir.ui.view,arch_db:bao_supplier_certificate.report_supplier_certificate_document
 msgid "Date of Approval:"
-msgstr "Date d'approbation :"
+msgstr ""
 
 #. module: bao_supplier_certificate
 #: model_terms:ir.ui.view,arch_db:bao_supplier_certificate.report_supplier_certificate_document
 msgid "Details of donations"
-msgstr "Détails des donations :"
+msgstr ""
 
 #. module: bao_supplier_certificate
 #: model:ir.model.fields,field_description:bao_supplier_certificate.field_bao_supplier_certificate__display_name
@@ -209,7 +199,6 @@ msgstr ""
 msgid ""
 "Donation Certificate from {{ object.start_date }} to {{ object.end_date }}"
 msgstr ""
-"Attestation de donation du {{ object.start_date }} au {{ object.end_date }}"
 
 #. module: bao_supplier_certificate
 #: model:mail.template,report_name:bao_supplier_certificate.email_template_supplier_certificate
@@ -256,7 +245,8 @@ msgstr ""
 
 #. module: bao_supplier_certificate
 #: model_terms:ir.actions.act_window,help:bao_supplier_certificate.action_supplier_certificate_generator
-msgid "Generate Vendor Certificate by creating a Vendor Certificate Generator."
+msgid ""
+"Generate Vendor Certificate by creating a Vendor Certificate Generator."
 msgstr ""
 
 #. module: bao_supplier_certificate
@@ -354,7 +344,7 @@ msgstr ""
 #. module: bao_supplier_certificate
 #: model_terms:ir.ui.view,arch_db:bao_supplier_certificate.report_supplier_certificate_document
 msgid "Name:"
-msgstr "Nom :"
+msgstr ""
 
 #. module: bao_supplier_certificate
 #: model:ir.model.fields,field_description:bao_supplier_certificate.field_bao_supplier_certificate_generator__activity_date_deadline
@@ -480,9 +470,6 @@ msgid ""
 "                                of Ixelles and with the aim of\n"
 "                                redistribution to social organizations."
 msgstr ""
-"Cette donation a lieu dans le cadre du marché public \n"
-"T’as de Beaux Restes mis en place par la commune d’Ixelles \n"
-"et dans le but d’une redistribution à des organismes sociaux."
 
 #. module: bao_supplier_certificate
 #: model:ir.model.fields,help:bao_supplier_certificate.field_bao_supplier_certificate_generator__activity_exception_decoration
@@ -492,7 +479,7 @@ msgstr ""
 #. module: bao_supplier_certificate
 #: model_terms:ir.ui.view,arch_db:bao_supplier_certificate.report_supplier_certificate_document
 msgid "VAT:"
-msgstr "TVA :"
+msgstr ""
 
 #. module: bao_supplier_certificate
 #: model:ir.ui.menu,name:bao_supplier_certificate.menu_supplier_certificate_generator
@@ -546,21 +533,18 @@ msgid ""
 "                                        the expenses directly linked to\n"
 "                                        this distribution."
 msgstr ""
-"à ne réclamer aucune contrepartie lors de la distribution de ces biens \n"
-"à l'exception d'une éventuelle contribution financière qui ne peut excéder \n"
-"les dépenses directement liées à cette distribution."
 
 #. module: bao_supplier_certificate
 #: model_terms:ir.ui.view,arch_db:bao_supplier_certificate.report_supplier_certificate_document
 msgid ""
 "not to use the goods received\n"
 "                                        for commercial purposes."
-msgstr "à ne pas utiliser les biens reçus à des fins commerciales"
+msgstr ""
 
 #. module: bao_supplier_certificate
 #: model_terms:ir.ui.view,arch_db:bao_supplier_certificate.report_supplier_certificate_document
 msgid "to"
-msgstr "au"
+msgstr ""
 
 #. module: bao_supplier_certificate
 #: model_terms:ir.ui.view,arch_db:bao_supplier_certificate.report_supplier_certificate_document
@@ -569,10 +553,8 @@ msgid ""
 "                                        social action in favor of needy\n"
 "                                        people."
 msgstr ""
-"à destiner les biens reçus à une action sociale en faveur de personnes "
-"nécessiteuses"
 
 #. module: bao_supplier_certificate
 #: model_terms:ir.ui.view,arch_db:bao_supplier_certificate.report_supplier_certificate_document
 msgid "undertakes:"
-msgstr "s’engage :"
+msgstr ""
