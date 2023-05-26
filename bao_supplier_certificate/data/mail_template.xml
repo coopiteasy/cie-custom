@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo noupdate="1">
+    <record id="email_template_supplier_certificate" model="mail.template">
+        <field name="name">Supplier Certificate Email</field>
+        <field
+            name="model_id"
+            ref="bao_supplier_certificate.model_bao_supplier_certificate"
+        />
+        <field
+            name="subject"
+        >Donation Certificate from {{ object.start_date }} to {{ object.end_date }}</field>
+        <field name="partner_to">{{ object.partner_id.id }}</field>
+        <field name="description">Certificate sent to vendor</field>
+        <field name="report_template" ref="supplier_certificate_report" />
+        <field
+            name="report_name"
+        >Donation_Certificate-{{ (object.partner_id.name or '').replace('/','_') }}</field>
+        <field name="lang">{{ object.partner_id.lang }}</field>
+        <field name="auto_delete" eval="False" />
+        <field name="body_html" type="html">
+<div style="margin: 0px; padding: 0px;">
+    <p style="margin: 0px; padding: 0px; font-size: 13px;">
+        Dear <t t-out="object.partner_id.name or ''" />
+        <t t-if="object.partner_id.parent_id">
+            (<t t-out="object.partner_id.parent_id.name or ''" />)
+        </t>
+        <br /><br />
+        Find attached to this email your donation certificate for the period from
+        <span style="font-weight:bold;" t-out="object.start_date or ''" />
+        to <span style="font-weight:bold;" t-out="object.end_date or ''" />
+        <br /><br />
+        If you have any questions, please do not hesitate to contact us.
+        <br /><br />
+        Best regards,
+        <t t-if="not is_html_empty(user.signature)">
+            <br /><br />
+            <t t-out="user.signature or ''" />
+        </t>
+    </p>
+</div></field>
+    </record>
+
+</odoo>
