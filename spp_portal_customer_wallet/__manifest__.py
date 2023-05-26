@@ -6,7 +6,7 @@
     "name": "SPP Portal Customer Wallet",
     "summary": """
         On the user's home page, display information about customer wallet usage.""",
-    "version": "12.0.1.0.0",
+    "version": "12.0.2.0.0",
     "category": "Accounting & Finance",
     "website": "https://coopiteasy.be",
     "author": "Coop IT Easy SC",
