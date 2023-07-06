@@ -31,7 +31,7 @@ git+https://github.com/coopiteasy/addons@12.0#subdirectory=setup/sale_order_volu
 git+https://github.com/coopiteasy/addons@12.0#subdirectory=setup/company_supplier_context
 git+https://github.com/coopiteasy/addons@12.0#subdirectory=setup/account_customer_wallet
 git+https://github.com/coopiteasy/addons@12.0#subdirectory=setup/pos_customer_wallet
-git+https://github.com/coopiteasy/addons@12.0-split-spp_portal_customer_wallet#subdirectory=setup/portal_customer_wallet
+git+https://github.com/coopiteasy/addons@12.0#subdirectory=setup/portal_customer_wallet
 # git+https://github.com/coopiteasy/csv-connector@12.0#subdirectory=setup/csv_export_base
 # git+https://github.com/coopiteasy/csv-connector@12.0#subdirectory=setup/sftp_backend
 # git+https://github.com/coopiteasy/csv-connector@12.0#subdirectory=setup/csv_export_invoice
@@ -46,6 +46,7 @@ git+https://github.com/coopiteasy/account-invoicing@12.0-account_invoice_date_re
 git+https://github.com/coopiteasy/account-invoicing@12.0-account_invoice_negative_total#subdirectory=setup/account_invoice_negative_total
 git+https://github.com/coopiteasy/cie-timesheet@12.0#subdirectory=setup/hr_timesheet_task_change_project
 git+https://github.com/coopiteasy/cie-timesheet@12.0#subdirectory=setup/hr_timesheet_overtime
+git+https://github.com/coopiteasy/cie-timesheet@12.0#subdirectory=setup/hr_timesheet_search_all_tasks
 git+https://github.com/coopiteasy/addons@12.0#subdirectory=setup/resource_work_time_from_contracts
 git+https://github.com/coopiteasy/addons@12.0#subdirectory=setup/company_today
 git+https://github.com/fcayre/odoo-usability@12.0-fix-account_usability-and-make-pip-installable#subdirectory=setup/sale_down_payment
