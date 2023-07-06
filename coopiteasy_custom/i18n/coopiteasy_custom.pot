@@ -14,6 +14,11 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. module: coopiteasy_custom
+#: model:ir.model,name:coopiteasy_custom.model_account_analytic_line
+msgid "Analytic Line"
+msgstr ""
+
+#. module: coopiteasy_custom
 #: model:ir.model.fields,field_description:coopiteasy_custom.field_project_task__author_id
 msgid "Author"
 msgstr ""
