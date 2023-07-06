@@ -24,7 +24,7 @@ addon | version | maintainers | summary
 [account_invoice_pos_already_paid](account_invoice_pos_already_paid/) | 12.0.1.0.0 |  | Remove sentence about payment communication from invoice based on the account journal
 [bablmarket_custom](bablmarket_custom/) | 12.0.1.0.0 |  | Specifics customizations for Bablmarket
 [bees_custom](bees_custom/) | 12.0.1.1.0 |  | Specifics customizations for BEES coop.
-[coopiteasy_custom](coopiteasy_custom/) | 12.0.1.2.0 |  | Specific customizations for Coop IT Easy
+[coopiteasy_custom](coopiteasy_custom/) | 12.0.1.3.0 |  | Specific customizations for Coop IT Easy
 [demain_purchase_quick](demain_purchase_quick/) | 12.0.1.0.0 |  | Add minimum quantity and purchase UoM fields to purchase order products quick add view
 [foodhub_copy_product_fields](foodhub_copy_product_fields/) | 12.0.1.0.0 | [![carmenbianca](https://github.com/carmenbianca.png?size=30px)](https://github.com/carmenbianca) | When duplicating a product, copy more fields over.
 [foodhub_custom](foodhub_custom/) | 12.0.1.1.0 |  | Foodhub customizations
