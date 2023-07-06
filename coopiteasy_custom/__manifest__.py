@@ -14,6 +14,7 @@
         Specific customizations for Coop IT Easy
     """,
     "depends": [
+        "hr_timesheet_search_all_tasks",
         "hr_timesheet_sheet",
         "hr_timesheet_task_change_project",
         "project_status",
