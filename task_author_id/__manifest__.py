@@ -5,7 +5,7 @@
 
 {
     "name": "Task Author",
-    "version": "13.0.1.0.0",
+    "version": "14.0.1.0.0",
     "author": "Coop IT Easy SC",
     "license": "AGPL-3",
     "category": "",
