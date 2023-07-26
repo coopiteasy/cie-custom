@@ -4,17 +4,20 @@
 
 
 {
-    "name": "Coop IT Easy Customization",
+    "name": "Task Author",
     "version": "12.0.1.3.0",
     "author": "Coop IT Easy SC",
     "license": "AGPL-3",
     "category": "",
     "website": "https://coopiteasy.be",
     "summary": """
-        Emptied.
+        Adds author_id field on project.task
     """,
     "depends": [
-        "task_author_id",
+        "project",
+    ],
+    "data": [
+        "views/project_view.xml",
     ],
     "installable": True,
 }
