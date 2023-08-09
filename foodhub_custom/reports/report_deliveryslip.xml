@@ -6,10 +6,7 @@
 
         <!-- picking in state done -->
         <!-- add column headers for price, tax and total -->
-        <xpath
-            expr="//tr[@t-foreach='o.move_line_ids']/../../thead/tr/th[last()]"
-            position="after"
-        >
+        <xpath expr="//th[@name='th_sml_product']/../th[last()]" position="after">
             <t t-if="o.picking_type_code == 'outgoing'">
                 <th>
                     <strong>Unit Price</strong>
@@ -24,9 +21,9 @@
         </xpath>
 
         <!-- add td for price, tax and total -->
-        <xpath expr="//tr[@t-foreach='o.move_line_ids']/td[last()]" position="after">
+        <xpath expr="//tr[@t-foreach='lines']/td[last()]" position="after">
             <t t-if="o.picking_type_code == 'outgoing'">
-                <t t-set="order_line" t-value="move_line.order_line_id" />
+                <t t-set="order_line" t-value="move.order_line_id" />
                 <td>
                     <span t-field="order_line.price_unit" />
                 </td>
@@ -40,11 +37,8 @@
         </xpath>
 
         <!--  add product description to product name-->
-        <xpath
-            expr="//span[@t-field='move_line.product_id.sudo().description_pickingout']"
-            position="replace"
-        >
-            <span t-field="move_line.product_id.description_sale" />
+        <xpath expr="//span[@t-field='move.product_id']" position="after">
+            <span t-field="move.product_id.description_sale" />
         </xpath>
 
 
@@ -83,13 +77,6 @@
             </t>
         </xpath>
 
-        <!--  add product description to product name-->
-        <xpath
-            expr="//span[@t-field='move.product_id.sudo().description_pickingout']"
-            position="replace"
-        >
-            <span t-field="move.product_id.description_sale" />
-        </xpath>
 
         <!-- add price and taxes summary table  -->
         <xpath expr="//table[last()]" position="after">
@@ -105,7 +92,7 @@
                                 <td class="text-right">
                                     <span
                                         t-field="sale_order.amount_untaxed"
-                                        t-field-options='{"widget": "monetary", "display_currency": "so.pricelist_id.currency_id"}'
+                                        t-options='{"widget": "monetary", "display_currency": "so.pricelist_id.currency_id"}'
                                     />
                                 </td>
                             </tr>
@@ -114,7 +101,7 @@
                                 <td class="text-right">
                                     <span
                                         t-field="sale_order.amount_tax"
-                                        t-field-options='{"widget": "monetary", "display_currency": "so.pricelist_id.currency_id"}'
+                                        t-options='{"widget": "monetary", "display_currency": "so.pricelist_id.currency_id"}'
                                     />
                                 </td>
                             </tr>
@@ -125,7 +112,7 @@
                                 <td class="text-right">
                                     <span
                                         t-field="sale_order.amount_total"
-                                        t-field-options='{"widget": "monetary", "display_currency": "so.pricelist_id.currency_id"}'
+                                        t-options='{"widget": "monetary", "display_currency": "so.pricelist_id.currency_id"}'
                                     />
                                 </td>
                             </tr>

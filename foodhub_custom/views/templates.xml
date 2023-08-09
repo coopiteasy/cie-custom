@@ -4,11 +4,8 @@
         inherit_id="website_sale.product"
         name="Hide Terms and Conditions"
     >
-        <xpath
-            expr="//div[@id='product_details']/p[@class='text-muted']"
-            position="attributes"
-        >
-            <attribute name="class">hidden</attribute>
+        <xpath expr="//div[@id='o_product_terms_and_share']" position="attributes">
+            <attribute name="class">invisible</attribute>
         </xpath>
     </template>
 </odoo>
