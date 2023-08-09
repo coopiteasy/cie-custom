@@ -15,7 +15,6 @@ class StockMove(models.Model):
         store=True,
     )
 
-    @api.multi
     @api.depends("picking_id.origin")
     def _compute_order_line_id(self):
         for move in self:
