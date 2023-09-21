@@ -7,7 +7,6 @@ Set Mandatory Fields in Product:
 - H.S. code
 - Sale Description
 - Website Product Category
-- Point of Sale Category
 - Sale Price
 
 When duplicating a product, copy more fields over. The fields are:

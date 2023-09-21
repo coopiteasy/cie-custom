@@ -7,7 +7,6 @@ class ProductTemplate(models.Model):
     # All below fields have required=True added to them.
     description_sale = fields.Text(required="True")
     public_categ_ids = fields.Many2many(required="True")
-    pos_categ_id = fields.Many2one(required="True")
     list_price = fields.Float(required="True")
 
     # The below field have copy=True added to them.
