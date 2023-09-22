@@ -1,0 +1,264 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* provelo_custom
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: provelo_custom
+#: model:ir.model.fields,help:provelo_custom.field_hr_leave_report__allocation_type
+msgid "	Fixed by HR: allocated by HR and cannot be bypassed; users can request leaves;	Fixed by HR + allocation request: allocated by HR and users can request leaves and allocations;	No allocation: no allocation by default, users can freely request leaves;"
+msgstr ""
+
+#. module: provelo_custom
+#: model:ir.model.fields,field_description:provelo_custom.field_hr_timesheet_overtime__active
+msgid "Active"
+msgstr ""
+
+#. module: provelo_custom
+#: model_terms:ir.ui.view,arch_db:provelo_custom.hr_leave_report_search_view
+msgid "Allocated Leaves"
+msgstr ""
+
+#. module: provelo_custom
+#: model:ir.model,name:provelo_custom.model_account_analytic_line
+msgid "Analytic Line"
+msgstr ""
+
+#. module: provelo_custom
+#: model_terms:ir.ui.view,arch_db:provelo_custom.hr_timesheet_sheet_form
+msgid "Approve"
+msgstr ""
+
+#. module: provelo_custom
+#: model_terms:ir.ui.view,arch_db:provelo_custom.report_invoice_document
+msgid "Ce client n'est pas assujetti à la TVA."
+msgstr ""
+
+#. module: provelo_custom
+#: model:ir.model.fields,field_description:provelo_custom.field_hr_timesheet_overtime__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: provelo_custom
+#: model:ir.model.fields,field_description:provelo_custom.field_hr_timesheet_overtime__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: provelo_custom
+#: model:ir.model.fields,field_description:provelo_custom.field_hr_timesheet_overtime__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: provelo_custom
+#: model_terms:ir.ui.view,arch_db:provelo_custom.external_layout_standard
+msgid "Email:"
+msgstr ""
+
+#. module: provelo_custom
+#: model:ir.model,name:provelo_custom.model_hr_employee
+#: model:ir.model.fields,field_description:provelo_custom.field_hr_timesheet_overtime__employee_id
+msgid "Employee"
+msgstr ""
+
+#. module: provelo_custom
+#: model:ir.model.fields,field_description:provelo_custom.field_hr_timesheet_overtime__id
+msgid "ID"
+msgstr ""
+
+#. module: provelo_custom
+#: model:ir.model.fields,help:provelo_custom.field_hr_timesheet_overtime__active
+msgid "If the active field is set to False, it will allow you to hide the resource record without removing it."
+msgstr ""
+
+#. module: provelo_custom
+#: model:ir.model.fields,field_description:provelo_custom.field_hr_timesheet_overtime__initial_overtime
+msgid "Initial Overtime"
+msgstr ""
+
+#. module: provelo_custom
+#: model:ir.model.fields,help:provelo_custom.field_hr_timesheet_overtime__initial_overtime
+msgid "Initial Overtime to start Overtime Start Date with"
+msgstr ""
+
+#. module: provelo_custom
+#: model:ir.model,name:provelo_custom.model_account_journal
+msgid "Journal"
+msgstr ""
+
+#. module: provelo_custom
+#: code:addons/provelo_custom/models/account_journal.py:18
+#, python-format
+msgid "Journal code cannot be longer than 4 characters"
+msgstr ""
+
+#. module: provelo_custom
+#: model:ir.model.fields,field_description:provelo_custom.field_hr_timesheet_overtime____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: provelo_custom
+#: model:ir.model.fields,field_description:provelo_custom.field_hr_timesheet_overtime__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: provelo_custom
+#: model:ir.model.fields,field_description:provelo_custom.field_hr_timesheet_overtime__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: provelo_custom
+#: model:ir.model,name:provelo_custom.model_hr_leave_report
+msgid "Leave Summary / Report"
+msgstr ""
+
+#. module: provelo_custom
+#: model:ir.model.fields,field_description:provelo_custom.field_account_payment__location_id
+msgid "Location"
+msgstr ""
+
+#. module: provelo_custom
+#: model:res.groups,name:provelo_custom.group_hr_contract_manager
+msgid "Manager (Pro Velo)"
+msgstr ""
+
+#. module: provelo_custom
+#: model_terms:ir.ui.view,arch_db:provelo_custom.report_invoice_document
+msgid "Merci de payer cette facture sur le compte de notre implantation de"
+msgstr ""
+
+#. module: provelo_custom
+#: model:ir.model.fields,field_description:provelo_custom.field_hr_leave_report__allocation_type
+msgid "Mode"
+msgstr ""
+
+#. module: provelo_custom
+#: model:ir.model.fields,field_description:provelo_custom.field_hr_timesheet_overtime__name
+#: model:ir.model.fields,field_description:provelo_custom.field_project_project__name
+msgid "Name"
+msgstr ""
+
+#. module: provelo_custom
+#: model_terms:ir.ui.view,arch_db:provelo_custom.hr_leave_report_search_view
+msgid "Only list leaves with an allocation limit"
+msgstr ""
+
+#. module: provelo_custom
+#: model:ir.actions.act_window,name:provelo_custom.hr_timesheet_overtime_act_window
+#: model:ir.model,name:provelo_custom.model_hr_timesheet_overtime
+msgid "Overtime"
+msgstr ""
+
+#. module: provelo_custom
+#: model:ir.model.fields,field_description:provelo_custom.field_hr_timesheet_overtime__overtime_start_date
+msgid "Overtime Start Date"
+msgstr ""
+
+#. module: provelo_custom
+#: model:ir.model.fields,help:provelo_custom.field_hr_timesheet_overtime__overtime_start_date
+msgid "Overtime Start Date to compute overtime"
+msgstr ""
+
+#. module: provelo_custom
+#: model:ir.ui.menu,name:provelo_custom.hr_timesheet_overtime_menu
+msgid "Overtime per Employee"
+msgstr ""
+
+#. module: provelo_custom
+#: model_terms:ir.ui.view,arch_db:provelo_custom.external_layout_standard
+msgid "Page:\n"
+"                    <span class=\"page\"/>\n"
+"                    of\n"
+"                    <span class=\"topage\"/>"
+msgstr ""
+
+#. module: provelo_custom
+#: model_terms:ir.ui.view,arch_db:provelo_custom.view_account_payment_search
+msgid "Payed today"
+msgstr ""
+
+#. module: provelo_custom
+#: model:ir.model,name:provelo_custom.model_account_payment
+msgid "Payments"
+msgstr ""
+
+#. module: provelo_custom
+#: model_terms:ir.ui.view,arch_db:provelo_custom.external_layout_standard
+msgid "Phone:"
+msgstr ""
+
+#. module: provelo_custom
+#: model:ir.model,name:provelo_custom.model_project_project
+msgid "Project"
+msgstr ""
+
+#. module: provelo_custom
+#: model:res.groups,name:provelo_custom.group_provelo_customizer
+msgid "Provelo Customizer"
+msgstr ""
+
+#. module: provelo_custom
+#: model_terms:ir.ui.view,arch_db:provelo_custom.hr_timesheet_sheet_form
+msgid "Refuse"
+msgstr ""
+
+#. module: provelo_custom
+#: model_terms:ir.ui.view,arch_db:provelo_custom.external_layout_standard
+msgid "Reg.:"
+msgstr ""
+
+#. module: provelo_custom
+#: model:ir.model,name:provelo_custom.model_resource_activity
+msgid "Resource Activity"
+msgstr ""
+
+#. module: provelo_custom
+#: model:ir.model,name:provelo_custom.model_sale_order
+msgid "Sale Order"
+msgstr ""
+
+#. module: provelo_custom
+#: model_terms:ir.ui.view,arch_db:provelo_custom.hr_timesheet_sheet_form
+msgid "Set to Draft"
+msgstr ""
+
+#. module: provelo_custom
+#: model_terms:ir.ui.view,arch_db:provelo_custom.hr_timesheet_sheet_form
+msgid "Submit to Manager"
+msgstr ""
+
+#. module: provelo_custom
+#: code:addons/provelo_custom/models/hr_timesheet_overtime.py:15
+#: sql_constraint:hr.timesheet.overtime:0
+#, python-format
+msgid "There can be only one overtime per employee."
+msgstr ""
+
+#. module: provelo_custom
+#: model:ir.model.fields,field_description:provelo_custom.field_hr_timesheet_overtime__total_overtime
+msgid "Total Overtime"
+msgstr ""
+
+#. module: provelo_custom
+#: model:ir.model.fields,help:provelo_custom.field_hr_timesheet_overtime__total_overtime
+msgid "Total Overtime since Overtime Start Date"
+msgstr ""
+
+#. module: provelo_custom
+#: model_terms:ir.ui.view,arch_db:provelo_custom.external_layout_standard
+msgid "VAT:"
+msgstr ""
+
+#. module: provelo_custom
+#: model_terms:ir.ui.view,arch_db:provelo_custom.external_layout_standard
+msgid "Website:"
+msgstr ""
+
