@@ -26,10 +26,11 @@ addon | version | maintainers | summary
 [bees_custom](bees_custom/) | 12.0.1.1.0 |  | Specifics customizations for BEES coop.
 [coopiteasy_custom](coopiteasy_custom/) | 12.0.1.3.0 |  | Specific customizations for Coop IT Easy
 [demain_purchase_quick](demain_purchase_quick/) | 12.0.1.0.0 |  | Add minimum quantity and purchase UoM fields to purchase order products quick add view
-[foodhub_copy_product_fields](foodhub_copy_product_fields/) | 12.0.1.0.0 | [![carmenbianca](https://github.com/carmenbianca.png?size=30px)](https://github.com/carmenbianca) | When duplicating a product, copy more fields over.
+[foodhub_copy_product_fields](foodhub_copy_product_fields/) | 12.0.2.0.0 | [![carmenbianca](https://github.com/carmenbianca.png?size=30px)](https://github.com/carmenbianca) | Emptied.
 [foodhub_custom](foodhub_custom/) | 12.0.1.1.0 |  | Foodhub customizations
 [foodhub_custom_product_kanban_view](foodhub_custom_product_kanban_view/) | 12.0.1.0.0 | [![remytms](https://github.com/remytms.png?size=30px)](https://github.com/remytms) | Adapt the kanban view for product
 [foodhub_label_custom](foodhub_label_custom/) | 12.0.1.0.0 |  | Additional fields for product labels
+[foodhub_product_fields](foodhub_product_fields/) | 12.0.1.0.0 | [![victor-champonnois](https://github.com/victor-champonnois.png?size=30px)](https://github.com/victor-champonnois) | Set Mandatory and Copy Options to Fields in Product
 [lesptitspots_worker_status](lesptitspots_worker_status/) | 12.0.1.0.1 |  | Worker status management specific to Les P'tit Pots.
 [provelo_analytic_account](provelo_analytic_account/) | 12.0.1.0.0 |  | Match BOB analytical accounts.
 [provelo_custom](provelo_custom/) | 12.0.1.6.0 |  | Pro Velo customizations
