@@ -1,5 +1,5 @@
 # Do NOT update manually; changes here will be overwritten by Copier
-_commit: v2.1.8
+_commit: v2.1.10
 _src_path: https://github.com/coopiteasy/oca-addons-repo-template.git
 ci: GitHub
 dependency_installation_mode: OCA
@@ -11,11 +11,13 @@ github_enable_makepot: true
 github_enable_stale_action: true
 github_enforce_dev_status_compatibility: true
 include_wkhtmltopdf: false
+odoo_test_flavor: OCB
 odoo_version: 12.0
 org_name: Coop IT Easy SC
 org_slug: coopiteasy
 rebel_module_groups:
-- provelo_custom
+- foodhub_copy_product_fields,foodhub_custom,foodhub_custom_product_kanban_view,foodhub_label_custom,foodhub_product_fields
+- provelo_analytic_account,provelo_custom,provelo_custom_display_phone,provelo_custom_invoice_auto_open,provelo_custom_timesheet_ui,provelo_resource_activity_reports
 repo_description: Custom modules for Coop IT Easy's clients.
 repo_name: cie-custom
 repo_slug: cie-custom
