@@ -19,9 +19,17 @@ jobs:
       matrix:
         include:
           - container: ghcr.io/oca/oca-ci/py3.6-ocb12.0:latest
-            exclude: "provelo_custom"
-            makepot: "true"
+            include: "foodhub_copy_product_fields,foodhub_custom,foodhub_custom_product_kanban_view,foodhub_label_custom,foodhub_product_fields"
             name: test with OCB
+            makepot: "true"
+          - container: ghcr.io/oca/oca-ci/py3.6-ocb12.0:latest
+            include: "provelo_analytic_account,provelo_custom,provelo_custom_display_phone,provelo_custom_invoice_auto_open,provelo_custom_timesheet_ui,provelo_resource_activity_reports"
+            name: test with OCB
+            makepot: "true"
+          - container: ghcr.io/oca/oca-ci/py3.6-ocb12.0:latest
+            exclude: "foodhub_copy_product_fields,foodhub_custom,foodhub_custom_product_kanban_view,foodhub_label_custom,foodhub_product_fields,provelo_analytic_account,provelo_custom,provelo_custom_display_phone,provelo_custom_invoice_auto_open,provelo_custom_timesheet_ui,provelo_resource_activity_reports"
+            name: test with OCB
+            makepot: "true"
     services:
       postgres:
         image: postgres:9.6
@@ -38,8 +46,6 @@ jobs:
       - uses: actions/checkout@v2
         with:
           persist-credentials: false
-      - name: Temporarily remove provelo_custom
-        run: rm -fr provelo_custom
       - name: Install addons and dependencies
         run: oca_install_addons
       - name: Check licenses
