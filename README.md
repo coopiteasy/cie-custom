@@ -49,6 +49,7 @@ addon | version | maintainers | summary
 [rotordc_sale_address](rotordc_sale_address/) | 12.0.1.0.0 | [![carmenbianca](https://github.com/carmenbianca.png?size=30px)](https://github.com/carmenbianca) | Display full address for invoice and delivery in sale order.
 [rotordc_sale_invoice_comment](rotordc_sale_invoice_comment/) | 12.0.1.0.0 | [![carmenbianca](https://github.com/carmenbianca.png?size=30px)](https://github.com/carmenbianca) | Make sure that the terms & conditions are always set on all invoices, and don't display the reference on POS invoices.
 [rotordc_sale_picking_state](rotordc_sale_picking_state/) | 12.0.1.0.0 | [![carmenbianca](https://github.com/carmenbianca.png?size=30px)](https://github.com/carmenbianca) | Set states for stock pickings on sale orders depending on the stock pickings' types.
+[rotordc_sale_related_so](rotordc_sale_related_so/) | 12.0.1.0.0 | [![robinkeunen](https://github.com/robinkeunen.png?size=30px)](https://github.com/robinkeunen) | Adds M2M links between SOs.
 [rotordc_website_theme](rotordc_website_theme/) | 12.0.1.0.0 |  | Website theme for RotorDC.
 [spp_custom](spp_custom/) | 12.0.1.1.0 |  | Specifics customizations for SPP
 [spp_portal_customer_wallet](spp_portal_customer_wallet/) | 12.0.2.0.0 | [![carmenbianca](https://github.com/carmenbianca.png?size=30px)](https://github.com/carmenbianca) | On the user's home page, display information about customer wallet usage.
