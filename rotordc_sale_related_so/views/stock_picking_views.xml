@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="view_picking_form" model="ir.ui.view">
+        <field name="name">stock.picking.form.related.so</field>
+        <field name="model">stock.picking</field>
+        <field name="inherit_id" ref="stock.view_picking_form" />
+        <field name="arch" type="xml">
+            <field name="origin" position="attributes">
+                <attribute
+                    name="attrs"
+                >{"invisible": [("sale_id", "!=", False)]}</attribute>
+            </field>
+            <field name="origin" position="after">
+                <field
+                    name="sale_id"
+                    attrs='{"invisible": [("sale_id", "=", False)]}'
+                />
+            </field>
+            <page name="extra" position="before">
+                <page string="Related Sale Orders" name="related_sale_orders">
+                    <group>
+                        <field name="related_so_ids" nolabel="1">
+                            <tree>
+                                <control>
+                                    <create
+                                        string="Create SO"
+                                        context="{'default_origin': name}"
+                                    />
+                                </control>
+                                <field name="name" />
+                                <field name="confirmation_date" />
+                                <field name="partner_id" />
+                                <field name="user_id" />
+                                <field name="amount_total" />
+                                <field name="state" />
+                                <field name="invoice_status" />
+                            </tree>
+                        </field>
+                    </group>
+                </page>
+            </page>
+        </field>
+    </record>
+</odoo>
