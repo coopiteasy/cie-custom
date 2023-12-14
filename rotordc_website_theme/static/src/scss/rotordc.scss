@@ -219,6 +219,20 @@ a:hover {
 /*text overlay on thumbnail */
 .oe_product section {
     background-color: #fff;
+    padding: 0 15px 0 15px;
+
+    h6 {
+        margin-top: 0.5rem;
+    }
+
+    .product_availability {
+        color: grey;
+        margin-bottom: 0.5rem;
+    }
+
+    .product_price > .product_availability {
+        display: none;
+    }
 }
 /*mobile specific*/
 @media (max-width: 767.98px) {

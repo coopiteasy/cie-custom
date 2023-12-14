@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <template id="products_item_availability" inherit_id="website_sale.products_item">
+        <xpath
+            expr="//div[@itemscope='itemscope']//div[hasclass('product_price')]"
+            position="before"
+        >
+            <div name="product_availability" class="product_availability">
+                <t t-call="website_sale_product_availability.product_availability" />
+                - More in stock
+            </div>
+        </xpath>
+    </template>
+</odoo>

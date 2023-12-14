@@ -11,9 +11,16 @@
     "author": "Coop IT Easy SC",
     "license": "AGPL-3",
     "application": False,
-    "depends": ["website", "website_theme_install"],
+    "depends": [
+        "website",
+        "website_theme_install",
+        "website_sale_product_availability",
+    ],
     "excludes": [],
-    "data": ["views/assets.xml"],
+    "data": [
+        "views/assets.xml",
+        "views/website_sale_product_availability_templates.xml",
+    ],
     "demo": [],
     "qweb": [],
 }
