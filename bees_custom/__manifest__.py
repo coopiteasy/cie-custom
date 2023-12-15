@@ -7,7 +7,7 @@
     "depends": [
         "point_of_sale",
         "account_invoice_date_required",
-        "beesdoo_product_info_screen",
+        "product_info_screen",
         "pos_mail_receipt",
     ],
     "author": "Coop IT Easy SC",
