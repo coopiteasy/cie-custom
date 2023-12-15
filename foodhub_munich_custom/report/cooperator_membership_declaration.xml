@@ -1,0 +1,567 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="cooperator_membership_declaration_document">
+        <t t-call="web.external_layout">
+            <t t-set="o" t-value="o.with_context(lang=o.partner_id.lang)"/>
+            <div class="page">
+                <!-- Declaration of participation in the cooperative -->
+                <div class="oe_structure"/>
+                <div class="row">
+                    <div class="col-12">
+                        <h2>
+                            <span t-field="o.company_id"/>
+                        </h2>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12">
+                        <h3>
+                            Declaration of participation in the cooperative
+                        </h3>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12">
+                        <p class="text-justify">
+                            <span t-field="o.lastname"/>,
+                            <span t-field="o.firstname"/>
+                        </p>
+                        <hr/>
+                        <p class="text-justify">
+                            Last name, first name / or company represented by: last name, first name
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12">
+                        <p class="text-justify">
+                            <span t-field="o.address"/>
+                        </p>
+                        <hr/>
+                        <p class="text-justify">
+                            Address
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12">
+                        <p class="text-justify">
+                            <span t-field="o.zip_code"/>,
+                            <span t-field="o.city"/>
+                        </p>
+                        <hr/>
+                        <p class="text-justify">
+                            Postcode, city
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-4">
+                        <p class="text-justify">
+                            <span t-field="o.birthdate"/>
+                        </p>
+                        <hr/>
+                        <p class="text-justify">
+                            Born on the
+                        </p>
+                    </div>
+                    <div class="col-8">
+                        <p class="text-justify">
+                            <span t-field="o.email"/>
+                        </p>
+                        <hr/>
+                        <p class="text-justify">
+                            E-mail
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12">
+                        <p class="text-justify">
+                            <strong>
+                                Please tick and fill in:
+                                <br/>
+                                Note: Each member must have at least five business shares at
+                                <span t-esc="o.share_unit_price"
+                                      t-options="{'widget': 'monetary', 'display_currency': o.company_id.currency_id}"/>
+                                so no less than 180 € in total in the cooperative.
+                                A maximum of 50 cooperative shares are possible
+                                (see Section 13, Paragraph 1 of the Articles of Association)
+                            </strong>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12">
+                        <p class="text-justify">
+                            <input type="checkbox"
+                                   t-att-disabled="'disabled'"
+                                   t-att-checked="'checked' if (o.share_short_name == 'Genossenschaftsanteil') and (o.already_cooperator == 'False' or o.type == 'new') else None"/>
+                            I hereby apply for admission to the <span t-field="o.company_id"/>.
+                            I would like to participate in the registered cooperative with a total of 5 shares.
+                            I undertake to make the payments of € 36 per share in the cooperative
+                            as stipulated by the statutes and by law.
+                            In total, I therefore undertake to pay 180 €.
+                            The articles of association of <span t-field="o.company_id"/> are available on the Internet
+                            at
+                            <a t-att-href="o.company_id.website">
+                                <span t-field="o.company_id.website"/>
+                            </a>.
+                            This will also be handed over on request.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12">
+                        <p class="text-justify">
+                            <strong>
+                                I acknowledge that the articles of association stipulate a notice period of two years
+                                for the end of the financial year.
+                            </strong>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12">
+                        <p class="text-justify">
+                            <input type="checkbox"
+                                   t-att-disabled="'disabled'"
+                                   t-att-checked="'checked' if (o.already_cooperator == 'True' or o.type == 'increase') else None"/>
+                            I would like to participate in the registered cooperative with
+                            <span t-field="o.ordered_parts"/> further shares.
+                            I undertake to make the payments of
+                            <span t-esc="o.share_unit_price"
+                                  t-options="{'widget': 'monetary', 'display_currency': o.company_id.currency_id}"/>
+                            per share in the cooperative, as stipulated by the statutes and by law.
+                            In total, I therefore undertake to pay
+                            <span t-esc="o.share_unit_price * o.ordered_parts"
+                                  t-options="{'widget': 'monetary', 'display_currency': o.company_id.currency_id}"/>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12">
+                        <p class="text-justify">
+                            <input type="checkbox"/>
+                            I apply to the board of directors of the cooperative for the option under the articles of
+                            association (Section 13 (2)) to allow payment in installments for the payment of the shares.
+                            <strong>
+                                Note:
+                                In this case, we will contact you to agree on the exact terms of the installment
+                                payment.
+                            </strong>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12">
+                        <p class="text-justify">
+                            <input type="checkbox"
+                                   t-att-disabled="'disabled'"
+                                   t-att-checked="'checked' if (o.share_short_name == 'Genossenschaftsanteil - Sozialtariff') and (o.already_cooperator == 'False' or o.type == 'new') else None"/>
+                            I hereby apply for admission to the <span t-field="o.company_id"/>.
+                            For social reasons, I would like to participate in the registered cooperative with 1 share.
+                            I undertake to make the payments of
+                            <span t-esc="o.share_unit_price"
+                                  t-options="{'widget': 'monetary', 'display_currency': o.company_id.currency_id}"/>
+                            per share in the cooperative, as stipulated by the statutes and by law.
+                            The articles of association of <span t-field="o.company_id"/> can be found on the Internet
+                            at
+                            <a t-att-href="o.company_id.website">
+                                <span t-field="o.company_id.website"/>
+                            </a>.
+                            This will also be handed over on request.
+                            <strong>
+                                Note: In this case, we will contact you to clarify the conditions for the social tariff.
+                            </strong>
+                            I acknowledge that the articles of association stipulate a notice period of two years for
+                            the end of the financial year.
+                            After approval you will receive an email from us asking you to transfer your shares to the
+                            following account:
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12">
+                        <p class="text-justify">
+                            <span t-field="o.company_id"/> - IBAN: DE17 4306 0967 1173 9628 00 - BIC: GENODEM1GLS
+                            <br/>
+                            <strong>
+                                Purpose: membership, surname and first name
+                            </strong>
+                        </p>
+                    </div>
+                </div>
+                <br/>
+
+                <div class="row">
+                    <div class="col-12">
+                        <p class="text-justify">
+                            <strong>
+                                Data protection
+                            </strong>
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <p class="text-justify">
+                            Responsible for data processing is: FoodHub München Market eG, Munich.
+                            <br/>
+                            Data protection officer: Quentin Orain
+                            <br/>
+                            The name and address are required for the membership list of the cooperative
+                            (Art. 6 Para. 1c GDPR)
+                        </p>
+                    </div>
+                </div>
+                <div class="oe_structure"/>
+                <p style="page-break-after:always"></p>
+
+                <!-- General Conditions -->
+                <div class="oe_structure"/>
+                <div class="row">
+                    <div class="col-12">
+                        <h3>
+                            <span t-field="o.company_id"/>
+                        </h3>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12">
+                        <p class="text-justify">
+                            In conjunction with Section 30 (1) Sentence 1 No. 1 GEnG). The tax identification number and
+                            the date of birth are required in order to be able to pay the withholding tax in the event
+                            of a profit distribution. (Art. 6 Paragraph 1c GDPR in conjunction with Section 45 d
+                            Paragraph 1 EStG) and to be able to carry out the legally required queries on the church tax
+                            attribute. (Art. 6 Paragraph 1c in conjunction with Section 51a Paragraph 2c, 2e EStG). You
+                            will be invited to meetings by the cooperative via the address, if applicable the e-mail
+                            address (Art. 6 Paragraph 1c GDPR) in conjunction with Section 46 Paragraph 1 Sentence 1
+                            GenG in conjunction with Section 6 No. 4 GenG), beyond that Informed about offers of the
+                            cooperative within the framework of membership (Art. 6 Paragraph 1b GDPR) in conjunction
+                            with Section 1 Paragraph 1 in conjunction with the Articles of Association. The cooperative
+                            has a legitimate interest in uncomplicated and legally secure fulfillment of its
+                            obligations. The provision of personal data is required by law or by the articles of
+                            association. Failure to provide it would mean that membership cannot be established. The
+                            personal data will not be passed on to third parties unless consent has been given in
+                            individual cases. However, we are legally obliged to allow access to personal data in some
+                            cases. This affects, for example, other members, the statutory auditing association and
+                            authorities, in particular the tax office. The data is stored in different ways. All
+                            tax-relevant information is kept for ten years (§147 AO). The data in the list of members
+                            (name and address in accordance with Section 30, Paragraph 2, Clause 1, No. 3 GenG) will not
+                            be deleted even after leaving. (Section 30, Paragraph 2, Clause 1, No. 3 GenG). You have the
+                            right to information from the person responsible about the relevant personal data as well as
+                            to correction or deletion or restriction of processing (unless this is contrary to a legal
+                            regulation). A data transfer can also be requested if the signatory wishes his data to be
+                            transferred to a third party.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12">
+                        <p class="text-justify">
+                            In addition, you have the right to lodge a complaint with the supervisory authority (state
+                            commissioner for data protection).
+                        </p>
+                    </div>
+                </div>
+                <br/>
+
+                <div class="row">
+                    <div class="col-6">
+                        <p/>
+                        <hr/>
+                        <p class="text-justify">
+                            Place, date
+                        </p>
+                    </div>
+                    <div class="col-6">
+                        <p/>
+                        <hr/>
+                        <p class="text-justify">
+                            Signature member
+                        </p>
+                    </div>
+                </div>
+                <br/>
+
+                <div class="row">
+                    <div class="col-12">
+                        <p class="text-justify">
+                            Approval by the cooperative: The application is granted:
+                        </p>
+                    </div>
+                </div>
+                <br/>
+                <br/>
+
+                <div class="row">
+                    <div class="col-6">
+                        <hr/>
+                        <p class="text-justify">
+                            Place, date
+                        </p>
+                    </div>
+                    <div class="col-6">
+                        <hr/>
+                        <p class="text-justify">
+                            Signature of the board of directors
+                        </p>
+                    </div>
+                </div>
+                <br/>
+                <div class="oe_structure"/>
+                <p style="page-break-after:always"></p>
+
+                <!-- Declaration of membership -->
+                <div class="oe_structure"/>
+                <div class="row">
+                    <div class="col-12">
+                        <h2>
+                            Declaration of membership
+                        </h2>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12">
+                        <p class="text-justify">
+                            I hereby declare that I am a member of the association
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12">
+                        <p class="text-justify">
+                            <strong>
+                                <span t-field="o.company_id"/>
+                            </strong>
+                            with effect from
+                            <span t-field="o.date"/>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-2">
+                        <p class="text-justify">
+                            Last name
+                        </p>
+                    </div>
+                    <div class="col-4">
+                        <p class="text-justify">
+                            <span t-field="o.lastname"/>
+                        </p>
+                    </div>
+                    <div class="col-2">
+                        <p class="text-justify">
+                            First name
+                        </p>
+                    </div>
+                    <div class="col-4">
+                        <p class="text-justify">
+                            <span t-field="o.firstname"/>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-2">
+                        <p class="text-justify">
+                            Address
+                        </p>
+                    </div>
+                    <div class="col-4">
+                        <p class="text-justify">
+                            <span t-field="o.address"/>
+                        </p>
+                    </div>
+                    <div class="col-2">
+                        <p class="text-justify">
+                            Postcode / City
+                        </p>
+                    </div>
+                    <div class="col-4">
+                        <p class="text-justify">
+                            <span t-field="o.zip_code"/> <span t-field="o.city"/>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-2">
+                        <p class="text-justify">
+                            E-mail
+                        </p>
+                    </div>
+                    <div class="col-4">
+                        <p class="text-justify">
+                            <span t-field="o.email"/>
+                        </p>
+                    </div>
+                    <div class="col-2">
+                        <p class="text-justify">
+                            Phone number
+                        </p>
+                    </div>
+                    <div class="col-4">
+                        <p class="text-justify">
+                            <span t-field="o.phone"/>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12">
+                        <p class="text-justify">
+                            By providing my email address, I agree to receive communications from the association by
+                            email.
+                            The email address will never be passed on to third parties.
+                            I can revoke this declaration at any time.
+                            The dispatch of information relevant to the association (e.g. invitation to the general
+                            meeting) cannot be ruled out with the opt-out decision.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12">
+                        <p class="text-justify">
+                            I have taken note of the statutes.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12">
+                        <p class="text-justify">
+                            I pay
+                            <strong>
+                                10 euros
+                            </strong>
+                            as an annual fee
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12">
+                        <p class="text-justify">
+                            The annual fee for the current year is due and payable immediately in full.
+                            I will transfer the contribution to the club account at
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <p class="text-justify">
+                            <strong>
+                                GLS Bank - IBAN DE60 430 609 671 075 937 900 - BIC GENODEM1GLS.
+                            </strong>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12">
+                        <p class="text-justify">
+                            In the following years it is due and payable on January 15th.
+                            I will pay this contribution annually to the above-mentioned association account.
+                            Membership is automatically extended by 1 year if it is not canceled 6 weeks before
+                            the end of the year.
+                        </p>
+                    </div>
+                </div>
+
+                <br/>
+                <div class="row">
+                    <div class="col-6">
+                        <p/>
+                        <hr/>
+                        <p class="text-justify">
+                            Place, date
+                        </p>
+                    </div>
+                    <div class="col-6">
+                        <p/>
+                        <hr/>
+                        <p class="text-justify">
+                            Signature
+                        </p>
+                    </div>
+                </div>
+                <br/>
+                <br/>
+
+                <!-- TODO: t-field -->
+                <div class="row">
+                    <div class="col-12">
+                        <p class="text-justify">
+                            Foodhub e. V. Munich, c/o Impact HUB, Gotzinger Straße 8, 81371 Munich
+                            <br/>
+                            VR 208582 District Court of Munich
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12">
+                        <p class="text-justify">
+                            Bank details: GLS Community Bank eG
+                            <br/>
+                            IBAN DE60 430 609 671 075 937 900 - BIC GENODEM1GL
+                        </p>
+                    </div>
+                </div>
+                <br/>
+
+                <div class="row">
+                    <div class="col-12">
+                        <p class="text-justify">
+                            <strong>
+                                Please send at:
+                            </strong>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12">
+                        <!-- TODO: t-field -->
+                        <p class="text-justify">
+                            Foodhub e. V. Munich Kristin Mansmann c/o Impact HUB - Gotzinger Strasse 8, 81371 Munich
+                        </p>
+                    </div>
+                </div>
+                <div class="oe_structure"/>
+            </div>
+        </t>
+
+    </template>
+
+    <template id="cooperator_membership_declaration">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                <t t-call="foodhub_munich_custom.cooperator_membership_declaration_document"
+                   t-lang="o.partner_id.lang"/>
+            </t>
+        </t>
+    </template>
+
+</odoo>

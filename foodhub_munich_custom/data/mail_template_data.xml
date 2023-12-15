@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <!--
+            Override the following record rules:
+            - `easy_my_coop.email_template_confirmation`
+            - `easy_my_coop.email_template_confirmation_company`
+            fields added:
+            - report_template
+            - report_name
+
+            Note: the parent record rule is inside a `<data noupdate="1">` element and
+            - will be created on module install
+            - will not be rewritten on module updates.
+            In the latter, the record rule should be first deleted in order to be recreated.
+        -->
+        <record id="easy_my_coop.email_template_confirmation" model="mail.template">
+            <field name="report_template" ref="foodhub_munich_custom.action_cooperator_membership_declaration_report"/>
+            <field name="report_name">
+                ${(object.name or '').replace('/','_')}_${object.state == 'draft' and 'draft' or ''}
+            </field>
+        </record>
+
+        <record id="easy_my_coop.email_template_confirmation_company" model="mail.template">
+            <field name="report_template" ref="foodhub_munich_custom.action_cooperator_membership_declaration_report"/>
+            <field name="report_name">
+                ${(object.name or '').replace('/','_')}_${object.state == 'draft' and 'draft' or ''}
+            </field>
+        </record>
+    </data>
+</odoo>

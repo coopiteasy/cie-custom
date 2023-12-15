@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <report
+                id="action_cooperator_membership_declaration_report"
+                model="subscription.request"
+                string="Membership Declaration Report"
+                report_type="qweb-pdf"
+                name="foodhub_munich_custom.cooperator_membership_declaration"
+                file="foodhub_munich_custom.cooperator_membership_declaration.xml"
+        />
+    </data>
+</odoo>
