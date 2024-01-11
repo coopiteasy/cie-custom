@@ -220,14 +220,16 @@ a:hover {
 .oe_product section {
     background-color: #fff;
     padding: 0 15px 0 15px;
+    padding-bottom: 15px;
 
     h6 {
         margin-top: 0.5rem;
+        margin-bottom: 0.2rem;
     }
 
     .product_availability {
         color: grey;
-        margin-bottom: 0.5rem;
+        font-size: 0.8em;
     }
 
     .product_price > .product_availability {
