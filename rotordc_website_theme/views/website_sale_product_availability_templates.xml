@@ -7,8 +7,9 @@
             position="after"
         >
             <div name="product_availability" class="product_availability">
-                <t t-call="website_sale_product_availability.product_availability" />
-                - More in stock
+                <t t-call="website_sale_product_availability.product_availability">
+                    <t t-set="quantity_format" t-value="'%d'" />
+                </t>
             </div>
         </xpath>
     </template>
