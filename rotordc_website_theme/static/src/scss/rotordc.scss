@@ -23,6 +23,10 @@
         format("opentype");
 }
 
+body {
+    font-family: "D-Din", Open Sans;
+}
+
 body,
 p,
 a,
@@ -53,7 +57,7 @@ h6,
     background-color: #565656;
 }
 a.nav-link {
-    font-family: Montserrat, Open sans, arial, sans serif;
+    font-family: "D-Din", Montserrat, Open sans, arial, sans serif;
 }
 #oe_main_menu_navbar .o_menu_systray > li > a[data-action="edit"],
 #oe_main_menu_navbar .o_menu_systray > li > a[data-action="translate"],
@@ -292,5 +296,5 @@ a:hover {
 
 /*'pay with' items */
 .o_payment_form .payment_option_name {
-    font-family: Montserrat;
+    font-family: "D-Din", Montserrat;
 }
