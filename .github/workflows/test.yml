@@ -18,8 +18,12 @@ jobs:
       fail-fast: false
       matrix:
         include:
+            # remytms: there is a circular dependency with
+            # provelo_analytic and csv_export_*
+            # Adding provelo_analytic_account is a work around until
+            # a real fix will be done.
           - container: ghcr.io/oca/oca-ci/py3.6-ocb12.0:latest
-            include: "foodhub_copy_product_fields,foodhub_custom,foodhub_custom_product_kanban_view,foodhub_label_custom,foodhub_product_fields"
+            include: "provelo_analytic_account,foodhub_copy_product_fields,foodhub_custom,foodhub_custom_product_kanban_view,foodhub_label_custom,foodhub_product_fields"
             name: test with OCB
             makepot: "true"
           - container: ghcr.io/oca/oca-ci/py3.6-ocb12.0:latest
@@ -27,7 +31,7 @@ jobs:
             name: test with OCB
             makepot: "true"
           - container: ghcr.io/oca/oca-ci/py3.6-ocb12.0:latest
-            exclude: "foodhub_copy_product_fields,foodhub_custom,foodhub_custom_product_kanban_view,foodhub_label_custom,foodhub_product_fields,provelo_analytic_account,provelo_custom,provelo_custom_display_phone,provelo_custom_invoice_auto_open,provelo_custom_timesheet_ui,provelo_resource_activity_reports"
+            exclude: "foodhub_copy_product_fields,foodhub_custom,foodhub_custom_product_kanban_view,foodhub_label_custom,foodhub_product_fields,provelo_custom,provelo_custom_display_phone,provelo_custom_invoice_auto_open,provelo_custom_timesheet_ui,provelo_resource_activity_reports"
             name: test with OCB
             makepot: "true"
     services:
