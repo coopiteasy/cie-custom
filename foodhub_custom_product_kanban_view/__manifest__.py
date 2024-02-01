@@ -6,7 +6,7 @@
     "name": "Foodhub Custom Product Kanban View",
     "summary": """
         Adapt the kanban view for product""",
-    "version": "12.0.1.0.0",
+    "version": "13.0.1.0.0",
     "category": "Product",
     "website": "https://coopiteasy.be",
     "author": "Coop IT Easy SC",
@@ -15,7 +15,10 @@
     "application": False,
     "depends": ["product", "stock"],
     "excludes": [],
-    "data": ["views/product_template_views.xml", "data/stock_product_views.xml"],
+    "data": [
+        "views/product_template_views.xml",
+        "views/stock_product_views.xml",
+    ],
     "demo": [],
     "qweb": [],
 }
