@@ -9,11 +9,6 @@ class ProductTemplate(models.Model):
     public_categ_ids = fields.Many2many(required="True")
     list_price = fields.Float(required="True")
 
-    # The below field have copy=True added to them.
-    origin_country_id = fields.Many2one(
-        copy=True,
-    )
-
     # All below fields have both copy=True and required=True added to them.
     volume = fields.Float(required="True", copy=True)
     weight = fields.Float(required="True", copy=True)
@@ -29,5 +24,4 @@ class ProductTemplate(models.Model):
     default_code = fields.Char(required="True", copy=True)
     hs_code_id = fields.Many2one(
         required="True",
-        copy=True,
     )

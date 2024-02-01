@@ -18,7 +18,6 @@ class TestProduct(TransactionCase):
         cls.supplier = cls.env["res.partner"].create(
             {
                 "name": "Supplier",
-                "supplier": True,
             }
         )
         cls.product = cls.env["product.template"].create(
@@ -27,13 +26,7 @@ class TestProduct(TransactionCase):
                 "volume": 4,
                 "weight": 2,
                 "seller_ids": [
-                    (
-                        0,
-                        False,
-                        {
-                            "name": cls.supplier.id,
-                        },
-                    )
+                    (0, 0, {"partner_id": cls.supplier.id}),
                 ],
                 "default_code": "123",
                 "hs_code_id": cls.hs_code.id,
@@ -46,7 +39,7 @@ class TestProduct(TransactionCase):
         new_product = self.product.copy()
         self.assertEqual(new_product.volume, self.product.volume)
         self.assertEqual(new_product.weight, self.product.weight)
-        self.assertEqual(new_product.seller_ids[0].name, self.supplier)
+        self.assertEqual(new_product.seller_ids[0].partner_id.name, self.supplier.name)
         self.assertEqual(new_product.hs_code_id, self.product.hs_code_id)
         self.assertEqual(new_product.default_code, self.product.default_code)
         self.assertEqual(new_product.origin_country_id, self.product.origin_country_id)
