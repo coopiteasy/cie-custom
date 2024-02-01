@@ -6,7 +6,7 @@
     "name": "Foodhub Product Fields Customization",
     "summary": """
         Set Mandatory and Copy Options to Fields in Product""",
-    "version": "14.0.1.0.0",
+    "version": "15.0.1.0.0",
     "category": "Product",
     "website": "https://coopiteasy.be",
     "author": "Coop IT Easy SC",

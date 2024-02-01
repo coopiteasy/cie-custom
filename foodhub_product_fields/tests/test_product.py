@@ -2,10 +2,10 @@
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
-from odoo.tests.common import SavepointCase
+from odoo.tests.common import TransactionCase
 
 
-class TestProduct(SavepointCase):
+class TestProduct(TransactionCase):
     @classmethod
     def setUpClass(cls):
         super().setUpClass()
