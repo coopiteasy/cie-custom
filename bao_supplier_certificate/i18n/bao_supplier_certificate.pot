@@ -378,7 +378,7 @@ msgstr ""
 
 #. module: bao_supplier_certificate
 #: model:ir.model.fields,help:bao_supplier_certificate.field_bao_supplier_certificate_generator__message_needaction_counter
-msgid "Number of messages which requires an action"
+msgid "Number of messages requiring action"
 msgstr ""
 
 #. module: bao_supplier_certificate
