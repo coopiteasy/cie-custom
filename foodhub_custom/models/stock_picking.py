@@ -22,7 +22,6 @@ class StockPicking(models.Model):
             sale_order = self.env["sale.order"].search([("name", "=", picking.origin)])
             # trigger
             sale_order._compute_order_volume()
-            sale_order.compute_product_category_volumes()
 
             picking.sale_order_id = sale_order
             picking.volume = sale_order.volume
