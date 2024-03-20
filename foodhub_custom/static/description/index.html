@@ -372,20 +372,12 @@ ul.auto-toc {
 <ul class="simple">
 <li>add order volume to delivery slip</li>
 <li>add price information on delivery slip</li>
-<li>link picking to sale order</li>
+<li>add product description on delivery slip</li>
+<li>display sale order number on picking</li>
 <li>link moves and move lines to sale order line</li>
 <li>hide product terms from website sale product page</li>
+<li>add a small text in customer credit notes document : “Please deduct this credit note from a future invoice or ask a refund.”</li>
 </ul>
-<p>Add a small text in customer credit notes document. This was done directly in the Odoo interface:
-Created a view <cite>report_invoice_document_custom_refund</cite> inheriting from <cite>report_invoice_document</cite> as an extension view, and witht the following architecture.</p>
-<blockquote>
-&lt;?xml version=”1.0”?&gt;
-&lt;data inherit_id=”account.report_invoice_document”&gt;
-&lt;xpath expr=”//div[&#64;id=’total’]/..” position=”after”&gt;
-&lt;p t-if=”o.type == ‘out_refund’”&gt;Please deduct this credit note from a future invoice or ask a refund.&lt;/p&gt;
-&lt;/xpath&gt;
-&lt;/data&gt;</blockquote>
-<p>It has to be done again in case of migration</p>
 <p><strong>Table of contents</strong></p>
 <div class="contents local topic" id="contents">
 <ul class="simple">
