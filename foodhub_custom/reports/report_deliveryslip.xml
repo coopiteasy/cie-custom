@@ -20,22 +20,6 @@
             </t>
         </xpath>
 
-        <!-- add td for price, tax and total -->
-        <xpath expr="//tr[@t-foreach='lines']/td[last()]" position="after">
-            <t t-if="o.picking_type_code == 'outgoing'">
-                <t t-set="order_line" t-value="move.order_line_id" />
-                <td>
-                    <span t-field="order_line.price_unit" />
-                </td>
-                <td>
-                    <span t-field="order_line.tax_id.name" />
-                </td>
-                <td>
-                    <span t-field="order_line.price_subtotal" />
-                </td>
-            </t>
-        </xpath>
-
         <!--  add product description to product name-->
         <xpath expr="//span[@t-field='move.product_id']" position="after">
             <span t-field="move.product_id.description_sale" />
@@ -83,56 +67,45 @@
             <t t-if="o.picking_type_code == 'outgoing'">
                 <t t-set="sale_order" t-value="o.sale_order_id" />
                 <div class="row justify-content-end" name="total">
-                    <div class="col-xs-4">
-                        <table class="table table-condensed">
+                    <div
+                        t-attf-class="#{'col-6' if report_type != 'html' else 'col-sm-7 col-md-6'} ms-auto"
+                    >
+                        <table
+                            class="table table-sm table-borderless"
+                            style="page-break-inside: avoid;"
+                        >
                             <tr class="border-black">
                                 <td>
                                     <strong>Total Without Taxes</strong>
                                 </td>
-                                <td class="text-right">
-                                    <span
-                                        t-field="sale_order.amount_untaxed"
-                                        t-options='{"widget": "monetary", "display_currency": "so.pricelist_id.currency_id"}'
-                                    />
+                                <td class="text-center">
+                                    <span t-field="sale_order.amount_untaxed" />
                                 </td>
                             </tr>
                             <tr>
                                 <td>Taxes</td>
-                                <td class="text-right">
-                                    <span
-                                        t-field="sale_order.amount_tax"
-                                        t-options='{"widget": "monetary", "display_currency": "so.pricelist_id.currency_id"}'
-                                    />
+                                <td class="text-center">
+                                    <span t-field="sale_order.amount_tax" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <strong>Total</strong>
+                                </td>
+                                <td class="text-center">
+                                    <span t-field="sale_order.amount_total" />
                                 </td>
                             </tr>
                             <tr class="border-black">
                                 <td>
-                                    <strong>Total</strong>
+                                    <strong>Volume (m3)</strong>
                                 </td>
-                                <td class="text-right">
-                                    <span
-                                        t-field="sale_order.amount_total"
-                                        t-options='{"widget": "monetary", "display_currency": "so.pricelist_id.currency_id"}'
-                                    />
+                                <td class="text-center">
+                                    <span t-field="o.volume" />
                                 </td>
                             </tr>
                         </table>
                     </div>
-                </div>
-
-                <!-- add volume summary table -->
-                <div class="row " name="volume">
-                    <table name="volume" class="table table-condensed">
-
-                        <tr id="order_total_volume">
-                            <td><strong>Volume (m³)</strong></td>
-                            <td>
-                                <span t-field="o.volume" />
-                            </td>
-                        </tr>
-
-                            </table>
-
                 </div>
             </t>
         </xpath>

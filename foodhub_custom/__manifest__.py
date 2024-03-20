@@ -16,5 +16,9 @@
         "website_sale_stock",
         "sale_order_volume",
     ],
-    "data": ["reports/report_deliveryslip.xml", "views/templates.xml"],
+    "data": [
+        "reports/report_deliveryslip.xml",
+        "views/templates.xml",
+        "views/report_invoice_document.xml",
+    ],
 }

@@ -1,0 +1,10 @@
+<odoo>
+    <template id="report_invoice_document" inherit_id="account.report_invoice_document">
+        <xpath expr="//div[@id='total']/.." position="after">
+        <p
+                t-if="o.move_type == 'out_refund'"
+            >Please deduct this credit note from a future invoice or ask
+            a refund.</p>
+        </xpath>
+    </template>
+</odoo>
