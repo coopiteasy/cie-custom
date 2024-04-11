@@ -1,12 +1,12 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-#	* foodhub_product_fields
+# 	* foodhub_product_fields
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 12.0\n"
+"Project-Id-Version: Odoo Server 16.0\n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: <>\n"
+"Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -16,25 +16,10 @@ msgstr ""
 #. module: foodhub_product_fields
 #: model:ir.model.fields,help:foodhub_product_fields.field_product_product__description_sale
 #: model:ir.model.fields,help:foodhub_product_fields.field_product_template__description_sale
-msgid "A description of the Product that you want to communicate to your customers. This description will be copied to every Sales Order, Delivery Order and Customer Invoice/Credit Note"
-msgstr ""
-
-#. module: foodhub_product_fields
-#: model:ir.model.fields,field_description:foodhub_product_fields.field_product_product__origin_country_id
-#: model:ir.model.fields,field_description:foodhub_product_fields.field_product_template__origin_country_id
-msgid "Country of Origin"
-msgstr ""
-
-#. module: foodhub_product_fields
-#: model:ir.model.fields,help:foodhub_product_fields.field_product_product__origin_country_id
-#: model:ir.model.fields,help:foodhub_product_fields.field_product_template__origin_country_id
-msgid "Country of origin of the product i.e. product 'made in ____'."
-msgstr ""
-
-#. module: foodhub_product_fields
-#: model:ir.model.fields,help:foodhub_product_fields.field_product_product__seller_ids
-#: model:ir.model.fields,help:foodhub_product_fields.field_product_template__seller_ids
-msgid "Define vendor pricelists."
+msgid ""
+"A description of the Product that you want to communicate to your customers."
+" This description will be copied to every Sales Order, Delivery Order and "
+"Customer Invoice/Credit Note"
 msgstr ""
 
 #. module: foodhub_product_fields
@@ -46,7 +31,10 @@ msgstr ""
 #. module: foodhub_product_fields
 #: model:ir.model.fields,help:foodhub_product_fields.field_product_product__hs_code_id
 #: model:ir.model.fields,help:foodhub_product_fields.field_product_template__hs_code_id
-msgid "Harmonised System Code. Nomenclature is available from the World Customs Organisation, see http://www.wcoomd.org/. You can leave this field empty and configure the H.S. code on the product category."
+msgid ""
+"Harmonised System Code. Nomenclature is available from the World Customs "
+"Organisation, see http://www.wcoomd.org/. You can leave this field empty and"
+" configure the H.S. code on the product category."
 msgstr ""
 
 #. module: foodhub_product_fields
@@ -62,13 +50,13 @@ msgstr ""
 
 #. module: foodhub_product_fields
 #: model:ir.model,name:foodhub_product_fields.model_product_template
-msgid "Product Template"
+msgid "Product"
 msgstr ""
 
 #. module: foodhub_product_fields
 #: model:ir.model.fields,field_description:foodhub_product_fields.field_product_product__description_sale
 #: model:ir.model.fields,field_description:foodhub_product_fields.field_product_template__description_sale
-msgid "Sale Description"
+msgid "Sales Description"
 msgstr ""
 
 #. module: foodhub_product_fields
@@ -80,17 +68,10 @@ msgstr ""
 #. module: foodhub_product_fields
 #: model:ir.model.fields,help:foodhub_product_fields.field_product_product__public_categ_ids
 #: model:ir.model.fields,help:foodhub_product_fields.field_product_template__public_categ_ids
-msgid "The product will be available in each mentioned e-commerce category. Go toShop > Customize and enable 'E-commerce categories' to view all e-commerce categories."
-msgstr ""
-
-#. module: foodhub_product_fields
-#: model:ir.model.fields,help:foodhub_product_fields.field_product_template__volume
-msgid "The volume in m3."
-msgstr ""
-
-#. module: foodhub_product_fields
-#: model:ir.model.fields,help:foodhub_product_fields.field_product_template__weight
-msgid "The weight of the contents in Kg, not including any packaging, etc."
+msgid ""
+"The product will be available in each mentioned eCommerce category. Go to "
+"Shop > Edit Click on the page and enable 'Categories' to view all eCommerce "
+"categories."
 msgstr ""
 
 #. module: foodhub_product_fields
@@ -114,4 +95,3 @@ msgstr ""
 #: model:ir.model.fields,field_description:foodhub_product_fields.field_product_template__weight
 msgid "Weight"
 msgstr ""
-
