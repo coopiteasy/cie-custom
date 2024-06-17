@@ -1,0 +1,11 @@
+<odoo>
+    <template
+        id="hide_product_terms"
+        inherit_id="website_sale.product"
+        name="Hide Terms and Conditions"
+    >
+        <xpath expr="//div[@id='o_product_terms_and_share']" position="attributes">
+            <attribute name="class">invisible</attribute>
+        </xpath>
+    </template>
+</odoo>
