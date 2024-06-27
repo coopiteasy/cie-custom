@@ -32,15 +32,9 @@ git+https://github.com/coopiteasy/addons@12.0#subdirectory=setup/company_supplie
 git+https://github.com/coopiteasy/addons@12.0#subdirectory=setup/account_customer_wallet
 git+https://github.com/coopiteasy/addons@12.0#subdirectory=setup/pos_customer_wallet
 git+https://github.com/coopiteasy/addons@12.0#subdirectory=setup/portal_customer_wallet
-# this is needed because csv_export_invoice depends on
-# provelo_analytic_account. although this modules comes from this repository,
-# the "install addons and dependencies" ci step fails if this is not listed
-# here.
-git+https://github.com/coopiteasy/cie-custom@12.0#subdirectory=setup/provelo_analytic_account
 git+https://github.com/coopiteasy/cie-hr@12.0#subdirectory=setup/hr_auto_manager_group_membership
 git+https://github.com/coopiteasy/csv-connector@12.0#subdirectory=setup/csv_export_base
 git+https://github.com/coopiteasy/csv-connector@12.0#subdirectory=setup/sftp_backend
-git+https://github.com/coopiteasy/csv-connector@12.0#subdirectory=setup/csv_export_invoice
 git+https://github.com/coopiteasy/csv-connector@12.0#subdirectory=setup/csv_export_partner
 git+https://github.com/coopiteasy/csv-connector@12.0#subdirectory=setup/csv_export_payment
 git+https://github.com/coopiteasy/pos@12-pos_mail_receipt-2#subdirectory=setup/pos_mail_receipt
