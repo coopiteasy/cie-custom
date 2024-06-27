@@ -25,6 +25,7 @@ addon | version | maintainers | summary
 [bablmarket_custom](bablmarket_custom/) | 12.0.1.0.0 |  | Specifics customizations for Bablmarket
 [bees_custom](bees_custom/) | 12.0.1.1.0 |  | Specifics customizations for BEES coop.
 [coopiteasy_custom](coopiteasy_custom/) | 12.0.1.3.0 |  | Specific customizations for Coop IT Easy
+[csv_export_invoice](csv_export_invoice/) | 12.0.1.1.0 |  | Export your invoices as CSV flat files
 [demain_purchase_quick](demain_purchase_quick/) | 12.0.1.0.0 |  | Add minimum quantity and purchase UoM fields to purchase order products quick add view
 [foodhub_copy_product_fields](foodhub_copy_product_fields/) | 12.0.2.0.0 | [![carmenbianca](https://github.com/carmenbianca.png?size=30px)](https://github.com/carmenbianca) | Emptied.
 [foodhub_custom](foodhub_custom/) | 12.0.1.1.0 |  | Foodhub customizations
