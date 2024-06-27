@@ -40,7 +40,7 @@ addon | version | maintainers | summary
 [provelo_custom_timesheet_ui](provelo_custom_timesheet_ui/) | 12.0.1.0.1 |  | Small modifications to the Timesheets UI
 [provelo_resource_activity_reports](provelo_resource_activity_reports/) | 12.0.1.0.1 |  | Reports for resource activities
 [rotordc_autofill_product_variant](rotordc_autofill_product_variant/) | 12.0.1.0.1 |  | Autofill some field of the product variant based on the product template.
-[rotordc_custom](rotordc_custom/) | 12.0.1.1.0 |  | Customization for RotorDC
+[rotordc_custom](rotordc_custom/) | 12.0.1.1.1 |  | Customization for RotorDC
 [rotordc_invoice_link_down_payment](rotordc_invoice_link_down_payment/) | 12.0.1.0.0 | [![carmenbianca](https://github.com/carmenbianca.png?size=30px)](https://github.com/carmenbianca) | Register payments done through invoices as down payment on sale orders.
 [rotordc_mail_activity_display_info](rotordc_mail_activity_display_info/) | 12.0.1.0.0 | [![carmenbianca](https://github.com/carmenbianca.png?size=30px)](https://github.com/carmenbianca) | Display the info of activities by default.
 [rotordc_optional_product](rotordc_optional_product/) | 12.0.1.0.0 |  | Custom modifications regarding RotorDC's use of optional products.
