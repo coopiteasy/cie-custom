@@ -1,0 +1,2 @@
+- Add Product Top Category to Sale Report
+- Allow sale_report_wizard module to use the report.all.channels.sale model by adding confirmation_date to it.
