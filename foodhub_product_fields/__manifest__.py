@@ -16,7 +16,6 @@
     "depends": [
         "product",
         "product_harmonized_system",
-        "point_of_sale",
         "website_sale",
     ],
 }
