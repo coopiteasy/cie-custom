@@ -10,7 +10,7 @@ class EventTrackSpeaker(models.Model):
 
     curriculum_vitae = fields.Text()
     invitation_number = fields.Integer()
-    invitation_code = fields.Integer()
+    invitation_code = fields.Char()
     need_ticket = fields.Boolean()
     need_reserved_car_place = fields.Boolean()
     slot_wishes = fields.Text()
