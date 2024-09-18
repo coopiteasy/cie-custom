@@ -15,7 +15,7 @@
     "depends": [
         "event_track_multi_speaker",
         "event_track_multi_date",
-        "event_speaker_travel",
+        "event_track_speaker_travel",
         "event_track_speaker_catering",
     ],
     "excludes": [],

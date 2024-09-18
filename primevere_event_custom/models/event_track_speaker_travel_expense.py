@@ -5,7 +5,7 @@
 from odoo import fields, models
 
 
-class EventTravelExpense(models.Model):
-    _inherit = "event.speaker.travel.expense"
+class EventTrackSpeakerTravelExpense(models.Model):
+    _inherit = "event.track.speaker.travel.expense"
 
     status = fields.Selection(selection_add=[("to_pay_in_hand", "To Pay In Hand")])
