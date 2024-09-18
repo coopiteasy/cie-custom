@@ -9,6 +9,7 @@
 
             <field name="color" position="after">
                 <field name="theme_ids" widget="many2many_tags" />
+                <field name="format_id" />
             </field>
 
             <field name="date" position="after">

@@ -9,6 +9,7 @@ class EventTrack(models.Model):
     _inherit = "event.track"
 
     theme_ids = fields.Many2many("event.track.theme", string="Themes")
+    format_id = fields.Many2one("event.track.format", string="Format")
     commission_summary = fields.Text()
     information = fields.Text()
     contacts = fields.Text()
