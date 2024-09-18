@@ -1,30 +1,48 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8" ?>
 <odoo>
 
     <record model="ir.ui.view" id="view_event_track_form">
         <field name="name">event.track.form</field>
         <field name="model">event.track</field>
-        <field
-            name="inherit_id"
-            ref="website_event_track.view_event_track_form"
-        />
+        <field name="inherit_id" ref="website_event_track.view_event_track_form" />
         <field name="arch" type="xml">
-           <field name="wishlisted_by_default" position="after" >
-            <field name="commission_summary" />
-            <field name="information" />
-            <field name="contacts" />
-            <field name="all_event" />
-            <field name="welcomer_id" />
-            <field name="electricity_watt" />
-        </field>
-        <field name="color" position="after" >
-            <field name="com_info_speaker_short" />
-            <field name="com_info_speaker_long" />
-            <field name="com_info_event" />
-            <field name="com_info_contacts" />
-            <field name="com_info_age" />
-            <field name="com_info_note" />
-        </field>
+
+            <field name="date" position="after">
+                <field name="all_event" />
+            </field>
+
+            <field name="user_id" position="after">
+                <field name="welcomer_id" />
+            </field>
+
+            <field name="equipment_line_ids" position="before">
+                <field name="electricity_watt" />
+            </field>
+
+            <xpath expr="//group" position="after">
+                <group name="primevere_custom">
+                    <group name="left">
+                        <field name="commission_summary" />
+                    </group>
+                    <group name="right">
+                        <field name="information" />
+                        <field name="contacts" />
+                    </group>
+                </group>
+            </xpath>
+
+            <xpath expr="//notebook" position="inside">
+                <page name="communication" string="Com Summary">
+                    <group>
+                        <field name="com_info_speaker_short" />
+                        <field name="com_info_speaker_long" />
+                        <field name="com_info_event" />
+                        <field name="com_info_contacts" />
+                        <field name="com_info_age" />
+                        <field name="com_info_note" />
+                    </group>
+                </page>
+            </xpath>
 
         </field>
     </record>

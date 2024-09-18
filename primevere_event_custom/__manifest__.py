@@ -17,6 +17,7 @@
         "event_track_multi_date",
         "event_track_speaker_travel",
         "event_track_speaker_catering",
+        "event_track_equipment",
     ],
     "excludes": [],
     "data": [
