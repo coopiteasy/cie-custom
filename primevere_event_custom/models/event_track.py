@@ -8,6 +8,7 @@ from odoo import fields, models
 class EventTrack(models.Model):
     _inherit = "event.track"
 
+    theme_ids = fields.Many2many("event.track.theme", string="Themes")
     commission_summary = fields.Text()
     information = fields.Text()
     contacts = fields.Text()
