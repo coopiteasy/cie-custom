@@ -25,6 +25,7 @@
         "views/event_track_speaker.xml",
         "views/event_track.xml",
         "views/event_track_speaker_booking.xml",
+        "views/menuitems.xml",
     ],
     "demo": [],
     "qweb": [],
