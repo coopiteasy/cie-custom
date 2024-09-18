@@ -9,7 +9,7 @@
             ref="event_track_speaker_travel.view_event_track_speaker_booking_form"
         />
         <field name="arch" type="xml">
-           <field name="event_id" position="after">
+           <field name="speaker_id" position="after">
             <field name="constraints" />
             <field name="discount_info" />
         </field>
