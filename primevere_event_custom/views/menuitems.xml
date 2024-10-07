@@ -1,6 +1,14 @@
 <?xml version="1.0" ?>
 <odoo>
+    <!-- Show Track -->
+    <record model="ir.ui.menu" id="website_event_track.menu_event_track">
+        <field
+            name="groups_id"
+            eval="[(6,0,[ref('event.group_event_registration_desk')])]"
+        />
+    </record>
 
+    <!-- Theme and Format -->
     <record model="ir.actions.act_window" id="action_track_theme">
         <field name="name">Track Themes</field>
         <field name="res_model">event.track.theme</field>
@@ -18,7 +26,7 @@
         name="Track Theme"
         action="action_track_theme"
         parent="event.menu_event_configuration"
-        groups="base.group_no_one"
+        groups="event.group_event_registration_desk"
     />
 
     <menuitem
@@ -26,7 +34,7 @@
         name="Track Format"
         action="action_track_format"
         parent="event.menu_event_configuration"
-        groups="base.group_no_one"
+        groups="event.group_event_registration_desk"
     />
 
 </odoo>
