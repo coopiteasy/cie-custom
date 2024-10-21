@@ -18,6 +18,7 @@
         "event_track_speaker_travel",
         "event_track_speaker_catering",
         "event_track_equipment",
+        "report_csv",
     ],
     "excludes": [],
     "data": [
@@ -26,6 +27,7 @@
         "views/event_track.xml",
         "views/event_track_speaker_booking.xml",
         "views/res_partner.xml",
+        "reports/track_export_website.xml",
         "views/menuitems.xml",
     ],
     "demo": [],

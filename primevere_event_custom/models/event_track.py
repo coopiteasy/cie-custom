@@ -2,7 +2,9 @@
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
-from odoo import fields, models
+import mimetypes
+
+from odoo import api, fields, models
 
 
 class EventTrack(models.Model):
@@ -22,3 +24,23 @@ class EventTrack(models.Model):
     com_info_contacts = fields.Text()
     com_info_age = fields.Text()
     com_info_note = fields.Text()
+    website_image_export_name = fields.Char(
+        compute="_compute_website_image_export_name"
+    )
+
+    @api.depends("image")
+    def _compute_website_image_export_name(self):
+        for track in self:
+            attachment = self.env["ir.attachment"].search(
+                [
+                    ("res_id", "=", track.id),
+                    ("res_model", "=", track._name),
+                    ("res_field", "=", "website_image"),
+                ],
+                limit=1,
+            )
+            if attachment:
+                extension = mimetypes.guess_extension(attachment.mimetype)
+                track.website_image_export_name = f"{track.id}{extension}"
+            else:
+                track.website_image_export_name = False
