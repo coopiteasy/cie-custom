@@ -12,7 +12,8 @@ class TrackWebsiteExportCSV(models.AbstractModel):
     _name = "report.primevere_event_custom.track_export_website"
     _inherit = "report.report_csv.abstract"
 
-    def generate_csv_report(self, writer, data, tracks):
+    def generate_csv_report(self, writer, data, event):
+        tracks = event.track_ids
         writer.writeheader()
         for track in tracks:
             for date_line in track.dates:
@@ -40,8 +41,8 @@ class TrackWebsiteExportCSV(models.AbstractModel):
                         "lieux": locations[-1] if locations else "",
                         "forme": track.format_id.name if track.format_id else "",
                         "duree": track_duration.isoformat(timespec="minutes"),
-                        "intervenant court": track.com_info_speaker_short,
-                        "titre session": track.name,
+                        "intervenant court": track.com_info_speaker_short or "",
+                        "titre session": track.name or "",
                         "presentation intervenant longue": track.com_info_speaker_long
                         or "",
                         "texte de présentation": track.com_info_event or "",

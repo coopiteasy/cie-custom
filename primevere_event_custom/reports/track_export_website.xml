@@ -3,11 +3,11 @@
 
     <record id="track_export_website" model="ir.actions.report">
         <field name="name">Website Export CSV</field>
-        <field name="model">event.track</field>
+        <field name="model">event.event</field>
         <field name="report_type">csv</field>
         <field name="report_name">primevere_event_custom.track_export_website</field>
         <field name="report_file">track_export_website</field>
-        <field name="binding_model_id" ref="model_event_track" />
+        <field name="binding_model_id" ref="model_event_event" />
         <field name="binding_type">report</field>
     </record>
 
