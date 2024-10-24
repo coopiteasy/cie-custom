@@ -7,6 +7,12 @@
         <field name="inherit_id" ref="website_event_track.view_event_track_form" />
         <field name="arch" type="xml">
 
+            <field name="website_image" position="attributes">
+                <attribute
+                    name="options"
+                >{'accepted_file_extensions': 'image/jpeg,image/png'}</attribute>
+            </field>
+
             <field name="color" position="after">
                 <field name="theme_ids" widget="many2many_tags" />
                 <field name="format_id" />
