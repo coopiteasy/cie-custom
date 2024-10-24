@@ -16,7 +16,7 @@ class TrackImageDownload(http.Controller):
         "/tracks/website_image/download",
         auth="user",
     )
-    def download_track_images(self, event, **kw):
+    def download_track_website_image(self, event, **kw):
         """Create a zip with all the track images and serve it"""
         tracks = request.env["event.track"].sudo().search([("event_id", "=", event.id)])
         with io.BytesIO() as buffer:
