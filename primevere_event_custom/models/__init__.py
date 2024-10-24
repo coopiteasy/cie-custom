@@ -2,7 +2,6 @@
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 from . import event_track_speaker
-from . import event_event
 from . import event_track
 from . import event_track_report
 from . import event_track_speaker_travel_booking
