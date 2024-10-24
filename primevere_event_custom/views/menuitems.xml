@@ -8,6 +8,25 @@
         />
     </record>
 
+    <!-- Download tracks images -->
+
+    <record model="ir.actions.act_url" id="action_track_download_images">
+        <field name="name">Download Track Images</field>
+        <field
+            name="url"
+        >/primevere_event_custom/event/1/tracks/website_image/download</field>
+        <field name="target">self</field>
+    </record>
+
+    <menuitem
+        id="menu_event_track_download_images"
+        name="Download Track Images"
+        action="action_track_download_images"
+        parent="event.menu_event_configuration"
+        groups="event.group_event_registration_desk"
+    />
+
+
     <!-- Theme and Format -->
     <record model="ir.actions.act_window" id="action_track_theme">
         <field name="name">Track Themes</field>
