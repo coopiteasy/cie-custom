@@ -18,7 +18,8 @@ class TrackImageDownload(http.Controller):
     )
     def download_track_website_image(self, event, **kw):
         """Create a zip with all the track images and serve it"""
-        tracks = request.env["event.track"].sudo().search([("event_id", "=", event.id)])
+        tracks = request.env["event.track"].search([("event_id", "=", event.id)])
+        zipname = f"event-{event.id}-tracks-website_image.zip"
         with io.BytesIO() as buffer:
             with zipfile.ZipFile(
                 buffer, mode="w", compression=zipfile.ZIP_DEFLATED
@@ -29,7 +30,6 @@ class TrackImageDownload(http.Controller):
                             track.website_image_export_name,
                             base64.b64decode(track.website_image),
                         )
-            zipname = f"event-{event.id}-tracks-website_image.zip"
             attach = request.env["ir.attachment"].new(
                 {
                     "name": zipname,
