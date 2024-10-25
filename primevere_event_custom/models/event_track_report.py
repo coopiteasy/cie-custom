@@ -74,5 +74,5 @@ class TrackWebsiteExportCSV(models.AbstractModel):
         res["fieldnames"].append("age spécifique")
         res["fieldnames"].append("info dernière minute")
         res["delimiter"] = ";"
-        res["quoting"] = csv.QUOTE_NONE
+        res["quoting"] = csv.QUOTE_MINIMAL
         return res
