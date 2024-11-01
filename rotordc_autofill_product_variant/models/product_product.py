@@ -27,8 +27,6 @@ class ProductProduct(models.Model):
             for vals in group_vals:
                 if "default_code" not in vals:
                     vals["default_code"] = product_tmpl_id.default_code
-                if "weight_uom_id" not in vals:
-                    vals["weight_uom_id"] = product_tmpl_id.weight_uom_id.id
                 if "weight" not in vals:
                     vals["weight"] = product_tmpl_id.weight
                 if "dimensional_uom_id" not in vals:
