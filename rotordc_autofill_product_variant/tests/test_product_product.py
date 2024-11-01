@@ -5,32 +5,33 @@ import odoo.tests.common as common
 
 
 class TestProductProduct(common.TransactionCase):
-    def setUp(self):
-        super().setUp()
-        self.product_product_10 = self.env.ref("product.product_product_10")
-        self.product_tmpl_10 = self.product_product_10.product_tmpl_id
-        self.product_attribute_1 = self.env.ref("product.product_attribute_1")
-        self.product_attribute_2 = self.env.ref("product.product_attribute_2")
+    @classmethod
+    def setUpClass(cls):
+        super().setUpClass()
+        cls.product_product_10 = cls.env.ref("product.product_product_10")
+        cls.product_tmpl_10 = cls.product_product_10.product_tmpl_id
+        cls.product_attribute_1 = cls.env.ref("product.product_attribute_1")
+        cls.product_attribute_2 = cls.env.ref("product.product_attribute_2")
         # Value for product_attribute_1
-        self.product_attribute_value_11 = self.env.ref(
+        cls.product_attribute_value_11 = cls.env.ref(
             "product.product_attribute_value_1"
         )
-        self.product_attribute_value_12 = self.env.ref(
+        cls.product_attribute_value_12 = cls.env.ref(
             "product.product_attribute_value_2"
         )
         # Value for product_attribute_2
-        self.product_attribute_value_21 = self.env.ref(
+        cls.product_attribute_value_21 = cls.env.ref(
             "product.product_attribute_value_3"
         )
-        self.product_attribute_value_22 = self.env.ref(
+        cls.product_attribute_value_22 = cls.env.ref(
             "product.product_attribute_value_4"
         )
 
-        self.default_code = "AAA"
-        self.weight = 50.0
-        self.product_length = 2.0
-        self.product_width = 1.0
-        self.product_height = 1.0
+        cls.default_code = "AAA"
+        cls.weight = 50.0
+        cls.product_length = 2.0
+        cls.product_width = 1.0
+        cls.product_height = 1.0
 
     def _set_value_on_product_tmpl(
         self, default_code, weight, product_length, product_width, product_height
