@@ -5,7 +5,7 @@
     "name": "RotorDC Autofill Product Variant",
     "summary": """Autofill some field of the product variant based on
     the product template.""",
-    "version": "13.0.1.0.0",
+    "version": "14.0.1.0.0",
     "category": "Uncategorized",
     "website": "https://coopiteasy.be",
     "author": "Coop IT Easy SC",
