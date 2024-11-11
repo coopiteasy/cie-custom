@@ -16,16 +16,20 @@
         <field name="dpi">90</field>
     </record>
 
-    <report
-        id="report_product_label_rotor"
-        string="Rotor Product Label (PDF)"
-        model="product.product"
-        report_type="qweb-pdf"
-        name="rotordc_custom.report_productlabel_rotor"
-        file="rotordc_custom.report_productlabel_rotor"
-        print_report_name="'Products Labels - %s' % (object.name)"
-        paperformat="rotordc_custom.paperformat_productlabel_rotor"
-    />
+    <record model="ir.actions.report" id="report_product_label_rotor">
+        <field name="name">Rotor Product Label (PDF)</field>
+        <field name="model">product.product</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">rotordc_custom.report_productlabel_rotor</field>
+        <field name="report_file">rotordc_custom.report_productlabel_rotor</field>
+        <field name="print_report_name">'Products Labels - %s' % (object.name)</field>
+        <field name="binding_model_id" ref="product.model_product_product" />
+        <field name="binding_type">report</field>
+        <field
+            name="paperformat_id"
+            ref="rotordc_custom.paperformat_productlabel_rotor"
+        />
+    </record>
 
     <template id="report_productlabel_rotor">
         <t t-call="web.basic_layout">
