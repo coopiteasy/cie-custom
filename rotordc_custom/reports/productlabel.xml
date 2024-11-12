@@ -59,7 +59,7 @@
                     <td style="font-size: 12px;width: 100%;padding: 0;">
                         <strong>Price:</strong>
                         <strong
-                            t-esc="product.lst_price * (1 + product.taxes_id.amount/100)"
+                            t-field="product.lst_price_taxes_included"
                             t-options="{'widget': 'monetary', 'display_currency': product.company_id.currency_id}"
                         />
                         <strong>/</strong>

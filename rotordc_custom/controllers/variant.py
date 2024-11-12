@@ -4,12 +4,10 @@
 from odoo import http
 from odoo.http import request
 
-from odoo.addons.sale.controllers.product_configurator import (
-    ProductConfiguratorController,
-)
+from odoo.addons.sale.controllers.variant import VariantController
 
 
-class RotorDCCustomProductConfiguratorController(ProductConfiguratorController):
+class RotorDCCustomVariantController(VariantController):
     @http.route()
     def get_combination_info(
         self,

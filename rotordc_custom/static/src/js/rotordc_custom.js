@@ -4,9 +4,9 @@
 odoo.define("rotordc_custom.rotordc_custom", function(require) {
     "use strict";
 
-    var sAnimations = require("website.content.snippets.animation");
+    var publicWidget = require("web.public.widget");
     require("website_sale.website_sale");
-    var WebsiteSale = sAnimations.registry.WebsiteSale;
+    var {WebsiteSale} = publicWidget.registry;
 
     WebsiteSale.include({
         _onChangeCombination: function(ev, $parent, combination) {

@@ -4,21 +4,17 @@
 {
     "name": "rotordc_custom",
     "summary": "Customization for RotorDC",
-    "version": "12.0.1.1.1",
+    "version": "13.0.1.0.0",
     "category": "Uncategorized",
     "website": "https://coopiteasy.be",
     "author": "Coop IT Easy SC",
     "license": "AGPL-3",
-    "application": False,
     "depends": [
         "product",
         "website_sale",
     ],
-    "excludes": [],
     "data": [
-        "report/productlabel.xml",
+        "reports/productlabel.xml",
         "views/templates.xml",
     ],
-    "demo": [],
-    "qweb": [],
 }
