@@ -1,7 +1,7 @@
 odoo.define("rotordc_optional_product.OptionalProductsModal", function(require) {
     "use strict";
 
-    var OptionalProductsModal = require("sale.OptionalProductsModal");
+    var OptionalProductsModal = require("sale_product_configurator.OptionalProductsModal");
 
     OptionalProductsModal.include({
         _getCategId: function($element) {

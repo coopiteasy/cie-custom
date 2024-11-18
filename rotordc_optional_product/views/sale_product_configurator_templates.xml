@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <odoo>
-    <template id="optional_product_items" inherit_id="sale.optional_product_items">
+    <template
+        id="optional_product_items"
+        inherit_id="sale_product_configurator.optional_product_items"
+    >
         <xpath expr="//td[hasclass('td-img')]" position="inside">
             <input
                 type="hidden"
