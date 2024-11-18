@@ -5,7 +5,7 @@
     "name": "RotorDC Optional Product",
     "summary": """
         Custom modifications regarding RotorDC's use of optional products.""",
-    "version": "13.0.1.0.0",
+    "version": "14.0.1.0.0",
     "category": "Sales",
     "website": "https://coopiteasy.be",
     "author": "Coop IT Easy SC",
