@@ -9,7 +9,7 @@ class ProductProduct(models.Model):
     _inherit = "product.product"
 
     lst_price_taxes_included = fields.Float(
-        "Public Price (Taxes Included)",
+        "Sales Price (Taxes Included)",
         compute="_compute_lst_price_taxes_included",
         digits="Product Price",
     )

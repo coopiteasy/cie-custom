@@ -2,5 +2,4 @@
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
-from . import product_product
-from . import product_template
+from . import product_label_layout

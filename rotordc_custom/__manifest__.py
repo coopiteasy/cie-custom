@@ -4,7 +4,7 @@
 {
     "name": "rotordc_custom",
     "summary": "Customization for RotorDC",
-    "version": "14.0.1.0.0",
+    "version": "15.0.1.0.0",
     "category": "Uncategorized",
     "website": "https://coopiteasy.be",
     "author": "Coop IT Easy SC",
@@ -14,7 +14,14 @@
         "website_sale",
     ],
     "data": [
-        "reports/productlabel.xml",
+        "reports/product_reports.xml",
+        "reports/product_template_templates.xml",
+        "reports/product_product_templates.xml",
         "views/templates.xml",
     ],
+    "assets": {
+        "web.assets_frontend": [
+            "rotordc_custom/static/src/**/*",
+        ],
+    },
 }
