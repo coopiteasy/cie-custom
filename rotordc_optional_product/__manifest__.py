@@ -5,23 +5,23 @@
     "name": "RotorDC Optional Product",
     "summary": """
         Custom modifications regarding RotorDC's use of optional products.""",
-    "version": "14.0.1.0.0",
+    "version": "15.0.1.0.0",
     "category": "Sales",
     "website": "https://coopiteasy.be",
     "author": "Coop IT Easy SC",
     "license": "AGPL-3",
-    "application": False,
     "depends": [
         "sale_product_configurator",
         "web",
         "website_sale",
     ],
-    "excludes": [],
     "data": [
-        "views/assets.xml",
         "views/sale_product_configurator_templates.xml",
         "views/templates.xml",
     ],
-    "demo": [],
-    "qweb": [],
+    "assets": {
+        "web.assets_frontend": [
+            "rotordc_optional_product/static/src/js/product_configurator_modal.js",
+        ],
+    },
 }
