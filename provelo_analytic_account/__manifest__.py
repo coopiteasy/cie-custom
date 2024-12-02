@@ -24,6 +24,7 @@
         "views/resource_location_views.xml",
         "views/account_invoice_views.xml",
         "views/resource_activity_type_views.xml",
+        "views/resource_resource_views.xml",
         "views/actions.xml",
         "views/menus.xml",
     ],
