@@ -249,7 +249,7 @@ msgstr ""
 
 #. module: provelo_custom
 #: model:ir.model.fields,help:provelo_custom.field_hr_timesheet_overtime__total_overtime
-msgid "Total Overtime since Overtime Start Date"
+msgid "Total overtime since Overtime Start Date"
 msgstr ""
 
 #. module: provelo_custom
