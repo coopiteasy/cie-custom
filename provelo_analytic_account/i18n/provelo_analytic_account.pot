@@ -149,6 +149,7 @@ msgstr ""
 
 #. module: provelo_analytic_account
 #: model:ir.model,name:provelo_analytic_account.model_pv_project
+#: model:ir.model.fields,field_description:provelo_analytic_account.field_resource_resource__pv_project_id
 msgid "Pro Velo Project"
 msgstr ""
 
@@ -176,6 +177,11 @@ msgstr ""
 #. module: provelo_analytic_account
 #: model:ir.model,name:provelo_analytic_account.model_resource_activity_type
 msgid "Resource Type"
+msgstr ""
+
+#. module: provelo_analytic_account
+#: model:ir.model,name:provelo_analytic_account.model_resource_resource
+msgid "Resources"
 msgstr ""
 
 #. module: provelo_analytic_account
