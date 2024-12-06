@@ -7,8 +7,8 @@
         "At the bottom of the Picking Operations report, display the sale "
         "order in huge text"
     ),
-    "version": "13.0.1.0.0",
-    "category": "Operations/Inventory",
+    "version": "14.0.1.0.0",
+    "category": "Inventory/Inventory",
     "website": "https://coopiteasy.be",
     "author": "Coop IT Easy SC",
     "license": "AGPL-3",
