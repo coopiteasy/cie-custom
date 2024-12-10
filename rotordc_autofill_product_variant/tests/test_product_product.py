@@ -2,6 +2,7 @@
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl.html).
 
 import odoo.tests.common as common
+from odoo import fields
 
 
 class TestProductProduct(common.TransactionCase):
@@ -57,40 +58,32 @@ class TestProductProduct(common.TransactionCase):
         self.product_tmpl_10.write(
             {
                 "attribute_line_ids": [
-                    [
-                        0,
-                        0,
+                    fields.Command.create(
                         {
                             "attribute_id": self.product_attribute_1.id,
                             "value_ids": [
-                                [
-                                    6,
-                                    0,
+                                fields.Command.set(
                                     [
                                         self.product_attribute_value_11.id,
                                         self.product_attribute_value_12.id,
                                     ],
-                                ]
+                                ),
                             ],
                         },
-                    ],
-                    [
-                        0,
-                        0,
+                    ),
+                    fields.Command.create(
                         {
                             "attribute_id": self.product_attribute_2.id,
                             "value_ids": [
-                                [
-                                    6,
-                                    0,
+                                fields.Command.set(
                                     [
                                         self.product_attribute_value_21.id,
                                         self.product_attribute_value_22.id,
                                     ],
-                                ]
+                                ),
                             ],
                         },
-                    ],
+                    ),
                 ]
             }
         )
