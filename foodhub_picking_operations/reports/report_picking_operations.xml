@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <odoo>
     <template id="report_picking" inherit_id="stock.report_picking">
+        <xpath expr="//h1" position="replace">
+            <h1 t-field="o.origin" class="mt0"/>
+        </xpath>
+        <xpath expr="//div[@name='div_origin']" position="replace">
+            <div t-if="o.origin" class="col-auto" name="div_origin">
+                <strong>Picking:</strong>
+                <p t-field="o.name"/>
+            </div>
+        </xpath>
         <xpath expr="//th[@name='th_product']" position="before">
                 <th>
                     <strong>Category</strong>
