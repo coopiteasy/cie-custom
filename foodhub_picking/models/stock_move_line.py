@@ -1,11 +1,11 @@
-# Copyright 2020 Coop IT Easy SCRL fs
-#   Robin Keunen <robin@coopiteasy.be>
-# License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl.html).
+# SPDX-FileCopyrightText: 2024 Coop IT Easy SC
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
 
 from odoo import fields, models
 
 
-class StockMove(models.Model):
+class StockMoveLine(models.Model):
     _inherit = "stock.move.line"
     _order = "product_category_name,product_default_code"
 

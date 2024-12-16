@@ -368,10 +368,15 @@ ul.auto-toc {
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !! source digest: sha256:7d681b62ded7841560c15427c9d8b30b35a514b6c31f2c2b36c47419e1e1120c
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
-<p><a class="reference external image-reference" href="https://odoo-community.org/page/development-status"><img alt="Beta" src="https://img.shields.io/badge/maturity-Beta-yellow.png" /></a> <a class="reference external image-reference" href="http://www.gnu.org/licenses/agpl-3.0-standalone.html"><img alt="License: AGPL-3" src="https://img.shields.io/badge/licence-AGPL--3-blue.png" /></a> <a class="reference external image-reference" href="https://github.com/coopiteasy/cie-custom/tree/16.0/foodhub_picking_operations"><img alt="coopiteasy/cie-custom" src="https://img.shields.io/badge/github-coopiteasy%2Fcie--custom-lightgray.png?logo=github" /></a></p>
-<p>Sort picking operations by internal category and internal reference.</p>
+<p><a class="reference external image-reference" href="https://odoo-community.org/page/development-status"><img alt="Beta" src="https://img.shields.io/badge/maturity-Beta-yellow.png" /></a> <a class="reference external image-reference" href="http://www.gnu.org/licenses/agpl-3.0-standalone.html"><img alt="License: AGPL-3" src="https://img.shields.io/badge/licence-AGPL--3-blue.png" /></a> <a class="reference external image-reference" href="https://github.com/coopiteasy/cie-custom/tree/16.0/foodhub_picking"><img alt="coopiteasy/cie-custom" src="https://img.shields.io/badge/github-coopiteasy%2Fcie--custom-lightgray.png?logo=github" /></a></p>
+<ul class="simple">
+<li>Sort picking operations by internal category and internal reference.</li>
+</ul>
 <p>Context : Increase the efficiency of picking by sorting products by location and priority. We cannot use “locations” because some products are of type Consumable and should stay this way : these are products that are received and sent on the same date, we don’t want to manage stock on these products.
 So instead we sort by internal categories and by reference.</p>
+<ul class="simple">
+<li>Put the name of the SO in title, rather than the picking reference. Because this picking will be sent to the client, who only knows the reference of the SO. In principle this document should not be sent to the client, but here it’s easier to only rely on one document.</li>
+</ul>
 <p><strong>Table of contents</strong></p>
 <div class="contents local topic" id="contents">
 <ul class="simple">
@@ -388,7 +393,7 @@ So instead we sort by internal categories and by reference.</p>
 <p>Bugs are tracked on <a class="reference external" href="https://github.com/coopiteasy/cie-custom/issues">GitHub Issues</a>.
 In case of trouble, please check there if your issue has already been reported.
 If you spotted it first, help us to smash it by providing a detailed and welcomed
-<a class="reference external" href="https://github.com/coopiteasy/cie-custom/issues/new?body=module:%20foodhub_picking_operations%0Aversion:%2016.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**">feedback</a>.</p>
+<a class="reference external" href="https://github.com/coopiteasy/cie-custom/issues/new?body=module:%20foodhub_picking%0Aversion:%2016.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**">feedback</a>.</p>
 <p>Do not contact contributors directly about support or help with technical issues.</p>
 </div>
 <div class="section" id="credits">
@@ -401,7 +406,7 @@ If you spotted it first, help us to smash it by providing a detailed and welcome
 </div>
 <div class="section" id="maintainers">
 <h2><a class="toc-backref" href="#toc-entry-4">Maintainers</a></h2>
-<p>This module is part of the <a class="reference external" href="https://github.com/coopiteasy/cie-custom/tree/16.0/foodhub_picking_operations">coopiteasy/cie-custom</a> project on GitHub.</p>
+<p>This module is part of the <a class="reference external" href="https://github.com/coopiteasy/cie-custom/tree/16.0/foodhub_picking">coopiteasy/cie-custom</a> project on GitHub.</p>
 <p>You are welcome to contribute.</p>
 </div>
 </div>
