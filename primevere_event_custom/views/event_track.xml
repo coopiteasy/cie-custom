@@ -58,4 +58,32 @@
         </field>
     </record>
 
+    <record id="view_event_track_tree" model="ir.ui.view">
+        <field name="name">event.track.tree</field>
+        <field name="model">event.track</field>
+        <field name="inherit_id" ref="website_event_track.view_event_track_tree" />
+        <field name="arch" type="xml">
+            <field name="name" position="before">
+                <field name="color" position="move" />
+                <field name="user_id" optional="show" />
+                <field name="dates" widget="many2many_tags" optional="show" />
+                <field name="duration" widget="float_time" optional="hide" />
+                <field name="location_id" optional="hide" />
+            </field>
+            <field name="name" position="after">
+                <field name="theme_ids" widget="many2many_tags" optional="hide" />
+                <field name="format_id" optional="hide" />
+            </field>
+            <field name="partner_name" position="attributes">
+                <attribute name="optional">hide</attribute>
+            </field>
+            <field name="partner_email" position="attributes">
+                <attribute name="optional">hide</attribute>
+            </field>
+            <field name="partner_phone" position="attributes">
+                <attribute name="optional">hide</attribute>
+            </field>
+        </field>
+    </record>
+
 </odoo>
