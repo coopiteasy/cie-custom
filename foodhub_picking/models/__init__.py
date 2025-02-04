@@ -1,5 +1,3 @@
-# SPDX-FileCopyrightText: 2024 Coop IT Easy SC
-#
-# SPDX-License-Identifier: AGPL-3.0-or-later
-
 from . import stock_move_line
+from . import stock_move
+from . import sale_order_line

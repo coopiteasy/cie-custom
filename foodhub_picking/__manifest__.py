@@ -1,7 +1,3 @@
-# SPDX-FileCopyrightText: 2024 Coop IT Easy SC
-#
-# SPDX-License-Identifier: AGPL-3.0-or-later
-
 {
     "name": "Foodhub Picking Operations",
     "version": "16.0.1.0.0",
@@ -11,8 +7,10 @@
     "website": "https://coopiteasy.be",
     "license": "AGPL-3",
     "category": "Stock",
-    "depends": [
-        "stock",
+    "depends": ["stock", "sale_management"],
+    "data": [
+        "reports/report_picking.xml",
+        "views/stock_picking_views.xml",
+        "views/sale_order_line_views.xml",
     ],
-    "data": ["reports/report_picking.xml"],
 }
