@@ -1,6 +1,6 @@
 {
     "name": "Foodhub Picking Operations",
-    "version": "16.0.1.0.0",
+    "version": "16.0.1.1.0",
     "summary": """
         Foodhub customizations : sort picking operations by category and reference""",
     "author": "Coop IT Easy SC",
