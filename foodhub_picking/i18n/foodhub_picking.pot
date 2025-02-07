@@ -14,21 +14,40 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. module: foodhub_picking
+#: model_terms:ir.ui.view,arch_db:foodhub_picking.report_delivery_document
 #: model_terms:ir.ui.view,arch_db:foodhub_picking.report_picking
 msgid "<strong>Category</strong>"
 msgstr ""
 
 #. module: foodhub_picking
+#: model_terms:ir.ui.view,arch_db:foodhub_picking.report_delivery_document
 #: model_terms:ir.ui.view,arch_db:foodhub_picking.report_picking
 msgid "<strong>Picking:</strong>"
 msgstr ""
 
 #. module: foodhub_picking
+#: model:ir.model.fields,field_description:foodhub_picking.field_stock_move__product_default_code
 #: model:ir.model.fields,field_description:foodhub_picking.field_stock_move_line__product_default_code
 msgid "Internal Reference"
 msgstr ""
 
 #. module: foodhub_picking
+#: model:ir.model.fields,field_description:foodhub_picking.field_sale_order_line__product_category_name
+#: model:ir.model.fields,field_description:foodhub_picking.field_stock_move__product_category_name
+msgid "Product Category"
+msgstr ""
+
+#. module: foodhub_picking
 #: model:ir.model,name:foodhub_picking.model_stock_move_line
 msgid "Product Moves (Stock Move Line)"
+msgstr ""
+
+#. module: foodhub_picking
+#: model:ir.model,name:foodhub_picking.model_sale_order_line
+msgid "Sales Order Line"
+msgstr ""
+
+#. module: foodhub_picking
+#: model:ir.model,name:foodhub_picking.model_stock_move
+msgid "Stock Move"
 msgstr ""
