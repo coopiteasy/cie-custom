@@ -26,6 +26,7 @@ addon | version | maintainers | summary
 [foodhub_custom_product_kanban_view](foodhub_custom_product_kanban_view/) | 16.0.1.0.0 | [![remytms](https://github.com/remytms.png?size=30px)](https://github.com/remytms) | Adapt the kanban view for product
 [foodhub_picking](foodhub_picking/) | 16.0.1.1.0 |  | Foodhub customizations : sort picking operations by category and reference
 [foodhub_product_fields](foodhub_product_fields/) | 16.0.1.0.0 | [![victor-champonnois](https://github.com/victor-champonnois.png?size=30px)](https://github.com/victor-champonnois) | Set Mandatory and Copy Options to Fields in Product
+[medor_custom_stats](medor_custom_stats/) | 16.0.1.0.0 |  | Compute stats on number of subscribers and number of cooperators
 [sawb_custom_contact_interface](sawb_custom_contact_interface/) | 16.0.1.0.0 | [![victor-champonnois](https://github.com/victor-champonnois.png?size=30px)](https://github.com/victor-champonnois) | SAWB Custom : Contact Interface.
 [sawb_custom_hide_vat_for_individual](sawb_custom_hide_vat_for_individual/) | 16.0.1.0.0 | [![victor-champonnois](https://github.com/victor-champonnois.png?size=30px)](https://github.com/victor-champonnois) | Hide the partner's VAT field if the partner is an individual.
 
