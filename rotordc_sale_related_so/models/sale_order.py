@@ -5,16 +5,6 @@
 from odoo import api, fields, models
 
 
-class SaleOrderGroup(models.Model):
-    _name = "sale.order.group"
-    _description = "A group of related sale orders"
-
-    sale_order_ids = fields.One2many(
-        comodel_name="sale.order",
-        inverse_name="sale_order_group_id",
-    )
-
-
 class SaleOrder(models.Model):
     _inherit = "sale.order"
 
@@ -27,7 +17,6 @@ class SaleOrder(models.Model):
         compute="_compute_related_sale_orders",
     )
 
-    @api.multi
     def create_related_sale_order(self):
         self.ensure_one()
         if not self.sale_order_group_id:
@@ -47,7 +36,6 @@ class SaleOrder(models.Model):
             "context": ctx,
         }
 
-    @api.multi
     @api.depends("sale_order_group_id.sale_order_ids")
     def _compute_related_sale_orders(self):
         for so in self:
@@ -55,3 +43,5 @@ class SaleOrder(models.Model):
                 so.related_so_ids = so.sale_order_group_id.sale_order_ids.filtered(
                     lambda related_so: related_so != so
                 )
+            else:
+                so.related_so_ids = False

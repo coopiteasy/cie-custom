@@ -18,25 +18,89 @@
             </field>
             <page name="extra" position="before">
                 <page string="Related Sale Orders" name="related_sale_orders">
-                    <group>
-                        <field name="related_so_ids" nolabel="1">
-                            <tree>
-                                <control>
-                                    <create
-                                        string="Create SO"
-                                        context="{'default_origin': name}"
-                                    />
-                                </control>
-                                <field name="name" />
-                                <field name="confirmation_date" />
-                                <field name="partner_id" />
-                                <field name="user_id" />
-                                <field name="amount_total" />
-                                <field name="state" />
-                                <field name="invoice_status" />
-                            </tree>
-                        </field>
-                    </group>
+                    <field name="related_so_ids">
+                        <!--
+                            this is a copy of the contents of
+                            sale.view_order_tree with some tweaks.
+                        -->
+                        <tree
+                            sample="1"
+                            decoration-info="invoice_status == 'to invoice'"
+                            decoration-muted="state == 'cancel'"
+                        >
+                            <field name="message_needaction" invisible="1" />
+                            <field
+                                name="name"
+                                string="Number"
+                                readonly="1"
+                                decoration-bf="1"
+                            />
+                            <field
+                                name="date_order"
+                                string="Order Date"
+                                widget="date"
+                                optional="show"
+                            />
+                            <field name="commitment_date" optional="hide" />
+                            <field name="expected_date" optional="hide" />
+                            <field name="partner_id" readonly="1" />
+                            <field
+                                name="user_id"
+                                optional="show"
+                                widget="many2one_avatar_user"
+                            />
+                            <!-- hide by default -->
+                            <field
+                                name="activity_ids"
+                                widget="list_activity"
+                                optional="hide"
+                            />
+                            <field name="team_id" optional="hide" />
+                            <!-- hide by default -->
+                            <field
+                                name="company_id"
+                                groups="base.group_multi_company"
+                                optional="hide"
+                                readonly="1"
+                            />
+                            <field
+                                name="amount_untaxed"
+                                sum="Total Tax Excluded"
+                                widget="monetary"
+                                optional="hide"
+                            />
+                            <field
+                                name="amount_tax"
+                                sum="Tax Total"
+                                widget="monetary"
+                                optional="hide"
+                            />
+                            <field
+                                name="amount_total"
+                                sum="Total Tax Included"
+                                widget="monetary"
+                                decoration-bf="1"
+                                optional="show"
+                            />
+                            <field name="currency_id" invisible="1" />
+                            <field
+                                name="invoice_status"
+                                decoration-success="invoice_status == 'invoiced'"
+                                decoration-info="invoice_status == 'to invoice'"
+                                decoration-warning="invoice_status == 'upselling'"
+                                widget="badge"
+                                optional="show"
+                            />
+                            <field
+                                name="tag_ids"
+                                optional="hide"
+                                widget="many2many_tags"
+                                options="{'color_field': 'color'}"
+                            />
+                            <!-- set visible -->
+                            <field name="state" optional="show" />
+                        </tree>
+                    </field>
                 </page>
             </page>
         </field>

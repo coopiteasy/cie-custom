@@ -3,4 +3,5 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
 from . import sale_order
+from . import sale_order_group
 from . import stock_picking

@@ -1,16 +1,14 @@
 # Copyright 2023 Coop IT Easy SC
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl.html).
 
-from odoo.tests import SavepointCase
+from odoo.tests import TransactionCase
 
 
-class TestRelatedSaleOrders(SavepointCase):
+class TestRelatedSaleOrders(TransactionCase):
     @classmethod
     def setUpClass(cls):
-        super(TestRelatedSaleOrders, cls).setUpClass()
-        cls.sale_order_obj = cls.env["sale.order"]
+        super().setUpClass()
         cls.customer = cls.env.ref("base.res_partner_1")
-        cls.other_customer = cls.env.ref("base.res_partner_2")
 
     def _create_so(self, name, parent_so=None):
         vals = {
@@ -22,7 +20,7 @@ class TestRelatedSaleOrders(SavepointCase):
                 parent_so.sale_order_group_id = self.env["sale.order.group"].create({})
             vals["sale_order_group_id"] = parent_so.sale_order_group_id.id
 
-        return self.sale_order_obj.create(vals)
+        return self.env["sale.order"].create(vals)
 
     def test_discover_single_so(self):
         so = self._create_so("X")
