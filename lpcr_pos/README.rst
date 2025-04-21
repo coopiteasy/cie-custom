@@ -24,7 +24,7 @@ PoS Customizations for LPCR
 
 Customize the PoS according to LPCR specifications.
 
-This module hides several buttons:
+This module hides several buttons for regular users (not for managers):
 
 * Top header:
 
@@ -41,6 +41,8 @@ This module hides several buttons:
 * Payment screen:
 
   * Customer
+
+Additionally, this module makes data hidden by ``pos_hide_partner_info`` visible again for managers.
 
 **Table of contents**
 

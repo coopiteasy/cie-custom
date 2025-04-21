@@ -9,6 +9,9 @@ import Registries from "point_of_sale.Registries";
 const LPCRProductScreen = (ProductScreen_) =>
     class extends ProductScreen_ {
         get controlButtons() {
+            if (this.env.pos.isManager) {
+                return super.controlButtons;
+            }
             return super.controlButtons.filter(
                 (button) => !["RefundButton", "ProductInfoButton"].includes(button.name)
             );
