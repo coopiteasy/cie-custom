@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <template
+        id="lpcr_donation_tax_receipt_document"
+        inherit_id="donation_base.report_donationtaxreceipt_document"
+    >
+        <xpath expr="//t[@t-call='web.internal_layout']" position="attributes">
+            <attribute name="t-if">False</attribute>
+        </xpath>
+        <xpath expr="//t[@t-call='web.internal_layout']" position="after">
+            <t t-call="web.external_layout">
+                <div class="page">
+                    <h2>Reçu fiscal pour don</h2>
+
+                    <p>
+                        Reçu au titre de dons à certains organismes d’intérêt
+                        général (Art. 200, 238 bis et 978 du code général
+                        des impôts (CGI)).
+                    </p>
+
+                    <p>
+                        <strong>Objet :</strong>
+                        Cette association a pour objet la réalisation d’une
+                        mission d’intérêt général à caractère social, par
+                        la création et l’animation d’activités au service
+                        des liens de proximité, dans le but de lutter
+                        contre les phénomènes d’isolement et d’anonymat.
+                    </p>
+
+                    <p>
+                        <strong>No d’ordre de reçu :</strong>
+                        <span t-field="o.number" />
+                    </p>
+
+                    <p>
+                        <strong>Donateur :</strong>
+                        <div
+                            t-field="o.partner_id"
+                            t-options='{"widget": "contact", "fields": ["address", "name"], "no_marker": True}'
+                            class="mb-2"
+                        />
+                    </p>
+
+                    <p>
+                        <strong>Bénéficiaire :</strong>
+                        <span t-field="o.company_id" /> reconnait avoir
+                        reçu, au titre de versements ouvrant droit à une
+                        réduction d’impôt, la somme de
+                        <span t-field="o.amount" />.
+                    </p>
+
+                    <p>
+                        <strong>Date du reçu :</strong>
+                        <span t-field="o.date" />
+                    </p>
+
+                    <p>
+                        <strong>Forme du don :</strong>
+                        Déclaration de don manuel
+                    </p>
+
+                    <p>
+                        <strong>Dons :</strong>
+                        <ul>
+                            <li t-foreach="o.donation_ids" t-as="donation_id">
+                                <span t-field="donation_id.donation_date" />,
+                                <span t-field="donation_id.amount_total" />,
+                                <span
+                                    t-if="donation_id.payment_mode_id"
+                                    t-field="donation_id.payment_mode_id"
+                                />
+                            </li>
+                        </ul>
+                    </p>
+
+                    <!--
+                    <table class="table table-sm o_main_table table-borderless" name="invoice_line_table">
+                        <thead>
+                            <tr>
+                                <th name="th_date" class="text-start"><span>Date</span></th>
+                                <th name="th_payment_mode" class="text-end"><span>Mode de versement</span></th>
+                                <th name="th_amount" t-attf-class="text-end {{ 'd-none d-md-table-cell' if report_type == 'html' else '' }}"><span>Montant</span></th>
+                                <th name="th_subtotal" class="text-end">
+                                    <span groups="account.group_show_line_subtotals_tax_excluded">Amount</span>
+                                    <span groups="account.group_show_line_subtotals_tax_included">Total Price</span>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody class="invoice_tbody">
+                            <t t-set="current_subtotal" t-value="0"/>
+                            <t t-set="lines" t-value="o.donation_ids"/>
+
+                            <t t-foreach="lines" t-as="line">
+                                <t t-set="current_subtotal" t-value="current_subtotal + line.amount" />
+
+                                <tr t-att-class="'bg-200 fw-bold o_line_section' if line.display_type == 'line_section' else 'fst-italic o_line_note' if line.display_type == 'line_note' else ''">
+                                    <t t-if="line.display_type == 'product'" name="account_invoice_line_accountable">
+                                        <td name="account_invoice_line_name"><span t-field="line.name" t-options="{'widget': 'text'}"/></td>
+                                        <td class="text-end">
+                                            <span t-field="line.quantity"/>
+                                            <span t-field="line.product_uom_id"  groups="uom.group_uom"/>
+                                        </td>
+                                        <td t-attf-class="text-end {{ 'd-none d-md-table-cell' if report_type == 'html' else '' }}">
+                                            <span class="text-nowrap" t-field="line.price_unit"/>
+                                        </td>
+                                        <td t-if="display_discount" t-attf-class="text-end {{ 'd-none d-md-table-cell' if report_type == 'html' else '' }}">
+                                            <span class="text-nowrap" t-field="line.discount"/>
+                                        </td>
+                                        <t t-set="taxes" t-value="', '.join([(tax.description or tax.name) for tax in line.tax_ids])"/>
+                                        <td name="td_taxes" t-attf-class="text-start {{ 'd-none d-md-table-cell' if report_type == 'html' else '' }} {{ 'text-nowrap' if len(taxes) &lt; 10 else '' }}">
+                                            <span t-out="taxes" id="line_tax_ids">Tax 15%</span>
+                                        </td>
+                                        <td class="text-end o_price_total">
+                                            <span class="text-nowrap" t-field="line.price_subtotal" groups="account.group_show_line_subtotals_tax_excluded"/>
+                                            <span class="text-nowrap" t-field="line.price_total" groups="account.group_show_line_subtotals_tax_included"/>
+                                        </td>
+                                    </t>
+                                    <t t-if="line.display_type == 'line_section'">
+                                        <td colspan="99">
+                                            <span t-field="line.name" t-options="{'widget': 'text'}"/>
+                                        </td>
+                                        <t t-set="current_section" t-value="line"/>
+                                        <t t-set="current_subtotal" t-value="0"/>
+                                    </t>
+                                    <t t-if="line.display_type == 'line_note'">
+                                        <td colspan="99">
+                                            <span t-field="line.name" t-options="{'widget': 'text'}"/>
+                                        </td>
+                                    </t>
+                                </tr>
+
+                                <t t-if="current_section and (line_last or lines[line_index+1].display_type == 'line_section')">
+                                    <tr class="is-subtotal text-end">
+                                        <td colspan="99">
+                                            <strong class="mr16">Subtotal</strong>
+                                            <span
+                                                t-esc="current_subtotal"
+                                                t-options='{"widget": "monetary", "display_currency": o.currency_id}'
+                                            />
+                                        </td>
+                                    </tr>
+                                </t>
+                            </t>
+                        </tbody>
+                    </table>
+                    -->
+
+                    <p>
+                        Le bénéficiaire certifie sur l’honneur que les dons
+                        et versements qu’il reçoit ouvrent droit à la
+                        réduction d’impôt prévue à l’article 200 du Code
+                        Général des Impôts.
+                        <br />
+                        Particuliers : Vous pouvez déduire 66% de votre don
+                        dans la limite de 20% de votre revenu imposable.
+                    </p>
+
+                    <p>
+                        Ce don a été effectué sans contrepartie directe ou
+                        indirecte, conformément aux dispositions des
+                        articles 200 et 238 bis du Code Général des Impôts.
+                    </p>
+
+                    <div class="row" style="margin-top: 8rem">
+                        <div name="board_commitee">
+                            <p>
+                                Nom, qualité, signature
+                            </p>
+                            <p>
+                                <strong>
+                                    <!-- TODO
+                                    <span
+                                        t-field="o.env.company.board_representative"
+                                    />
+                                        -->
+                                </strong>
+                            </p>
+                            <!-- TODO
+                            <img
+                                t-if="o.env.company.signature_scan"
+                                class="w-50 mt-1"
+                                t-attf-style="{{ 'min-width: 100px; max-width: 250px' if report_type == 'pdf' else '' }}"
+                                t-att-src="'data:image/png;base64,%s' % o.env.company.signature_scan.decode()"
+                            />
+                            -->
+                        </div>
+                    </div>
+                </div>
+            </t>
+        </xpath>
+    </template>
+
+    <!--
+    <template id="report_lpcr_donation_tax_receipt">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                <t
+                    t-call="lpcr_donation_tax_receipt_document"
+                    t-lang="o.partner_id.lang"
+                />
+            </t>
+        </t>
+    </template>
+
+    <record id="report_lpcr_donation_tax_receipt" model="ir.actions.report">
+        <field name="name">LPCR Donation Tax Receipt</field>
+        <field name="model">donation.tax.receipt</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">lpcr_donation_tax_report.report_lpcr_donation_tax_receipt</field>
+        <field name="report_file">lpcr_donation_tax_report.report_lpcr_donation_tax_receipt</field>
+        <field
+            name="print_report_name"
+        >'Fiscal_receipt-'+(object.number or '').replace('/','')</field>
+        <field name="binding_model_id" ref="donation_base.model_donation_tax_receipt" />
+        <field name="attachment_use" eval="True" />
+        <field name="binding_type">report</field>
+    </record>
+        -->
+
+</odoo>
