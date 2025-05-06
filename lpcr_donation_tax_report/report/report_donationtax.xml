@@ -64,87 +64,23 @@
                         <strong>Dons :</strong>
                         <ul>
                             <li t-foreach="o.donation_ids" t-as="donation_id">
-                                <span t-field="donation_id.donation_date" />,
-                                <span t-field="donation_id.amount_total" />,
-                                <span
-                                    t-if="donation_id.payment_mode_id"
-                                    t-field="donation_id.payment_mode_id"
-                                />
+                                <strong>Montant du don:</strong>
+                                <span t-field="donation_id.tax_receipt_total" /> <br /> 
+                                <strong>Date du don:</strong>
+                                <span t-field="donation_id.donation_date" /> <br />
+                                <strong>Montant, nature du don et mode de versement:</strong>
+                                <ul>
+                                    <t t-foreach="donation_id.line_ids" t-as="line_id">
+                                        <li t-if="line_id.tax_receipt_ok">
+                                            <span t-field="line_id.amount" />,
+                                            <span t-field="line_id.product_id" />,
+                                            <span t-if="line_id.product_id.detailed_type == 'donation'" t-field="donation_id.payment_mode_id" />
+                                        </li>
+                                    </t>
+                                </ul>
                             </li>
                         </ul>
                     </p>
-
-                    <!--
-                    <table class="table table-sm o_main_table table-borderless" name="invoice_line_table">
-                        <thead>
-                            <tr>
-                                <th name="th_date" class="text-start"><span>Date</span></th>
-                                <th name="th_payment_mode" class="text-end"><span>Mode de versement</span></th>
-                                <th name="th_amount" t-attf-class="text-end {{ 'd-none d-md-table-cell' if report_type == 'html' else '' }}"><span>Montant</span></th>
-                                <th name="th_subtotal" class="text-end">
-                                    <span groups="account.group_show_line_subtotals_tax_excluded">Amount</span>
-                                    <span groups="account.group_show_line_subtotals_tax_included">Total Price</span>
-                                </th>
-                            </tr>
-                        </thead>
-                        <tbody class="invoice_tbody">
-                            <t t-set="current_subtotal" t-value="0"/>
-                            <t t-set="lines" t-value="o.donation_ids"/>
-
-                            <t t-foreach="lines" t-as="line">
-                                <t t-set="current_subtotal" t-value="current_subtotal + line.amount" />
-
-                                <tr t-att-class="'bg-200 fw-bold o_line_section' if line.display_type == 'line_section' else 'fst-italic o_line_note' if line.display_type == 'line_note' else ''">
-                                    <t t-if="line.display_type == 'product'" name="account_invoice_line_accountable">
-                                        <td name="account_invoice_line_name"><span t-field="line.name" t-options="{'widget': 'text'}"/></td>
-                                        <td class="text-end">
-                                            <span t-field="line.quantity"/>
-                                            <span t-field="line.product_uom_id"  groups="uom.group_uom"/>
-                                        </td>
-                                        <td t-attf-class="text-end {{ 'd-none d-md-table-cell' if report_type == 'html' else '' }}">
-                                            <span class="text-nowrap" t-field="line.price_unit"/>
-                                        </td>
-                                        <td t-if="display_discount" t-attf-class="text-end {{ 'd-none d-md-table-cell' if report_type == 'html' else '' }}">
-                                            <span class="text-nowrap" t-field="line.discount"/>
-                                        </td>
-                                        <t t-set="taxes" t-value="', '.join([(tax.description or tax.name) for tax in line.tax_ids])"/>
-                                        <td name="td_taxes" t-attf-class="text-start {{ 'd-none d-md-table-cell' if report_type == 'html' else '' }} {{ 'text-nowrap' if len(taxes) &lt; 10 else '' }}">
-                                            <span t-out="taxes" id="line_tax_ids">Tax 15%</span>
-                                        </td>
-                                        <td class="text-end o_price_total">
-                                            <span class="text-nowrap" t-field="line.price_subtotal" groups="account.group_show_line_subtotals_tax_excluded"/>
-                                            <span class="text-nowrap" t-field="line.price_total" groups="account.group_show_line_subtotals_tax_included"/>
-                                        </td>
-                                    </t>
-                                    <t t-if="line.display_type == 'line_section'">
-                                        <td colspan="99">
-                                            <span t-field="line.name" t-options="{'widget': 'text'}"/>
-                                        </td>
-                                        <t t-set="current_section" t-value="line"/>
-                                        <t t-set="current_subtotal" t-value="0"/>
-                                    </t>
-                                    <t t-if="line.display_type == 'line_note'">
-                                        <td colspan="99">
-                                            <span t-field="line.name" t-options="{'widget': 'text'}"/>
-                                        </td>
-                                    </t>
-                                </tr>
-
-                                <t t-if="current_section and (line_last or lines[line_index+1].display_type == 'line_section')">
-                                    <tr class="is-subtotal text-end">
-                                        <td colspan="99">
-                                            <strong class="mr16">Subtotal</strong>
-                                            <span
-                                                t-esc="current_subtotal"
-                                                t-options='{"widget": "monetary", "display_currency": o.currency_id}'
-                                            />
-                                        </td>
-                                    </tr>
-                                </t>
-                            </t>
-                        </tbody>
-                    </table>
-                    -->
 
                     <p>
                         Le bénéficiaire certifie sur l’honneur que les dons
