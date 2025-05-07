@@ -44,10 +44,14 @@
 
                     <p>
                         <strong>Bénéficiaire :</strong>
+                        <!-- <t t-set="sum_tax_amount" t-value="0"/>
+                        <t t-foreach="o.donation_ids" t-as="donation_id">
+                            <t t-set="sum_tax_amount" t-value="sum_taxt_amount+donation_id.tax_receipt_total"/>
+                        </t> -->
                         <span t-field="o.company_id" /> reconnait avoir
                         reçu, au titre de versements ouvrant droit à une
                         réduction d’impôt, la somme de
-                        <span t-field="o.donation_ids.tax_receipt_total" />.
+                        <span t-field="o.amount" />.
                     </p>
 
                     <p>
