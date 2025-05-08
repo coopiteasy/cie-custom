@@ -76,11 +76,10 @@
                                             <span t-field="line_id.amount" />
                                             <t
                                                 t-if="line_id.product_id.detailed_type == 'donation'"
-                                            >,</t>
-                                            <span
-                                                t-if="line_id.product_id.detailed_type == 'donation'"
-                                                t-field="donation_id.payment_mode_id"
-                                            />
+                                            >, <span
+                                                    t-field="donation_id.payment_mode_id"
+                                                />
+                                            </t>
                                         </li>
                                     </t>
                                 </ul>
