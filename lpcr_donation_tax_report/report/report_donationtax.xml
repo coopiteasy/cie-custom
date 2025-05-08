@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <template
+        id="lpcr_donation_tax_receipt_document"
+        inherit_id="donation_base.report_donationtaxreceipt_document"
+    >
+        <xpath expr="//t[@t-call='web.internal_layout']" position="attributes">
+            <attribute name="t-if">False</attribute>
+        </xpath>
+        <xpath expr="//t[@t-call='web.internal_layout']" position="after">
+            <t t-call="web.external_layout">
+                <div class="page">
+                    <h2>Reçu fiscal pour don</h2>
+
+                    <p>
+                        Reçu au titre de dons à certains organismes d’intérêt
+                        général (Art. 200, 238 bis et 978 du code général
+                        des impôts (CGI)).
+                    </p>
+
+                    <p>
+                        <strong>Objet :</strong>
+                        Cette association a pour objet la réalisation d’une
+                        mission d’intérêt général à caractère social, par
+                        la création et l’animation d’activités au service
+                        des liens de proximité, dans le but de lutter
+                        contre les phénomènes d’isolement et d’anonymat.
+                    </p>
+
+                    <p>
+                        <strong>No d’ordre de reçu :</strong>
+                        <span t-field="o.number" />
+                    </p>
+
+                    <p>
+                        <strong>Donateur :</strong>
+                        <span
+                            t-field="o.partner_id"
+                            t-options='{"widget": "contact", "fields": ["address", "name"], "no_marker": True}'
+                        />
+                        <span
+                            t-if="o.partner_id.is_company and o.partner_id.siret"
+                            t-field="o.partner_id.siret"
+                        />
+                    </p>
+
+                    <p>
+                        <strong>Bénéficiaire :</strong>
+                        <span t-field="o.company_id" /> reconnait avoir
+                        reçu, au titre de versements ouvrant droit à une
+                        réduction d’impôt, la somme de
+                        <span t-field="o.amount" />.
+                    </p>
+
+                    <p>
+                        <strong>Date du reçu :</strong>
+                        <span t-field="o.date" />
+                    </p>
+
+                    <p>
+                        <strong>Forme du don :</strong>
+                        Déclaration de don manuel
+                    </p>
+
+                    <p>
+                        <strong>Dons :</strong>
+                        <ul>
+                            <li t-foreach="o.donation_ids" t-as="donation_id">
+                                <span t-field="donation_id.display_name" />,
+                                <span t-field="donation_id.donation_date" />
+                                <ul>
+                                    <t t-foreach="donation_id.line_ids" t-as="line_id">
+                                        <li t-if="line_id.tax_receipt_ok">
+                                            <span t-field="line_id.product_id" />,
+                                            <span t-field="line_id.amount" />
+                                            <t
+                                                t-if="line_id.product_id.detailed_type == 'donation'"
+                                            >, <span
+                                                    t-field="donation_id.payment_mode_id"
+                                                />
+                                            </t>
+                                        </li>
+                                    </t>
+                                </ul>
+                            </li>
+                        </ul>
+                    </p>
+
+                    <p>
+                        Le bénéficiaire certifie sur l’honneur que les dons
+                        et versements qu’il reçoit ouvrent droit à la
+                        réduction d’impôt prévue à l’article 200 du Code
+                        Général des Impôts.
+                        <br />
+                        Particuliers : Vous pouvez déduire 66% de votre don
+                        dans la limite de 20% de votre revenu imposable.
+                    </p>
+
+                    <p>
+                        Ce don a été effectué sans contrepartie directe ou
+                        indirecte, conformément aux dispositions des
+                        articles 200 et 238 bis du Code Général des Impôts.
+                    </p>
+
+                    <div class="row" style="margin-top: 8rem">
+                        <div name="board_commitee">
+                            <p>
+                                Nom, qualité, signature
+                            </p>
+                            <p>
+                                <strong>
+                                    <!-- TODO
+                                    <span
+                                        t-field="o.env.company.board_representative"
+                                    />
+                                        -->
+                                </strong>
+                            </p>
+                            <!-- TODO
+                            <img
+                                t-if="o.env.company.signature_scan"
+                                class="w-50 mt-1"
+                                t-attf-style="{{ 'min-width: 100px; max-width: 250px' if report_type == 'pdf' else '' }}"
+                                t-att-src="'data:image/png;base64,%s' % o.env.company.signature_scan.decode()"
+                            />
+                            -->
+                        </div>
+                    </div>
+                </div>
+            </t>
+        </xpath>
+    </template>
+</odoo>
