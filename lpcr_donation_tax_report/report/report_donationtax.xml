@@ -39,15 +39,14 @@
                             t-field="o.partner_id"
                             t-options='{"widget": "contact", "fields": ["address", "name"], "no_marker": True}'
                         />
-                        <span t-if="o.partner_id.is_company and o.partner_id.siret" t-field="o.partner_id.siret"/> 
+                        <span
+                            t-if="o.partner_id.is_company and o.partner_id.siret"
+                            t-field="o.partner_id.siret"
+                        />
                     </p>
 
                     <p>
                         <strong>Bénéficiaire :</strong>
-                        <!-- <t t-set="sum_tax_amount" t-value="0"/>
-                        <t t-foreach="o.donation_ids" t-as="donation_id">
-                            <t t-set="sum_tax_amount" t-value="sum_taxt_amount+donation_id.tax_receipt_total"/>
-                        </t> -->
                         <span t-field="o.company_id" /> reconnait avoir
                         reçu, au titre de versements ouvrant droit à une
                         réduction d’impôt, la somme de
@@ -68,16 +67,21 @@
                         <strong>Dons :</strong>
                         <ul>
                             <li t-foreach="o.donation_ids" t-as="donation_id">
-                                <span t-field="donation_id.display_name" />, 
-                                <span t-field="donation_id.donation_date" />, 
+                                <span t-field="donation_id.display_name" />,
+                                <span t-field="donation_id.donation_date" />,
                                 <span t-field="donation_id.tax_receipt_total" />
                                 <ul>
                                     <t t-foreach="donation_id.line_ids" t-as="line_id">
                                         <li t-if="line_id.tax_receipt_ok">
                                             <span t-field="line_id.product_id" />,
                                             <span t-field="line_id.amount" />
-                                            <t t-if="line_id.product_id.detailed_type == 'donation'">,</t>
-                                            <span t-if="line_id.product_id.detailed_type == 'donation'" t-field="donation_id.payment_mode_id" />
+                                            <t
+                                                t-if="line_id.product_id.detailed_type == 'donation'"
+                                            >,</t>
+                                            <span
+                                                t-if="line_id.product_id.detailed_type == 'donation'"
+                                                t-field="donation_id.payment_mode_id"
+                                            />
                                         </li>
                                     </t>
                                 </ul>
