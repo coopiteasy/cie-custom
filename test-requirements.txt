@@ -1,3 +1,4 @@
 freezegun
 git+https://github.com/coopiteasy/addons@16.0#subdirectory=setup/sale_order_volume
 git+https://github.com/coopiteasy/addons@16.0#subdirectory=setup/subscription_web_access
+git+https://github.com/coopiteasy/addons@16.0#subdirectory=setup/board_signature

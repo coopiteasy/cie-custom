@@ -68,8 +68,7 @@
                         <ul>
                             <li t-foreach="o.donation_ids" t-as="donation_id">
                                 <span t-field="donation_id.display_name" />,
-                                <span t-field="donation_id.donation_date" />,
-                                <span t-field="donation_id.tax_receipt_total" />
+                                <span t-field="donation_id.donation_date" />
                                 <ul>
                                     <t t-foreach="donation_id.line_ids" t-as="line_id">
                                         <li t-if="line_id.tax_receipt_ok">
@@ -105,60 +104,24 @@
                         articles 200 et 238 bis du Code Général des Impôts.
                     </p>
 
-                    <div class="row" style="margin-top: 8rem">
-                        <div name="board_commitee">
-                            <p>
-                                Nom, qualité, signature
-                            </p>
-                            <p>
-                                <strong>
-                                    <!-- TODO
-                                    <span
-                                        t-field="o.env.company.board_representative"
-                                    />
-                                        -->
-                                </strong>
-                            </p>
-                            <!-- TODO
-                            <img
-                                t-if="o.env.company.signature_scan"
-                                class="w-50 mt-1"
-                                t-attf-style="{{ 'min-width: 100px; max-width: 250px' if report_type == 'pdf' else '' }}"
-                                t-att-src="'data:image/png;base64,%s' % o.env.company.signature_scan.decode()"
+                    <div style="page-break-inside: avoid" name="board_commitee">
+                        <p>
+                            <strong>
+                                <span t-field="o.env.company.board_representative" />
+                            </strong>
+                            <span
+                                t-field="o.env.company.board_representative_function"
                             />
-                            -->
-                        </div>
+                        </p>
+                        <img
+                            t-if="o.env.company.board_representative_signature_scan"
+                            class="mt-1"
+                            t-attf-style="{{ 'min-width: 100px; max-width: 250px' if report_type == 'pdf' else '' }}"
+                            t-att-src="'data:image/png;base64,%s' % o.env.company.board_representative_signature_scan.decode()"
+                        />
                     </div>
                 </div>
             </t>
         </xpath>
     </template>
-
-    <!--
-    <template id="report_lpcr_donation_tax_receipt">
-        <t t-call="web.html_container">
-            <t t-foreach="docs" t-as="o">
-                <t
-                    t-call="lpcr_donation_tax_receipt_document"
-                    t-lang="o.partner_id.lang"
-                />
-            </t>
-        </t>
-    </template>
-
-    <record id="report_lpcr_donation_tax_receipt" model="ir.actions.report">
-        <field name="name">LPCR Donation Tax Receipt</field>
-        <field name="model">donation.tax.receipt</field>
-        <field name="report_type">qweb-pdf</field>
-        <field name="report_name">lpcr_donation_tax_report.report_lpcr_donation_tax_receipt</field>
-        <field name="report_file">lpcr_donation_tax_report.report_lpcr_donation_tax_receipt</field>
-        <field
-            name="print_report_name"
-        >'Fiscal_receipt-'+(object.number or '').replace('/','')</field>
-        <field name="binding_model_id" ref="donation_base.model_donation_tax_receipt" />
-        <field name="attachment_use" eval="True" />
-        <field name="binding_type">report</field>
-    </record>
-        -->
-
 </odoo>
