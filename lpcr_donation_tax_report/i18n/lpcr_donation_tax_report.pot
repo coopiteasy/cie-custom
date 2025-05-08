@@ -1,0 +1,103 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* lpcr_donation_tax_report
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: lpcr_donation_tax_report
+#: model_terms:ir.ui.view,arch_db:lpcr_donation_tax_report.lpcr_donation_tax_receipt_document
+msgid "<strong>Bénéficiaire :</strong>"
+msgstr ""
+
+#. module: lpcr_donation_tax_report
+#: model_terms:ir.ui.view,arch_db:lpcr_donation_tax_report.lpcr_donation_tax_receipt_document
+msgid "<strong>Date du reçu :</strong>"
+msgstr ""
+
+#. module: lpcr_donation_tax_report
+#: model_terms:ir.ui.view,arch_db:lpcr_donation_tax_report.lpcr_donation_tax_receipt_document
+msgid "<strong>Donateur :</strong>"
+msgstr ""
+
+#. module: lpcr_donation_tax_report
+#: model_terms:ir.ui.view,arch_db:lpcr_donation_tax_report.lpcr_donation_tax_receipt_document
+msgid "<strong>Dons :</strong>"
+msgstr ""
+
+#. module: lpcr_donation_tax_report
+#: model_terms:ir.ui.view,arch_db:lpcr_donation_tax_report.lpcr_donation_tax_receipt_document
+msgid ""
+"<strong>Forme du don :</strong>\n"
+"                        Déclaration de don manuel"
+msgstr ""
+
+#. module: lpcr_donation_tax_report
+#: model_terms:ir.ui.view,arch_db:lpcr_donation_tax_report.lpcr_donation_tax_receipt_document
+msgid "<strong>No d’ordre de reçu :</strong>"
+msgstr ""
+
+#. module: lpcr_donation_tax_report
+#: model_terms:ir.ui.view,arch_db:lpcr_donation_tax_report.lpcr_donation_tax_receipt_document
+msgid ""
+"<strong>Objet :</strong>\n"
+"                        Cette association a pour objet la réalisation d’une\n"
+"                        mission d’intérêt général à caractère social, par\n"
+"                        la création et l’animation d’activités au service\n"
+"                        des liens de proximité, dans le but de lutter\n"
+"                        contre les phénomènes d’isolement et d’anonymat."
+msgstr ""
+
+#. module: lpcr_donation_tax_report
+#: model_terms:ir.ui.view,arch_db:lpcr_donation_tax_report.lpcr_donation_tax_receipt_document
+msgid ""
+"Ce don a été effectué sans contrepartie directe ou\n"
+"                        indirecte, conformément aux dispositions des\n"
+"                        articles 200 et 238 bis du Code Général des Impôts."
+msgstr ""
+
+#. module: lpcr_donation_tax_report
+#: model_terms:ir.ui.view,arch_db:lpcr_donation_tax_report.lpcr_donation_tax_receipt_document
+msgid ""
+"Le bénéficiaire certifie sur l’honneur que les dons\n"
+"                        et versements qu’il reçoit ouvrent droit à la\n"
+"                        réduction d’impôt prévue à l’article 200 du Code\n"
+"                        Général des Impôts.\n"
+"                        <br/>\n"
+"                        Particuliers : Vous pouvez déduire 66% de votre don\n"
+"                        dans la limite de 20% de votre revenu imposable."
+msgstr ""
+
+#. module: lpcr_donation_tax_report
+#: model_terms:ir.ui.view,arch_db:lpcr_donation_tax_report.lpcr_donation_tax_receipt_document
+msgid "Nom, qualité, signature"
+msgstr ""
+
+#. module: lpcr_donation_tax_report
+#: model_terms:ir.ui.view,arch_db:lpcr_donation_tax_report.lpcr_donation_tax_receipt_document
+msgid ""
+"Reçu au titre de dons à certains organismes d’intérêt\n"
+"                        général (Art. 200, 238 bis et 978 du code général\n"
+"                        des impôts (CGI))."
+msgstr ""
+
+#. module: lpcr_donation_tax_report
+#: model_terms:ir.ui.view,arch_db:lpcr_donation_tax_report.lpcr_donation_tax_receipt_document
+msgid "Reçu fiscal pour don"
+msgstr ""
+
+#. module: lpcr_donation_tax_report
+#: model_terms:ir.ui.view,arch_db:lpcr_donation_tax_report.lpcr_donation_tax_receipt_document
+msgid ""
+"reconnait avoir\n"
+"                        reçu, au titre de versements ouvrant droit à une\n"
+"                        réduction d’impôt, la somme de"
+msgstr ""
