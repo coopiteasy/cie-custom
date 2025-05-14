@@ -78,11 +78,6 @@ msgstr ""
 
 #. module: lpcr_donation_tax_report
 #: model_terms:ir.ui.view,arch_db:lpcr_donation_tax_report.lpcr_donation_tax_receipt_document
-msgid "Nom, qualité, signature"
-msgstr ""
-
-#. module: lpcr_donation_tax_report
-#: model_terms:ir.ui.view,arch_db:lpcr_donation_tax_report.lpcr_donation_tax_receipt_document
 msgid ""
 "Reçu au titre de dons à certains organismes d’intérêt\n"
 "                        général (Art. 200, 238 bis et 978 du code général\n"
