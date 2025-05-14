@@ -11,7 +11,7 @@
     "author": "Coop IT Easy SC",
     "maintainers": ["remytms"],
     "license": "AGPL-3",
-    "depends": ["donation_base", "l10n_fr_siret"],
+    "depends": ["donation_base", "l10n_fr_siret", "board_signature"],
     "data": [
         "report/report_donationtax.xml",
     ],

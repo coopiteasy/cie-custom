@@ -103,29 +103,21 @@
                         articles 200 et 238 bis du Code Général des Impôts.
                     </p>
 
-                    <div class="row" style="margin-top: 8rem">
-                        <div name="board_commitee">
-                            <p>
-                                Nom, qualité, signature
-                            </p>
-                            <p>
-                                <strong>
-                                    <!-- TODO
-                                    <span
-                                        t-field="o.env.company.board_representative"
-                                    />
-                                        -->
-                                </strong>
-                            </p>
-                            <!-- TODO
-                            <img
-                                t-if="o.env.company.signature_scan"
-                                class="w-50 mt-1"
-                                t-attf-style="{{ 'min-width: 100px; max-width: 250px' if report_type == 'pdf' else '' }}"
-                                t-att-src="'data:image/png;base64,%s' % o.env.company.signature_scan.decode()"
+                    <div style="page-break-inside: avoid" name="board_commitee">
+                        <p>
+                            <strong>
+                                <span t-field="o.env.company.board_representative" />
+                            </strong>
+                            <span
+                                t-field="o.env.company.board_representative_function"
                             />
-                            -->
-                        </div>
+                        </p>
+                        <img
+                            t-if="o.env.company.board_representative_signature_scan"
+                            class="mt-1"
+                            t-attf-style="{{ 'min-width: 100px; max-width: 250px' if report_type == 'pdf' else '' }}"
+                            t-att-src="'data:image/png;base64,%s' % o.env.company.board_representative_signature_scan.decode()"
+                        />
                     </div>
                 </div>
             </t>
