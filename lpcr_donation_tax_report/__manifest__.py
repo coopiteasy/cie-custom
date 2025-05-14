@@ -5,7 +5,7 @@
 {
     "name": "LPCR Donation Tax Report",
     "summary": "Custom tax report for donation",
-    "version": "16.0.1.0.0",
+    "version": "16.0.2.0.0",
     "category": "Accounting",
     "website": "https://coopiteasy.be",
     "author": "Coop IT Easy SC",
