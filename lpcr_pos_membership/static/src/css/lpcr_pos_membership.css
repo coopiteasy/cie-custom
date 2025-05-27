@@ -1,0 +1,23 @@
+.pos i.membership-green {
+    color: #1e5b23;
+}
+
+.pos i.membership-orange {
+    color: #c59e07;
+}
+
+.pos i.membership-red {
+    color: #ee0d0d;
+}
+
+.pos .partnerlist-screen .partner-list span.membership-green {
+    background-color: #1e5b23;
+}
+
+.pos .partnerlist-screen .partner-list span.membership-orange {
+    background-color: #c59e07;
+}
+
+.pos .partnerlist-screen .partner-list span.membership-red {
+    background-color: #ee0d0d;
+}
