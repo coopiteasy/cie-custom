@@ -13,7 +13,12 @@ const LPCRProductScreen = (ProductScreen_) =>
                 return super.controlButtons;
             }
             return super.controlButtons.filter(
-                (button) => !["RefundButton", "ProductInfoButton"].includes(button.name)
+                (button) =>
+                    ![
+                        "OrderlineCustomerNoteButton",
+                        "RefundButton",
+                        "ProductInfoButton",
+                    ].includes(button.name)
             );
         }
     };

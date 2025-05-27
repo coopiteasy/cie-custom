@@ -10,10 +10,6 @@ SPDX-License-Identifier: AGPL-3.0-or-later
         <xpath expr="//CashMoveButton" position="attributes">
             <attribute name="t-if">env.pos.isManager</attribute>
         </xpath>
-
-        <xpath expr="//TicketButton" position="attributes">
-            <attribute name="t-if">env.pos.isManager</attribute>
-        </xpath>
     </t>
 
 </templates>

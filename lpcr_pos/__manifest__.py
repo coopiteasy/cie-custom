@@ -12,6 +12,7 @@
     "license": "AGPL-3",
     "depends": [
         "pos_hide_partner_info",
+        "pos_sale",
     ],
     "assets": {
         "point_of_sale.assets": [
