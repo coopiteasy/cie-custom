@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+    SPDX-FileCopyrightText: 2017 Open Architects Consulting SPRL
+    SPDX-FileCopyrightText: 2025 Coop IT Easy SC
+
+    SPDX-License-Identifier: AGPL-3.0-or-later
+    -->
+<odoo>
+    <record model="ir.ui.view" id="lpcr_donation_form">
+        <field name="name">lpcr.donation.form</field>
+        <field name="model">donation.donation</field>
+        <field name="inherit_id" ref="donation.donation_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='partner_id']" position="after">
+                <field name="is_donor_address_valid" />
+            </xpath>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="lpcr_donation_tree">
+        <field name="name">lpcr.donation.tree</field>
+        <field name="model">donation.donation</field>
+        <field name="inherit_id" ref="donation.donation_tree" />
+        <field name="arch" type="xml">
+            <field name="state" position="after">
+                <field name="tax_receipt_id" />
+                <field name="is_donor_address_valid" />
+            </field>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="lpcr_donation_search">
+        <field name="name">lpcr.donation.search</field>
+        <field name="model">donation.donation</field>
+        <field name="inherit_id" ref="donation.donation_search" />
+        <field name="arch" type="xml">
+            <search>
+                <filter name="thanks_to_print" position="after">
+                    <separator />
+                    <filter
+                        name="donor_address_valid"
+                        string="Valid donor address"
+                        domain="[('is_donor_address_valid', '=', True)]"
+                    />
+                    <filter
+                        name="donor_address_not_valid"
+                        string="Incomplete donor address"
+                        domain="[('is_donor_address_valid', '=', False)]"
+                    />
+                </filter>
+            </search>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+SPDX-FileCopyrightText: 2017 Open Architects Consulting SPRL
+SPDX-FileCopyrightText: 2025 Coop IT Easy SC
+
+SPDX-License-Identifier: AGPL-3.0-or-later
+-->
+<odoo>
+
+    <record model="ir.ui.view" id="lpcr_donation_tax_receipt_form">
+        <field name="name">lpcr.donation.tax.receipt.form</field>
+        <field name="model">donation.tax.receipt</field>
+        <field name="inherit_id" ref="donation_base.donation_tax_receipt_form" />
+        <field name="arch" type="xml">
+            <field name="company_id" position="after">
+                <field name="donor_name" />
+                <label for="street" string="Address" />
+                <div class="o_address_format">
+                    <field
+                        name="street"
+                        placeholder="Street..."
+                        class="o_address_street"
+                    />
+                    <field
+                        name="street2"
+                        placeholder="Street 2..."
+                        class="o_address_street"
+                    />
+                    <field name="city" placeholder="City" class="o_address_city" />
+                    <field
+                        name="state_id"
+                        class="o_address_state"
+                        placeholder="State"
+                        options="{'no_open': True, 'no_quick_create': True}"
+                        context="{'default_country_id': country_id}"
+                    />
+                    <field name="zip" placeholder="ZIP" class="o_address_zip" />
+                    <field
+                        name="country_id"
+                        placeholder="Country"
+                        class="o_address_country"
+                        options='{"no_open": True, "no_create": True}'
+                    />
+                </div>
+                <field t-if="siret" name="siret" />
+            </field>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="lpcr_donation_tax_receipt_tree">
+        <field name="name">lpcr.donation.tax.receipt.tree</field>
+        <field name="model">donation.tax.receipt</field>
+        <field name="inherit_id" ref="donation_base.donation_tax_receipt_tree" />
+        <field name="arch" type="xml">
+            <field name="partner_id" position="after">
+                <field name="email" />
+            </field>
+        </field>
+
+    </record>
+</odoo>

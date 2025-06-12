@@ -13,6 +13,9 @@
     "license": "AGPL-3",
     "depends": ["donation_base", "l10n_fr_siret", "board_signature"],
     "data": [
-        "report/report_donationtax.xml",
+        "report/report_donation_tax.xml",
+        "views/donation_tax_receipt.xml",
+        "views/donation_donation_views.xml",
+        "views/res_partner.xml",
     ],
 }
