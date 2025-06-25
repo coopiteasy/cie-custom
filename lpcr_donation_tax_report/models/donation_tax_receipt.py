@@ -2,8 +2,7 @@
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
-from odoo import _, api, fields, models
-from odoo.exceptions import UserError
+from odoo import api, fields, models
 
 
 class DonationTaxReceipt(models.Model):
@@ -45,28 +44,9 @@ class DonationTaxReceipt(models.Model):
 
     @api.model_create_multi
     def create(self, vals_list):
+        # TODO: filter on complete info and tax receipt already created in wizard
         result_list = super().create(vals_list)
         for result in result_list:
-            is_partner_address_valid = bool(
-                result.partner_id.street
-                and result.partner_id.city
-                and result.partner_id.zip
-                and result.partner_id.country_id
-                and (result.partner_id.siret or not result.partner_id.is_company)
-            )
-            if not is_partner_address_valid:
-                raise UserError(
-                    _(
-                        "Certains Reçus Fiscaux n’ont pas pu être émis car "
-                        "il manque des informations. \n"
-                        "Le nom, le prénom et l'adresse postale (rue et numéro"
-                        ", code postale, ville, pays) des personnes doivent "
-                        "être définis. \n"
-                        "Le nom, le numéro SIRET et l'adresse postale (rue et "
-                        "numéro, code postale, ville, pays) des sociétés "
-                        "doivent être définis."
-                    )
-                )
             address_at_creation = {
                 "donor_name": result.partner_id.name,
                 "street": result.partner_id.street,
