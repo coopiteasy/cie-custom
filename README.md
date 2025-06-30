@@ -34,7 +34,7 @@ addon | version | maintainers | summary
 [foodhub_product_fields](foodhub_product_fields/) | 12.0.1.0.0 | [![victor-champonnois](https://github.com/victor-champonnois.png?size=30px)](https://github.com/victor-champonnois) | Set Mandatory and Copy Options to Fields in Product
 [lesptitspots_worker_status](lesptitspots_worker_status/) | 12.0.1.0.1 |  | Worker status management specific to Les P'tit Pots.
 [provelo_analytic_account](provelo_analytic_account/) | 12.0.1.1.0 |  | Match BOB analytical accounts.
-[provelo_custom](provelo_custom/) | 12.0.1.6.0 |  | Pro Velo customizations
+[provelo_custom](provelo_custom/) | 12.0.1.7.0 |  | Pro Velo customizations
 [provelo_custom_display_phone](provelo_custom_display_phone/) | 12.0.1.5.0 |  | Display phone number in sale order and invoice reports
 [provelo_custom_invoice_auto_open](provelo_custom_invoice_auto_open/) | 12.0.1.0.0 |  | Invoices are automatically opened for users with 'Automatically Open Invoices' group set.
 [provelo_custom_timesheet_ui](provelo_custom_timesheet_ui/) | 12.0.1.0.1 |  | Small modifications to the Timesheets UI
