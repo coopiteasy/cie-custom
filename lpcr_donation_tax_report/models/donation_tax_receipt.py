@@ -8,6 +8,17 @@ from odoo import api, fields, models
 class DonationTaxReceipt(models.Model):
     _inherit = "donation.tax.receipt"
 
+    # Remove the domain restriction that partner can't have parent
+    # because we want individuals not just their companies
+    partner_id = fields.Many2one(
+        "res.partner",
+        string="Donor",
+        required=True,
+        ondelete="restrict",
+        index=True,
+        tracking=True,
+    )
+
     email = fields.Char(related="partner_id.email")
     donor_name = fields.Char(
         readonly=True,
@@ -44,7 +55,6 @@ class DonationTaxReceipt(models.Model):
 
     @api.model_create_multi
     def create(self, vals_list):
-        # TODO: filter on complete info and tax receipt already created in wizard
         result_list = super().create(vals_list)
         for result in result_list:
             address_at_creation = {

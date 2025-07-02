@@ -50,18 +50,6 @@ class TaxReceiptAnnualCreate(models.TransientModel):
 
         tax_receipt_ids = []
         for partner, partner_dict in filtered_tax_receipt_annual_dict.items():
-            # Block if the partner already has an annual tax receipt
-            # if partner in existing_annual_receipts_dict:
-            #     existing_annual_receipts_dict[partner]
-            #     raise UserError(
-            #         _(
-            #             "The Donor '%(partner)s' already has an annual tax receipt "
-            #             "in this timeframe: %(receipt)s dated %(date)s.",
-            #             partner=partner.display_name,
-            #             receipt=existing_receipt.number,
-            #             date=format_date(self.env, existing_receipt.date),
-            #         )
-            #     )
             vals = self._prepare_annual_tax_receipt(partner, partner_dict)
             tax_receipt = dtro.create(vals)
             tax_receipt_ids.append(tax_receipt.id)
@@ -70,8 +58,9 @@ class TaxReceiptAnnualCreate(models.TransientModel):
             raise UserError(
                 _(
                     "No annual tax receipt to generate \n"
-                    "If it is expected for new tax receipts to be generated,"
-                    "this could mean the donors' addresses are incomplete"
+                    "If it is expected for new tax receipts to be generated, "
+                    "this could mean the donors' informations (postal address "
+                    "or SIRET number) are incomplete"
                 )
             )
 
@@ -81,18 +70,14 @@ class TaxReceiptAnnualCreate(models.TransientModel):
                 "type": "ir.actions.client",
                 "tag": "display_notification",
                 "params": {
-                    "title": _("Informations manquantes"),
+                    "title": _("Attention"),
                     "type": "warning",
                     "sticky": True,
                     "message": _(
-                        "Certains Reçus Fiscaux n’ont pas pu être émis car "
-                        "il manque des informations."
-                        "Le nom, le prénom et l'adresse postale (rue et numéro"
-                        ", code postal, ville, pays) des personnes doivent "
-                        "être définis."
-                        "Le nom, le numéro SIRET et l'adresse postale (rue et "
-                        "numéro, code postale, ville, pays) des sociétés "
-                        "doivent être définis."
+                        "Un ou plusieurs reçus fiscaux n’ont pas été émis car "
+                        "l'adresse postale ou le numéro SIRET sont manquants."
+                        "Veuillez compléter les informations des contacts"
+                        " dont les données sont incomplètes."
                     ),
                 },
             }
