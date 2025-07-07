@@ -18,6 +18,7 @@ const LPCRProductScreen = (ProductScreen_) =>
                         "OrderlineCustomerNoteButton",
                         "RefundButton",
                         "ProductInfoButton",
+                        "SetSaleOrderButton",
                     ].includes(button.name)
             );
         }
