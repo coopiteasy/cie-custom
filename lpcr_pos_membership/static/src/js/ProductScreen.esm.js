@@ -8,10 +8,20 @@ const LPCRPosMembershipProductScreen = (OriginalProductScreen) =>
         async _onClickPay() {
             const partnerCounts = {};
             const idToName = {};
+            const membershipLinesWithoutPartner = [];
+            const membershipLinesWithIncorrectQuantity = [];
 
             this.currentOrder.get_orderlines().forEach((line) => {
                 if (line.product.membership) {
+                    if (line.quantity !== 1) {
+                        membershipLinesWithIncorrectQuantity.push(line);
+                        return;
+                    }
                     const partner = line.partner_for_membership;
+                    if (!partner) {
+                        membershipLinesWithoutPartner.push(line);
+                        return;
+                    }
                     const partnerId = partner.id;
                     if (partnerCounts[partnerId]) {
                         partnerCounts[partnerId]++;
@@ -21,6 +31,24 @@ const LPCRPosMembershipProductScreen = (OriginalProductScreen) =>
                     }
                 }
             });
+
+            if (membershipLinesWithIncorrectQuantity.length !== 0) {
+                this.showPopup("ErrorPopup", {
+                    title: this.env._t("Quantity other than 1 not allowed"),
+                    body: this.env._t(
+                        "Membership products must have a quantity equal to one."
+                    ),
+                });
+                return;
+            }
+
+            if (membershipLinesWithoutPartner.length !== 0) {
+                this.showPopup("ErrorPopup", {
+                    title: this.env._t("Membership without people"),
+                    body: this.env._t("Please select a person for the membership."),
+                });
+                return;
+            }
 
             const duplicatesWithCount = Object.entries(partnerCounts)
                 .filter(([, count]) => count > 1)

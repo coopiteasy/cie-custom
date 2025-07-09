@@ -3,7 +3,6 @@
 import {Order, Orderline, PosGlobalState} from "point_of_sale.models";
 import {Gui} from "point_of_sale.Gui";
 import {Model} from "point_of_sale.Registries";
-import {_t} from "web.core";
 import {parseDate} from "@web/core/l10n/dates";
 
 const LPCRPosMembershipOrder = (OriginalOrder) =>
@@ -19,11 +18,14 @@ Model.extend(Order, LPCRPosMembershipOrder);
 const LPCRPosMembershipOrderline = (OriginalOrderline) =>
     class extends OriginalOrderline {
         set_quantity(quantity, keep_price) {
-            if (this.product.membership && quantity > 1) {
+            // Quantity values "" and "remove" must be allowed because these
+            // are the normal values the quantity passes through when removing
+            // an order line.
+            if (this.product.membership && ![1, "1", "", "remove"].includes(quantity)) {
                 Gui.showPopup("ErrorPopup", {
-                    title: _t("Quantity greater than 1 not allowed"),
-                    body: _t(
-                        "Membership products cannot have a quantity greater than one."
+                    title: this.pos.env._t("Quantity other than 1 not allowed"),
+                    body: this.pos.env._t(
+                        "Membership products must have a quantity equal to one."
                     ),
                 });
                 return false;

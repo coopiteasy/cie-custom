@@ -15,9 +15,17 @@ msgstr ""
 
 #. module: lpcr_pos_membership
 #. odoo-javascript
+#: code:addons/lpcr_pos_membership/static/src/js/ProductScreen.esm.js:0
 #: code:addons/lpcr_pos_membership/static/src/js/models.esm.js:0
 #, python-format
-msgid "Membership products cannot have a quantity greater than one."
+msgid "Membership products must have a quantity equal to one."
+msgstr ""
+
+#. module: lpcr_pos_membership
+#. odoo-javascript
+#: code:addons/lpcr_pos_membership/static/src/js/ProductScreen.esm.js:0
+#, python-format
+msgid "Membership without people"
 msgstr ""
 
 #. module: lpcr_pos_membership
@@ -29,9 +37,17 @@ msgstr ""
 
 #. module: lpcr_pos_membership
 #. odoo-javascript
+#: code:addons/lpcr_pos_membership/static/src/js/ProductScreen.esm.js:0
+#, python-format
+msgid "Please select a person for the membership."
+msgstr ""
+
+#. module: lpcr_pos_membership
+#. odoo-javascript
+#: code:addons/lpcr_pos_membership/static/src/js/ProductScreen.esm.js:0
 #: code:addons/lpcr_pos_membership/static/src/js/models.esm.js:0
 #, python-format
-msgid "Quantity greater than 1 not allowed"
+msgid "Quantity other than 1 not allowed"
 msgstr ""
 
 #. module: lpcr_pos_membership
