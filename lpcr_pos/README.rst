@@ -29,11 +29,12 @@ This module hides several buttons for regular users (not for managers):
 * Top header:
 
   * Cash In/Out
-  * Orders
 * Product screen:
 
+  * Customer Note
   * Refund
   * Info
+  * Quotation/Order (from ``pos_sale`` module)
 * Customer selection screen:
 
   * Create
