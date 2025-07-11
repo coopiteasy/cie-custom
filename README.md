@@ -28,6 +28,7 @@ addon | version | maintainers | summary
 [foodhub_product_fields](foodhub_product_fields/) | 16.0.1.0.0 | [![victor-champonnois](https://github.com/victor-champonnois.png?size=30px)](https://github.com/victor-champonnois) | Set Mandatory and Copy Options to Fields in Product
 [lpcr_donation_tax_report](lpcr_donation_tax_report/) | 16.0.2.0.0 | [![remytms](https://github.com/remytms.png?size=30px)](https://github.com/remytms) | Custom tax report for donation
 [lpcr_pos](lpcr_pos/) | 16.0.1.0.0 |  | Customize the PoS according to LPCR specifications
+[lpcr_pos_membership](lpcr_pos_membership/) | 16.0.1.0.0 | [![flaenen](https://github.com/flaenen.png?size=30px)](https://github.com/flaenen) | POS Membership customizations for LPCR
 [lpcr_website_partner_form](lpcr_website_partner_form/) | 16.0.1.0.0 | [![remytms](https://github.com/remytms.png?size=30px)](https://github.com/remytms) | Add a form to add partners from website.
 [medor_custom_stats](medor_custom_stats/) | 16.0.1.0.0 |  | Compute stats on number of subscribers and number of cooperators
 [sawb_custom_contact_interface](sawb_custom_contact_interface/) | 16.0.1.0.0 | [![victor-champonnois](https://github.com/victor-champonnois.png?size=30px)](https://github.com/victor-champonnois) | SAWB Custom : Contact Interface.
