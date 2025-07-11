@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+SPDX-FileCopyrightText: 2025 Coop IT Easy SC
+
+SPDX-License-Identifier: AGPL-3.0-or-later
+-->
+<templates id="template" xml:space="preserve">
+
+    <t t-inherit="point_of_sale.PartnerListScreen" t-inherit-mode="extension" owl="1">
+        <xpath
+            expr="//div[hasclass('button', 'new-customer', 'highlight')]"
+            position="attributes"
+        >
+            <attribute name="t-if">env.pos.isManager</attribute>
+        </xpath>
+        <xpath expr="//th[text()='Address']" position="attributes">
+            <attribute name="t-if">env.pos.isManager</attribute>
+        </xpath>
+        <xpath expr="//th[hasclass('partner-line-email')]" position="attributes">
+            <attribute name="t-if">env.pos.isManager</attribute>
+        </xpath>
+        <xpath expr="//th[text()='ZIP']" position="attributes">
+            <attribute name="t-if">env.pos.isManager</attribute>
+        </xpath>
+    </t>
+
+</templates>

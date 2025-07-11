@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+SPDX-FileCopyrightText: 2025 Coop IT Easy SC
+
+SPDX-License-Identifier: AGPL-3.0-or-later
+-->
+<templates id="template" xml:space="preserve">
+
+    <t t-inherit="point_of_sale.PartnerLine" t-inherit-mode="extension" owl="1">
+        <xpath expr="//td/t[@t-esc='shortAddress']/.." position="attributes">
+            <attribute name="t-if">env.pos.isManager</attribute>
+        </xpath>
+        <xpath expr="//td[hasclass('partner-line-email')]" position="attributes">
+            <attribute name="t-if">env.pos.isManager</attribute>
+        </xpath>
+        <xpath
+            expr="//td/t[@t-esc=&quot;props.partner.zip or ''&quot;]/.."
+            position="attributes"
+        >
+            <attribute name="t-if">env.pos.isManager</attribute>
+        </xpath>
+        <xpath expr="//button[hasclass('edit-partner-button')]" position="attributes">
+            <attribute name="t-if">env.pos.isManager</attribute>
+        </xpath>
+    </t>
+
+</templates>
