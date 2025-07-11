@@ -5,6 +5,7 @@
   SPDX-License-Identifier: AGPL-3.0-or-later
 -->
 <odoo>
+
     <record id="view_acquisition_medium_form" model="ir.ui.view">
         <field name="name">res.partner.acquisition.medium.form</field>
         <field name="model">res.partner.acquisition.medium</field>
@@ -30,14 +31,14 @@
     </record>
 
     <record id="action_acquisition_medium" model="ir.actions.act_window">
-        <field name="name">acquisition.mediums</field>
+        <field name="name">Acquisition Mediums</field>
         <field name="res_model">res.partner.acquisition.medium</field>
         <field name="view_mode">tree,form</field>
     </record>
 
     <menuitem
         id="menu_acquisition_medium"
-        name="acquisition.mediums"
+        name="Acquisition Mediums"
         parent="contacts.res_partner_menu_config"
         action="action_acquisition_medium"
     />

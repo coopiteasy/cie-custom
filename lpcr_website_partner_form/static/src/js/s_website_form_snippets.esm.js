@@ -1,4 +1,7 @@
 /** @odoo-module **/
+// SPDX-FileCopyrightText: 2025 Coop IT Easy SC
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
 
 import "website.s_website_form";
 import {patch} from "@web/core/utils/patch";
@@ -6,8 +9,12 @@ import publicWidget from "web.public.widget";
 
 patch(publicWidget.registry.s_website_form.prototype, "lpcr_website_parner_form", {
     getURLParameters() {
+        // This code comes from https://stackoverflow.com/a/827378. A more
+        // modern approach would be to use URLSearchParams
+        // (https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams),
+        // but this is more compatible.
         const params = {};
-        // Get params and remove leading "&"
+        // Get params and remove leading "?"
         const url_params = window.location.search.substring(1);
 
         const items = url_params.split("&");
@@ -66,13 +73,13 @@ patch(publicWidget.registry.s_website_form.prototype, "lpcr_website_parner_form"
                 $lastname_input.prop("required", true);
             }
 
-            // Only one of the email or postal address must be required
+            // Only one of the email, phone or postal address must be required
             const $email_input = $target.find("input[name='email']");
             const $phone_input = $target.find("input[name='phone']");
             const $street_input = $target.find("input[name='street']");
             const $city_input = $target.find("input[name='city']");
             const $zip_input = $target.find("input[name='zip']");
-            const $country_input = $target.find("input[name='contry_id']");
+            const $country_input = $target.find("input[name='country_id']");
             if ($email_input.length && $email_input.val()) {
                 $email_input.prop("required", true);
                 $phone_input.prop("required", false);
