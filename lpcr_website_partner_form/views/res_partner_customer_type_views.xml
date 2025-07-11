@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+  SPDX-FileCopyrightText: 2025 Coop IT Easy SC
+
+  SPDX-License-Identifier: AGPL-3.0-or-later
+-->
+<odoo>
+
+    <record id="view_customer_type_form" model="ir.ui.view">
+        <field name="name">res.partner.customer.type.form</field>
+        <field name="model">res.partner.customer.type</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_customer_type_tree" model="ir.ui.view">
+        <field name="name">res.partner.customer.type.tree</field>
+        <field name="model">res.partner.customer.type</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_customer_type" model="ir.actions.act_window">
+        <field name="name">Customer Types</field>
+        <field name="res_model">res.partner.customer.type</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem
+        id="menu_customer_type"
+        name="Customer Types"
+        parent="contacts.res_partner_menu_config"
+        action="action_customer_type"
+    />
+
+</odoo>
