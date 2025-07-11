@@ -1,0 +1,59 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* lpcr_pos_membership
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: lpcr_pos_membership
+#. odoo-javascript
+#: code:addons/lpcr_pos_membership/static/src/js/ProductScreen.esm.js:0
+#: code:addons/lpcr_pos_membership/static/src/js/models.esm.js:0
+#, python-format
+msgid "Membership products must have a quantity equal to one."
+msgstr "Les produits d'adhésion doivent avoir une quantité égale à un."
+
+#. module: lpcr_pos_membership
+#. odoo-javascript
+#: code:addons/lpcr_pos_membership/static/src/js/ProductScreen.esm.js:0
+#, python-format
+msgid "Membership without people"
+msgstr "Adhésion sans personne"
+
+#. module: lpcr_pos_membership
+#. odoo-javascript
+#: code:addons/lpcr_pos_membership/static/src/js/ProductScreen.esm.js:0
+#, python-format
+msgid "Only one membership allowed per person"
+msgstr "Une seule adhésion autorisée par personne"
+
+#. module: lpcr_pos_membership
+#. odoo-javascript
+#: code:addons/lpcr_pos_membership/static/src/js/ProductScreen.esm.js:0
+#, python-format
+msgid "Please select a person for the membership."
+msgstr "Veuillez sélectionner une personne pour l'adhésion."
+
+#. module: lpcr_pos_membership
+#. odoo-javascript
+#: code:addons/lpcr_pos_membership/static/src/js/ProductScreen.esm.js:0
+#: code:addons/lpcr_pos_membership/static/src/js/models.esm.js:0
+#, python-format
+msgid "Quantity other than 1 not allowed"
+msgstr "Quantité autre que 1 non autorisée"
+
+#. module: lpcr_pos_membership
+#. odoo-javascript
+#: code:addons/lpcr_pos_membership/static/src/js/ProductScreen.esm.js:0
+#, python-format
+msgid "Some people have several memberships: %s"
+msgstr "Certaines personnes ont plusieurs adhésions : %s"

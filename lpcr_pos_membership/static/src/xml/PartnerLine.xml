@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates id="template" xml:space="preserve">
+
+    <t
+        t-name="PartnerLine"
+        t-inherit="point_of_sale.PartnerLine"
+        t-inherit-mode="extension"
+        owl="1"
+    >
+        <xpath
+            expr="//span[contains(@t-attf-class, 'membership-state-tag')]"
+            position="attributes"
+        >
+            <attribute name="t-if" />
+            <attribute name="t-attf-class">
+                membership-state-tag
+                membership-{{props.partner.is_member ? (env.pos.isMembershipEnding(props.partner) ? 'orange' : 'green') : 'red'}}
+            </attribute>
+        </xpath>
+    </t>
+
+</templates>
