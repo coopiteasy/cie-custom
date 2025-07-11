@@ -11,7 +11,6 @@
     "author": "Coop IT Easy SC",
     "license": "AGPL-3",
     "depends": [
-        "pos_hide_partner_info",
         "pos_sale",
     ],
     "assets": {
