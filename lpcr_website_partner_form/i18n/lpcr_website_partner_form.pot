@@ -1,0 +1,116 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* lpcr_website_partner_form
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: lpcr_website_partner_form
+#: model:ir.model.fields,field_description:lpcr_website_partner_form.field_res_partner__acquisition_medium_id
+#: model:ir.model.fields,field_description:lpcr_website_partner_form.field_res_users__acquisition_medium_id
+#: model_terms:ir.ui.view,arch_db:lpcr_website_partner_form.view_res_partner_filter_customer_type
+msgid "Acquisition Medium"
+msgstr ""
+
+#. module: lpcr_website_partner_form
+#: model:ir.actions.act_window,name:lpcr_website_partner_form.action_acquisition_medium
+#: model:ir.ui.menu,name:lpcr_website_partner_form.menu_acquisition_medium
+msgid "Acquisition Mediums"
+msgstr ""
+
+#. module: lpcr_website_partner_form
+#: model:ir.model,name:lpcr_website_partner_form.model_res_partner
+msgid "Contact"
+msgstr ""
+
+#. module: lpcr_website_partner_form
+#: model:ir.model.fields,field_description:lpcr_website_partner_form.field_res_partner_acquisition_medium__create_uid
+#: model:ir.model.fields,field_description:lpcr_website_partner_form.field_res_partner_customer_type__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: lpcr_website_partner_form
+#: model:ir.model.fields,field_description:lpcr_website_partner_form.field_res_partner_acquisition_medium__create_date
+#: model:ir.model.fields,field_description:lpcr_website_partner_form.field_res_partner_customer_type__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: lpcr_website_partner_form
+#: model:ir.model.fields,field_description:lpcr_website_partner_form.field_res_partner__customer_type_id
+#: model:ir.model.fields,field_description:lpcr_website_partner_form.field_res_users__customer_type_id
+#: model_terms:ir.ui.view,arch_db:lpcr_website_partner_form.view_res_partner_filter_customer_type
+msgid "Customer Type"
+msgstr ""
+
+#. module: lpcr_website_partner_form
+#: model:ir.model,name:lpcr_website_partner_form.model_res_partner_customer_type
+msgid "Customer Type for Partners"
+msgstr ""
+
+#. module: lpcr_website_partner_form
+#: model:ir.actions.act_window,name:lpcr_website_partner_form.action_customer_type
+#: model:ir.ui.menu,name:lpcr_website_partner_form.menu_customer_type
+msgid "Customer Types"
+msgstr ""
+
+#. module: lpcr_website_partner_form
+#: model:ir.model.fields,field_description:lpcr_website_partner_form.field_res_partner_acquisition_medium__display_name
+#: model:ir.model.fields,field_description:lpcr_website_partner_form.field_res_partner_customer_type__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: lpcr_website_partner_form
+#. odoo-python
+#: code:addons/lpcr_website_partner_form/controllers/main.py:0
+#, python-format
+msgid "E-mail address already used."
+msgstr ""
+
+#. module: lpcr_website_partner_form
+#: model:ir.model,name:lpcr_website_partner_form.model_res_partner_acquisition_medium
+msgid "How partner get acquired"
+msgstr ""
+
+#. module: lpcr_website_partner_form
+#: model:ir.model.fields,field_description:lpcr_website_partner_form.field_res_partner_acquisition_medium__id
+#: model:ir.model.fields,field_description:lpcr_website_partner_form.field_res_partner_customer_type__id
+msgid "ID"
+msgstr ""
+
+#. module: lpcr_website_partner_form
+#: model:ir.model.fields,field_description:lpcr_website_partner_form.field_res_partner_acquisition_medium____last_update
+#: model:ir.model.fields,field_description:lpcr_website_partner_form.field_res_partner_customer_type____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: lpcr_website_partner_form
+#: model:ir.model.fields,field_description:lpcr_website_partner_form.field_res_partner_acquisition_medium__write_uid
+#: model:ir.model.fields,field_description:lpcr_website_partner_form.field_res_partner_customer_type__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: lpcr_website_partner_form
+#: model:ir.model.fields,field_description:lpcr_website_partner_form.field_res_partner_acquisition_medium__write_date
+#: model:ir.model.fields,field_description:lpcr_website_partner_form.field_res_partner_customer_type__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: lpcr_website_partner_form
+#: model:ir.model.fields,field_description:lpcr_website_partner_form.field_res_partner_acquisition_medium__name
+#: model:ir.model.fields,field_description:lpcr_website_partner_form.field_res_partner_customer_type__name
+msgid "Name"
+msgstr ""
+
+#. module: lpcr_website_partner_form
+#: model:ir.model.fields,field_description:lpcr_website_partner_form.field_res_partner_acquisition_medium__partner_ids
+#: model:ir.model.fields,field_description:lpcr_website_partner_form.field_res_partner_customer_type__partner_ids
+msgid "Partners"
+msgstr ""
