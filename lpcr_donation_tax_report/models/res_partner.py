@@ -9,7 +9,7 @@ class ResPartner(models.Model):
     _inherit = "res.partner"
 
     is_address_valid = fields.Boolean(
-        string="Complete info",
+        string="Complete Info",
         store=True,
         compute="_compute_address_valid",
     )
