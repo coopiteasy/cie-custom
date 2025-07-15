@@ -28,6 +28,7 @@ class TestDonationTaxReceipt(common.TransactionCase):
         # Models
         self.company = self.env.ref("base.main_company")
         self.partner_donor = self.env.ref("donation_base.donor1")
+        self.partner_donor2 = self.env.ref("donation_base.donor2")
         self.product_donation = self.env.ref("donation_base.product_product_donation")
         self.product_donation_no_tax = self.env.ref(
             "donation_base.product_product_donation_notaxreceipt"
@@ -61,7 +62,10 @@ class TestDonationTaxReceipt(common.TransactionCase):
         self.product1 = self.env.ref("donation_base.product_product_donation")
 
     def test_create_tax_receipt(self):
-        """Tests that the tax receipt is correctly created"""
+        """
+        Test that the tax receipt is correctly created and that it doesn't
+        change on partner changes
+        """
         donation = self.DonationDonation.create(
             {
                 "donation_date": datetime(2023, 1, 1),
@@ -82,7 +86,7 @@ class TestDonationTaxReceipt(common.TransactionCase):
         )
 
         donation.validate()
-
+        donation.write({"partner_id": self.partner_donor2})
         donation_tax_receipt = donation.tax_receipt_id
         self.assertEqual(donation_tax_receipt.street, self.partner_donor.street)
         self.assertEqual(donation_tax_receipt.street2, self.partner_donor.street2)
@@ -90,6 +94,15 @@ class TestDonationTaxReceipt(common.TransactionCase):
         self.assertEqual(donation_tax_receipt.state_id, self.partner_donor.state_id)
         self.assertEqual(donation_tax_receipt.zip, self.partner_donor.zip)
         self.assertEqual(donation_tax_receipt.country_id, self.partner_donor.country_id)
+
+        self.assertNotEqual(donation_tax_receipt.street, self.partner_donor2.street)
+        self.assertNotEqual(donation_tax_receipt.street2, self.partner_donor2.street2)
+        self.assertNotEqual(donation_tax_receipt.city, self.partner_donor2.city)
+        self.assertNotEqual(donation_tax_receipt.state_id, self.partner_donor2.state_id)
+        self.assertNotEqual(donation_tax_receipt.zip, self.partner_donor2.zip)
+        self.assertNotEqual(
+            donation_tax_receipt.country_id, self.partner_donor2.country_id
+        )
 
     def test_empty_address_raises_eror(self):
         donor_with_empty_address = self.env.ref("donation_base.donor2")
