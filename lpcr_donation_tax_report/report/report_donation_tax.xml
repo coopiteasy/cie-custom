@@ -48,11 +48,16 @@
                     </p>
 
                     <p>
+                        <t t-set="currency_name" t-value="o.currency_id.name" />
                         <strong>Bénéficiaire :</strong>
                         <span t-field="o.company_id" /> reconnait avoir
                         reçu, au titre de versements ouvrant droit à une
                         réduction d’impôt, la somme de
-                        <span t-field="o.amount" />.
+                        *** <span t-out="'%.2f' % o.amount" /> <span
+                            t-out="currency_name"
+                        /> ***.
+
+
                     </p>
 
                     <p>
@@ -89,10 +94,8 @@
                                     </td>
                                     <td t-if="line_id.tax_receipt_ok">
                                         <span t-field="line_id.amount" />
-                                        <t
-                                                t-if="line_id.product_id.detailed_type == 'donation'"
-                                            >, <span
-                                                    t-field="donation_id.payment_mode_id"
+                                        <t t-if="line_id.product_id.is_donation">, <span
+                                                    t-field="donation_id.displayed_payment_mode"
                                                 />
                                         </t>
                                     </td>
