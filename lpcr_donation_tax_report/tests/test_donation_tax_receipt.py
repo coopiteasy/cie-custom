@@ -50,12 +50,14 @@ class TestDonationTaxReceipt(TransactionCase):
         cls.partner_donor2.country_id = cls.env.ref("base.be")
         cls.partner_donor2.state_id = dummy_state2
         cls.product_donation = cls.env.ref("donation_base.product_product_donation")
-        cls.product_donation_no_tax = cls.env.ref(
-            "donation_base.product_product_donation_notaxreceipt"
-        )
+        # this is to prevent the error: "Failed to get account for donation
+        # line with product '[DON] Donation'." that occurs when a coa has not
+        # been loaded on the company.
+        if not cls.company.chart_template_id:
+            cls.env["account.chart.template"].search([], limit=1).try_loading(
+                cls.company
+            )
         cls.DonationDonation = cls.env["donation.donation"]
-        cls.DonationLine = cls.env["donation.line"]
-        cls.DonationTaxReceipt = cls.env["donation.tax.receipt"]
 
         # Create payment mode
         cls.payment_mode = cls.env.ref("account_payment_mode.payment_mode_inbound_ct1")
@@ -77,8 +79,6 @@ class TestDonationTaxReceipt(TransactionCase):
             }
         )
 
-        cls.product1 = cls.env.ref("donation_base.product_product_donation")
-
     def test_create_tax_receipt(self):
         """
         Test that the tax receipt is correctly created and that it doesn't
@@ -94,7 +94,7 @@ class TestDonationTaxReceipt(TransactionCase):
                 "line_ids": [
                     Command.create(
                         {
-                            "product_id": self.product1.id,
+                            "product_id": self.product_donation.id,
                             "quantity": 1,
                             "unit_price": 100.0,
                         }
@@ -154,7 +154,7 @@ class TestDonationTaxReceipt(TransactionCase):
                 "line_ids": [
                     Command.create(
                         {
-                            "product_id": self.product1.id,
+                            "product_id": self.product_donation.id,
                             "quantity": 1,
                             "unit_price": 100.0,
                         }
