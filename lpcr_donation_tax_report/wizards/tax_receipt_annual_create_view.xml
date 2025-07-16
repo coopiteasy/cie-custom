@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+SPDX-FileCopyrightText: 2025 Coop IT Easy SC
+
+SPDX-License-Identifier: AGPL-3.0-or-later
+-->
+<odoo>
+    <record id="tax_receipt_annual_create_form" model="ir.ui.view">
+        <field name="name">tax_receipt_annual_create.form</field>
+        <field name="model">tax.receipt.annual.create</field>
+        <field name="inherit_id" ref="donation_base.tax_receipt_annual_create_form" />
+        <field name="arch" type="xml">
+            <group name="main" position="before">
+                <div
+                    class="alert alert-success"
+                    role="alert"
+                    attrs="{'invisible': ['|', ('invalid_tax_receipts_count', '>', 0), ('valid_tax_receipts_count', '=', 0)]}"
+                >
+                    <field
+                        name="valid_tax_receipts_count"
+                    /> tax receipt(s) will be generated.
+                </div>
+                <div
+                    class="alert alert-warning"
+                    role="alert"
+                    attrs="{'invisible': [('invalid_tax_receipts_count', '=', 0), ('valid_tax_receipts_count', '>', 0)]}"
+                >
+                    <field
+                        name="valid_tax_receipts_count"
+                    /> tax receipt(s) will be generated.<br />
+                    <span
+                        attrs="{'invisible': [('invalid_tax_receipts_count', '=', 0)]}"
+                    ><field
+                            name="invalid_tax_receipts_count"
+                        /> tax receipt(s) cannot be generated because the donor's information is incomplete.</span>
+                </div>
+            </group>
+        </field>
+    </record>
+</odoo>

@@ -34,11 +34,13 @@
                     </p>
 
                     <p>
-                        <strong>Donateur :</strong>
-                        <span
-                            t-field="o.partner_id"
-                            t-options='{"widget": "contact", "fields": ["address", "name"], "no_marker": True}'
-                        />
+                        <strong>Donateur :</strong><br />
+                        <span t-field="o.donor_name" /><br />
+                        <span t-field="o.street" />
+                        <span t-field="o.street2" /><br />
+                        <span t-field="o.zip" />
+                        <span t-field="o.city" /><br />
+                        <span t-out="o.country_name" /><br />
                         <span
                             t-if="o.partner_id.is_company and o.partner_id.siret"
                             t-field="o.partner_id.siret"
@@ -50,7 +52,15 @@
                         <span t-field="o.company_id" /> reconnait avoir
                         reçu, au titre de versements ouvrant droit à une
                         réduction d’impôt, la somme de
-                        <span t-field="o.amount" />.
+                        <!--
+                            currency_unit_label contains the plural form
+                            ("Euros"), while full_name contains the singular
+                            form ("Euro").
+                        -->
+                        *** <span t-out="'%.2f' % o.amount" />&#x00a0;<t
+                            t-if="o.amount > 1"
+                            t-out="o.currency_id.currency_unit_label"
+                        /><t t-else="" t-out="o.currency_id.full_name" /> ***.
                     </p>
 
                     <p>
@@ -64,30 +74,41 @@
                     </p>
 
                     <p>
-                        <strong>Dons :</strong>
-                        <ul>
-                            <li t-foreach="o.donation_ids" t-as="donation_id">
-                                <span t-field="donation_id.display_name" />,
-                                <span t-field="donation_id.donation_date" />
-                                <ul>
-                                    <t t-foreach="donation_id.line_ids" t-as="line_id">
-                                        <li t-if="line_id.tax_receipt_ok">
-                                            <span t-field="line_id.product_id" />,
-                                            <span t-field="line_id.amount" />
-                                            <t
-                                                t-if="line_id.product_id.detailed_type == 'donation'"
-                                            >, <span
-                                                    t-field="donation_id.payment_mode_id"
+                        <table style="width: 100%">
+                            <thead>
+                                <tr>
+                                    <th class="text-start pb-2">Référence</th>
+                                    <th class="text-start pb-2">Date</th>
+                                    <th class="text-start pb-2">Nature du don</th>
+                                    <th class="text-start pb-2">Montant</th>
+                                </tr>
+                            </thead>
+                            <tbody class="mt-5">
+                                <t t-foreach="o.donation_ids" t-as="donation_id">
+                                <tr t-foreach="donation_id.line_ids" t-as="line_id">
+                                    <td>
+                                        <span t-field="donation_id.display_name" />
+                                    </td>
+                                    <td>
+                                        <span t-field="donation_id.donation_date" />
+                                    </td>
+                                    <td>
+                                        <span t-field="line_id.product_id" />
+                                    </td>
+                                    <td t-if="line_id.tax_receipt_ok">
+                                        <span t-field="line_id.amount" />
+                                        <t t-if="line_id.product_id.is_donation">, <span
+                                                    t-field="donation_id.displayed_payment_mode"
                                                 />
-                                            </t>
-                                        </li>
-                                    </t>
-                                </ul>
-                            </li>
-                        </ul>
+                                        </t>
+                                    </td>
+                                </tr>
+                                </t>
+                            </tbody>
+                        </table>
                     </p>
 
-                    <p>
+                    <p class="pt-4">
                         Le bénéficiaire certifie sur l’honneur que les dons
                         et versements qu’il reçoit ouvrent droit à la
                         réduction d’impôt prévue à l’article 200 du Code
@@ -105,9 +126,11 @@
 
                     <div style="page-break-inside: avoid" name="board_commitee">
                         <p>
-                            <strong>
-                                <span t-field="o.env.company.board_representative" />
-                            </strong>
+                            <strong><span
+                                    t-field="o.env.company.board_representative"
+                                /></strong><t
+                                t-if="o.env.company.board_representative"
+                            >,</t>
                             <span
                                 t-field="o.env.company.board_representative_function"
                             />
@@ -123,4 +146,5 @@
             </t>
         </xpath>
     </template>
+
 </odoo>

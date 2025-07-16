@@ -16,7 +16,8 @@ odoo_test_flavor: OCB
 odoo_version: 16.0
 org_name: Coop IT Easy SC
 org_slug: coopiteasy
-rebel_module_groups: null
+rebel_module_groups:
+- foodhub_product_fields
 repo_description: Custom modules for Coop IT Easy's clients.
 repo_name: cie-custom
 repo_slug: cie-custom
