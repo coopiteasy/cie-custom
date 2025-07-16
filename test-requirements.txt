@@ -1,9 +1,11 @@
 freezegun
+git+https://github.com/coopiteasy/addons@16.0#subdirectory=setup/board_signature
 git+https://github.com/coopiteasy/addons@16.0#subdirectory=setup/sale_order_volume
+git+https://github.com/coopiteasy/addons@16.0#subdirectory=setup/subscription_web_access
 git+https://github.com/coopiteasy/addons@16.0#subdirectory=setup/website_sale_product_compatibility
 git+https://github.com/coopiteasy/addons@16.0#subdirectory=setup/website_sale_product_trial
-git+https://github.com/coopiteasy/addons@16.0#subdirectory=setup/subscription_web_access
-git+https://github.com/coopiteasy/addons@16.0#subdirectory=setup/board_signature
-git+https://github.com/flaenen/pos@16.0-imp-pos_membership_highlight_status#subdirectory=setup/pos_membership
+git+https://github.com/coopiteasy/donation@16.0-imp-donation_base#subdirectory=setup/donation_base
+git+https://github.com/coopiteasy/pos@16.0-add-pos_donation#subdirectory=setup/pos_donation
 git+https://github.com/flaenen/pos@16.0-add-pos_membership_delegated_partner#subdirectory=setup/pos_membership_delegated_partner
+git+https://github.com/flaenen/pos@16.0-imp-pos_membership_highlight_status#subdirectory=setup/pos_membership
 git+https://github.com/flaenen/vertical-association@16.0-membership_delegated_partner_multi#subdirectory=setup/membership_delegated_partner
