@@ -9,45 +9,20 @@ from odoo.exceptions import UserError
 class DonationTaxReceipt(models.Model):
     _inherit = "donation.tax.receipt"
 
-    # Remove the domain restriction that partner can't have parent
+    # Remove the domain restriction that partner can't have a parent
     # because we want individuals not just their companies
-    partner_id = fields.Many2one(
-        domain=[],
-    )
-
+    partner_id = fields.Many2one(domain=[])
     email = fields.Char(related="partner_id.email")
-    donor_name = fields.Char(
-        readonly=True,
-    )
-    street = fields.Char(
-        readonly=True,
-    )
-    street2 = fields.Char(
-        readonly=True,
-    )
-    city = fields.Char(
-        readonly=True,
-    )
-    state_id = fields.Many2one(
-        "res.country.state",
-        readonly=True,
-    )
-    state_name = fields.Char(
-        readonly=True,
-    )
-    zip = fields.Char(
-        readonly=True,
-    )
-    country_id = fields.Many2one(
-        "res.country",
-        readonly=True,
-    )
-    country_name = fields.Char(
-        readonly=True,
-    )
-    siret = fields.Char(
-        readonly=True,
-    )
+    donor_name = fields.Char(readonly=True)
+    street = fields.Char(readonly=True)
+    street2 = fields.Char(readonly=True)
+    city = fields.Char(readonly=True)
+    state_id = fields.Many2one("res.country.state", readonly=True)
+    state_name = fields.Char(readonly=True)
+    zip = fields.Char(readonly=True)
+    country_id = fields.Many2one("res.country", readonly=True)
+    country_name = fields.Char(readonly=True)
+    siret = fields.Char(readonly=True)
 
     @api.model_create_multi
     def create(self, vals_list):
