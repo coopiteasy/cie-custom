@@ -23,7 +23,7 @@ SPDX-License-Identifier: AGPL-3.0-or-later
                     <field name="zip" class="o_address_zip" />
                     <field name="country_id" class="o_address_country" />
                 </div>
-                <field t-if="siret" name="siret" />
+                <field name="siret" attrs="{'invisible': [('siret', '=', False)]}" />
             </field>
         </field>
     </record>
@@ -37,6 +37,6 @@ SPDX-License-Identifier: AGPL-3.0-or-later
                 <field name="email" />
             </field>
         </field>
-
     </record>
+
 </odoo>
