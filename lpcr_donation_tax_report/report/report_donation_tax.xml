@@ -48,16 +48,19 @@
                     </p>
 
                     <p>
-                        <t t-set="currency_name" t-value="o.currency_id.name" />
                         <strong>Bénéficiaire :</strong>
                         <span t-field="o.company_id" /> reconnait avoir
                         reçu, au titre de versements ouvrant droit à une
                         réduction d’impôt, la somme de
-                        *** <span t-out="'%.2f' % o.amount" /> <span
-                            t-out="currency_name"
-                        /> ***.
-
-
+                        <!--
+                            currency_unit_label contains the plural form
+                            ("Euros"), while full_name contains the singular
+                            form ("Euro").
+                        -->
+                        *** <span t-out="'%.2f' % o.amount" />&#x00a0;<t
+                            t-if="o.amount > 1"
+                            t-out="o.currency_id.currency_unit_label"
+                        /><t t-else="" t-out="o.currency_id.full_name" /> ***.
                     </p>
 
                     <p>
@@ -143,4 +146,5 @@
             </t>
         </xpath>
     </template>
+
 </odoo>
