@@ -25,12 +25,7 @@ msgstr ""
 
 #. module: lpcr_donation_tax_report
 #: model_terms:ir.ui.view,arch_db:lpcr_donation_tax_report.lpcr_donation_tax_receipt_document
-msgid "<strong>Donateur :</strong>"
-msgstr ""
-
-#. module: lpcr_donation_tax_report
-#: model_terms:ir.ui.view,arch_db:lpcr_donation_tax_report.lpcr_donation_tax_receipt_document
-msgid "<strong>Dons :</strong>"
+msgid "<strong>Donateur :</strong><br/>"
 msgstr ""
 
 #. module: lpcr_donation_tax_report
@@ -57,11 +52,92 @@ msgid ""
 msgstr ""
 
 #. module: lpcr_donation_tax_report
+#: model_terms:ir.ui.view,arch_db:lpcr_donation_tax_report.lpcr_donation_tax_receipt_form
+msgid "Address"
+msgstr ""
+
+#. module: lpcr_donation_tax_report
 #: model_terms:ir.ui.view,arch_db:lpcr_donation_tax_report.lpcr_donation_tax_receipt_document
 msgid ""
 "Ce don a été effectué sans contrepartie directe ou\n"
 "                        indirecte, conformément aux dispositions des\n"
 "                        articles 200 et 238 bis du Code Général des Impôts."
+msgstr ""
+
+#. module: lpcr_donation_tax_report
+#: model:ir.model.fields,field_description:lpcr_donation_tax_report.field_donation_tax_receipt__city
+msgid "City"
+msgstr ""
+
+#. module: lpcr_donation_tax_report
+#: model:ir.model.fields,field_description:lpcr_donation_tax_report.field_res_partner__is_address_valid
+#: model:ir.model.fields,field_description:lpcr_donation_tax_report.field_res_users__is_address_valid
+msgid "Complete Info"
+msgstr ""
+
+#. module: lpcr_donation_tax_report
+#: model:ir.model.fields,field_description:lpcr_donation_tax_report.field_donation_donation__is_donor_address_valid
+msgid "Complete info"
+msgstr ""
+
+#. module: lpcr_donation_tax_report
+#: model:ir.model,name:lpcr_donation_tax_report.model_res_partner
+msgid "Contact"
+msgstr ""
+
+#. module: lpcr_donation_tax_report
+#: model:ir.model.fields,field_description:lpcr_donation_tax_report.field_donation_tax_receipt__country_id
+msgid "Country"
+msgstr ""
+
+#. module: lpcr_donation_tax_report
+#: model:ir.model.fields,field_description:lpcr_donation_tax_report.field_donation_tax_receipt__country_name
+msgid "Country Name"
+msgstr ""
+
+#. module: lpcr_donation_tax_report
+#: model_terms:ir.ui.view,arch_db:lpcr_donation_tax_report.lpcr_donation_tax_receipt_document
+msgid "Date"
+msgstr ""
+
+#. module: lpcr_donation_tax_report
+#: model:ir.model,name:lpcr_donation_tax_report.model_donation_donation
+msgid "Donation"
+msgstr ""
+
+#. module: lpcr_donation_tax_report
+#: model:ir.model.fields,field_description:lpcr_donation_tax_report.field_donation_tax_receipt__partner_id
+msgid "Donor"
+msgstr ""
+
+#. module: lpcr_donation_tax_report
+#: model:ir.model.fields,field_description:lpcr_donation_tax_report.field_donation_tax_receipt__donor_name
+msgid "Donor Name"
+msgstr ""
+
+#. module: lpcr_donation_tax_report
+#: model:ir.model.fields,field_description:lpcr_donation_tax_report.field_donation_tax_receipt__email
+msgid "Email"
+msgstr ""
+
+#. module: lpcr_donation_tax_report
+#: model:ir.model,name:lpcr_donation_tax_report.model_tax_receipt_annual_create
+msgid "Generate Annual Tax Receipts"
+msgstr ""
+
+#. module: lpcr_donation_tax_report
+#: model_terms:ir.ui.view,arch_db:lpcr_donation_tax_report.lpcr_donation_search
+msgid "Incomplete donor address"
+msgstr ""
+
+#. module: lpcr_donation_tax_report
+#: model:ir.model.fields,field_description:lpcr_donation_tax_report.field_tax_receipt_annual_create__invalid_tax_receipts_count
+msgid "Invalid Tax Receipts Count"
+msgstr ""
+
+#. module: lpcr_donation_tax_report
+#: model_terms:ir.ui.view,arch_db:lpcr_donation_tax_report.lpcr_res_partner_view_search
+msgid "Invalid donors"
 msgstr ""
 
 #. module: lpcr_donation_tax_report
@@ -74,6 +150,31 @@ msgid ""
 "                        <br/>\n"
 "                        Particuliers : Vous pouvez déduire 66% de votre don\n"
 "                        dans la limite de 20% de votre revenu imposable."
+msgstr ""
+
+#. module: lpcr_donation_tax_report
+#. odoo-python
+#: code:addons/lpcr_donation_tax_report/models/donation_tax_receipt.py:0
+#, python-format
+msgid ""
+"Le reçu fiscal n'a pas pu être émis car il manque des informations.\n"
+"Le nom, le prénom et l'adresse postale (rue et numéro, code postal, ville, pays) des personnes doivent être définis.\n"
+"Le nom, le numéro SIRET et l'adresse postale (rue et numéro, code postal, ville, pays) des sociétés doivent être définis."
+msgstr ""
+
+#. module: lpcr_donation_tax_report
+#: model_terms:ir.ui.view,arch_db:lpcr_donation_tax_report.lpcr_donation_tax_receipt_document
+msgid "Montant"
+msgstr ""
+
+#. module: lpcr_donation_tax_report
+#: model_terms:ir.ui.view,arch_db:lpcr_donation_tax_report.lpcr_donation_tax_receipt_document
+msgid "Nature du don"
+msgstr ""
+
+#. module: lpcr_donation_tax_report
+#: model:ir.model.fields,field_description:lpcr_donation_tax_report.field_donation_donation__commercial_partner_id
+msgid "Parent Donor"
 msgstr ""
 
 #. module: lpcr_donation_tax_report
@@ -91,8 +192,80 @@ msgstr ""
 
 #. module: lpcr_donation_tax_report
 #: model_terms:ir.ui.view,arch_db:lpcr_donation_tax_report.lpcr_donation_tax_receipt_document
+msgid "Référence"
+msgstr ""
+
+#. module: lpcr_donation_tax_report
+#: model:ir.model.fields,field_description:lpcr_donation_tax_report.field_donation_tax_receipt__siret
+msgid "Siret"
+msgstr ""
+
+#. module: lpcr_donation_tax_report
+#: model:ir.model.fields,field_description:lpcr_donation_tax_report.field_donation_tax_receipt__state_id
+msgid "State"
+msgstr ""
+
+#. module: lpcr_donation_tax_report
+#: model:ir.model.fields,field_description:lpcr_donation_tax_report.field_donation_tax_receipt__state_name
+msgid "State Name"
+msgstr ""
+
+#. module: lpcr_donation_tax_report
+#: model:ir.model.fields,field_description:lpcr_donation_tax_report.field_donation_tax_receipt__street
+msgid "Street"
+msgstr ""
+
+#. module: lpcr_donation_tax_report
+#: model:ir.model.fields,field_description:lpcr_donation_tax_report.field_donation_tax_receipt__street2
+msgid "Street2"
+msgstr ""
+
+#. module: lpcr_donation_tax_report
+#: model:ir.model,name:lpcr_donation_tax_report.model_donation_tax_receipt
+msgid "Tax Receipt for Donations"
+msgstr ""
+
+#. module: lpcr_donation_tax_report
+#: model:ir.model.fields,field_description:lpcr_donation_tax_report.field_tax_receipt_annual_create__valid_tax_receipts_count
+msgid "Valid Tax Receipts Count"
+msgstr ""
+
+#. module: lpcr_donation_tax_report
+#: model_terms:ir.ui.view,arch_db:lpcr_donation_tax_report.lpcr_donation_search
+msgid "Valid donor address"
+msgstr ""
+
+#. module: lpcr_donation_tax_report
+#: model_terms:ir.ui.view,arch_db:lpcr_donation_tax_report.lpcr_res_partner_view_search
+msgid "Valid donors"
+msgstr ""
+
+#. module: lpcr_donation_tax_report
+#: model:ir.model.fields,field_description:lpcr_donation_tax_report.field_donation_tax_receipt__zip
+msgid "Zip"
+msgstr ""
+
+#. module: lpcr_donation_tax_report
+#: model_terms:ir.ui.view,arch_db:lpcr_donation_tax_report.lpcr_donation_tax_receipt_document
 msgid ""
 "reconnait avoir\n"
 "                        reçu, au titre de versements ouvrant droit à une\n"
 "                        réduction d’impôt, la somme de"
+msgstr ""
+
+#. module: lpcr_donation_tax_report
+#: model_terms:ir.ui.view,arch_db:lpcr_donation_tax_report.tax_receipt_annual_create_form
+msgid ""
+"tax receipt(s) cannot be generated because the donor's information is "
+"incomplete."
+msgstr ""
+
+#. module: lpcr_donation_tax_report
+#: model_terms:ir.ui.view,arch_db:lpcr_donation_tax_report.tax_receipt_annual_create_form
+msgid "tax receipt(s) will be generated."
+msgstr ""
+
+#. module: lpcr_donation_tax_report
+#: model_terms:ir.ui.view,arch_db:lpcr_donation_tax_report.tax_receipt_annual_create_form
+msgid "tax receipt(s) will be generated.<br/>"
 msgstr ""
