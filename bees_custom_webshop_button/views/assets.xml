@@ -13,7 +13,7 @@ SPDX-License-Identifier: AGPL-3.0-or-later
         <xpath expr="." position="inside">
             <link
                 rel="stylesheet"
-                href="/beesdoo_website_shopbutton/static/src/css/website_shopbutton.css"
+                href="/bees_custom_webshop_button/static/src/css/website_shopbutton.css"
             />
         </xpath>
     </template>
