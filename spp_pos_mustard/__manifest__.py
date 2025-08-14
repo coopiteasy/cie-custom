@@ -6,7 +6,7 @@
     "name": "SPP Point of Sale Mustard",
     "summary": """
         Make a button in the POS interface mustard-coloured.""",
-    "version": "12.0.1.0.0",
+    "version": "16.0.1.0.0",
     "category": "Point of Sale",
     "website": "https://coopiteasy.be",
     "author": "Coop IT Easy SC",
@@ -16,10 +16,9 @@
     "depends": [
         "pos_shift_partner_can_shop",
     ],
-    "excludes": [],
-    "data": [
-        "views/assets.xml",
-    ],
-    "demo": [],
-    "qweb": [],
+    "assets": {
+        "point_of_sale.assets": [
+            "spp_pos_mustard/static/src/css/pos_shift_partner_can_shop.scss",
+        ],
+    },
 }
