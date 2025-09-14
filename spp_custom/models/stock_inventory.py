@@ -5,7 +5,7 @@
 from odoo import fields, models
 
 
-class StockInventory(models.Model):
+class InventoryAdjustmentsGroup(models.Model):
     _inherit = "stock.inventory"
 
-    filter = fields.Selection(default="partial")
+    product_selection = fields.Selection(default="manual")

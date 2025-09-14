@@ -17,7 +17,7 @@ SPP Customizations
     :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
     :alt: License: AGPL-3
 .. |badge3| image:: https://img.shields.io/badge/github-coopiteasy%2Fcie--custom-lightgray.png?logo=github
-    :target: https://github.com/coopiteasy/cie-custom/tree/12.0/spp_custom
+    :target: https://github.com/coopiteasy/cie-custom/tree/16.0/spp_custom
     :alt: coopiteasy/cie-custom
 
 |badge1| |badge2| |badge3|
@@ -31,7 +31,7 @@ Specifics customizations for SPP
 * on customer invoice, supplier invoice, sale order, purchase order and picking:
   - display full product view
   - display 200 lines by defaut on line lists
-* track_visibility on product.template fields: list_price, uom_id, uom_po_id, default_code, sale_ok, available_in_pos, description
+* tracking on product.template fields: list_price, uom_id, uom_po_id, default_code, sale_ok, available_in_pos, description
 * boolean fields is_foodprint_label, is_gentle_price_label
 * show product flagged as is_foodprint_label on the PosTicket
 
@@ -46,7 +46,7 @@ Bug Tracker
 Bugs are tracked on `GitHub Issues <https://github.com/coopiteasy/cie-custom/issues>`_.
 In case of trouble, please check there if your issue has already been reported.
 If you spotted it first, help us to smash it by providing a detailed and welcomed
-`feedback <https://github.com/coopiteasy/cie-custom/issues/new?body=module:%20spp_custom%0Aversion:%2012.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**>`_.
+`feedback <https://github.com/coopiteasy/cie-custom/issues/new?body=module:%20spp_custom%0Aversion:%2016.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**>`_.
 
 Do not contact contributors directly about support or help with technical issues.
 
@@ -71,6 +71,6 @@ Contributors
 Maintainers
 ~~~~~~~~~~~
 
-This module is part of the `coopiteasy/cie-custom <https://github.com/coopiteasy/cie-custom/tree/12.0/spp_custom>`_ project on GitHub.
+This module is part of the `coopiteasy/cie-custom <https://github.com/coopiteasy/cie-custom/tree/16.0/spp_custom>`_ project on GitHub.
 
 You are welcome to contribute.

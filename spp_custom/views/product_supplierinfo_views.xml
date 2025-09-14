@@ -6,7 +6,7 @@
         <field name="inherit_id" ref="product.product_supplierinfo_tree_view" />
 
         <field name="arch" type="xml">
-            <field name="name" position="after">
+            <field name="partner_id" position="after">
                 <field name="product_code" />
             </field>
         </field>
