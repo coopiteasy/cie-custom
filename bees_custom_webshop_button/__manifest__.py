@@ -5,7 +5,7 @@
 {
     "name": "Bees Custom Webshop Button",
     "summary": "Add a button in Bees' website redirecting to the webshop",
-    "version": "12.0.1.0.0",
+    "version": "16.0.1.0.0",
     "category": "Uncategorized",
     "website": "https://coopiteasy.be",
     "author": "Coop IT Easy SC",
