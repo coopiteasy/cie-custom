@@ -8,13 +8,10 @@
     <template
         id="product"
         name="Product (in rotordc_custom)"
-        inherit_id="website_sale.product"
+        inherit_id="website_sale_product_weight.product"
     >
-        <xpath
-            expr="//div[@id='product_details']//div[hasclass('js_product', 'js_main_product')]/t[1]"
-            position="after"
-        >
-            <p class="oe_product_barcode">barcode: <span
+        <xpath expr="//p[hasclass('oe_product_weight')]" position="before">
+            <p class="oe_product_barcode">Barcode: <span
                     class="oe_product_barcode_value"
                     t-field="product_variant.barcode"
                 /></p>

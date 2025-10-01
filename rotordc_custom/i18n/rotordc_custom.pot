@@ -71,5 +71,5 @@ msgstr ""
 
 #. module: rotordc_custom
 #: model_terms:ir.ui.view,arch_db:rotordc_custom.product
-msgid "barcode:"
+msgid "Barcode:"
 msgstr ""

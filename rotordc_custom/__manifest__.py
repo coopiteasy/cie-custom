@@ -13,6 +13,7 @@
         "product",
         "website_sale",
         "website_sale_stock",
+        "website_sale_product_weight",
     ],
     "data": [
         "reports/product_reports.xml",
