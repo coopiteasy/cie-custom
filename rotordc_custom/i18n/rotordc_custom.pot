@@ -1,12 +1,12 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-#	* rotordc_custom
+# 	* rotordc_custom
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 12.0\n"
+"Project-Id-Version: Odoo Server 16.0\n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: <>\n"
+"Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -14,27 +14,62 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. module: rotordc_custom
-#: model_terms:ir.ui.view,arch_db:rotordc_custom.report_simple_label_rotor
-msgid "<span class=\"text-muted\">No barcode available</span>"
+#: model:ir.actions.report,print_report_name:rotordc_custom.report_product_template_label_dymo_rotordc
+msgid "'Products Labels - %s' % (object.name)"
 msgstr ""
 
 #. module: rotordc_custom
-#: model_terms:ir.ui.view,arch_db:rotordc_custom.report_simple_label_rotor
-msgid "<strong>Price:</strong>"
+#: model_terms:ir.ui.view,arch_db:rotordc_custom.report_simple_label_dymo_rotordc
+msgid "<strong>/</strong>"
 msgstr ""
 
 #. module: rotordc_custom
-#: model_terms:ir.ui.view,arch_db:rotordc_custom.report_simple_label_rotor
-msgid "Barcode"
+#: model:ir.model,name:rotordc_custom.model_product_label_layout
+msgid "Choose the sheet layout to print the labels"
 msgstr ""
 
 #. module: rotordc_custom
-#: model:ir.actions.report,name:rotordc_custom.report_product_label_rotor
-msgid "Rotor Product Label (PDF)"
+#: model:ir.model.fields.selection,name:rotordc_custom.selection__product_label_layout__print_format__dymo_rotordc
+msgid "Dymo (RotorDC)"
+msgstr ""
+
+#. module: rotordc_custom
+#: model:ir.model.fields,field_description:rotordc_custom.field_product_label_layout__print_format
+msgid "Format"
+msgstr ""
+
+#. module: rotordc_custom
+#: model:ir.model,name:rotordc_custom.model_product_template
+msgid "Product"
+msgstr ""
+
+#. module: rotordc_custom
+#: model:ir.model,name:rotordc_custom.model_report_rotordc_custom_report_producttemplatelabel_dymo_rotordc
+msgid "Product Label Report"
+msgstr ""
+
+#. module: rotordc_custom
+#: model:ir.model,name:rotordc_custom.model_product_product
+msgid "Product Variant"
+msgstr ""
+
+#. module: rotordc_custom
+#: model:ir.actions.report,name:rotordc_custom.report_product_template_label_dymo_rotordc
+msgid "RotorDC Product Label (PDF)"
+msgstr ""
+
+#. module: rotordc_custom
+#: model:ir.model.fields,field_description:rotordc_custom.field_product_product__list_price_taxes_included
+#: model:ir.model.fields,field_description:rotordc_custom.field_product_template__list_price_taxes_included
+msgid "Sales Price (Taxes Included)"
+msgstr ""
+
+#. module: rotordc_custom
+#: model:ir.model.fields,field_description:rotordc_custom.field_product_product__lst_price_taxes_included
+msgid "Sales Price (Taxes Included)"
 msgstr ""
 
 #. module: rotordc_custom
 #: model_terms:ir.ui.view,arch_db:rotordc_custom.product
 msgid "barcode:"
 msgstr ""
-
