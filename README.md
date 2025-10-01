@@ -35,6 +35,7 @@ addon | version | maintainers | summary
 [rotordc_custom](rotordc_custom/) | 16.0.1.0.0 |  | Customization for RotorDC
 [rotordc_optional_product](rotordc_optional_product/) | 16.0.1.0.0 |  | Custom modifications regarding RotorDC's use of optional products.
 [rotordc_report_picking_huge_sale_order](rotordc_report_picking_huge_sale_order/) | 16.0.1.0.0 |  | At the bottom of the Picking Operations report, display the sale order in huge text
+[rotordc_sale_related_so](rotordc_sale_related_so/) | 16.0.1.0.0 | [![robinkeunen](https://github.com/robinkeunen.png?size=30px)](https://github.com/robinkeunen) | Add M2M links between SOs
 [sawb_custom_contact_interface](sawb_custom_contact_interface/) | 16.0.1.0.0 | [![victor-champonnois](https://github.com/victor-champonnois.png?size=30px)](https://github.com/victor-champonnois) | SAWB Custom : Contact Interface.
 [sawb_custom_hide_vat_for_individual](sawb_custom_hide_vat_for_individual/) | 16.0.1.0.0 | [![victor-champonnois](https://github.com/victor-champonnois.png?size=30px)](https://github.com/victor-champonnois) | Hide the partner's VAT field if the partner is an individual.
 
