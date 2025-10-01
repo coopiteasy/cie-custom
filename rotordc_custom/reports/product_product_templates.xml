@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <template
+        id="report_productlabel_dymo_rotordc"
+        inherit_id="product.report_productlabel_dymo"
+        primary="True"
+        priority="100"
+    >
+        <xpath
+            expr="//t[@t-call='product.report_simple_label_dymo']"
+            position="attributes"
+        >
+            <attribute
+                name="t-call"
+            >rotordc_custom.report_simple_label_dymo_rotordc</attribute>
+        </xpath>
+    </template>
+
+    <template
+        id="report_simple_label_dymo_rotordc"
+        inherit_id="product.report_simple_label_dymo"
+        primary="True"
+        priority="100"
+    >
+        <xpath expr="//strong[@t-field='product.lst_price']" position="attributes">
+            <attribute name="t-field">product.lst_price_taxes_included</attribute>
+        </xpath>
+
+        <xpath expr="//strong[@t-field='product.list_price']" position="attributes">
+            <attribute name="t-field">product.list_price_taxes_included</attribute>
+        </xpath>
+
+        <xpath expr="//div[hasclass('o_label_extra_data')]" position="before">
+            <strong>/</strong>
+            <strong t-out="product.uom_id.name" />
+        </xpath>
+    </template>
+
+</odoo>

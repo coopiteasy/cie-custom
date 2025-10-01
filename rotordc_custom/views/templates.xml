@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+    Copyright 2022 Coop IT Easy SC
+    License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
+-->
+<odoo>
+
+    <template
+        id="product"
+        name="Product (in rotordc_custom)"
+        inherit_id="website_sale.product"
+    >
+        <xpath
+            expr="//div[@id='product_details']//div[hasclass('js_product', 'js_main_product')]/t[1]"
+            position="after"
+        >
+            <p class="oe_product_barcode">barcode: <span
+                    class="oe_product_barcode_value"
+                    t-field="product_variant.barcode"
+                /></p>
+        </xpath>
+    </template>
+
+</odoo>

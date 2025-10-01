@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <record model="ir.actions.report" id="report_product_template_label_dymo_rotordc">
+        <field name="name">RotorDC Product Label (PDF)</field>
+        <field name="model">product.template</field>
+        <field name="report_type">qweb-pdf</field>
+        <field
+            name="report_name"
+        >rotordc_custom.report_producttemplatelabel_dymo_rotordc</field>
+        <field
+            name="report_file"
+        >rotordc_custom.report_producttemplatelabel_dymo_rotordc</field>
+        <field name="print_report_name">'Products Labels - %s' % (object.name)</field>
+        <field name="binding_type">report</field>
+        <field name="paperformat_id" ref="product.paperformat_label_sheet_dymo" />
+    </record>
+
+</odoo>
