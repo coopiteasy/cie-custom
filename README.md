@@ -31,6 +31,7 @@ addon | version | maintainers | summary
 [lpcr_pos_membership](lpcr_pos_membership/) | 16.0.1.0.0 | [![flaenen](https://github.com/flaenen.png?size=30px)](https://github.com/flaenen) | POS Membership customizations for LPCR
 [lpcr_website_partner_form](lpcr_website_partner_form/) | 16.0.1.0.0 | [![remytms](https://github.com/remytms.png?size=30px)](https://github.com/remytms) | Add a form to add partners from website.
 [medor_custom_stats](medor_custom_stats/) | 16.0.1.0.0 |  | Compute stats on number of subscribers and number of cooperators
+[rotordc_custom](rotordc_custom/) | 16.0.1.0.0 |  | Customization for RotorDC
 [sawb_custom_contact_interface](sawb_custom_contact_interface/) | 16.0.1.0.0 | [![victor-champonnois](https://github.com/victor-champonnois.png?size=30px)](https://github.com/victor-champonnois) | SAWB Custom : Contact Interface.
 [sawb_custom_hide_vat_for_individual](sawb_custom_hide_vat_for_individual/) | 16.0.1.0.0 | [![victor-champonnois](https://github.com/victor-champonnois.png?size=30px)](https://github.com/victor-champonnois) | Hide the partner's VAT field if the partner is an individual.
 
