@@ -1,12 +1,12 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-#	* rotordc_optional_product
+# 	* rotordc_optional_product
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 12.0\n"
+"Project-Id-Version: Odoo Server 16.0\n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: <>\n"
+"Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -15,7 +15,8 @@ msgstr ""
 
 #. module: rotordc_optional_product
 #: model_terms:ir.ui.view,arch_db:rotordc_optional_product.missing_categories
-msgid "<br/>\n"
+msgid ""
+"<br/>\n"
 "                            Missing categories:"
 msgstr ""
 
@@ -36,12 +37,18 @@ msgstr ""
 
 #. module: rotordc_optional_product
 #: model_terms:ir.ui.view,arch_db:rotordc_optional_product.missing_categories
-msgid "Re-add the products. When you do, make sure to also add any available 'Optional Products'."
+msgid ""
+"Re-add the products. When you do, make sure to also add any available "
+"'Optional Products'."
 msgstr ""
 
 #. module: rotordc_optional_product
 #: model_terms:ir.ui.view,arch_db:rotordc_optional_product.missing_categories
-msgid "The order checkout was interrupted because your order is not complete. You added one or more products to your cart that are not completely configured. The products are listed below together with the configurations that are missing."
+msgid ""
+"The order checkout was interrupted because your order is not complete. You "
+"added one or more products to your cart that are not completely configured. "
+"The products are listed below together with the configurations that are "
+"missing."
 msgstr ""
 
 #. module: rotordc_optional_product
@@ -63,4 +70,3 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:rotordc_optional_product.missing_categories
 msgid "your cart"
 msgstr ""
-
