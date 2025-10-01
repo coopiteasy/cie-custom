@@ -1,0 +1,27 @@
+# Copyright 2022 Coop IT Easy SC
+# License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
+
+{
+    "name": "RotorDC Optional Product",
+    "summary": """
+        Custom modifications regarding RotorDC's use of optional products.""",
+    "version": "16.0.1.0.0",
+    "category": "Sales",
+    "website": "https://coopiteasy.be",
+    "author": "Coop IT Easy SC",
+    "license": "AGPL-3",
+    "depends": [
+        "sale_product_configurator",
+        "web",
+        "website_sale",
+    ],
+    "data": [
+        "views/sale_product_configurator_templates.xml",
+        "views/templates.xml",
+    ],
+    "assets": {
+        "web.assets_frontend": [
+            "rotordc_optional_product/static/src/js/product_configurator_modal.esm.js",
+        ],
+    },
+}
