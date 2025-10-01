@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template id="report_picking" inherit_id="stock.report_picking">
+        <xpath expr="//div[hasclass('page')]" position="inside">
+            <p
+                name="huge_origin_so"
+                t-field="o.origin"
+                style="text-align: center; font-size: 10rem;"
+            />
+        </xpath>
+    </template>
+</odoo>
