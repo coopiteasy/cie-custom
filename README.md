@@ -33,6 +33,7 @@ addon | version | maintainers | summary
 [medor_custom_stats](medor_custom_stats/) | 16.0.1.0.0 |  | Compute stats on number of subscribers and number of cooperators
 [rotordc_autofill_product_variant](rotordc_autofill_product_variant/) | 16.0.1.0.0 |  | Autofill some field of the product variant based on the product template.
 [rotordc_custom](rotordc_custom/) | 16.0.1.0.0 |  | Customization for RotorDC
+[rotordc_report_picking_huge_sale_order](rotordc_report_picking_huge_sale_order/) | 16.0.1.0.0 |  | At the bottom of the Picking Operations report, display the sale order in huge text
 [sawb_custom_contact_interface](sawb_custom_contact_interface/) | 16.0.1.0.0 | [![victor-champonnois](https://github.com/victor-champonnois.png?size=30px)](https://github.com/victor-champonnois) | SAWB Custom : Contact Interface.
 [sawb_custom_hide_vat_for_individual](sawb_custom_hide_vat_for_individual/) | 16.0.1.0.0 | [![victor-champonnois](https://github.com/victor-champonnois.png?size=30px)](https://github.com/victor-champonnois) | Hide the partner's VAT field if the partner is an individual.
 
