@@ -12,6 +12,7 @@
     "depends": [
         "product",
         "website_sale",
+        "website_sale_stock",
     ],
     "data": [
         "reports/product_reports.xml",
