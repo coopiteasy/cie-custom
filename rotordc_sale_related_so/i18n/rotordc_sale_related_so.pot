@@ -1,12 +1,12 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-#	* rotordc_sale_related_so
+# 	* rotordc_sale_related_so
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 12.0\n"
+"Project-Id-Version: Odoo Server 16.0\n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: <>\n"
+"Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -21,12 +21,6 @@ msgstr ""
 #. module: rotordc_sale_related_so
 #: model_terms:ir.ui.view,arch_db:rotordc_sale_related_so.sale_order_view_form
 msgid "Create Related Sale Order"
-msgstr ""
-
-#. module: rotordc_sale_related_so
-#: model_terms:ir.ui.view,arch_db:rotordc_sale_related_so.sale_order_view_form
-#: model_terms:ir.ui.view,arch_db:rotordc_sale_related_so.view_picking_form
-msgid "Create SO"
 msgstr ""
 
 #. module: rotordc_sale_related_so
@@ -73,11 +67,22 @@ msgstr ""
 #. module: rotordc_sale_related_so
 #: model_terms:ir.ui.view,arch_db:rotordc_sale_related_so.sale_order_view_form
 #: model_terms:ir.ui.view,arch_db:rotordc_sale_related_so.view_picking_form
+msgid "Number"
+msgstr ""
+
+#. module: rotordc_sale_related_so
+#: model_terms:ir.ui.view,arch_db:rotordc_sale_related_so.sale_order_view_form
+#: model_terms:ir.ui.view,arch_db:rotordc_sale_related_so.view_picking_form
+msgid "Order Date"
+msgstr ""
+
+#. module: rotordc_sale_related_so
+#: model_terms:ir.ui.view,arch_db:rotordc_sale_related_so.sale_order_view_form
+#: model_terms:ir.ui.view,arch_db:rotordc_sale_related_so.view_picking_form
 msgid "Related Sale Orders"
 msgstr ""
 
 #. module: rotordc_sale_related_so
-#: model:ir.model,name:rotordc_sale_related_so.model_sale_order
 #: model:ir.model.fields,field_description:rotordc_sale_related_so.field_sale_order_group__sale_order_ids
 msgid "Sale Order"
 msgstr ""
@@ -88,7 +93,29 @@ msgid "Sale Order Group"
 msgstr ""
 
 #. module: rotordc_sale_related_so
+#: model:ir.model,name:rotordc_sale_related_so.model_sale_order
+msgid "Sales Order"
+msgstr ""
+
+#. module: rotordc_sale_related_so
+#: model_terms:ir.ui.view,arch_db:rotordc_sale_related_so.sale_order_view_form
+#: model_terms:ir.ui.view,arch_db:rotordc_sale_related_so.view_picking_form
+msgid "Tax Total"
+msgstr ""
+
+#. module: rotordc_sale_related_so
+#: model_terms:ir.ui.view,arch_db:rotordc_sale_related_so.sale_order_view_form
+#: model_terms:ir.ui.view,arch_db:rotordc_sale_related_so.view_picking_form
+msgid "Total Tax Excluded"
+msgstr ""
+
+#. module: rotordc_sale_related_so
+#: model_terms:ir.ui.view,arch_db:rotordc_sale_related_so.sale_order_view_form
+#: model_terms:ir.ui.view,arch_db:rotordc_sale_related_so.view_picking_form
+msgid "Total Tax Included"
+msgstr ""
+
+#. module: rotordc_sale_related_so
 #: model:ir.model,name:rotordc_sale_related_so.model_stock_picking
 msgid "Transfer"
 msgstr ""
-
