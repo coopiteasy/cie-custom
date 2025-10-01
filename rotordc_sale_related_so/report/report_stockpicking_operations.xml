@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template
+        id="report_picking"
+        inherit_id="rotordc_report_picking_huge_sale_order.report_picking"
+    >
+        <xpath expr="//p[@name='huge_origin_so']" position="after">
+            <t t-if="o.related_so_ids">
+                <p style="text-align: center; font-size: 3rem;">
+                    <t t-foreach="o.related_so_ids" t-as="so">
+                        <span t-field="so.name" />
+                    </t>
+                </p>
+            </t>
+        </xpath>
+    </template>
+</odoo>

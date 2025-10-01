@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="sale_order_view_form" model="ir.ui.view">
+        <field name="name">sale.order.form.rotordc.sale.related.so</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form" />
+        <field name="arch" type="xml">
+            <field name="payment_term_id" position="after">
+                <field name="origin" readonly="1" />
+            </field>
+            <page name="other_information" position="before">
+                <page string="Related Sale Orders" name="linked_sale_orders">
+                    <button
+                        name="create_related_sale_order"
+                        type="object"
+                        string="Create Related Sale Order"
+                        class="oe_link"
+                    />
+                    <field name="related_so_ids">
+                        <!--
+                            this is a copy of the contents of
+                            sale.view_order_tree with some tweaks.
+                        -->
+                        <tree
+                            sample="1"
+                            decoration-info="invoice_status == 'to invoice'"
+                            decoration-muted="state == 'cancel'"
+                        >
+                            <field name="message_needaction" invisible="1" />
+                            <field
+                                name="name"
+                                string="Number"
+                                readonly="1"
+                                decoration-bf="1"
+                            />
+                            <field
+                                name="date_order"
+                                string="Order Date"
+                                widget="date"
+                                optional="show"
+                            />
+                            <field name="commitment_date" optional="hide" />
+                            <field name="expected_date" optional="hide" />
+                            <field name="partner_id" readonly="1" />
+                            <field
+                                name="user_id"
+                                optional="show"
+                                widget="many2one_avatar_user"
+                            />
+                            <!-- hide by default -->
+                            <field
+                                name="activity_ids"
+                                widget="list_activity"
+                                optional="hide"
+                            />
+                            <field name="team_id" optional="hide" />
+                            <!-- hide by default -->
+                            <field
+                                name="company_id"
+                                groups="base.group_multi_company"
+                                optional="hide"
+                                readonly="1"
+                            />
+                            <field
+                                name="amount_untaxed"
+                                sum="Total Tax Excluded"
+                                widget="monetary"
+                                optional="hide"
+                            />
+                            <field
+                                name="amount_tax"
+                                sum="Tax Total"
+                                widget="monetary"
+                                optional="hide"
+                            />
+                            <field
+                                name="amount_total"
+                                sum="Total Tax Included"
+                                widget="monetary"
+                                decoration-bf="1"
+                                optional="show"
+                            />
+                            <field name="currency_id" invisible="1" />
+                            <field
+                                name="invoice_status"
+                                decoration-success="invoice_status == 'invoiced'"
+                                decoration-info="invoice_status == 'to invoice'"
+                                decoration-warning="invoice_status == 'upselling'"
+                                widget="badge"
+                                optional="show"
+                            />
+                            <field
+                                name="tag_ids"
+                                optional="hide"
+                                widget="many2many_tags"
+                                options="{'color_field': 'color'}"
+                            />
+                            <!-- set visible -->
+                            <field name="state" optional="show" />
+                        </tree>
+                    </field>
+                </page>
+            </page>
+        </field>
+    </record>
+
+    <record id="sale_order_view_quotation_tree" model="ir.ui.view">
+        <field name="name">sale.order.tree.rotordc.sale.related.so</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_quotation_tree" />
+        <field name="arch" type="xml">
+            <field name="state" position="before">
+                <field name="related_so_ids" widget="many2many_tags" />
+            </field>
+        </field>
+    </record>
+</odoo>
