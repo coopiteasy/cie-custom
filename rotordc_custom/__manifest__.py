@@ -14,6 +14,7 @@
         "website_sale",
         "website_sale_stock",
         "website_sale_product_weight",
+        "website_sale_uom_price_list_preview",
     ],
     "data": [
         "reports/product_reports.xml",
