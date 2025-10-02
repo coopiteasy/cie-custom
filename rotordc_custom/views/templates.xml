@@ -31,4 +31,32 @@
         </xpath>
     </template>
 
+    <template
+        id="o_wsale_offcanvas"
+        inherit_id="website_sale.o_wsale_offcanvas"
+        name="Offcanvas (rotordc_custom)"
+    >
+        <!-- Remove variant attribute filter on right side panel -->
+        <xpath
+            expr="//form[contains(@t-attf-class, 'js_attributes')]"
+            position="attributes"
+        >
+            <attribute name="t-attf-class" add="d-none" separator=" " />
+        </xpath>
+    </template>
+
+    <template
+        id="products"
+        name="Products (in rotordc_custom)"
+        inherit_id="website_sale.products"
+    >
+        <!-- Remove variant attribute filter on left side panel -->
+        <xpath
+            expr="//div[hasclass('products_attributes_filters')]"
+            position="attributes"
+        >
+            <attribute name="class" add="d-none" separator=" " />
+        </xpath>
+    </template>
+
 </odoo>

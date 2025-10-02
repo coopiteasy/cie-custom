@@ -28,6 +28,7 @@ Customization for RotorDC
 * custom product label report
 * Change text for stock availability on the e-commerce.
 * On the list preview of products, show the unit of the product.
+* Remove variant attribute filter on e-commerce (keep price filter)
 
 **Table of contents**
 
