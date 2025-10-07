@@ -38,6 +38,7 @@ addon | version | maintainers | summary
 [rotordc_sale_related_so](rotordc_sale_related_so/) | 16.0.1.0.0 | [![robinkeunen](https://github.com/robinkeunen.png?size=30px)](https://github.com/robinkeunen) | Add M2M links between SOs
 [sawb_custom_contact_interface](sawb_custom_contact_interface/) | 16.0.1.0.0 | [![victor-champonnois](https://github.com/victor-champonnois.png?size=30px)](https://github.com/victor-champonnois) | SAWB Custom : Contact Interface.
 [sawb_custom_hide_vat_for_individual](sawb_custom_hide_vat_for_individual/) | 16.0.1.0.0 | [![victor-champonnois](https://github.com/victor-champonnois.png?size=30px)](https://github.com/victor-champonnois) | Hide the partner's VAT field if the partner is an individual.
+[spp_custom](spp_custom/) | 16.0.1.0.0 |  | Specifics customizations for SPP
 [spp_pos_mustard](spp_pos_mustard/) | 16.0.1.0.0 | [![carmenbianca](https://github.com/carmenbianca.png?size=30px)](https://github.com/carmenbianca) | Make a button in the POS interface mustard-coloured.
 
 [//]: # (end addons)
