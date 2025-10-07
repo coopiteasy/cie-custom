@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+SPDX-FileCopyrightText: 2025 Coop IT Easy SC
+
+SPDX-License-Identifier: AGPL-3.0-or-later
+-->
+<templates id="template" xml:space="preserve">
+
+    <t
+        t-name="OrderReceipt"
+        t-inherit="point_of_sale.OrderReceipt"
+        t-inherit-mode="extension"
+        owl="1"
+    >
+        <xpath
+            expr="//t[@t-if='receipt.total_rounded != receipt.total_with_tax']"
+            position="after"
+        >
+            <t t-if="receipt.total_foodprint_amount">
+                <div class="responsive-price">
+                    Including Foodprint [F] products:
+                    <span
+                        t-out="env.pos.format_currency(receipt.total_foodprint_amount)"
+                        class="price_display pos-receipt-right-align"
+                    />
+                </div>
+            </t>
+        </xpath>
+    </t>
+
+    <t
+        t-name="OrderLinesReceipt"
+        t-inherit="point_of_sale.OrderLinesReceipt"
+        t-inherit-mode="extension"
+        owl="1"
+    >
+        <xpath expr="//t[@t-esc='line.product_name_wrapped[0]']" position="after">
+            <span
+                style="white-space: pre;"
+                class="is_foodprint_label"
+                t-if="line.is_foodprint_label"
+            > [F]</span>
+        </xpath>
+    </t>
+</templates>
