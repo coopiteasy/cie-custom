@@ -1,12 +1,12 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-#	* spp_custom
+# 	* spp_custom
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 12.0\n"
+"Project-Id-Version: Odoo Server 16.0\n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: <>\n"
+"Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -45,7 +45,9 @@ msgstr ""
 #. module: spp_custom
 #: model:ir.model.fields,help:spp_custom.field_product_product__uom_po_id
 #: model:ir.model.fields,help:spp_custom.field_product_template__uom_po_id
-msgid "Default unit of measure used for purchase orders. It must be in the same category as the default unit of measure."
+msgid ""
+"Default unit of measure used for purchase orders. It must be in the same "
+"category as the default unit of measure."
 msgstr ""
 
 #. module: spp_custom
@@ -67,14 +69,10 @@ msgid "Gentle Price Label"
 msgstr ""
 
 #. module: spp_custom
-#: model:ir.model.fields,help:spp_custom.field_stock_inventory__filter
-msgid "If you do an entire inventory, you can choose 'All Products' and it will prefill the inventory with the current stock.  If you only do some products  (e.g. Cycle Counting) you can choose 'Manual Selection of Products' and the system won't propose anything.  You can also let the system propose for a single product / lot /... "
-msgstr ""
-
-#. module: spp_custom
-#. openerp-web
-#: code:addons/spp_custom/static/src/xml/pos.xml:14
-#: code:addons/spp_custom/static/src/xml/pos.xml:34
+#. odoo-javascript
+#: code:addons/spp_custom/static/src/xml/Screens/ReceiptScreen/OrderReceipt.xml:0
+#: code:addons/spp_custom/static/src/xml/pos.xml:0
+#: code:addons/spp_custom/static/src/xml/pos.xml:0
 #, python-format
 msgid "Including Foodprint [F] products:"
 msgstr ""
@@ -86,37 +84,37 @@ msgstr ""
 
 #. module: spp_custom
 #: model:ir.model,name:spp_custom.model_stock_inventory
-msgid "Inventory"
+msgid "Inventory Adjustment Group"
 msgstr ""
 
 #. module: spp_custom
-#: model:ir.model.fields,field_description:spp_custom.field_stock_inventory__filter
-msgid "Inventory of"
-msgstr ""
-
-#. module: spp_custom
-#: model_terms:ir.ui.view,arch_db:spp_custom.product_template_only_form_view
+#: model_terms:ir.ui.view,arch_db:spp_custom.beesdoo_product_label_product_template_only_form_view
 msgid "Nouveau numéro PP"
 msgstr ""
 
 #. module: spp_custom
-#: model_terms:ir.ui.view,arch_db:spp_custom.product_template_only_form_view
+#: model_terms:ir.ui.view,arch_db:spp_custom.beesdoo_product_label_product_template_only_form_view
 msgid "Nouveau numéro fournisseurs BIO"
 msgstr ""
 
 #. module: spp_custom
-#: model_terms:ir.ui.view,arch_db:spp_custom.product_template_only_form_view
+#: model_terms:ir.ui.view,arch_db:spp_custom.beesdoo_product_label_product_template_only_form_view
 msgid "Nouveau numéro non-BIO"
 msgstr ""
 
 #. module: spp_custom
-#: model_terms:ir.ui.view,arch_db:spp_custom.product_template_only_form_view
+#: model_terms:ir.ui.view,arch_db:spp_custom.beesdoo_product_label_product_template_only_form_view
 msgid "Nouveau numéro non-alimentaire"
 msgstr ""
 
 #. module: spp_custom
-#: model_terms:ir.ui.view,arch_db:spp_custom.product_template_only_form_view
+#: model_terms:ir.ui.view,arch_db:spp_custom.beesdoo_product_label_product_template_only_form_view
 msgid "Nouveau numéro producteurs BIO"
+msgstr ""
+
+#. module: spp_custom
+#: model:ir.model,name:spp_custom.model_pos_session
+msgid "Point of Sale Session"
 msgstr ""
 
 #. module: spp_custom
@@ -127,13 +125,18 @@ msgstr ""
 
 #. module: spp_custom
 #: model:ir.model,name:spp_custom.model_product_template
-msgid "Product Template"
+msgid "Product"
+msgstr ""
+
+#. module: spp_custom
+#: model:ir.model.fields,field_description:spp_custom.field_stock_inventory__product_selection
+msgid "Product Selection"
 msgstr ""
 
 #. module: spp_custom
 #: model:ir.model.fields,field_description:spp_custom.field_product_product__uom_po_id
 #: model:ir.model.fields,field_description:spp_custom.field_product_template__uom_po_id
-msgid "Purchase Unit of Measure"
+msgid "Purchase UoM"
 msgstr ""
 
 #. module: spp_custom
@@ -155,10 +158,11 @@ msgid "Unit of Measure"
 msgstr ""
 
 #. module: spp_custom
-#: code:addons/spp_custom/models/product.py:108
+#. odoo-python
+#: code:addons/spp_custom/models/product.py:0
 #, python-format
-msgid "You have reached the limit for default code generation. Please contact your system administrator.\n"
+msgid ""
+"You have reached the limit for default code generation. Please contact your system administrator.\n"
 "\n"
 "%s"
 msgstr ""
-
