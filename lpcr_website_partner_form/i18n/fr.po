@@ -6,6 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 16.0\n"
 "Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-10-16 16:26+0000\n"
+"PO-Revision-Date: 2025-10-16 16:26+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -18,13 +20,13 @@ msgstr ""
 #: model:ir.model.fields,field_description:lpcr_website_partner_form.field_res_users__acquisition_medium_id
 #: model_terms:ir.ui.view,arch_db:lpcr_website_partner_form.view_res_partner_filter_customer_type
 msgid "Acquisition Medium"
-msgstr ""
+msgstr "Médium d'acquisition"
 
 #. module: lpcr_website_partner_form
 #: model:ir.actions.act_window,name:lpcr_website_partner_form.action_acquisition_medium
 #: model:ir.ui.menu,name:lpcr_website_partner_form.menu_acquisition_medium
 msgid "Acquisition Mediums"
-msgstr ""
+msgstr "Médiums d'acquisition"
 
 #. module: lpcr_website_partner_form
 #: model:ir.model,name:lpcr_website_partner_form.model_res_partner
@@ -35,37 +37,37 @@ msgstr ""
 #: model:ir.model.fields,field_description:lpcr_website_partner_form.field_res_partner_acquisition_medium__create_uid
 #: model:ir.model.fields,field_description:lpcr_website_partner_form.field_res_partner_customer_type__create_uid
 msgid "Created by"
-msgstr ""
+msgstr "Créé par"
 
 #. module: lpcr_website_partner_form
 #: model:ir.model.fields,field_description:lpcr_website_partner_form.field_res_partner_acquisition_medium__create_date
 #: model:ir.model.fields,field_description:lpcr_website_partner_form.field_res_partner_customer_type__create_date
 msgid "Created on"
-msgstr ""
+msgstr "Créé le"
 
 #. module: lpcr_website_partner_form
 #: model:ir.model.fields,field_description:lpcr_website_partner_form.field_res_partner__customer_type_id
 #: model:ir.model.fields,field_description:lpcr_website_partner_form.field_res_users__customer_type_id
 #: model_terms:ir.ui.view,arch_db:lpcr_website_partner_form.view_res_partner_filter_customer_type
 msgid "Customer Type"
-msgstr ""
+msgstr "Type de client"
 
 #. module: lpcr_website_partner_form
 #: model:ir.model,name:lpcr_website_partner_form.model_res_partner_customer_type
 msgid "Customer Type for Partners"
-msgstr ""
+msgstr "Type de client pour partner"
 
 #. module: lpcr_website_partner_form
 #: model:ir.actions.act_window,name:lpcr_website_partner_form.action_customer_type
 #: model:ir.ui.menu,name:lpcr_website_partner_form.menu_customer_type
 msgid "Customer Types"
-msgstr ""
+msgstr "Type de client"
 
 #. module: lpcr_website_partner_form
 #: model:ir.model.fields,field_description:lpcr_website_partner_form.field_res_partner_acquisition_medium__display_name
 #: model:ir.model.fields,field_description:lpcr_website_partner_form.field_res_partner_customer_type__display_name
 msgid "Display Name"
-msgstr ""
+msgstr "Nom d'affichage"
 
 #. module: lpcr_website_partner_form
 #. odoo-python
@@ -73,12 +75,12 @@ msgstr ""
 #: code:addons/lpcr_website_partner_form/controllers/main.py:0
 #, python-format
 msgid "E-mail address already used."
-msgstr ""
+msgstr "Adresse email déjà utilisée"
 
 #. module: lpcr_website_partner_form
 #: model:ir.model,name:lpcr_website_partner_form.model_res_partner_acquisition_medium
 msgid "How partner get acquired"
-msgstr ""
+msgstr "Comment les partenaires ont été acquis"
 
 #. module: lpcr_website_partner_form
 #: model:ir.model.fields,field_description:lpcr_website_partner_form.field_res_partner_acquisition_medium__id
@@ -90,28 +92,28 @@ msgstr ""
 #: model:ir.model.fields,field_description:lpcr_website_partner_form.field_res_partner_acquisition_medium____last_update
 #: model:ir.model.fields,field_description:lpcr_website_partner_form.field_res_partner_customer_type____last_update
 msgid "Last Modified on"
-msgstr ""
+msgstr "Dernière modifications le"
 
 #. module: lpcr_website_partner_form
 #: model:ir.model.fields,field_description:lpcr_website_partner_form.field_res_partner_acquisition_medium__write_uid
 #: model:ir.model.fields,field_description:lpcr_website_partner_form.field_res_partner_customer_type__write_uid
 msgid "Last Updated by"
-msgstr ""
+msgstr "Dernière mise à jour par"
 
 #. module: lpcr_website_partner_form
 #: model:ir.model.fields,field_description:lpcr_website_partner_form.field_res_partner_acquisition_medium__write_date
 #: model:ir.model.fields,field_description:lpcr_website_partner_form.field_res_partner_customer_type__write_date
 msgid "Last Updated on"
-msgstr ""
+msgstr "Dernière mise à jour le"
 
 #. module: lpcr_website_partner_form
 #: model:ir.model.fields,field_description:lpcr_website_partner_form.field_res_partner_acquisition_medium__name
 #: model:ir.model.fields,field_description:lpcr_website_partner_form.field_res_partner_customer_type__name
 msgid "Name"
-msgstr ""
+msgstr "Nom"
 
 #. module: lpcr_website_partner_form
 #: model:ir.model.fields,field_description:lpcr_website_partner_form.field_res_partner_acquisition_medium__partner_ids
 #: model:ir.model.fields,field_description:lpcr_website_partner_form.field_res_partner_customer_type__partner_ids
 msgid "Partners"
-msgstr ""
+msgstr "Partenaire"
