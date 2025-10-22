@@ -11,3 +11,10 @@ class StockMove(models.Model):
     picking_type_code = fields.Selection(
         string="Code du type d'opération", related="picking_type_id.code"
     )
+    supply_source_id = fields.Many2one(
+        "supply.source",
+        related="picking_id.supply_source_id",
+        # ONI: this is to allow grouping on view
+        # to be checked against perf. issues
+        store=True,
+    )

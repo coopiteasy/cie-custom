@@ -11,15 +11,3 @@ class StockPicking(models.Model):
     supply_source_id = fields.Many2one(
         "supply.source",
     )
-
-
-class StockMove(models.Model):
-    _inherit = "stock.move"
-
-    supply_source_id = fields.Many2one(
-        "supply.source",
-        related="picking_id.supply_source_id",
-        # ONI: this is to allow grouping on view
-        # to be checked against perf. issues
-        store=True,
-    )
