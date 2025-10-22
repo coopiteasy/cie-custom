@@ -11,12 +11,10 @@ class ResPartner(models.Model):
     )
 
     total_income = fields.Monetary(
-        string="Total Income",
         compute="_compute_total_amount",
         store=False,
     )
     total_expenditure = fields.Monetary(
-        string="Total Expenditure",
         compute="_compute_total_amount",
         store=False,
     )
@@ -37,5 +35,5 @@ class ResPartner(models.Model):
                 moves.filtered(lambda m: m.type == "expenditure").mapped("expenditure")
             )
 
-    monthly_savings_per_person = fields.Monetary(string="Monthly Savings per Person")
-    daily_savings_per_person = fields.Monetary(string="Daily Savings per Person")
+    monthly_savings_per_person = fields.Monetary()
+    daily_savings_per_person = fields.Monetary()
