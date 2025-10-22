@@ -88,7 +88,7 @@ class ResPartner(models.Model):
         "member_lines.membership_id.membership_pricelist_id",
     )
     def _compute_product_pricelist(self):
-        super()._compute_product_pricelist()
+        res = super()._compute_product_pricelist()
         # This overrides existing functionality, but only if a membership was
         # found.
         for partner in self:
@@ -97,6 +97,7 @@ class ResPartner(models.Model):
                 partner.property_product_pricelist = (
                     membership.membership_id.membership_pricelist_id
                 )
+        return res
 
     def _search_current_membership_line_id(self, operator, value):
         if operator not in ("=", "!=", ">", ">=", "<", "<=", "=?", "in", "not in"):

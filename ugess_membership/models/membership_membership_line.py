@@ -35,14 +35,13 @@ class MembershipLine(models.Model):
         string="Social Project Type",
         related="social_project_id.type_id",
     )
-    comment = fields.Text(string="Comment")
+    comment = fields.Text()
     currency_id = fields.Many2one(
         comodel_name="res.currency",
         related="company_id.currency_id",
         readonly=True,
     )
     expenditure_ceiling = fields.Monetary(
-        string="Expenditure Ceiling",
         help=EXPENDITURE_CEILING_HELP,
     )
     expenditure_ceiling_period = fields.Selection(
@@ -51,7 +50,6 @@ class MembershipLine(models.Model):
             ("month", "Month"),
             ("year", "Year"),
         ],
-        string="Expenditure Ceiling Period",
         help=EXPENDITURE_CEILING_PERIOD_HELP,
         default="month",
         required=True,
