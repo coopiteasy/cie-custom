@@ -16,16 +16,13 @@ class SocialProject(models.Model):
             ("75", "75"),
             ("100", "100"),
         ],
-        string="Realization Rate",
     )
     partner_id = fields.Many2one(comodel_name="res.partner")
-    start_date = fields.Date(string="Start Date", default=fields.Datetime.now)
-    end_date = fields.Date(string="End Date")
+    start_date = fields.Date(default=fields.Datetime.now)
+    end_date = fields.Date()
 
     name = fields.Char(
         string="Description",
         required=True,
     )
-    comment = fields.Text(
-        string="Comment",
-    )
+    comment = fields.Text()
