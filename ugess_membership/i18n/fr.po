@@ -194,6 +194,7 @@ msgstr ""
 #. module: ugess_membership
 #: model:ir.model.fields,field_description:ugess_membership.field_membership_invoice_override__date_to
 #: model:ir.model.fields,field_description:ugess_membership.field_membership_membership_line_expenditure_override__date_to
+#: model:ir.model.fields,field_description:ugess_membership.field_membership_invoice__current_membership_date_to
 msgid "End Date"
 msgstr "Date de fin"
 
@@ -405,6 +406,7 @@ msgstr "Solidaire"
 #. module: ugess_membership
 #: model:ir.model.fields,field_description:ugess_membership.field_membership_invoice_override__date_from
 #: model:ir.model.fields,field_description:ugess_membership.field_membership_membership_line_expenditure_override__date_from
+#: model:ir.model.fields,field_description:ugess_membership.field_membership_invoice__current_membership_date_from
 msgid "Start Date"
 msgstr "Date de début"
 
@@ -534,16 +536,6 @@ msgstr "Année"
 #: model_terms:ir.ui.view,arch_db:ugess_membership.view_membership_invoice_view
 msgid "per"
 msgstr "par"
-
-#. module: ugess_membership
-#: model:ir.model.fields,field_description:ugess_membership.field_membership_invoice__current_membership_date_from
-msgid "Start Date"
-msgstr "Date de début"
-
-#. module: ugess_membership
-#: model:ir.model.fields,field_description:ugess_membership.field_membership_invoice__current_membership_date_to
-msgid "End Date"
-msgstr "Date de fin"
 
 #~ msgid "Per Month"
 #~ msgstr "Par mois"

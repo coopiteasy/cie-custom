@@ -18,6 +18,7 @@ msgstr ""
 
 #. module: ugess_product_short_name
 #: model:ir.model.fields,field_description:ugess_product_short_name.field_product_template__short_name
+#: model:ir.model.fields,field_description:ugess_product_short_name.field_product_product__short_name
 msgid "Short name"
 msgstr "Nom court"
 
@@ -30,8 +31,3 @@ msgstr ""
 #: model:ir.model,name:ugess_product_short_name.model_product_product
 msgid "Product Variant"
 msgstr ""
-
-#. module: ugess_product_short_name
-#: model:ir.model.fields,field_description:ugess_product_short_name.field_product_product__short_name
-msgid "Short name"
-msgstr "Nom court"

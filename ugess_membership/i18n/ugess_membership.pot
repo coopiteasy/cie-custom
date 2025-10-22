@@ -119,11 +119,6 @@ msgid "Current Membership"
 msgstr ""
 
 #. module: ugess_membership
-#: model:ir.model.fields,field_description:ugess_membership.field_membership_invoice__date_to
-msgid "End Date"
-msgstr ""
-
-#. module: ugess_membership
 #: model:ir.model.fields,field_description:ugess_membership.field_res_partner__expenditure_ceiling_current_period_end_date
 #: model:ir.model.fields,field_description:ugess_membership.field_res_users__expenditure_ceiling_current_period_end_date
 msgid "End Date of Current Expenditure Period"
@@ -248,11 +243,6 @@ msgid "Solidary"
 msgstr ""
 
 #. module: ugess_membership
-#: model:ir.model.fields,field_description:ugess_membership.field_membership_invoice__date_from
-msgid "Start Date"
-msgstr ""
-
-#. module: ugess_membership
 #: model:ir.model.fields,field_description:ugess_membership.field_res_partner__expenditure_ceiling_current_period_start_date
 #: model:ir.model.fields,field_description:ugess_membership.field_res_users__expenditure_ceiling_current_period_start_date
 msgid "Start Date of Current Expenditure Period"
@@ -292,11 +282,13 @@ msgid "per"
 msgstr ""
 
 #. module: ugess_membership
+#: model:ir.model.fields,field_description:ugess_membership.field_membership_invoice__date_from
 #: model:ir.model.fields,field_description:ugess_membership.field_membership_invoice__current_membership_date_from
 msgid "Start Date"
 msgstr "Date de début"
 
 #. module: ugess_membership
+#: model:ir.model.fields,field_description:ugess_membership.field_membership_invoice__date_to
 #: model:ir.model.fields,field_description:ugess_membership.field_membership_invoice__current_membership_date_to
 msgid "End Date"
 msgstr "Date de fin"
