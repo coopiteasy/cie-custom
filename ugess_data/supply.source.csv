@@ -1,0 +1,10 @@
+id,name
+supply_source_sources,"Autres sources"
+supply_source_ddts,"Autres sources/DDTS"
+supply_source_cnes,"CNES"
+supply_source_fead,"FEAD"
+supply_source_marchand,"Secteur marchand"
+supply_source_banquealim,"Banque alimentaire ou autre association d'aide alimentaire"
+supply_source_distributeurs,"Dons en nature par distributeurs"
+supply_source_entreprises,"Dons en nature par des entreprises, hors distributeurs"
+supply_source_particuliers,"Dons en nature par des particuliers ou collecte en magasin"

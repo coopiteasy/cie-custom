@@ -1,0 +1,36 @@
+<?xml version="1.0" ?>
+<!--
+SPDX-FileCopyrightText: 2025 Coop IT Easy SC
+
+SPDX-License-Identifier: AGPL-3.0-or-later
+-->
+<odoo>
+
+  <record id="view_product_print_category_form_2" model="ir.ui.view">
+    <field name="name">view_product_print_category_form_2</field>
+    <field name="model">product.print.category</field>
+    <field
+            name="inherit_id"
+            ref="product_print_category.view_product_print_category_form_2"
+        />
+    <field name="arch" type="xml">
+      <field name="active" position="after">
+        <field name="company_id" groups="!base.group_multi_company" invisible="True" />
+        <field name="is_multipricetag" groups="product_print_category.manager" />
+        <field
+                    name="price_lists_ids"
+                    attrs="{'invisible': [('is_multipricetag', '=', False)]}"
+                    widget="many2many_tags"
+                    groups="product_print_category.manager"
+                />
+        <field
+                    name="pricelist_weight"
+                    attrs="{'invisible': [('is_multipricetag', '=', False)]}"
+                    widget="many2one_tag"
+                    groups="product_print_category.manager"
+                />
+      </field>
+    </field>
+
+</record>
+</odoo>

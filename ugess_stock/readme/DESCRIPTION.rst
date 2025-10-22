@@ -1,0 +1,1 @@
+Custom stock for UGESS.

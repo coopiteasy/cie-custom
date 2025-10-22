@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <!-- the main menu should be available to membership users -->
+    <record id="membership.menu_association" model="ir.ui.menu">
+        <field
+            name="groups_id"
+            eval="[
+                Command.link(ref('ugess_security.group_membership_user')),
+            ]"
+        />
+    </record>
+
+    <!-- add groups to some menus to avoid confusion for certain roles -->
+
+    <record id="membership_extension.menu_membership_category" model="ir.ui.menu">
+        <field
+            name="groups_id"
+            eval="[
+                Command.set([
+                    ref('membership_extension.group_membership_manager'),
+                ]),
+            ]"
+        />
+    </record>
+
+    <record
+        id="membership_withdrawal.menu_membership_withdrawal_reason"
+        model="ir.ui.menu"
+    >
+        <field
+            name="groups_id"
+            eval="[Command.set([ref('membership_extension.group_membership_manager')])]"
+        />
+    </record>
+
+    <record id="membership.menu_membership_products" model="ir.ui.menu">
+        <field
+            name="groups_id"
+            eval="[Command.set([ref('membership_extension.group_membership_manager')])]"
+        />
+    </record>
+
+</odoo>

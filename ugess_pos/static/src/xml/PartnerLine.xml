@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+    Copyright (C) 2022-Today GRAP (http://www.grap.coop)
+    @author Sylvain LE GAL (https://twitter.com/legalsylvain)
+    License AGPL-3 - See http://www.gnu.org/licenses/agpl-3.0.html
+-->
+<templates id="template" xml:space="preserve">
+
+    <t
+        t-name="PartnerLine"
+        t-inherit="point_of_sale.PartnerLine"
+        t-inherit-mode="extension"
+        owl="1"
+    >
+        <xpath expr="//td[@class='partner-line-email']" position="after">
+            <td class="partner-line-email" t-if="!env.isMobile">
+                <div t-if="props.partner.household_text">
+                    <t t-esc="props.partner.household_text" />
+                </div>
+                <div t-if="props.partner.expenditure_ceiling_current">
+                    <t
+                        t-esc="env.pos.format_currency(props.partner.expenditure_ceiling_current_total_sale_amount, 'Product Price')"
+                    />
+                    / <t
+                        t-esc="env.pos.format_currency(props.partner.expenditure_ceiling_current, 'Product Price')"
+                    />
+                    <br />
+                    <t
+                        t-esc="env.pos.format_date_fr(props.partner.expenditure_ceiling_current_period_start_date)"
+                    /> - <t
+                        t-esc="env.pos.format_date_fr(props.partner.expenditure_ceiling_current_period_end_date)"
+                    />
+
+                </div>
+            </td>
+        </xpath>
+    </t>
+
+</templates>

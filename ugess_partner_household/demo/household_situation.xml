@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="situation_single_mother" model="household.situation">
+        <field name="name">Single Mother</field>
+    </record>
+
+    <record id="situation_couple_with_children" model="household.situation">
+        <field name="name">Couple With Children</field>
+    </record>
+</odoo>

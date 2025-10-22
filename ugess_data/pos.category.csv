@@ -1,0 +1,8 @@
+id,name,parent_id/id
+pos_category_fruits,"Alimentaire / Fruits et Légumes",
+pos_category_frais,"Alimentaire / Produits Frais",
+pos_category_sec,"Alimentaire / Produits secs",
+pos_category_boissons,"Alimentaire / Boissons",
+pos_category_non_alimentaire,"Non Alimentaire",
+pos_category_adhesion,"Adhésions",
+pos_category_vrac,"Vrac",pos_category_sec

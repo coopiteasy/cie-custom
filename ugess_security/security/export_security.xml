@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <!-- res.partner -->
+    <function name="write" model="ir.model.access">
+        <function name="search" model="ir.model.access">
+            <value eval="[('model_id.model', '=', 'res.partner')]" />
+        </function>
+        <value eval="{'perm_export': False}" />
+    </function>
+
+    <record model="ir.model.access" id="access_export_res_partner_ugess_social">
+        <field name="name">access_export_res_partner_ugess_social</field>
+        <field name="model_id" ref="base.model_res_partner" />
+        <field name="group_id" ref="ugess_security.role_ugess_social_res_groups" />
+        <field name="perm_export" eval="1" />
+    </record>
+
+    <record model="ir.model.access" id="access_export_res_partner_erp_manager">
+        <field name="name">access_export_res_partner_erp_manager</field>
+        <field name="model_id" ref="base.model_res_partner" />
+        <field name="group_id" ref="base.group_erp_manager" />
+        <field name="perm_export" eval="1" />
+    </record>
+
+    <!-- products -->
+    <function name="write" model="ir.model.access">
+        <function name="search" model="ir.model.access">
+            <value eval="[('model_id.model', '=', 'product.product')]" />
+        </function>
+        <value eval="{'perm_export': False}" />
+    </function>
+    <function name="write" model="ir.model.access">
+        <function name="search" model="ir.model.access">
+            <value eval="[('model_id.model', '=', 'product.template')]" />
+        </function>
+        <value eval="{'perm_export': False}" />
+    </function>
+
+    <record model="ir.model.access" id="stock.access_product_product_stock_manager">
+        <field name="perm_export" eval="1" />
+    </record>
+    <record model="ir.model.access" id="stock.access_product_template_stock_manager">
+        <field name="perm_export" eval="1" />
+    </record>
+
+    <!-- stock moves -->
+    <function name="write" model="ir.model.access">
+        <function name="search" model="ir.model.access">
+            <value eval="[('model_id.model', '=', 'stock.move')]" />
+        </function>
+        <value eval="{'perm_export': False}" />
+    </function>
+    <function name="write" model="ir.model.access">
+        <function name="search" model="ir.model.access">
+            <value eval="[('model_id.model', '=', 'stock.move.line')]" />
+        </function>
+        <value eval="{'perm_export': False}" />
+    </function>
+
+    <record model="ir.model.access" id="stock.access_stock_move_manager">
+        <field name="perm_export" eval="1" />
+    </record>
+    <record model="ir.model.access" id="stock.access_stock_move_line_manager">
+        <field name="perm_export" eval="1" />
+    </record>
+
+    <!-- stock quants -->
+    <function name="write" model="ir.model.access">
+        <function name="search" model="ir.model.access">
+            <value eval="[('model_id.model', '=', 'stock.quant')]" />
+        </function>
+        <value eval="{'perm_export': False}" />
+    </function>
+
+    <record model="ir.model.access" id="access_export_stock_quant_stock_manager">
+        <field name="name">access_export_stock_quant_stock_manager</field>
+        <field name="model_id" ref="stock.model_stock_quant" />
+        <field name="group_id" ref="stock.group_stock_manager" />
+        <field name="perm_export" eval="1" />
+    </record>
+
+</odoo>

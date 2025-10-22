@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="stock_scrap_form_reason_code" model="ir.ui.view">
+        <field name="model">stock.scrap</field>
+        <field name="inherit_id" ref="scrap_reason_code.stock_scrap_form_reason_code" />
+        <field name="arch" type="xml">
+            <field name="reason_code_id" position="attributes">
+                <attribute name="required">1</attribute>
+            </field>
+        </field>
+    </record>
+
+</odoo>

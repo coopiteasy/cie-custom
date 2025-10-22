@@ -1,0 +1,555 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ugess_membership
+# Carmen Bianca Bakker <carmen@coopiteasy.be>, 2022.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0beta\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-10-23 12:49+0000\n"
+"PO-Revision-Date: 2023-11-20 15:29+0100\n"
+"Last-Translator: Carmen Bianca Bakker <carmen@coopiteasy.be>\n"
+"Language-Team: French <carmen@coopiteasy.be>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Poedit 3.2.2\n"
+
+#. module: ugess_membership
+#: model:ir.model.fields,help:ugess_membership.field_membership_invoice__expenditure_ceiling_first_period
+#: model:ir.model.fields,help:ugess_membership.field_membership_membership_line__expenditure_ceiling_first_period
+msgid ""
+"\n"
+"    This amount corresponds to the amount defined for the first period.\n"
+"\n"
+"    For example, if the interval is monthly and the membership starts on "
+"07/09,\n"
+"    the amount of this first period should be the amount defined in the\n"
+"    expenditure ceiling field divided by the number of days in the month "
+"and\n"
+"    multiplied by the number of days between the start date and the date "
+"defined\n"
+"    in the end date field of the first period.\n"
+"\n"
+"    This field is not calculated automatically.\n"
+"    "
+msgstr ""
+"\n"
+"     Ce montant correspond au montant défini pour la première période.\n"
+"\n"
+"    Par exemple, si l'intervalle est mensuel et que l'adhésion débute le "
+"07/09,\n"
+"    le montant de cette première période doit correspondre au montant défini "
+"dans le\n"
+"    champ plafond de dépenses divisé par le nombre de jours du mois et \n"
+"    multipliée par le nombre de jours compris entre la date de début et la "
+"date définie\n"
+"    dans le champ de la date de fin de la première période.\n"
+"\n"
+"    Ce champ n'est pas calculé automatiquement.\n"
+"    "
+
+#. module: ugess_membership
+#: model:ir.model.fields,help:ugess_membership.field_membership_invoice__expenditure_ceiling
+#: model:ir.model.fields,help:ugess_membership.field_membership_membership_line__expenditure_ceiling
+msgid ""
+"\n"
+"    This amount represents the maximum amount that can be spent over the "
+"period\n"
+"    given in the expenditure ceiling period field.\n"
+"    "
+msgstr ""
+"\n"
+"    Ce montant représente le montant maximum qui peut être dépensé au cours "
+"de la période\n"
+"    indiquée dans le champ de la période de plafond des dépenses.\n"
+"    "
+
+#. module: ugess_membership
+#: model:ir.model.fields,help:ugess_membership.field_membership_invoice__expenditure_ceiling_first_period_end_date
+#: model:ir.model.fields,help:ugess_membership.field_membership_invoice_override__membership_line_first_period_end_date
+#: model:ir.model.fields,help:ugess_membership.field_membership_membership_line__expenditure_ceiling_first_period_end_date
+#: model:ir.model.fields,help:ugess_membership.field_membership_membership_line_expenditure_override__membership_line_first_period_end_date
+msgid ""
+"\n"
+"    This date is used to define the end of the first period if it does not "
+"start\n"
+"    at the beginning of an interval (beginning of a week, a month, a year).\n"
+"\n"
+"    For example if the interval is monthly and the membership starts on "
+"7/09,\n"
+"    the end of the first period will be 30/09.\n"
+"    "
+msgstr ""
+"\n"
+"    Cette date est utilisée pour définir la fin de la première période si "
+"elle ne commence pas\n"
+"     au début d'un intervalle (début de la semaine, du mois, de l'année).\n"
+"\n"
+"    Par exemple si l'intervalle est mensuel et que l'adhésion commence le "
+"7/09,\n"
+"    la fin de la première période sera le 30/09.\n"
+"    "
+
+#. module: ugess_membership
+#: model:ir.model.fields,help:ugess_membership.field_membership_invoice__expenditure_ceiling_period
+#: model:ir.model.fields,help:ugess_membership.field_membership_invoice_override__expenditure_ceiling_period
+#: model:ir.model.fields,help:ugess_membership.field_membership_membership_line__expenditure_ceiling_period
+#: model:ir.model.fields,help:ugess_membership.field_membership_membership_line_expenditure_override__expenditure_ceiling_period
+msgid ""
+"\n"
+"    This interval represents the period for which the expenditure ceiling "
+"is\n"
+"    defined.\n"
+"\n"
+"    - Each week starts on a Monday.\n"
+"    - Each month starts on its first day.\n"
+"    - Each year starts on its first day.\n"
+"    "
+msgstr ""
+"\n"
+"    Cet intervalle représente la période pour laquelle le plafond des "
+"dépenses est\n"
+"    défini.\n"
+"\n"
+"    - Chaque semaine commence un lundi.\n"
+"    - Chaque mois commence le premier jour.\n"
+"    - L'année commence le premier jour.\n"
+"    "
+
+#. module: ugess_membership
+#. odoo-python
+#: code:addons/ugess_membership/models/membership_membership_line.py:0
+#, python-format
+msgid ""
+"A partner can not have several memberships for the same date and the same "
+"membership type."
+msgstr ""
+"Un partenaire ne peut pas avoir plusieurs adhésion du même type à la même "
+"date."
+
+#. module: ugess_membership
+#: model:ir.model.fields.selection,name:ugess_membership.selection__membership_membership_category__ugess_type__beneficiary
+msgid "Beneficiary"
+msgstr "Bénéficiaire"
+
+#. module: ugess_membership
+#: model:ir.model.fields,field_description:ugess_membership.field_membership_invoice__comment
+#: model:ir.model.fields,field_description:ugess_membership.field_membership_membership_line__comment
+msgid "Comment"
+msgstr "Commentaire"
+
+#. module: ugess_membership
+#: model:ir.model.fields,field_description:ugess_membership.field_membership_invoice__company_id
+msgid "Company"
+msgstr "Société"
+
+#. module: ugess_membership
+#: model:ir.model,name:ugess_membership.model_res_partner
+msgid "Contact"
+msgstr "Contact"
+
+#. module: ugess_membership
+#: model:ir.model.fields,field_description:ugess_membership.field_membership_invoice_override__create_uid
+#: model:ir.model.fields,field_description:ugess_membership.field_membership_membership_line_expenditure_override__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: ugess_membership
+#: model:ir.model.fields,field_description:ugess_membership.field_membership_invoice_override__create_date
+#: model:ir.model.fields,field_description:ugess_membership.field_membership_membership_line_expenditure_override__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: ugess_membership
+#: model:ir.model.fields,field_description:ugess_membership.field_membership_invoice__currency_id
+#: model:ir.model.fields,field_description:ugess_membership.field_membership_invoice_override__currency_id
+#: model:ir.model.fields,field_description:ugess_membership.field_membership_membership_line__currency_id
+#: model:ir.model.fields,field_description:ugess_membership.field_membership_membership_line_expenditure_override__currency_id
+msgid "Currency"
+msgstr "Devise"
+
+#. module: ugess_membership
+#: model:ir.model.fields,field_description:ugess_membership.field_membership_membership_line__expenditure_ceiling_current
+#: model:ir.model.fields,field_description:ugess_membership.field_res_partner__expenditure_ceiling_current
+#: model:ir.model.fields,field_description:ugess_membership.field_res_users__expenditure_ceiling_current
+msgid "Current Expenditure Ceiling"
+msgstr "Plafond de dépense actuel"
+
+#. module: ugess_membership
+#: model:ir.model.fields,field_description:ugess_membership.field_res_partner__current_membership_line_id
+#: model:ir.model.fields,field_description:ugess_membership.field_res_users__current_membership_line_id
+msgid "Current Membership"
+msgstr "Adhésion courante"
+
+#. module: ugess_membership
+#: model:ir.model.fields,field_description:ugess_membership.field_membership_invoice_override__display_name
+#: model:ir.model.fields,field_description:ugess_membership.field_membership_membership_line_expenditure_override__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: ugess_membership
+#: model:ir.model.fields,field_description:ugess_membership.field_membership_invoice_override__date_to
+#: model:ir.model.fields,field_description:ugess_membership.field_membership_membership_line_expenditure_override__date_to
+msgid "End Date"
+msgstr "Date de fin"
+
+#. module: ugess_membership
+#: model:ir.model.fields,field_description:ugess_membership.field_res_partner__expenditure_ceiling_current_period_end_date
+#: model:ir.model.fields,field_description:ugess_membership.field_res_users__expenditure_ceiling_current_period_end_date
+msgid "End Date of Current Expenditure Period"
+msgstr "Date de fin de la période de budget actuelle"
+
+#. module: ugess_membership
+#: model:ir.model.fields,field_description:ugess_membership.field_membership_membership_line__expenditure_ceiling_current_period_end_date
+msgid "End Date of Current Period"
+msgstr "Date de fin de la période actuelle"
+
+#. module: ugess_membership
+#: model:ir.model.fields,field_description:ugess_membership.field_membership_invoice__expenditure_ceiling_first_period_end_date
+#: model:ir.model.fields,field_description:ugess_membership.field_membership_invoice_override__membership_line_first_period_end_date
+#: model:ir.model.fields,field_description:ugess_membership.field_membership_membership_line__expenditure_ceiling_first_period_end_date
+#: model:ir.model.fields,field_description:ugess_membership.field_membership_membership_line_expenditure_override__membership_line_first_period_end_date
+msgid "End Date of First Period"
+msgstr "Date de fin de la première periode"
+
+#. module: ugess_membership
+#. odoo-python
+#: code:addons/ugess_membership/wizard/membership_invoice.py:0
+#, python-format
+msgid "Error : the start and end dates are mandatory."
+msgstr "Erreur : les dates de début et de fin sont obligatoires."
+
+#. module: ugess_membership
+#: model:ir.model.fields,field_description:ugess_membership.field_membership_invoice__expenditure_ceiling
+#: model:ir.model.fields,field_description:ugess_membership.field_membership_membership_line__expenditure_ceiling
+msgid "Expenditure Ceiling"
+msgstr "Plafond de dépense"
+
+#. module: ugess_membership
+#: model:ir.model.fields,field_description:ugess_membership.field_res_partner__expenditure_ceiling_current_remaining_amount
+#: model:ir.model.fields,field_description:ugess_membership.field_res_users__expenditure_ceiling_current_remaining_amount
+msgid "Expenditure Ceiling Current Remaining Amount"
+msgstr "Montant restant du plafond de dépense"
+
+#. module: ugess_membership
+#: model:ir.model.fields,field_description:ugess_membership.field_res_partner__expenditure_ceiling_current_total_sale_amount
+#: model:ir.model.fields,field_description:ugess_membership.field_res_users__expenditure_ceiling_current_total_sale_amount
+msgid "Expenditure Ceiling Current Total Sale Amount"
+msgstr "Montant de vente total durant la période du plafond de dépenses"
+
+#. module: ugess_membership
+#: model:ir.model.fields,field_description:ugess_membership.field_membership_invoice__expenditure_ceiling_period
+#: model:ir.model.fields,field_description:ugess_membership.field_membership_invoice_override__expenditure_ceiling_period
+#: model:ir.model.fields,field_description:ugess_membership.field_membership_membership_line__expenditure_ceiling_period
+#: model:ir.model.fields,field_description:ugess_membership.field_membership_membership_line_expenditure_override__expenditure_ceiling_period
+msgid "Expenditure Ceiling Period"
+msgstr "Période du plafond de dépense"
+
+#. module: ugess_membership
+#: model:ir.model.fields,field_description:ugess_membership.field_membership_invoice__expenditure_ceiling_first_period
+#: model:ir.model.fields,field_description:ugess_membership.field_membership_membership_line__expenditure_ceiling_first_period
+msgid "Expenditure Ceiling of the First Period"
+msgstr "Plafond de dépense de la première periode"
+
+#. module: ugess_membership
+#: model:ir.model.fields,field_description:ugess_membership.field_membership_invoice__expenditure_override_ids
+#: model:ir.model.fields,field_description:ugess_membership.field_membership_membership_line__expenditure_override_ids
+#| msgid "Expenditure Ceiling"
+msgid "Expenditure Overrides"
+msgstr "Dérogations au plafond général de dépenses"
+
+#. module: ugess_membership
+#: model:ir.model.fields,field_description:ugess_membership.field_membership_invoice_override__id
+#: model:ir.model.fields,field_description:ugess_membership.field_membership_membership_line_expenditure_override__id
+msgid "ID"
+msgstr ""
+
+#. module: ugess_membership
+#: model:ir.model.fields,field_description:ugess_membership.field_membership_invoice_override____last_update
+#: model:ir.model.fields,field_description:ugess_membership.field_membership_membership_line_expenditure_override____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: ugess_membership
+#: model:ir.model.fields,field_description:ugess_membership.field_membership_invoice_override__write_uid
+#: model:ir.model.fields,field_description:ugess_membership.field_membership_membership_line_expenditure_override__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: ugess_membership
+#: model:ir.model.fields,field_description:ugess_membership.field_membership_invoice_override__write_date
+#: model:ir.model.fields,field_description:ugess_membership.field_membership_membership_line_expenditure_override__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: ugess_membership
+#: model:ir.model.fields,field_description:ugess_membership.field_membership_invoice_override__membership_line_id
+#: model:ir.model.fields,field_description:ugess_membership.field_membership_membership_line_expenditure_override__membership_line_id
+#| msgid "Membership Line"
+msgid "Membership"
+msgstr "Ligne d'adhésion"
+
+#. module: ugess_membership
+#: model:ir.model.fields,field_description:ugess_membership.field_membership_invoice_override__membership_line_date_to
+#: model:ir.model.fields,field_description:ugess_membership.field_membership_membership_line_expenditure_override__membership_line_date_to
+#, fuzzy
+#| msgid "Membership Line"
+msgid "Membership End Date"
+msgstr "Ligne d'adhésion"
+
+#. module: ugess_membership
+#: model:ir.model,name:ugess_membership.model_membership_membership_line_expenditure_override
+#, fuzzy
+#| msgid "Membership Invoice"
+msgid "Membership Expenditure Override"
+msgstr "Facture d'adhésion"
+
+#. module: ugess_membership
+#: model:ir.model,name:ugess_membership.model_membership_invoice
+msgid "Membership Invoice"
+msgstr "Facture d'adhésion"
+
+#. module: ugess_membership
+#: model:ir.model,name:ugess_membership.model_membership_invoice_override
+#, fuzzy
+#| msgid "Membership Invoice"
+msgid "Membership Invoice Override"
+msgstr "Facture d'adhésion"
+
+#. module: ugess_membership
+#: model:ir.model,name:ugess_membership.model_membership_membership_line
+msgid "Membership Line"
+msgstr "Ligne d'adhésion"
+
+#. module: ugess_membership
+#: model:ir.model.fields,field_description:ugess_membership.field_social_project__membership_line_ids
+msgid "Membership Lines"
+msgstr "Lignes d'adhésion"
+
+#. module: ugess_membership
+#: model:ir.model.fields,field_description:ugess_membership.field_product_product__membership_pricelist_id
+#: model:ir.model.fields,field_description:ugess_membership.field_product_template__membership_pricelist_id
+msgid "Membership Pricelist"
+msgstr "Liste de prix de l'adhésion"
+
+#. module: ugess_membership
+#: model:ir.model.fields,field_description:ugess_membership.field_membership_invoice_override__membership_line_date_from
+#: model:ir.model.fields,field_description:ugess_membership.field_membership_membership_line_expenditure_override__membership_line_date_from
+#, fuzzy
+#| msgid "Membership category"
+msgid "Membership Start Date"
+msgstr "Catégorie d'adhésion"
+
+#. module: ugess_membership
+#: model:ir.model,name:ugess_membership.model_membership_membership_category
+msgid "Membership category"
+msgstr "Catégorie d'adhésion"
+
+#. module: ugess_membership
+#: model:ir.model.fields.selection,name:ugess_membership.selection__membership_invoice__expenditure_ceiling_period__month
+#: model:ir.model.fields.selection,name:ugess_membership.selection__membership_membership_line__expenditure_ceiling_period__month
+msgid "Month"
+msgstr "Mois"
+
+#. module: ugess_membership
+#: model:ir.model.fields,field_description:ugess_membership.field_membership_invoice_override__expenditure_ceiling
+#: model:ir.model.fields,field_description:ugess_membership.field_membership_membership_line_expenditure_override__expenditure_ceiling
+#| msgid "Expenditure Ceiling"
+msgid "New Expenditure Ceiling"
+msgstr "Montant du plafond"
+
+#. module: ugess_membership
+#: model:ir.model.fields,help:ugess_membership.field_membership_invoice_override__expenditure_ceiling
+#: model:ir.model.fields,help:ugess_membership.field_membership_membership_line_expenditure_override__expenditure_ceiling
+msgid "New ceiling for the defined period."
+msgstr "Nouveau plafond pour la période définie"
+
+#. module: ugess_membership
+#: model:ir.model.fields,field_description:ugess_membership.field_membership_invoice__partner_id
+msgid "Partner"
+msgstr "Partenaire"
+
+#. module: ugess_membership
+#. odoo-python
+#: code:addons/ugess_membership/models/membership_membership_line.py:0
+#, python-format
+msgid "Period '%s' is invalid."
+msgstr ""
+
+#. module: ugess_membership
+#: model:ir.model,name:ugess_membership.model_product_template
+msgid "Product"
+msgstr "Produit"
+
+#. module: ugess_membership
+#: model:ir.model,name:ugess_membership.model_social_project
+#: model:ir.model.fields,field_description:ugess_membership.field_membership_invoice__social_project_id
+#: model:ir.model.fields,field_description:ugess_membership.field_membership_membership_line__social_project_id
+msgid "Social Project"
+msgstr "Projet social"
+
+#. module: ugess_membership
+#: model:ir.model.fields,field_description:ugess_membership.field_membership_membership_line__social_project_type_id
+msgid "Social Project Type"
+msgstr "Type de projet social"
+
+#. module: ugess_membership
+#: model:ir.model.fields.selection,name:ugess_membership.selection__membership_membership_category__ugess_type__solidary
+msgid "Solidary"
+msgstr "Solidaire"
+
+#. module: ugess_membership
+#: model:ir.model.fields,field_description:ugess_membership.field_membership_invoice_override__date_from
+#: model:ir.model.fields,field_description:ugess_membership.field_membership_membership_line_expenditure_override__date_from
+msgid "Start Date"
+msgstr "Date de début"
+
+#. module: ugess_membership
+#: model:ir.model.fields,field_description:ugess_membership.field_res_partner__expenditure_ceiling_current_period_start_date
+#: model:ir.model.fields,field_description:ugess_membership.field_res_users__expenditure_ceiling_current_period_start_date
+msgid "Start Date of Current Expenditure Period"
+msgstr "Date de début de la période de budget actuelle"
+
+#. module: ugess_membership
+#: model:ir.model.fields,field_description:ugess_membership.field_membership_membership_line__expenditure_ceiling_current_period_start_date
+msgid "Start Date of Current Period"
+msgstr "Date de début de la période actuelle"
+
+#. module: ugess_membership
+#: model_terms:ir.ui.view,arch_db:ugess_membership.res_partner_view_form
+msgid "Technical"
+msgstr "Technique"
+
+#. module: ugess_membership
+#. odoo-python
+#: code:addons/ugess_membership/models/membership_membership_line_expenditure_override.py:0
+#, python-format
+msgid ""
+"The override's date range (%(date_from)s–%(date_to)s) overlaps with another "
+"override's(%(other_date_from)s–%(other_date_to)s)."
+msgstr ""
+"La plage de date de la dérogation (%(date_from)s–%(date_to)s) chevauche celle d'une autre "
+"dérogation(%(other_date_from)s–%(other_date_to)s)."
+
+#. module: ugess_membership
+#. odoo-python
+#: code:addons/ugess_membership/models/membership_membership_line_expenditure_override.py:0
+#, python-format
+msgid ""
+"The override's end date (%(date_to)s) must not be after the membership's end "
+"date (%(line_date_to)s)."
+msgstr ""
+"La date de fin de la dérogation (%(date_to)s) ne doit pas être après la date de fin de l'adhésion "
+"(%(line_date_to)s)."
+
+#. module: ugess_membership
+#. odoo-python
+#: code:addons/ugess_membership/models/membership_membership_line_expenditure_override.py:0
+#, python-format
+msgid ""
+"The override's start date (%(date_from)s) must be before the end date "
+"(%(date_to)s)."
+msgstr ""
+"La date de début de la dérogation(%(date_from)s) doit être antérieure à la date de fin "
+"(%(date_to)s)."
+
+#. module: ugess_membership
+#. odoo-python
+#: code:addons/ugess_membership/models/membership_membership_line_expenditure_override.py:0
+#, python-format
+msgid ""
+"The override's start date (%(date_from)s) must be on a Monday, and the end "
+"date (%(date_to)s) must be on a Sunday."
+msgstr ""
+"La date de début de la dérogation (%(date_from)s) doit être un lundi, et la date de fin "
+"(%(date_to)s) un dimanche."
+
+#. module: ugess_membership
+#. odoo-python
+#: code:addons/ugess_membership/models/membership_membership_line_expenditure_override.py:0
+#, python-format
+msgid ""
+"The override's start date (%(date_from)s) must be on the first day of the "
+"month, and the end date (%(date_to)s) must be the last."
+msgstr ""
+"La date de début de la dérogation (%(date_from)s) doit être le premier jour "
+"du mois, et la date de fin (%(date_to)s), le dernier jour du mois."
+
+#. module: ugess_membership
+#. odoo-python
+#: code:addons/ugess_membership/models/membership_membership_line_expenditure_override.py:0
+#, python-format
+msgid ""
+"The override's start date (%(date_from)s) must be the first day of the year, "
+"and the end date (%(date_to)s) must be the last."
+msgstr ""
+"La date de début de la dérogation (%(date_from)s) doit être le premier jour de l'année, "
+"et la date de fin (%(date_to)s) doit être le dernier."
+
+#. module: ugess_membership
+#. odoo-python
+#: code:addons/ugess_membership/models/membership_membership_line_expenditure_override.py:0
+#, python-format
+msgid ""
+"The override's start date (%(date_from)s) must not be before the "
+"membership's start date (%(line_date_from)s)."
+msgstr ""
+"La date de début de la dérogation (%(date_from)s) ne doit pas être avant la "
+"date de début de l'adhésion (%(line_date_from)s)."
+
+#. module: ugess_membership
+#. odoo-python
+#: code:addons/ugess_membership/models/membership_membership_line_expenditure_override.py:0
+#, python-format
+msgid ""
+"The override's start date (%(date_from)s) must not be in the first period "
+"(before %(period_end_date)s)."
+msgstr ""
+"La date de début de la dérogation (%(date_from)s) ne doit pas être dans la première période"
+"(before %(period_end_date)s)."
+
+#. module: ugess_membership
+#: model:ir.model.fields,field_description:ugess_membership.field_membership_membership_category__ugess_type
+msgid "Ugess Type"
+msgstr "Type Ugess"
+
+#. module: ugess_membership
+#: model:ir.model.fields.selection,name:ugess_membership.selection__membership_invoice__expenditure_ceiling_period__week
+#: model:ir.model.fields.selection,name:ugess_membership.selection__membership_membership_line__expenditure_ceiling_period__week
+msgid "Week"
+msgstr "Semaine"
+
+#. module: ugess_membership
+#: model:ir.model.fields.selection,name:ugess_membership.selection__membership_invoice__expenditure_ceiling_period__year
+#: model:ir.model.fields.selection,name:ugess_membership.selection__membership_membership_line__expenditure_ceiling_period__year
+msgid "Year"
+msgstr "Année"
+
+#. module: ugess_membership
+#: model_terms:ir.ui.view,arch_db:ugess_membership.res_partner_view_form
+#: model_terms:ir.ui.view,arch_db:ugess_membership.view_membership_invoice_view
+msgid "per"
+msgstr "par"
+
+#. module: ugess_membership
+#: model:ir.model.fields,field_description:ugess_membership.field_membership_invoice__current_membership_date_from
+msgid "Start Date"
+msgstr "Date de début"
+
+#. module: ugess_membership
+#: model:ir.model.fields,field_description:ugess_membership.field_membership_invoice__current_membership_date_to
+msgid "End Date"
+msgstr "Date de fin"
+
+#~ msgid "Per Month"
+#~ msgstr "Par mois"
+
+#~ msgid "Per Week"
+#~ msgstr "Par semaine"
+
+#~ msgid "Per Year"
+#~ msgstr "Par année"

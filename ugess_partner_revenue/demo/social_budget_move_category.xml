@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <record id="social_budget_categegory_salary" model="social.budget.move.category">
+        <field name="name">Salary</field>
+    </record>
+
+    <record
+        id="social_budget_categegory_active_solidary_income"
+        model="social.budget.move.category"
+    >
+        <field name="name">Active Solidarity Income</field>
+    </record>
+
+</odoo>

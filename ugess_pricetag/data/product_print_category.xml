@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+    Copyright (C) 2022-Today GRAP (http://www.grap.coop)
+    @author Sylvain LE GAL (https://twitter.com/legalsylvain)
+    License AGPL-3 - See http://www.gnu.org/licenses/agpl-3.0.html
+-->
+<odoo>
+
+    <record model="product.print.category" id="print_category_ugess_1">
+        <field name="name">Ugess Format 1</field>
+        <field name="qweb_view_id" ref="label_template_product_ugess_1" />
+        <field
+            name="field_ids"
+            eval="[
+                (4, ref('product.field_product_product__name')),
+                (4, ref('ugess_supply_source.field_product_product__supplier_id')),
+                (4, ref('product.field_product_product__product_tag_ids')),
+                (4, ref('ugess_pricelist.field_product_product__ugess_beneficiary_price')),
+                (4, ref('ugess_pricelist.field_product_product__ugess_solidary_price')),
+                (4, ref('ugess_pricelist.field_product_product__ugess_average_market_price')),
+            ]"
+        />
+    </record>
+
+</odoo>

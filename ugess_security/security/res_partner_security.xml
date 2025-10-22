@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <!-- partner management groups -->
+
+    <record model="res.groups" id="group_res_partner_settings_manager">
+        <field name="name">UGESS Partner Settings Manager</field>
+        <field
+            name="implied_ids"
+            eval="[Command.link(ref('base.group_partner_manager'))]"
+        />
+        <field name="category_id" ref="ugess_security.category_ugess_security" />
+    </record>
+
+    <record model="res.groups" id="group_res_partner_archive">
+        <field name="name">UGESS Partner Archive</field>
+        <field
+            name="implied_ids"
+            eval="[Command.link(ref('base.group_partner_manager'))]"
+        />
+        <field name="category_id" ref="ugess_security.category_ugess_security" />
+    </record>
+
+</odoo>

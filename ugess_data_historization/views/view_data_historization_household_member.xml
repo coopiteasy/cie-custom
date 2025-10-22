@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <record id="view_data_historization_household_member_search" model="ir.ui.view">
+        <field name="model">data.historization.household.member</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="household_member_id" />
+            </search>
+        </field>
+    </record>
+
+    <record id="view_data_historization_household_member_form" model="ir.ui.view">
+        <field name="model">data.historization.household.member</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="create_date" />
+                <field name="household_member_id" />
+                <field name="name" optional="show" />
+                <field name="main_income_source" optional="show" />
+                <field name="job_position_id" optional="show" />
+                <field name="gender" optional="show" />
+                <field name="is_active_member" optional="show" />
+            </tree>
+        </field>
+    </record>
+
+</odoo>

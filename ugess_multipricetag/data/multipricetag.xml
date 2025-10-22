@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+SPDX-FileCopyrightText: 2025 Coop IT Easy SC
+
+SPDX-License-Identifier: AGPL-3.0-or-later
+-->
+<odoo>
+
+  <template id="ugess_multipricetag">
+    <style type="text/css">
+div.single_tag {
+    border: 1px solid;
+    display: inline-block;
+    width: 8cm;
+    height: 3.7cm;
+    padding-left: 0.1cm;
+}
+div.short_name {
+    font-size: 1.2em;
+    height: 18%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+div.supplier {
+    font-size: 0.7em;
+    overflow: hidden;
+    white-space: nowrap;
+}
+div.placeholder_left {
+    float: left;
+    width: 60%;
+    height: 70%;
+}
+div.pricelist {
+    font-size: small;
+    white-space: nowrap;
+    overflow: hidden;
+}
+div.pricelist_name {
+    float: left;
+    overflow: hidden;
+    width: 70%;
+}
+div.pricelist_price {
+    float: right;
+    overflow: hidden;
+    width: 25%;
+}
+div.placeholder_right {
+    float: right;
+    padding-top: 0.15em;
+    width: 38%;
+}
+div.pricelist_weight {
+    font-size: small;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+}
+div.barcode {
+    padding-top: 0.2cm;
+}
+        </style>
+  <t t-foreach="category_data['lines']" t-as="line">
+    <t t-set="product" t-value="line.product_id" />
+    <t t-foreach="line.quantity" t-as="q">
+      <div class="single_tag">
+
+        <!-- Product Short Name -->
+        <div class="short_name">
+          <t t-if="product.short_name">
+            <strong t-out="product.short_name" />
+          </t>
+          <t t-if="not product.short_name">
+            <strong t-out="product.name" />
+          </t>
+        </div>
+
+        <!-- Supplier -->
+        <div class="supplier">
+          <strong t-out="product.supplier_id.name" />
+        </div>
+
+        <div class="placeholder_left">
+          <!-- Price Lists -->
+          <t t-foreach="product.print_category_id.price_lists_ids" t-as="price_list">
+            <div class="pricelist">
+              <div class="pricelist_name">
+                <span class="pricelist_name">
+                  <strong t-out="price_list.name" />
+                </span>
+              </div>
+              <div class="pricelist_price">
+                <span
+                                        class="pricelist_price"
+                                        t-out="product.with_context(pricelist=price_list.id)._get_contextual_price()"
+                                        t-options="{'widget': 'monetary', 'display_currency': price_list.currency_id, 'field_digits': True}"
+                                    />
+              </div>
+            </div>
+          </t>
+        </div>
+
+        <div class="placeholder_right">
+          <!-- Price List Weight -->
+          <div class="pricelist_weight">
+            <t
+                                t-set="pricelist_item"
+                                t-value="env['product.pricelist.item'].browse(product.print_category_id.pricelist_weight._get_product_rule(product, 1))"
+                            />
+            <t t-if="pricelist_item">
+            <strong t-out="product.print_category_id.pricelist_weight.name" />
+            <div>
+                <div
+                                        t-out="pricelist_item.get_price_per_weight(product)"
+                                        t-options="{
+                    'widget': 'monetary',
+                    'display_currency': pricelist_item.currency_id,
+                    'field_digits': True
+                  }"
+                                    />
+                /
+                <span t-out="product.weight_uom_name" />
+              </div>
+            </t>
+          </div>
+
+          <!-- Barcode -->
+          <div class="barcode">
+            <t
+                                t-out="product.barcode"
+                                t-options="{
+              'widget': 'barcode',
+              'humanreadable': 1,
+              'symbology': 'auto',
+              'width': 600,
+              'height': 170,
+              'img_style': 'max-height:100%;max-width:100%;'
+              }"
+                            />
+          </div>
+        </div>
+      </div>
+    </t>
+  </t>
+  </template>
+
+</odoo>

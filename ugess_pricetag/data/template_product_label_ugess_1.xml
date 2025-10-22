@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+    Copyright (C) 2022-Today GRAP (http://www.grap.coop)
+    @author Sylvain LE GAL (https://twitter.com/legalsylvain)
+    License AGPL-3 - See http://www.gnu.org/licenses/agpl-3.0.html
+-->
+<odoo>
+
+    <template id="label_template_product_ugess_1">
+        <style type="text/css">
+html,
+body {
+    margin: 0px;
+    padding: 0px;
+}
+div.product_label_1 {
+    border: 1px solid;
+    display: inline-block;
+    width: 8cm;
+    height: 3.7cm;
+    margin: 0cm;
+    padding: 0.1cm;
+    overflow: hidden;
+    font-size: 0px;
+    letter-spacing: 0px;
+    word-spacing: 0px;
+}
+
+div.product_label_1 div {
+    display: inline-block;
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+}
+
+div.placeholder_left {
+    width: 3.85cm;
+    height: 3.5cm;
+}
+
+div.placeholder_left_name {
+    width: 100%;
+    height: 1.65cm;
+    font-size: 20px;
+}
+div.placeholder_left_supplier {
+    width: 100%;
+    height: 0.83cm;
+    font-size: 14px;
+}
+
+div.placeholder_left_extra_info {
+    width: 100%;
+    height: 1.02cm;
+    font-size: 10px;
+}
+
+span.product_tag {
+    border-radius: 5px;
+    padding: 1.5px;
+    border: 1px solid gray;
+}
+span.title {
+    color: gray;
+    font-size: 8px;
+}
+
+div.placeholder_right {
+    width: 3.85cm;
+    height: 3.5cm;
+}
+
+div.placeholder_right_beneficiary_price {
+    text-align: center;
+    width: 100%;
+    height: 1.28cm;
+    font-size: 22px;
+}
+
+div.placeholder_right_solidary_price {
+    text-align: center;
+    width: 100%;
+    height: 1.11cm;
+    font-size: 18px;
+}
+
+div.placeholder_right_average_market_price {
+    text-align: center;
+    width: 100%;
+    height: 1.11cm;
+    font-size: 12px;
+}
+        </style>
+
+        <t t-foreach="category_data['lines']" t-as="line">
+            <t t-foreach="line.quantity" t-as="q"><!--
+                --><div
+                    class="product_label_1"
+                ><!--
+                    --><div
+                        class="placeholder_left"
+                    ><!--
+                        --><div class="placeholder_left_name">
+                            <t
+                                t-esc="line.product_id.name"
+                            /><!--
+                        --></div><!--
+                        --><div
+                            class="placeholder_left_supplier"
+                        ><!--
+                            --><t
+                                t-if="line.product_id.supplier_id"
+                            ><!--
+                                --><span
+                                    class="title"
+                                >Fournisseur</span><br />
+                                <t t-esc="line.product_id.supplier_id.name" />
+                            </t>
+                        </div><!--
+                        --><div
+                            class="placeholder_left_extra_info"
+                        ><!--
+                            --><t
+                                t-if="line.product_id.product_tag_ids"
+                            >
+                                <span class="title">Information complementaire</span>
+                                <br />
+                                <t
+                                    t-foreach="line.product_id.product_tag_ids"
+                                    t-as="tag"
+                                >
+                                    <span class="product_tag" t-field="tag.name" />
+                                </t>
+                            </t><!--
+                        --></div><!--
+                    --></div><!--
+                    --><div
+                        class="placeholder_right"
+                    ><!--
+                        --><div
+                            class="placeholder_right_beneficiary_price"
+                        ><!--
+                            --><t
+                                t-if="line.product_id.ugess_beneficiary_price"
+                            ><!--
+                                --><span
+                                    class="title"
+                                >Prix Bénéficiaire</span>
+                                <br />
+                                <strong
+                                    class="o_label_price"
+                                    t-field="line.product_id.ugess_beneficiary_price"
+                                    t-options="{'widget': 'monetary'}"
+                                />/<t t-esc="line.product_id.uom_id.name" />
+                            </t><!--
+                        --></div><!--
+                        --><div
+                            class="placeholder_right_solidary_price"
+                        ><!--
+                            --><t
+                                t-if="line.product_id.ugess_solidary_price"
+                            ><!--
+                                --><span
+                                    class="title"
+                                >Prix Solidaire</span>
+                                <br />
+                                <strong
+                                    class="o_label_price"
+                                    t-field="line.product_id.ugess_solidary_price"
+                                    t-options="{'widget': 'monetary'}"
+                                />/<t t-esc="line.product_id.uom_id.name" />
+                            </t><!--
+                        --></div><!--
+                        --><div
+                            class="placeholder_right_average_market_price"
+                        >
+                                <t t-if="line.product_id.ugess_average_market_price">
+                                <span class="title">Prix Moyen Marché</span>
+                                <br />
+                                    <strong
+                                    class="o_label_price"
+                                    t-field="line.product_id.ugess_average_market_price"
+                                    t-options="{'widget': 'monetary'}"
+                                />/<t t-esc="line.product_id.uom_id.name" />
+                                </t>
+                        </div><!--
+
+
+                    --></div><!--
+                --></div><!--
+            --></t>
+        </t>
+    </template>
+
+</odoo>

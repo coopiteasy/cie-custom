@@ -1,0 +1,37 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ugess_pricelist_weight
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2025-07-03 14:37+0000\n"
+"Last-Translator: mihien <simo@coopiteasy.be>\n"
+"Language-Team: \n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 4.17\n"
+
+#. module: ugess_pricelist_weight
+#: model:ir.model.fields,field_description:ugess_pricelist_weight.field_product_print_category__pricelist_weight
+msgid "Pricelist with price per unit of measurement"
+msgstr "Liste de prix par unité de mesure"
+
+#. module: ugess_pricelist_weight
+#: model:ir.model,name:ugess_pricelist_weight.model_product_pricelist
+msgid "Pricelist"
+msgstr ""
+
+#. module: ugess_pricelist_weight
+#: model:ir.model,name:ugess_pricelist_weight.model_product_pricelist_item
+msgid "Pricelist Rule"
+msgstr ""
+
+#. module: ugess_pricelist_weight
+#: model:ir.model,name:ugess_pricelist_weight.model_product_print_category
+msgid "Print Category for Product"
+msgstr ""

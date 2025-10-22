@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_supply_source,supply.source,ugess_supply_source.model_supply_source,base.group_user,1,0,0,0
+access_supply_source_manager,supply.source,ugess_supply_source.model_supply_source,stock.group_stock_manager,1,1,1,1

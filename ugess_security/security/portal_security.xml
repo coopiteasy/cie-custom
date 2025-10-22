@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <!-- portal share management groups -->
+
+    <record model="res.groups" id="group_portal_share_manager">
+        <field name="name">UGESS Portal Share Manager</field>
+        <field
+            name="implied_ids"
+            eval="[Command.link(ref('base.group_partner_manager'))]"
+        />
+        <field name="category_id" ref="ugess_security.category_ugess_security" />
+    </record>
+
+</odoo>

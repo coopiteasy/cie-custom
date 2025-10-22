@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+Copyright (C) 2023-Today: GRAP (<http://www.grap.coop>)
+@author: Sylvain LE GAL (https://twitter.com/legalsylvain)
+License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
+-->
+<odoo>
+
+    <record model="res.partner" id="supplier_1">
+        <field name="name">My Supplier 1</field>
+    </record>
+
+    <record model="res.partner" id="supplier_2">
+        <field name="name">My Supplier 2 with a very long long name</field>
+    </record>
+
+</odoo>

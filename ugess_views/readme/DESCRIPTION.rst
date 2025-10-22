@@ -1,0 +1,2 @@
+- Reorganise the order of tabs on the partner form view.
+- Small changes to product and picking views.

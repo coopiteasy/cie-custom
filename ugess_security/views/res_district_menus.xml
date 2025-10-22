@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+<!--
+    The menu_district_partner defined in base_location_district
+    is a child of res_partner_menu_config which is available only
+    for group_system.
+    We want one for our group_res_district_manager
+ -->
+    <menuitem
+        id="menu_district_partner_for_distict_manager"
+        action="base_location_district.action_res_district_tree"
+        groups="ugess_security.group_res_district_manager"
+        parent="contacts.menu_contacts"
+        sequence="10"
+    />
+
+</odoo>
