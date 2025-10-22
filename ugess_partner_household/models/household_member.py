@@ -25,7 +25,7 @@ HouseholdMemberParent._compute_age = ResPartnerBirthdate._compute_age
 class HouseholdMember(models.Model):
     _inherit = "household.member"
 
-    name = fields.Char(string="Name")
+    name = fields.Char()
 
     is_active_member = fields.Boolean(string="Active Member", default=True)
 
@@ -47,7 +47,6 @@ class HouseholdMember(models.Model):
     )
     main_income_source = fields.Many2one(
         comodel_name="social.budget.move.category",
-        string="Main Income Source",
     )
     birthdate_date = fields.Date("Birthdate")
     # storing age to be able to use it in statistics
