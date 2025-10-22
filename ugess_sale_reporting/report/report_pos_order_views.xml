@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="view_report_pos_order_pivot" model="ir.ui.view">
+        <field name="model">report.pos.order</field>
+        <field name="priority">100</field>
+        <field name="inherit_id" ref="point_of_sale.view_report_pos_order_pivot" />
+        <field name="arch" type="xml">
+            <field name="product_qty" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </field>
+            <field name="order_id" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </field>
+            <field name="product_qty" position="after">
+                <field name="weight" type="measure" />
+            </field>
+        </field>
+    </record>
+
+    <record id="view_report_pos_order_search" model="ir.ui.view">
+        <field name="model">report.pos.order</field>
+        <field name="inherit_id" ref="point_of_sale.view_report_pos_order_search" />
+        <field name="arch" type="xml">
+            <field name="product_categ_id" position="after">
+                <field name="supply_source_id" />
+                <field name="supplier_id" />
+            </field>
+            <filter name="pos" position="after">
+                <filter
+                    string="Supply source"
+                    name="supply_source"
+                    context="{'group_by':'supply_source_id'}"
+                />
+                <filter
+                    string="Supplier"
+                    name="supplier"
+                    context="{'group_by':'supplier_id'}"
+                />
+            </filter>
+        </field>
+    </record>
+
+</odoo>

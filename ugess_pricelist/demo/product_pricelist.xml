@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+Copyright (C) 2023-Today: GRAP (<http://www.grap.coop>)
+@author: Sylvain LE GAL (https://twitter.com/legalsylvain)
+License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
+-->
+<odoo>
+
+    <record model="product.pricelist" id="pricelist_beneficiary">
+        <field name="name">Pricelist Beneficiary</field>
+        <field name="ugess_type">beneficiary</field>
+        <field name="company_id" ref="base.main_company" />
+    </record>
+
+    <record model="product.pricelist.item" id="pricelist_item_beneficiary">
+        <field name="pricelist_id" ref="pricelist_beneficiary" />
+        <field name="applied_on">1_product</field>
+        <field
+            name="product_tmpl_id"
+            ref="ugess_pricelist.demo_product_with_specific_prices_product_template"
+        />
+        <field name="fixed_price">3.00</field>
+    </record>
+
+    <record model="product.pricelist" id="pricelist_solidary">
+        <field name="name">Pricelist Solidary</field>
+        <field name="ugess_type">solidary</field>
+        <field name="company_id" ref="base.main_company" />
+    </record>
+
+    <record model="product.pricelist.item" id="pricelist_item_solidary">
+        <field name="pricelist_id" ref="pricelist_solidary" />
+        <field name="applied_on">1_product</field>
+        <field
+            name="product_tmpl_id"
+            ref="ugess_pricelist.demo_product_with_specific_prices_product_template"
+        />
+        <field name="fixed_price">6.00</field>
+    </record>
+
+    <record model="product.pricelist" id="pricelist_average_market">
+        <field name="name">Pricelist Average Market</field>
+        <field name="ugess_type">average_market</field>
+        <field name="company_id" ref="base.main_company" />
+    </record>
+
+    <record model="product.pricelist.item" id="pricelist_item_average_market">
+        <field name="pricelist_id" ref="pricelist_average_market" />
+        <field name="applied_on">1_product</field>
+        <field
+            name="product_tmpl_id"
+            ref="ugess_pricelist.demo_product_with_specific_prices_product_template"
+        />
+        <field name="fixed_price">3.50</field>
+    </record>
+
+
+</odoo>

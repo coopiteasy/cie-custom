@@ -1,0 +1,83 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ugess_security
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-02-13 08:15+0000\n"
+"PO-Revision-Date: 2024-02-13 08:15+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ugess_security
+#: model:ir.model,name:ugess_security.model_res_partner
+msgid "Contact"
+msgstr ""
+
+#. module: ugess_security
+#: model:ir.ui.menu,name:ugess_security.menu_district_partner_for_distict_manager
+msgid "Districts"
+msgstr ""
+
+#. module: ugess_security
+#: model:res.groups,name:ugess_security.role_ugess_cashier_res_groups
+msgid "UGESS Cashier"
+msgstr ""
+
+#. module: ugess_security
+#: model:res.groups,name:ugess_security.group_res_district_manager
+msgid "UGESS District Manager"
+msgstr ""
+
+#. module: ugess_security
+#: model:res.groups,name:ugess_security.role_ugess_grocer_res_groups
+msgid "UGESS Grocer"
+msgstr ""
+
+#. module: ugess_security
+#: model:res.groups,name:ugess_security.role_ugess_manager_res_groups
+msgid "UGESS Manager"
+msgstr ""
+
+#. module: ugess_security
+#: model:res.groups,name:ugess_security.group_res_partner_archive
+msgid "UGESS Partner Archive"
+msgstr ""
+
+#. module: ugess_security
+#: model:res.groups,name:ugess_security.group_res_partner_settings_manager
+msgid "UGESS Partner Settings Manager"
+msgstr ""
+
+#. module: ugess_security
+#: model:ir.module.category,name:ugess_security.category_ugess_security
+msgid "UGESS Security"
+msgstr ""
+
+#. module: ugess_security
+#: model:res.groups,name:ugess_security.role_ugess_social_res_groups
+msgid "UGESS Social"
+msgstr ""
+
+#. module: ugess_security
+#: model:res.groups,name:ugess_security.group_membership_user
+msgid "UGESS User"
+msgstr ""
+
+#. module: ugess_security
+#: model:ir.model,name:ugess_security.model_res_users
+msgid "User"
+msgstr ""
+
+#. module: ugess_security
+#. odoo-python
+#: code:addons/ugess_security/models/res_partner.py:0
+#, python-format
+msgid "You are not allowed to archive or unarchive a contact."
+msgstr ""

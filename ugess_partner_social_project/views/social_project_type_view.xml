@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="social_project_type_action" model="ir.actions.act_window">
+        <field name="name">social_project_type_action</field>
+        <field name="res_model">social.project.type</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+
+    <menuitem
+        id="social_project_type_menu"
+        name="Social Project Type"
+        action="social_project_type_action"
+        parent="membership.menu_marketing_config_association"
+        groups="group_ugess_partner_social_project_manager"
+    />
+
+    <record id="social_project_type_view_tree" model="ir.ui.view">
+        <field name="name">view_social_project_type_tree</field>
+        <field name="model">social.project.type</field>
+        <field name="arch" type="xml">
+            <tree editable="bottom">
+                <field name="name" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="social_project_type_view_form" model="ir.ui.view">
+        <field name="name">view_social_project_type_form</field>
+        <field name="model">social.project.type</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <field name="name" />
+                </group>
+            </form>
+        </field>
+    </record>
+</odoo>

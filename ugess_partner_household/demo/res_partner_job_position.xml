@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <record id="job_position_student" model="res.partner.job_position">
+        <field name="name">Student</field>
+    </record>
+
+    <record id="job_position_part_time_employee" model="res.partner.job_position">
+        <field name="name">Part-Time Employee</field>
+    </record>
+
+    <record id="job_position_full_time_employee" model="res.partner.job_position">
+        <field name="name">Full-Time Employee</field>
+    </record>
+
+    <record id="job_position_retired" model="res.partner.job_position">
+        <field name="name">Retired</field>
+    </record>
+
+</odoo>

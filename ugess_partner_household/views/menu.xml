@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <menuitem
+        id="menu_household"
+        name="Household"
+        parent="contacts.menu_contacts"
+        groups="group_ugess_partner_household_manager"
+    />
+</odoo>

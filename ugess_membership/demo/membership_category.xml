@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <record id="category_beneficiary" model="membership.membership_category">
+        <field name="name">Beneficiary</field>
+        <field name="ugess_type">beneficiary</field>
+    </record>
+
+    <record id="category_solidary" model="membership.membership_category">
+        <field name="name">Solidary</field>
+        <field name="ugess_type">solidary</field>
+    </record>
+
+</odoo>

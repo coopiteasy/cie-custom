@@ -1,0 +1,261 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ugess_membership_reporting
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-03-08 12:53+0000\n"
+"PO-Revision-Date: 2023-03-08 12:53+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ugess_membership_reporting
+#: model_terms:ir.ui.view,arch_db:ugess_membership_reporting.view_report_membership_search
+msgid "Adhésion en cours"
+msgstr ""
+
+#. module: ugess_membership_reporting
+#: model:ir.model.fields,field_description:ugess_membership_reporting.field_household_member__age_group
+#: model:ir.model.fields,field_description:ugess_membership_reporting.field_report_membership__age_group
+msgid "Age Group"
+msgstr ""
+
+#. module: ugess_membership_reporting
+#: model:ir.model.fields.selection,name:ugess_membership_reporting.selection__report_membership__membership_line_state__canceled
+msgid "Cancelled Member"
+msgstr ""
+
+#. module: ugess_membership_reporting
+#: model_terms:ir.ui.view,arch_db:ugess_membership_reporting.view_report_membership_search
+msgid "Catégories d'adhésion"
+msgstr ""
+
+#. module: ugess_membership_reporting
+#: model:ir.model,name:ugess_membership_reporting.model_res_partner
+msgid "Contact"
+msgstr ""
+
+#. module: ugess_membership_reporting
+#: model:ir.model.fields,field_description:ugess_membership_reporting.field_report_membership__currency_id
+msgid "Currency"
+msgstr ""
+
+#. module: ugess_membership_reporting
+#: model:ir.model.fields,field_description:ugess_membership_reporting.field_report_membership__daily_savings_per_person
+msgid "Daily Savings Per Person"
+msgstr ""
+
+#. module: ugess_membership_reporting
+#: model_terms:ir.ui.view,arch_db:ugess_membership_reporting.view_report_membership_search
+msgid "Date de fin"
+msgstr ""
+
+#. module: ugess_membership_reporting
+#: model:ir.model.fields,field_description:ugess_membership_reporting.field_report_membership__district_id
+msgid "District"
+msgstr ""
+
+#. module: ugess_membership_reporting
+#: model:ir.model.fields,field_description:ugess_membership_reporting.field_report_membership__expenditure_ceiling
+msgid "Expenditure Ceiling"
+msgstr ""
+
+#. module: ugess_membership_reporting
+#: model:ir.model.fields,field_description:ugess_membership_reporting.field_report_membership__expenditure_ceiling_period
+msgid "Expenditure Ceiling Period"
+msgstr ""
+
+#. module: ugess_membership_reporting
+#: model:ir.model.fields.selection,name:ugess_membership_reporting.selection__report_membership__membership_line_state__free
+msgid "Free Member"
+msgstr ""
+
+#. module: ugess_membership_reporting
+#: model:ir.model.fields,field_description:ugess_membership_reporting.field_report_membership__gender
+msgid "Gender"
+msgstr ""
+
+#. module: ugess_membership_reporting
+#: model:ir.model,name:ugess_membership_reporting.model_household_member
+msgid "Household Member"
+msgstr ""
+
+#. module: ugess_membership_reporting
+#: model:ir.model.fields.selection,name:ugess_membership_reporting.selection__report_membership__membership_line_state__invoiced
+msgid "Invoiced Member"
+msgstr ""
+
+#. module: ugess_membership_reporting
+#: model:ir.model.fields,field_description:ugess_membership_reporting.field_report_membership__main_income_source_household
+msgid "Main Income Source Household"
+msgstr ""
+
+#. module: ugess_membership_reporting
+#: model:ir.model,name:ugess_membership_reporting.model_report_membership
+msgid "Membership Analysis"
+msgstr ""
+
+#. module: ugess_membership_reporting
+#: model:ir.model.fields,field_description:ugess_membership_reporting.field_res_partner__membership_category_ids
+#: model:ir.model.fields,field_description:ugess_membership_reporting.field_res_users__membership_category_ids
+msgid "Membership Categories"
+msgstr ""
+
+#. module: ugess_membership_reporting
+#: model:ir.model.fields,field_description:ugess_membership_reporting.field_report_membership__membership_category_ids
+msgid "Membership Category"
+msgstr ""
+
+#. module: ugess_membership_reporting
+#: model:ir.model.fields,field_description:ugess_membership_reporting.field_report_membership__membership_line_state
+msgid "Membership Line State"
+msgstr ""
+
+#. module: ugess_membership_reporting
+#: model:ir.model.fields.selection,name:ugess_membership_reporting.selection__report_membership__expenditure_ceiling_period__month
+msgid "Month"
+msgstr ""
+
+#. module: ugess_membership_reporting
+#: model:ir.model.fields,field_description:ugess_membership_reporting.field_report_membership__monthly_savings_per_person
+msgid "Monthly Savings Per Person"
+msgstr ""
+
+#. module: ugess_membership_reporting
+#: model:ir.model.fields.selection,name:ugess_membership_reporting.selection__report_membership__membership_line_state__none
+msgid "Non Member"
+msgstr ""
+
+#. module: ugess_membership_reporting
+#: model:ir.model.fields,field_description:ugess_membership_reporting.field_report_membership__number_of_adults_in_household
+msgid "Number Of Adults In Household"
+msgstr ""
+
+#. module: ugess_membership_reporting
+#: model:ir.model.fields,field_description:ugess_membership_reporting.field_report_membership__number_of_babies_in_household
+msgid "Number Of Babies In Household"
+msgstr ""
+
+#. module: ugess_membership_reporting
+#: model:ir.model.fields,field_description:ugess_membership_reporting.field_report_membership__number_of_children_in_household
+msgid "Number Of Children In Household"
+msgstr ""
+
+#. module: ugess_membership_reporting
+#: model:ir.model.fields,field_description:ugess_membership_reporting.field_report_membership__number_of_females_in_household
+msgid "Number Of Females In Household"
+msgstr ""
+
+#. module: ugess_membership_reporting
+#: model:ir.model.fields,field_description:ugess_membership_reporting.field_report_membership__number_of_males_in_household
+msgid "Number Of Males In Household"
+msgstr ""
+
+#. module: ugess_membership_reporting
+#: model:ir.model.fields,field_description:ugess_membership_reporting.field_report_membership__number_of_other_genders_in_household
+msgid "Number Of Other Genders In Household"
+msgstr ""
+
+#. module: ugess_membership_reporting
+#: model:ir.model.fields,field_description:ugess_membership_reporting.field_report_membership__number_of_persons_in_household
+msgid "Number Of Persons In Household"
+msgstr ""
+
+#. module: ugess_membership_reporting
+#: model:ir.model.fields,field_description:ugess_membership_reporting.field_report_membership__number_of_unknown_genders_in_household
+msgid "Number Of Unknown Genders In Household"
+msgstr ""
+
+#. module: ugess_membership_reporting
+#: model:ir.model.fields,field_description:ugess_membership_reporting.field_res_partner__number_of_adult_in_household
+#: model:ir.model.fields,field_description:ugess_membership_reporting.field_res_users__number_of_adult_in_household
+msgid "Number of adults (>14)"
+msgstr ""
+
+#. module: ugess_membership_reporting
+#: model:ir.model.fields,field_description:ugess_membership_reporting.field_res_partner__number_of_babies_in_household
+#: model:ir.model.fields,field_description:ugess_membership_reporting.field_res_users__number_of_babies_in_household
+msgid "Number of babies (0-3)"
+msgstr ""
+
+#. module: ugess_membership_reporting
+#: model:ir.model.fields,field_description:ugess_membership_reporting.field_res_partner__number_of_children_in_household
+#: model:ir.model.fields,field_description:ugess_membership_reporting.field_res_users__number_of_children_in_household
+msgid "Number of children (3-14)"
+msgstr ""
+
+#. module: ugess_membership_reporting
+#: model:ir.model.fields.selection,name:ugess_membership_reporting.selection__report_membership__membership_line_state__old
+msgid "Old Member"
+msgstr ""
+
+#. module: ugess_membership_reporting
+#: model:ir.model.fields.selection,name:ugess_membership_reporting.selection__report_membership__membership_line_state__paid
+msgid "Paid Member"
+msgstr ""
+
+#. module: ugess_membership_reporting
+#: model:ir.model.fields,field_description:ugess_membership_reporting.field_report_membership__social_organization_id
+msgid "Social Organization"
+msgstr ""
+
+#. module: ugess_membership_reporting
+#: model:ir.model.fields,field_description:ugess_membership_reporting.field_report_membership__social_project_realization_rate
+msgid "Social Project Realization Rate"
+msgstr ""
+
+#. module: ugess_membership_reporting
+#: model:ir.model.fields,field_description:ugess_membership_reporting.field_report_membership__social_project_type_id
+msgid "Social Project Type"
+msgstr ""
+
+#. module: ugess_membership_reporting
+#: model:ir.model.fields,field_description:ugess_membership_reporting.field_report_membership__social_worker_id
+msgid "Social Worker"
+msgstr ""
+
+#. module: ugess_membership_reporting
+#: model:ir.model.fields,field_description:ugess_membership_reporting.field_report_membership__total_expenditure
+#: model:ir.model.fields,field_description:ugess_membership_reporting.field_res_partner__total_expenditure
+#: model:ir.model.fields,field_description:ugess_membership_reporting.field_res_users__total_expenditure
+msgid "Total Expenditure"
+msgstr ""
+
+#. module: ugess_membership_reporting
+#: model:ir.model.fields,field_description:ugess_membership_reporting.field_report_membership__total_income
+#: model:ir.model.fields,field_description:ugess_membership_reporting.field_res_partner__total_income
+#: model:ir.model.fields,field_description:ugess_membership_reporting.field_res_users__total_income
+msgid "Total Income"
+msgstr ""
+
+#. module: ugess_membership_reporting
+#: model:ir.model.fields,field_description:ugess_membership_reporting.field_res_partner__number_of_persons_in_household
+#: model:ir.model.fields,field_description:ugess_membership_reporting.field_res_users__number_of_persons_in_household
+msgid "Total number of persons in household"
+msgstr ""
+
+#. module: ugess_membership_reporting
+#: model_terms:ir.ui.view,arch_db:ugess_membership_reporting.view_report_membership_search
+msgid "Types de projet social"
+msgstr ""
+
+#. module: ugess_membership_reporting
+#: model:ir.model.fields.selection,name:ugess_membership_reporting.selection__report_membership__membership_line_state__waiting
+msgid "Waiting Member"
+msgstr ""
+
+#. module: ugess_membership_reporting
+#: model:ir.model.fields.selection,name:ugess_membership_reporting.selection__report_membership__expenditure_ceiling_period__week
+msgid "Week"
+msgstr ""
+
+#. module: ugess_membership_reporting
+#: model:ir.model.fields.selection,name:ugess_membership_reporting.selection__report_membership__expenditure_ceiling_period__year
+msgid "Year"
+msgstr ""

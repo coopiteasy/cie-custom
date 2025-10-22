@@ -1,0 +1,44 @@
+id,name,type
+budget_move_total_revenu,"Total Revenus mensuels",Income
+budget_move_total_depense,"Total Dépenses mensuelles",Expenditure
+budget_move_total_depense_dettes,"Total Dépenses mensuelles Hors Dettes",Expenditure
+budget_move_salaire,"Salaire",Income
+budget_move_rsa,"RSA",Income
+budget_move_assedic,"Assedic",Income
+budget_move_invalidite,"Invalidité",Income
+budget_move_sans_ressource,"Sans ressource",Income
+budget_move_aah,"AAH",Income
+budget_move_ata,"ATA",Income
+budget_move_autre,"Autre",Income
+budget_move_indemnites,"Indemnités",Income
+budget_move_pension_alimentaire,"Pension alimentaire",Income
+budget_move_prestations,"Prestations",Income
+budget_move_retraite,"Retraite",Income
+budget_move_loyer,"Loyer + charges locatives",Expenditure
+budget_move_garage,"Garage",Expenditure
+budget_move_electricite,"Electricité",Expenditure
+budget_move_gaz,"Gaz / + bouteilles ",Expenditure
+budget_move_eau,"Eau",Expenditure
+budget_move_telephone,"Téléphone ",Expenditure
+budget_move_internet,"Internet",Expenditure
+budget_move_assurance_voiture,"Assurance voiture",Expenditure
+budget_move_assurance_habitation,"Assurance habitation",Expenditure
+budget_move_assurance_rc,"Assurance RC / Vie et autres…",Expenditure
+budget_move_mutuelle,"Mutuelle",Expenditure
+budget_move_impots,"Impôts sur le revenu",Expenditure
+budget_move_taxe,"Taxe d'habitation + redevance TV",Expenditure
+budget_move_taxe_fonciere,"Taxe foncière",Expenditure
+budget_move_pension,"Pension et obligation alimentaire",Expenditure
+budget_move_scolarite,"Frais de scolarité ",Expenditure
+budget_move_cantine,"Frais de cantine",Expenditure
+budget_move_frais_garde,"Frais de garde",Expenditure
+budget_move_frais_transport,"Frais de transport pour le travail, Abonnement transport en commun et carburant ",Expenditure
+budget_move_frais_sante,"Frais santé : pathologie identifiées / pas les choix de vie",Expenditure
+budget_move_credits,"Crédits divers",Expenditure
+budget_move_mutuelle_animal,"Mutuelle animalière",Expenditure
+budget_move_loisir,"Activités, loisirs, sports etc.",Expenditure
+budget_move_abonnements,"Abonnements TV, etc.",Expenditure
+budget_move_envoi_argent,"Envoi d'argent (= pension alim à un tiers)",Expenditure
+budget_move_retenues_caf,"Retenue CAF/PE/ saisies (pour dossier Lucile : en dettes mensuelles)",Expenditure
+budget_move_tabac,"Tabac ou autre dépendance ",Expenditure
+budget_move_dettes_mensualisees,"Dettes mensualisées",Expenditure

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <!-- the reporting menu should be available to pos users -->
+    <record id="point_of_sale.menu_point_rep" model="ir.ui.menu">
+        <field
+            name="groups_id"
+            eval="[
+                Command.link(ref('point_of_sale.group_pos_user')),
+            ]"
+        />
+    </record>
+    <!-- the pos sessions menu should be available to pos users -->
+    <record id="point_of_sale.menu_pos_session_all" model="ir.ui.menu">
+        <field
+            name="groups_id"
+            eval="[
+                Command.link(ref('point_of_sale.group_pos_user')),
+            ]"
+        />
+    </record>
+</odoo>

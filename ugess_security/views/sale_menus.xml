@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <!-- the analysis menu should be available to grocery users
+    who are at the minimum group_sale_salesman_all_leads  -->
+    <record id="sale.menu_sale_report" model="ir.ui.menu">
+        <field
+            name="groups_id"
+            eval="[
+                Command.link(ref('sales_team.group_sale_salesman_all_leads')),
+            ]"
+        />
+    </record>
+
+</odoo>

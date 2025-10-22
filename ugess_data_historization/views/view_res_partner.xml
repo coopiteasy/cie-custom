@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <record id="act_res_partner_2_historization" model="ir.actions.act_window">
+        <field name="name">History</field>
+        <field name="res_model">data.historization.res.partner</field>
+        <field name="view_mode">tree</field>
+            <field
+            name="context"
+        >{'search_default_partner_id': active_id, 'default_partner_id': active_id}</field>
+    </record>
+
+    <record id="act_household_member_2_historization" model="ir.actions.act_window">
+        <field name="name">History</field>
+        <field name="res_model">data.historization.household.member</field>
+        <field name="view_mode">tree</field>
+            <field
+            name="context"
+        >{'search_default_household_member_id': active_id, 'default_household_member_id': active_id}</field>
+    </record>
+
+    <record id="view_res_partner_form" model="ir.ui.view">
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form" />
+        <field name="arch" type="xml">
+            <div name="button_box" position="inside">
+                <button
+                    class="oe_stat_button"
+                    name="%(ugess_data_historization.act_res_partner_2_historization)d"
+                    type="action"
+                    icon="fa-list"
+                    attrs="{'invisible': [('historization_qty', '=', 0)]}"
+                >
+                    <field
+                        string="History"
+                        name="historization_qty"
+                        widget="statinfo"
+                    />
+                </button>
+            </div>
+            <xpath
+                expr="//field[@name='household_member_ids']/tree/field[@name='main_income_source']"
+                position="after"
+            >
+                <button
+                    string="History"
+                    name="%(ugess_data_historization.act_household_member_2_historization)d"
+                    type="action"
+                    attrs="{'invisible': [('historization_qty', '=', 0)]}"
+                >
+                </button>
+                    <field name="historization_qty" invisible="1" />
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

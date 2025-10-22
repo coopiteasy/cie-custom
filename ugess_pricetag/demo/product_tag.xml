@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+Copyright (C) 2023-Today: GRAP (<http://www.grap.coop>)
+@author: Sylvain LE GAL (https://twitter.com/legalsylvain)
+License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
+-->
+<odoo>
+
+    <record model="product.tag" id="product_tag_1">
+        <field name="name">Bio</field>
+    </record>
+
+    <record model="product.tag" id="product_tag_2">
+        <field name="name">Local</field>
+    </record>
+
+</odoo>

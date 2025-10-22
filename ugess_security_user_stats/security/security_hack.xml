@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+Copyright 2023 Akretion (http://www.akretion.com).
+@author Olivier Nibart <olivier.nibart@akretion.com>
+License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
+-->
+<odoo>
+
+    <!--
+        This hack is used to forbid BY DEFAULT the access to
+        all contacts except the user's one.
+        This is need to allow a 'stat' kind of profile, which
+        is given to people that are internal users becauise they
+        need SQL reports access but they can't see personal data
+        of contacts (not even names).
+
+        Therefore another group is created :
+
+            ugess_security_user_stats.group_user_all_non_private_contacts
+
+        That every 'regular' internal users must also belongs to.
+    -->
+    <!-- create a new group -->
+    <record model="res.groups" id="group_user_all_non_private_contacts">
+        <field name="name">Internal User With All Non Private Contacts</field>
+        <field
+            name="users"
+            eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"
+        />
+        <field name="implied_ids" eval="[Command.link(ref('base.group_user'))]" />
+        <field name="category_id" ref="ugess_security.category_ugess_security" />
+    </record>
+
+    <!-- kind of hack the base rules -->
+    <function name="write" model="ir.model.data">
+        <function name="search" model="ir.model.data">
+            <value
+                eval="[('module', '=', 'base'),
+                ('name', 'in', (
+                        'res_partner_rule_private_employee',
+                        'res_partner_portal_public_rule',
+                    )
+                )
+            ]"
+            />
+        </function>
+        <value eval="{'noupdate': False}" />
+    </function>
+    <!-- the record rule placed on internal user is moved to our new group -->
+    <record id="base.res_partner_rule_private_employee" model="ir.rule">
+            <field
+            name="groups"
+            eval="[
+                Command.set([ref('ugess_security_user_stats.group_user_all_non_private_contacts')]),
+            ]"
+        />
+    </record>
+    <!-- then we set the portal record rule to the internal users -->
+    <record id="base.res_partner_portal_public_rule" model="ir.rule">
+            <field
+            name="groups"
+            eval="[
+                Command.link(ref('base.group_user')),
+            ]"
+        />
+    </record>
+    <function name="write" model="ir.model.data">
+        <function name="search" model="ir.model.data">
+            <value
+                eval="[('module', '=', 'base'),
+                ('name', 'in', (
+                        'res_partner_rule_private_employee',
+                        'res_partner_portal_public_rule',
+                    )
+                )
+            ]"
+            />
+        </function>
+        <value eval="{'noupdate': True}" />
+    </function>
+
+    <!-- add the new group to the cashier group -->
+    <record model="res.groups" id="ugess_security.role_ugess_cashier_res_groups">
+        <field
+            name="implied_ids"
+            eval="[
+            Command.link(
+                ref('ugess_security_user_stats.group_user_all_non_private_contacts'),
+            ),
+        ]"
+        />
+    </record>
+
+    <!-- fix also some other access rights -->
+    <record model="ir.model.access" id="hr.access_hr_employee_public_user">
+        <field
+            name="group_id"
+            ref="ugess_security_user_stats.group_user_all_non_private_contacts"
+        />
+    </record>
+    <record model="ir.model.access" id="utm.access_utm_campaign_user">
+        <field
+            name="group_id"
+            ref="ugess_security_user_stats.group_user_all_non_private_contacts"
+        />
+    </record>
+
+</odoo>

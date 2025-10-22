@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="social_project_view_form" model="ir.ui.view">
+        <field name="name">view_social_project_form</field>
+        <field name="model">social.project</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <group>
+                        <field name="name" />
+                        <field name="type_id" />
+                        <field
+                            name="partner_id"
+                            invisible="context.get('invisible_partner', False)"
+                        />
+                    </group>
+                    <group>
+                        <field name="start_date" />
+                        <field name="end_date" />
+                        <field name="realization_rate" />
+                    </group>
+                    <label for="comment" />
+                    <field name="comment" />
+                </group>
+            </form>
+        </field>
+    </record>
+</odoo>

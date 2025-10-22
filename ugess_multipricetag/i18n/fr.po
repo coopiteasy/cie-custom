@@ -1,0 +1,43 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ugess_multipricetag
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2025-07-03 14:37+0000\n"
+"Last-Translator: mihien <simo@coopiteasy.be>\n"
+"Language-Team: \n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 4.17\n"
+
+#. module: ugess_multipricetag
+#. odoo-python
+#: code:addons/ugess_multipricetag/models/product_print_category.py:0
+#, python-format
+msgid ""
+"All price lists must belong to the same company as the product print category. \n"
+"Please check the price lists associated with this category and remove those belonging to the wrong company."
+msgstr ""
+"Toutes les listes de prix doivent appartenir à la même entreprise que la catégorie d'impression. \n"
+"Veuillez vérifier listes de prix associées à la catégorie d'impression et retirez celles appartenant à une autre entreprise."
+
+#. module: ugess_multipricetag
+#: model:ir.model.fields,field_description:ugess_multipricetag.field_product_print_category__is_multipricetag
+msgid "Multi-price"
+msgstr "Prix multiples"
+
+#. module: ugess_multipricetag
+#: model:ir.model.fields,field_description:ugess_multipricetag.field_product_print_category__price_lists_ids
+msgid "Pricelists"
+msgstr "Listes de prix"
+
+#. module: ugess_multipricetag
+#: model:ir.model,name:ugess_multipricetag.model_product_print_category
+msgid "Print Category for Product"
+msgstr ""

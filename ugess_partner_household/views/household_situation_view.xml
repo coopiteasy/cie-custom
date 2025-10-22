@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="household_situation_action" model="ir.actions.act_window">
+        <field name="name">Household Situation</field>
+        <field name="res_model">household.situation</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+
+    <menuitem
+        id="household_situation_menu"
+        name="Household Situation"
+        action="household_situation_action"
+        parent="contacts.res_partner_menu_config"
+    />
+
+    <record id="view_household_situation_tree" model="ir.ui.view">
+        <field name="name">view_household_situation_tree</field>
+        <field name="model">household.situation</field>
+        <field name="arch" type="xml">
+            <tree editable="bottom">
+                <field name="name" />
+            </tree>
+        </field>
+    </record>
+
+
+</odoo>
