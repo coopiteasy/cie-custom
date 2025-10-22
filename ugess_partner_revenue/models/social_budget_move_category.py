@@ -12,6 +12,5 @@ class SocialBudgetMoveCategory(models.Model):
     type = fields.Selection(
         selection=[("income", "Income"), ("expenditure", "Expenditure")],
         default="income",
-        string="Type",
         required=True,
     )
