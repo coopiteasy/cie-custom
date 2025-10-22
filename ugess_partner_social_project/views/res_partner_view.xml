@@ -14,11 +14,7 @@
                 >
                 <group string="Social Project" name="social_project" />
                 <field name="social_project_ids">
-                        <tree
-                            string="Social Project"
-                            name="social_project"
-                            editable="bottom"
-                        >
+                        <tree name="social_project" editable="bottom">
                             <field name="type_id" />
                             <field name="start_date" />
                             <field name="realization_rate" />
