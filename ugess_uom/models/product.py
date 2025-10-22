@@ -10,12 +10,14 @@ class ProductProduct(models.Model):
 
     @api.depends("uom_id", "weight")
     def _compute_weight(self):
-        super()._compute_weight()
+        res = super()._compute_weight()
         self._set_product_weight_uom_kg()
+        return res
 
     def _set_weight(self):
-        super()._set_weight()
+        res = super()._set_weight()
         self._set_product_weight_uom_kg()
+        return res
 
     def _set_product_weight_uom_kg(self):
         for record in self:
