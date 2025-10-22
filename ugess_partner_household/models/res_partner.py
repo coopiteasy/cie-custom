@@ -31,9 +31,7 @@ class ResPartner(models.Model):
         compute="_compute_linked_household_member_id",
         store=True,
     )
-    activate_household_functionality = fields.Boolean(
-        string="Activate Household Functionality"
-    )
+    activate_household_functionality = fields.Boolean()
 
     number_of_persons_in_household = fields.Integer(
         string="Total number of persons in household",
