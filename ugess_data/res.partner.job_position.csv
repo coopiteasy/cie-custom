@@ -1,10 +1,10 @@
 id,name
-job_position_salarietp,"Salarié(e) à temps plein"
+job_position_salarietplein,"Salarié(e) à temps plein"
 job_position_retraite,"Retraité(e)"
 job_position_chomage,"Demandeur(se) d'emploi indemnisé(e)"
 job_position_etudiant,"Etudiant(e)"
 job_position_rsa,"Bénéficiaire du RSA"
-job_position_salarietp,"Salarié(e) à temps partiel"
+job_position_salarietpartiel,"Salarié(e) à temps partiel"
 job_position_independant,"Travailleur(se) indépendant(e)"
 job_position_apprenti,"Apprenti(e)"
 job_position_garantie_jeune,"Garantie jeune"
