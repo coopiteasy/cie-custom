@@ -24,11 +24,7 @@
                 </group>
                 <group name="group_social_budget" />
                 <field name="social_budget_move_ids">
-                        <tree
-                            string="Social Budget"
-                            name="tree_social_budget"
-                            editable="bottom"
-                        >
+                        <tree name="tree_social_budget" editable="bottom">
                             <field name="type" invisible="True" />
                             <field name="category_id" />
                             <field
