@@ -10,4 +10,4 @@ class ResPartner(models.Model):
             raise AccessError(
                 _("You are not allowed to archive or unarchive a contact.")
             )
-        super().toggle_active()
+        return super().toggle_active()
