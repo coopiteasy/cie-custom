@@ -18,18 +18,19 @@ class TrackWebsiteExportCSV(models.AbstractModel):
         for track in tracks:
             # Special handling for permanent sessions without dates
             if track.all_event and not track.dates:
-                self._write_permanent_track_row(writer, track)
+                self._write_permanent_track_row(writer, track, sequence=1)
             else:
                 # Normal processing for sessions with dates
-                for date_line in track.dates:
-                    self._write_normal_track_row(writer, track, date_line)
+                for sequence, date_line in enumerate(track.dates, start=1):
+                    self._write_normal_track_row(writer, track, date_line, sequence)
 
-    def _write_permanent_track_row(self, writer, track):
+    def _write_permanent_track_row(self, writer, track, sequence):
         """Write a row for a permanent session without dates."""
         # Use special formatting for permanent sessions
         track_time = "00:00:00"
         track_date = "00-00-0000"
-        track_id = track.id  # Use track ID instead of date_line ID
+        track_id = track.id  # Always use track ID
+        id_horaire = f"{track_id}{sequence}"  # Concatenate track ID with sequence
         
         # Format duration
         track_duration = self._format_duration(track.duration)
@@ -40,6 +41,7 @@ class TrackWebsiteExportCSV(models.AbstractModel):
         # Write the row
         self._write_csv_row(writer, {
             "id": track_id,
+            "id_horaire": id_horaire,
             "date": track_date,
             "heure": track_time,
             "permanent": int(track.all_event),
@@ -49,7 +51,7 @@ class TrackWebsiteExportCSV(models.AbstractModel):
             "duree": track_duration.isoformat(timespec="minutes"),
         }, track)
 
-    def _write_normal_track_row(self, writer, track, date_line):
+    def _write_normal_track_row(self, writer, track, date_line, sequence):
         """Write a row for a normal session with dates."""
         # Format time from date_line
         hour = int(date_line.hour)
@@ -62,9 +64,14 @@ class TrackWebsiteExportCSV(models.AbstractModel):
         # Parse location
         locations = self._parse_location(track)
         
+        # Use track ID (not date_line ID) and create id_horaire
+        track_id = track.id
+        id_horaire = f"{track_id}{sequence}"
+        
         # Write the row
         self._write_csv_row(writer, {
-            "id": date_line.id,
+            "id": track_id,
+            "id_horaire": id_horaire,
             "date": date_line.date,
             "heure": track_time.isoformat(timespec="minutes"),
             "permanent": int(track.all_event),
@@ -105,6 +112,7 @@ class TrackWebsiteExportCSV(models.AbstractModel):
     def csv_report_options(self):
         res = super().csv_report_options()
         res["fieldnames"].append("id")
+        res["fieldnames"].append("id_horaire")
         res["fieldnames"].append("date")
         res["fieldnames"].append("heure")
         res["fieldnames"].append("permanent")

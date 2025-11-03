@@ -72,6 +72,8 @@ class TestTrackWebsiteExport(TransactionCase):
         row = rows[0]
         
         # Verify each column has the correct value
+        self.assertEqual(row["id"], str(track.id))  # Track ID (not date_line ID)
+        self.assertEqual(row["id_horaire"], f"{track.id}1")  # Track ID + sequence
         self.assertEqual(row["titre session"], "Permanent Session")
         self.assertEqual(row["date"], "00-00-0000")  # Special date format
         self.assertEqual(row["heure"], "00:00:00")   # Special time format
@@ -127,6 +129,8 @@ class TestTrackWebsiteExport(TransactionCase):
         row = rows[0]
         
         # Verify each column has the correct value
+        self.assertEqual(row["id"], str(track.id))  # Track ID (not date_line ID)
+        self.assertEqual(row["id_horaire"], f"{track.id}1")  # Track ID + sequence
         self.assertEqual(row["titre session"], "Normal Session")
         self.assertEqual(row["date"], "2025-06-01")  # Real date
         self.assertEqual(row["heure"], "16:30")      # Time with timezone conversion (UTC+2)
@@ -134,3 +138,59 @@ class TestTrackWebsiteExport(TransactionCase):
         self.assertEqual(row["lieux"], "Amphitheater")  # Location parsing
         self.assertEqual(row["forme"], "Conference")
         self.assertEqual(row["duree"], "01:30")      # 1.5 hours formatted
+
+    def test_track_with_multiple_dates(self):
+        """Test that a track with multiple dates generates multiple rows with correct id_horaire"""
+        # Create a track with multiple dates
+        track = self.env["event.track"].create({
+            "name": "Multi-date Session",
+            "event_id": self.event.id,
+            "duration": 1.0,
+            "all_event": False,
+            "format_id": self.format.id,
+            "location_id": self.location.id,
+        })
+        
+        # Add multiple dates to the track
+        date1 = datetime(2025, 6, 1, 10, 0)
+        date2 = datetime(2025, 6, 2, 14, 0)
+        self.env["event.track.date"].create({
+            "track_id": track.id,
+            "datetime": date1,
+        })
+        self.env["event.track.date"].create({
+            "track_id": track.id,
+            "datetime": date2,
+        })
+        
+        # Test the export
+        report = self.env["report.primevere_event_custom.track_export_website"]
+        
+        output = io.StringIO()
+        writer = csv.DictWriter(
+            output, 
+            fieldnames=report.csv_report_options()["fieldnames"], 
+            delimiter=";"
+        )
+        
+        # Generate CSV
+        report.generate_csv_report(writer, {}, self.event)
+        
+        output.seek(0)
+        reader = csv.DictReader(output, delimiter=";")
+        rows = list(reader)
+        
+        # Should have exactly two rows for the two dates
+        self.assertEqual(len(rows), 2)
+        
+        # First row
+        row1 = rows[0]
+        self.assertEqual(row1["id"], str(track.id))  # Same track ID
+        self.assertEqual(row1["id_horaire"], f"{track.id}1")  # First sequence
+        self.assertEqual(row1["titre session"], "Multi-date Session")
+        
+        # Second row  
+        row2 = rows[1]
+        self.assertEqual(row2["id"], str(track.id))  # Same track ID
+        self.assertEqual(row2["id_horaire"], f"{track.id}2")  # Second sequence
+        self.assertEqual(row2["titre session"], "Multi-date Session")
