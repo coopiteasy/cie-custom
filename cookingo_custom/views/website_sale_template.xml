@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template id="product" inherit_id="website_sale.shop_product_carousel">
+        <xpath expr="//div[hasclass('carousel-outer')]" position="before">
+            <xpath expr="//p[@id='product_public_description']/.." position="move" />
+        </xpath>
+    </template>
+</odoo>
