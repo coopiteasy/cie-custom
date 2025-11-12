@@ -27,8 +27,7 @@ patch(publicWidget.registry.s_website_form.prototype, "lpcr_website_parner_form"
         return params;
     },
 
-    start() {
-        const res = this._super(...arguments);
+    setCompany() {
         // Magic field
         // The presence of a magic field in the form trigger custom
         // validation of the form.
@@ -40,6 +39,20 @@ patch(publicWidget.registry.s_website_form.prototype, "lpcr_website_parner_form"
             if ($company_select.length) {
                 $company_select[0].value = params.company_id;
             }
+        }
+    },
+
+    start() {
+        const res = this._super(...arguments);
+        this.setCompany();
+        return res;
+    },
+
+    update_status(status) {
+        const res = this._super(...arguments);
+        console.log("in update_status function");
+        if (status === "success") {
+            this.__started.then(() => this.setCompany());
         }
         return res;
     },
