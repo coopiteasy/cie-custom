@@ -1,0 +1,1 @@
+Fix setting the default company after submitting the form.
