@@ -29,7 +29,7 @@ patch(publicWidget.registry.s_website_form.prototype, "lpcr_website_parner_form"
 
     setCompany() {
         // Magic field
-        // The presence of a magic field in the form trigger custom
+        // The presence of a magic field in the form triggers custom
         // validation of the form.
         const $target = this.$target;
         const $magic_input = $target.find("input[name='form_type']");
