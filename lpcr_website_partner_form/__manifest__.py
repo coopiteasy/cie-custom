@@ -5,7 +5,7 @@
 {
     "name": "LPCR Website Partner Form",
     "summary": "Add a form to add partners from website.",
-    "version": "16.0.1.0.0",
+    "version": "16.0.1.0.1",
     "category": "website",
     "website": "https://coopiteasy.be",
     "author": "Coop IT Easy SC",
