@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data noupdate="0">
+
+    <!-- Navbar-Anpassungen für SUPERCOOP Bremen -->
+    <template id="supercoop_navbar_inherit"
+              name="SUPERCOOP Navbar"
+              inherit_id="website.navbar">
+
+      <!-- 1) Nav-Element leicht anpassen (shadow, etc.) -->
+      <xpath expr="//nav[@data-name='Navbar']" position="attributes">
+        <!-- bestehende Klassen erweitern, nicht ersetzen -->
+        <attribute name="class" add=" shadow-sm" separator=" "/>
+      </xpath>
+
+      <!-- 2) Container: flex-Layout sicherstellen -->
+      <xpath expr="//div[@id='top_menu_container']" position="attributes">
+        <attribute name="class">
+          container d-flex align-items-center justify-content-start justify-content-lg-between
+        </attribute>
+      </xpath>
+
+      <!-- 3) Top-Menü-UL pilliger machen -->
+      <xpath expr="//ul[@id='top_menu']" position="attributes">
+        <attribute name="class">
+          nav navbar-nav flex-grow-1 nav-pills gap-3
+        </attribute>
+        <attribute name="role">menu</attribute>
+      </xpath>
+
+      <!-- 4) Struktur-Slot rechts vom Menü (falls noch nicht vorhanden) -->
+      <xpath expr="//div[@id='top_menu_collapse']" position="after">
+        <div class="oe_structure oe_structure_solo ms-lg-4"/>
+      </xpath>
+
+    </template>
+
+  </data>
+</odoo>
