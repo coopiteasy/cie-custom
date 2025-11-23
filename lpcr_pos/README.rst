@@ -35,6 +35,9 @@ This module hides several buttons for regular users (not for managers):
   * Refund
   * Info
   * Quotation/Order (from ``pos_sale`` module)
+* Order screen
+
+  * Refund
 * Customer selection screen:
 
   * Create
