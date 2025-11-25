@@ -30,7 +30,7 @@ addon | version | maintainers | summary
 [lpcr_donation_tax_report](lpcr_donation_tax_report/) | 16.0.2.0.0 | <a href='https://github.com/remytms'><img src='https://github.com/remytms.png' width='32' height='32' style='border-radius:50%;' alt='remytms'/></a> | Custom tax report for donation
 [lpcr_pos](lpcr_pos/) | 16.0.1.0.0 |  | Customize the PoS according to LPCR specifications
 [lpcr_pos_membership](lpcr_pos_membership/) | 16.0.1.0.0 | <a href='https://github.com/flaenen'><img src='https://github.com/flaenen.png' width='32' height='32' style='border-radius:50%;' alt='flaenen'/></a> | POS Membership customizations for LPCR
-[lpcr_website_partner_form](lpcr_website_partner_form/) | 16.0.1.0.1 | <a href='https://github.com/remytms'><img src='https://github.com/remytms.png' width='32' height='32' style='border-radius:50%;' alt='remytms'/></a> | Add a form to add partners from website.
+[lpcr_website_partner_form](lpcr_website_partner_form/) | 16.0.1.0.2 | <a href='https://github.com/remytms'><img src='https://github.com/remytms.png' width='32' height='32' style='border-radius:50%;' alt='remytms'/></a> | Add a form to add partners from website.
 [medor_custom_stats](medor_custom_stats/) | 16.0.1.0.0 |  | Compute stats on number of subscribers and number of cooperators
 [rotordc_autofill_product_variant](rotordc_autofill_product_variant/) | 16.0.1.0.0 |  | Autofill some field of the product variant based on the product template.
 [rotordc_custom](rotordc_custom/) | 16.0.1.0.0 |  | Customization for RotorDC
