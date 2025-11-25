@@ -70,7 +70,6 @@ msgstr ""
 #. module: lpcr_website_partner_form
 #. odoo-python
 #: code:addons/lpcr_website_partner_form/controllers/main.py:0
-#: code:addons/lpcr_website_partner_form/controllers/main.py:0
 #, python-format
 msgid "E-mail address already used."
 msgstr ""
