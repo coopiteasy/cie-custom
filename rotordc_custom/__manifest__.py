@@ -4,7 +4,7 @@
 {
     "name": "rotordc_custom",
     "summary": "Customization for RotorDC",
-    "version": "16.0.1.0.0",
+    "version": "16.0.1.1.0",
     "category": "Uncategorized",
     "website": "https://coopiteasy.be",
     "author": "Coop IT Easy SC",

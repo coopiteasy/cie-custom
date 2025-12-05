@@ -33,7 +33,7 @@ addon | version | maintainers | summary
 [lpcr_website_partner_form](lpcr_website_partner_form/) | 16.0.1.0.2 | <a href='https://github.com/remytms'><img src='https://github.com/remytms.png' width='32' height='32' style='border-radius:50%;' alt='remytms'/></a> | Add a form to add partners from website.
 [medor_custom_stats](medor_custom_stats/) | 16.0.1.0.0 |  | Compute stats on number of subscribers and number of cooperators
 [rotordc_autofill_product_variant](rotordc_autofill_product_variant/) | 16.0.1.0.0 |  | Autofill some field of the product variant based on the product template.
-[rotordc_custom](rotordc_custom/) | 16.0.1.0.0 |  | Customization for RotorDC
+[rotordc_custom](rotordc_custom/) | 16.0.1.1.0 |  | Customization for RotorDC
 [rotordc_optional_product](rotordc_optional_product/) | 16.0.1.0.0 |  | Custom modifications regarding RotorDC's use of optional products.
 [rotordc_report_picking_huge_sale_order](rotordc_report_picking_huge_sale_order/) | 16.0.1.0.0 |  | At the bottom of the Picking Operations report, display the sale order in huge text
 [rotordc_sale_related_so](rotordc_sale_related_so/) | 16.0.1.0.0 | <a href='https://github.com/robinkeunen'><img src='https://github.com/robinkeunen.png' width='32' height='32' style='border-radius:50%;' alt='robinkeunen'/></a> | Add M2M links between SOs
