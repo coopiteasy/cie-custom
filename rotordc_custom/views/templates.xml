@@ -8,16 +8,54 @@
     <template
         id="product"
         name="Product (in rotordc_custom)"
-        inherit_id="website_sale.product"
+        inherit_id="website_sale_product_weight.product"
     >
-        <xpath
-            expr="//div[@id='product_details']//div[hasclass('js_product', 'js_main_product')]/t[1]"
-            position="after"
-        >
-            <p class="oe_product_barcode">barcode: <span
+        <xpath expr="//p[hasclass('oe_product_weight')]" position="before">
+            <p class="oe_product_barcode">Barcode: <span
                     class="oe_product_barcode_value"
                     t-field="product_variant.barcode"
                 /></p>
+        </xpath>
+    </template>
+
+    <template
+        id="products_item_price_uom"
+        name="Products Item Price UOM (rotordc_custom)"
+        inherit_id="website_sale_uom_price_list_preview.products_item_price_uom"
+    >
+        <xpath expr="//t[@t-call='website_sale.base_unit_price']" position="attributes">
+            <attribute name="t-if">False</attribute>
+        </xpath>
+        <xpath expr="//t[@t-call='website_sale.base_unit_price']" position="after">
+            / <span class="oe_custom_base_unit" t-field="product.base_unit_name" />
+        </xpath>
+    </template>
+
+    <template
+        id="o_wsale_offcanvas"
+        inherit_id="website_sale.o_wsale_offcanvas"
+        name="Offcanvas (rotordc_custom)"
+    >
+        <!-- Remove variant attribute filter on right side panel -->
+        <xpath
+            expr="//form[contains(@t-attf-class, 'js_attributes')]"
+            position="attributes"
+        >
+            <attribute name="t-attf-class" add="d-none" separator=" " />
+        </xpath>
+    </template>
+
+    <template
+        id="products"
+        name="Products (in rotordc_custom)"
+        inherit_id="website_sale.products"
+    >
+        <!-- Remove variant attribute filter on left side panel -->
+        <xpath
+            expr="//div[hasclass('products_attributes_filters')]"
+            position="attributes"
+        >
+            <attribute name="class" add="d-none" separator=" " />
         </xpath>
     </template>
 
