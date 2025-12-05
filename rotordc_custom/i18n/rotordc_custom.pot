@@ -24,6 +24,11 @@ msgid "<strong>/</strong>"
 msgstr ""
 
 #. module: rotordc_custom
+#: model_terms:ir.ui.view,arch_db:rotordc_custom.product
+msgid "Barcode:"
+msgstr ""
+
+#. module: rotordc_custom
 #: model:ir.model,name:rotordc_custom.model_product_label_layout
 msgid "Choose the sheet layout to print the labels"
 msgstr ""
@@ -70,6 +75,8 @@ msgid "Sales Price (Taxes Included)"
 msgstr ""
 
 #. module: rotordc_custom
-#: model_terms:ir.ui.view,arch_db:rotordc_custom.product
-msgid "Barcode:"
+#. odoo-javascript
+#: code:addons/rotordc_custom/static/src/xml/website_sale_stock_product_availability.xml:0
+#, python-format
+msgid "in stock."
 msgstr ""
