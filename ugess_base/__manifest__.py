@@ -14,7 +14,6 @@
         "analytic",
         # OCA
         "account_financial_report",
-        "auth_oidc",
         "barcodes_generator_product",
         "base_address_extended_geonames_import",
         "base_location_district",
