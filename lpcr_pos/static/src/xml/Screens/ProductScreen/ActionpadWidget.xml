@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+SPDX-FileCopyrightText: 2025 Coop IT Easy SC
+
+SPDX-License-Identifier: AGPL-3.0-or-later
+-->
+<templates xml:space="preserve">
+    <t t-inherit="point_of_sale.ActionpadWidget" t-inherit-mode="extension" owl="1">
+        <!-- The refund button will not appear on the TicketScreen unless the
+             user is a manager. Don't mind that this file is in the ProductScreen
+             folder, I haven't found a way to make this change from a TicketScreen
+             file, but this will not change anything for the ProductScreen.
+        -->
+        <xpath
+            expr="//button[hasclass('button','pay','validation')]"
+            position="attributes"
+        >
+            <attribute name="t-if">
+            props.actionToTrigger != 'do-refund' or env.pos.isManager
+            </attribute>
+        </xpath>
+    </t>
+</templates>
