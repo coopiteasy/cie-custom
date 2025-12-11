@@ -5,7 +5,7 @@
 {
     "name": "PoS Customizations for LPCR",
     "summary": "Customize the PoS according to LPCR specifications",
-    "version": "16.0.1.0.0",
+    "version": "16.0.1.1.0",
     "category": "Sales/Point of Sale",
     "website": "https://coopiteasy.be",
     "author": "Coop IT Easy SC",
