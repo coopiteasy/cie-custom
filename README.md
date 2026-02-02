@@ -22,6 +22,7 @@ Available addons
 addon | version | maintainers | summary
 --- | --- | --- | ---
 [bao_supplier_certificate](bao_supplier_certificate/) | 16.0.1.0.0 | <a href='https://github.com/remytms'><img src='https://github.com/remytms.png' width='32' height='32' style='border-radius:50%;' alt='remytms'/></a> | Custom certificates for supplier of Boucher À Oreilles
+[brupower_custom_customer_invoice](brupower_custom_customer_invoice/) | 16.0.1.0.0 | <a href='https://github.com/mihien'><img src='https://github.com/mihien.png' width='32' height='32' style='border-radius:50%;' alt='mihien'/></a> | Add start, end date and contract to customer invoices
 [cookingo_custom](cookingo_custom/) | 16.0.1.0.0 |  | Custom modifications for Cookingo.
 [foodhub_custom](foodhub_custom/) | 16.0.1.0.0 |  | Foodhub customizations
 [foodhub_custom_product_kanban_view](foodhub_custom_product_kanban_view/) | 16.0.1.0.0 | <a href='https://github.com/remytms'><img src='https://github.com/remytms.png' width='32' height='32' style='border-radius:50%;' alt='remytms'/></a> | Adapt the kanban view for product
