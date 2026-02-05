@@ -10,7 +10,3 @@ class AccountMove(models.Model):
 
     start_date = fields.Date()
     end_date = fields.Date()
-    contract_id = fields.Many2one(
-        comodel_name="contract.contract",
-        string="Contract",
-    )
