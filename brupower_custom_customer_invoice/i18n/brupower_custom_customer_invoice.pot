@@ -14,9 +14,7 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. module: brupower_custom_customer_invoice
-#: model:ir.model.fields,field_description:brupower_custom_customer_invoice.field_account_bank_statement_line__contract_id
-#: model:ir.model.fields,field_description:brupower_custom_customer_invoice.field_account_move__contract_id
-#: model:ir.model.fields,field_description:brupower_custom_customer_invoice.field_account_payment__contract_id
+#: model_terms:ir.ui.view,arch_db:brupower_custom_customer_invoice.account_move_view_form_inherit
 msgid "Contract"
 msgstr ""
 
