@@ -5,7 +5,7 @@
 {
     "name": "Brupower Custom Module For Customer Invoices",
     "summary": "Add start, end date and contract to customer invoices",
-    "version": "16.0.1.0.0",
+    "version": "16.0.2.0.0",
     "category": "Accounting/Accounting",
     "website": "https://coopiteasy.be",
     "author": "Coop IT Easy SC",
