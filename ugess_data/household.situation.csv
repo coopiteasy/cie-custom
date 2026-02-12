@@ -1,0 +1,6 @@
+id,name
+household_situation_monoparental_pere,"Monoparental père"
+household_situation_monoparental_mere,"Monoparental mère"
+household_situation_seul,"Personne seule"
+household_situation_sans_enfant,"Couple sans enfant"
+household_situation_avec_enfant,"Couple avec enfants"

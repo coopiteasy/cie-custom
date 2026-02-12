@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="social_budget_move_view_form" model="ir.ui.view">
+        <field name="name">social_budget_move_view_form</field>
+        <field name="model">social.budget.move</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <field name="type" />
+                    <field name="category_id" />
+                    <field name="expenditure" />
+                    <field name="income" />
+                    <field name="currency_id" invisible="True" />
+                </group>
+            </form>
+        </field>
+    </record>
+
+
+</odoo>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <record id="view_data_historization_res_partner_search" model="ir.ui.view">
+        <field name="model">data.historization.res.partner</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="partner_id" />
+            </search>
+        </field>
+    </record>
+
+    <record id="view_data_historization_res_partner_form" model="ir.ui.view">
+        <field name="model">data.historization.res.partner</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="create_date" />
+                <field name="partner_id" />
+                <field name="name" optional="show" />
+                <field name="main_income_source_household" optional="show" />
+                <field name="main_income_source_member" optional="show" />
+                <field name="household_situation_id" optional="show" />
+                <field name="job_position_id" optional="show" />
+                <field name="gender" optional="show" />
+                <field name="city" optional="show" />
+                <field name="monthly_savings_per_person" optional="show" />
+                <field name="daily_savings_per_person" optional="show" />
+                <field name="total_income" optional="show" />
+                <field name="total_expenditure" optional="show" />
+                <field name="active" optional="show" />
+            </tree>
+        </field>
+    </record>
+
+</odoo>

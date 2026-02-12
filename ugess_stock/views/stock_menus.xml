@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <!-- we don't want the Operations / Replenishment menu to be seen
+    as they don't use it for now at UGESS.
+    -->
+    <record id="stock.menu_reordering_rules_replenish" model="ir.ui.menu">
+        <field name="active">0</field>
+    </record>
+
+    <!-- same as the run scheduler, even in debug mode -->
+    <record id="stock.menu_procurement_compute" model="ir.ui.menu">
+        <field name="active">0</field>
+    </record>
+
+</odoo>

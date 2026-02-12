@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <!-- the base_location_district.access_res_district_group_user
+    should not be given to the partner_manager here, but to a specific group
+    see ir.model.access.csv -->
+
+    <record model="res.groups" id="group_res_district_manager">
+        <field name="name">UGESS District Manager</field>
+        <field name="category_id" ref="ugess_security.category_ugess_security" />
+    </record>
+
+</odoo>

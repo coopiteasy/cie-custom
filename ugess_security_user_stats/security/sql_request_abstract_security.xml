@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+Copyright 2023 Akretion (http://www.akretion.com).
+@author Olivier Nibart <olivier.nibart@akretion.com>
+License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
+-->
+<odoo>
+
+    <record model="res.groups" id="sql_request_abstract.group_sql_request_manager">
+        <field
+            name="implied_ids"
+            eval="[Command.link(ref('ugess_security_user_stats.role_ugess_anonymous_stats_user_res_groups'))]"
+        />
+    </record>
+
+</odoo>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+    Copyright (C) 2022-Today GRAP (http://www.grap.coop)
+    @author Sylvain LE GAL (https://twitter.com/legalsylvain)
+    License AGPL-3 - See http://www.gnu.org/licenses/agpl-3.0.html
+-->
+<odoo>
+
+    <record
+        id="actions_server_label_product_product_agipa_65"
+        model="ir.actions.server"
+    >
+        <field name="name">Print Self-adhesive Labels</field>
+        <field name="state">report_label</field>
+        <field name="model_id" ref="product.model_product_product" />
+        <field
+            name="label_paperformat_id"
+            ref="report_paperformat_label_product_agipa_65"
+        />
+        <field
+            name="label_template_view_id"
+            ref="ugess_pricetag.label_template_product_agipa_65"
+        />
+    </record>
+
+    <record
+        id="actions_server_label_product_template_agipa_65"
+        model="ir.actions.server"
+    >
+        <field name="name">Print Self-adhesive Labels</field>
+        <field name="state">report_label</field>
+        <field name="model_id" ref="product.model_product_template" />
+        <field
+            name="label_paperformat_id"
+            ref="report_paperformat_label_product_agipa_65"
+        />
+        <field
+            name="label_template_view_id"
+            ref="ugess_pricetag.label_template_product_agipa_65"
+        />
+    </record>
+
+    <function
+        model="ir.actions.server"
+        eval="[ref('actions_server_label_product_product_agipa_65')]"
+        name="create_action"
+    />
+
+    <function
+        model="ir.actions.server"
+        eval="[ref('actions_server_label_product_template_agipa_65')]"
+        name="create_action"
+    />
+
+
+</odoo>

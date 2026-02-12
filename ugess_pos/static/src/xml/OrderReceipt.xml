@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+    Copyright (C) 2022-Today GRAP (http://www.grap.coop)
+    @author Sylvain LE GAL (https://twitter.com/legalsylvain)
+    License AGPL-3 - See http://www.gnu.org/licenses/agpl-3.0.html
+-->
+<templates id="template" xml:space="preserve">
+
+    <t
+        t-name="OrderReceipt"
+        t-inherit="point_of_sale.OrderReceipt"
+        t-inherit-mode="extension"
+        owl="1"
+    >
+        <xpath expr="//t[@t-if='receipt.total_discount']" position="replace">
+            <div>
+                Savings Achieved
+                <span
+                    t-esc="env.pos.format_currency(receipt.total_discount)"
+                    class="pos-receipt-right-align"
+                />
+            </div>
+            <t t-if="receipt.remaining_expenditure_amount">
+                <div>
+                    Ceiling Remaining
+                    <span
+                        t-esc="receipt.remaining_expenditure_amount"
+                        class="pos-receipt-right-align"
+                    />
+                </div>
+                <div>
+                    Until
+                    <span
+                        t-esc="receipt.remaining_expenditure_until"
+                        class="pos-receipt-right-align"
+                    />
+                </div>
+            </t>
+        </xpath>
+    </t>
+
+</templates>

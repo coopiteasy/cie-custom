@@ -1,0 +1,33 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ugess_product_short_name
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2025-07-03 14:37+0000\n"
+"Last-Translator: mihien <simo@coopiteasy.be>\n"
+"Language-Team: \n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 4.17\n"
+
+#. module: ugess_product_short_name
+#: model:ir.model.fields,field_description:ugess_product_short_name.field_product_template__short_name
+#: model:ir.model.fields,field_description:ugess_product_short_name.field_product_product__short_name
+msgid "Short name"
+msgstr "Nom court"
+
+#. module: ugess_product_short_name
+#: model:ir.model,name:ugess_product_short_name.model_product_template
+msgid "Product"
+msgstr ""
+
+#. module: ugess_product_short_name
+#: model:ir.model,name:ugess_product_short_name.model_product_product
+msgid "Product Variant"
+msgstr ""

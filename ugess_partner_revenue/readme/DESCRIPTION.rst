@@ -1,0 +1,1 @@
+UGESS partner revenue

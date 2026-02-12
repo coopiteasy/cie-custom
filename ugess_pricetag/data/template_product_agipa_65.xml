@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+    Copyright (C) 2022-Today GRAP (http://www.grap.coop)
+    @author Sylvain LE GAL (https://twitter.com/legalsylvain)
+    License AGPL-3 - See http://www.gnu.org/licenses/agpl-3.0.html
+-->
+<odoo>
+
+    <template id="label_template_product_agipa_65">
+        <style type="text/css">
+div.product_name {
+    text-align: center;
+    width: 100%;
+    height: 50%;
+    overflow: hidden;
+    display: inline-block;
+    font-size: 13px;
+}
+div.product_barcode {
+    text-align: center;
+    width: 100%;
+    height: 50%;
+    overflow: hidden;
+    display: inline-block;
+    font-size: 9px;
+}
+        </style>
+        <div class="product_name">
+            <t t-esc="record.name" />
+        </div>
+        <div
+            class="product_barcode"
+            t-out="record.barcode"
+            t-options="{'widget': 'barcode', 'humanreadable': 1, 'symbology': 'auto', 'width': 600, 'height': 170, 'img_style': 'max-height:100%;max-width:100%;'}"
+        />
+    </template>
+
+</odoo>

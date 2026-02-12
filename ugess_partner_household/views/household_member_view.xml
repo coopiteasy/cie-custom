@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <record id="view_household_member_tree" model="ir.ui.view">
+        <field name="model">household.member</field>
+        <field name="arch" type="xml">
+            <tree
+                editable="bottom"
+                decoration-muted="is_active_member == False"
+                decoration-it="is_active_member == False"
+            >
+                <field name="name" />
+                <field name="partner_id" />
+                <field name="birthdate_date" />
+                <field name="gender" />
+                <field
+                    name="age"
+                    attrs="{'invisible': [('birthdate_date', '=', 'False')]}"
+                />
+                <field
+                    name="age_group"
+                    attrs="{'invisible': [('birthdate_date', '=', 'False')]}"
+                />
+                <field name="job_position_id" />
+                <field name="main_income_source" />
+
+                <field name="is_active_member" widget="boolean_toggle" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="household_member_action" model="ir.actions.act_window">
+        <field name="name">Household Members</field>
+        <field name="res_model">household.member</field>
+        <field name="view_mode">tree</field>
+    </record>
+
+    <menuitem
+        id="household_member_menu"
+        name="Household Members"
+        action="household_member_action"
+        parent="menu_household"
+    />
+
+</odoo>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="partner_household" model="res.partner">
+        <field name="name">Mother of Household</field>
+        <field name="activate_household_functionality" eval="True" />
+        <field name="birthdate_date">1982-01-01</field>
+        <field name="gender">female</field>
+        <field
+            name="job_position_id"
+            ref="ugess_partner_household.job_position_part_time_employee"
+        />
+        <field
+            name="main_income_source_member"
+            ref="ugess_partner_revenue.social_budget_categegory_salary"
+        />
+        <field
+            name="main_income_source_household"
+            ref="ugess_partner_revenue.social_budget_categegory_active_solidary_income"
+        />
+        <field
+            name="household_situation_id"
+            ref="ugess_partner_household.situation_couple_with_children"
+        />
+    </record>
+</odoo>

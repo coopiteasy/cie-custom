@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+Copyright 2023 Akretion (http://www.akretion.com).
+@author Olivier Nibart <olivier.nibart@akretion.com>
+License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
+-->
+<odoo>
+
+    <!-- add some security here to hide the unecessary menus to our
+    internal users (that should only have access to anonymous sql reports)
+    -->
+    <record
+        id="spreadsheet_dashboard.spreadsheet_dashboard_menu_dashboard"
+        model="ir.ui.menu"
+    >
+        <field
+            name="groups_id"
+            eval="[
+                Command.link(ref('ugess_security_user_stats.group_user_all_non_private_contacts')),
+            ]"
+        />
+    </record>
+    <record
+        id="spreadsheet_dashboard.spreadsheet_dashboard_menu_configuration"
+        model="ir.ui.menu"
+    >
+        <field
+            name="groups_id"
+            eval="[
+                Command.link(ref('ugess_security_user_stats.group_user_all_non_private_contacts')),
+            ]"
+        />
+    </record>
+
+</odoo>

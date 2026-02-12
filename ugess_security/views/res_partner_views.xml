@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <record id="res_partner_view_form" model="ir.ui.view">
+        <field name="name">view_partner_form</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="ugess_membership.res_partner_view_form" />
+        <field name="arch" type="xml">
+
+            <xpath
+                expr="//page[@name='personal_information_page']"
+                position="attributes"
+            >
+                <attribute
+                    name="groups"
+                >ugess_partner_household.group_ugess_partner_household_user,ugess_partner_revenue.group_ugess_partner_revenue_user,ugess_partner_social_project.group_ugess_partner_social_project_user</attribute>
+            </xpath>
+
+            <xpath expr="//page[@name='internal_notes']" position="attributes">
+                <attribute
+                    name="groups"
+                >ugess_partner_household.group_ugess_partner_household_user,ugess_partner_revenue.group_ugess_partner_revenue_user,ugess_partner_social_project.group_ugess_partner_social_project_user</attribute>
+            </xpath>
+
+            <xpath expr="//page[@name='membership']" position="attributes">
+                <attribute
+                    name="groups"
+                >ugess_security.group_membership_user</attribute>
+            </xpath>
+
+        </field>
+    </record>
+
+
+    <!-- in base.base_security we can see that comment :
+
+        "We exclude partners that have internal users (`partner_share` field) from
+        the multi-company rule because it might interfere with the user's company rule
+        and make some users unselectable in relational fields. This means that partners
+        of internal users are always visible, not matter the company setting."
+
+        Therefore we add a domain in this action (members) to filter at view time
+        the partners of internal users considering the allowed companies.
+        It's not really for security, but is less confusing for the users.
+    -->
+    <record id="membership.action_membership_members" model="ir.actions.act_window">
+        <field
+            name="domain"
+        >['|','|', ('user_ids','=',False), ("company_id", "=", False), ('company_id', 'in', allowed_company_ids)]</field>
+    </record>
+
+</odoo>

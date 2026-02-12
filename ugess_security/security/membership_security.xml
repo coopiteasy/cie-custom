@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+<!-- add this to simplify devs and tests ?
+    <field name="users" eval="[Command.link(ref('base.user_root')), Command.link(ref('base.user_admin'))]"/>
+-->
+
+    <!-- define a Membership User group that can use memberships but not
+    configure the products
+    it implies account.group_account_user which is needed to be able to invoice memberships
+    -->
+    <record model="res.groups" id="group_membership_user">
+        <field name="name">UGESS User</field>
+        <field
+            name="category_id"
+            ref="membership_extension.module_category_membership_management"
+        />
+        <field
+            name="implied_ids"
+            eval="[Command.link(ref('account.group_account_user'))]"
+        />
+    </record>
+    <!-- add it to the membership_extension.group_membership_manager -->
+    <record model="res.groups" id="membership_extension.group_membership_manager">
+        <field name="implied_ids" eval="[Command.link(ref('group_membership_user'))]" />
+    </record>
+
+    <!-- The Odoo Inventory Administrator IS NOT allowed to CUD memberships !
+    This is a specific right given only to the membership manager
+    -->
+    <record model="ir.rule" id="membership_product_create_delete_restricted">
+        <field name="name">product: membership CUD forbidden</field>
+        <field name="model_id" ref="product.model_product_template" />
+        <field name="domain_force">[('membership', '=', False)]</field>
+        <field name="groups" eval="[Command.link(ref('stock.group_stock_manager'))]" />
+        <field name="perm_create" eval="True" />
+        <field name="perm_unlink" eval="True" />
+        <field name="perm_write" eval="True" />
+        <field name="perm_read" eval="False" />
+    </record>
+    <record model="ir.rule" id="membership_product_variant_create_delete_restricted">
+        <field name="name">product variant: membership CUD forbidden</field>
+        <field name="model_id" ref="product.model_product_product" />
+        <field name="domain_force">[('membership', '=', False)]</field>
+        <field name="groups" eval="[Command.link(ref('stock.group_stock_manager'))]" />
+        <field name="perm_create" eval="True" />
+        <field name="perm_unlink" eval="True" />
+        <field name="perm_write" eval="True" />
+        <field name="perm_read" eval="False" />
+    </record>
+
+    <!-- The membership_manager IS allowed to create memberships
+    but NOT other products
+
+    IMPORTANT  : to really be able to for a membership manager
+    to create memberships it lacks an access on product.product which is not given
+    in membership_extension.
+    It is ok for now as ususally the membership manager have the stock_manager also.
+    But should be reviewd.
+    -->
+    <record model="ir.rule" id="full_product_access">
+        <field name="name">product: membership CUD</field>
+        <field name="model_id" ref="product.model_product_template" />
+        <field name="domain_force">[('membership', '=', True)]</field>
+        <field
+            name="groups"
+            eval="[Command.link(ref('membership_extension.group_membership_manager'))]"
+        />
+        <field name="perm_create" eval="True" />
+        <field name="perm_unlink" eval="True" />
+        <field name="perm_write" eval="True" />
+        <field name="perm_read" eval="False" />
+    </record>
+    <record model="ir.rule" id="full_product_variant_access">
+        <field name="name">product variant: membership CUD</field>
+        <field name="model_id" ref="product.model_product_product" />
+        <field name="domain_force">[('membership', '=', True)]</field>
+        <field
+            name="groups"
+            eval="[Command.link(ref('membership_extension.group_membership_manager'))]"
+        />
+        <field name="perm_create" eval="True" />
+        <field name="perm_unlink" eval="True" />
+        <field name="perm_write" eval="True" />
+        <field name="perm_read" eval="False" />
+    </record>
+
+    <!-- IMPORTANT : disable the product CUD given to internal users by membership_extension
+    we need to ask upstream if such a right is a feature or a bug :
+
+    "access_product_membership_manager",product.template.user,model_product_template,base.group_user,1,1,1,1
+
+    my guess is that is would be membership_extension.group_membership_manager
+    rather than base.group_user
+    -->
+    <record
+        model="ir.model.access"
+        id="membership_extension.access_product_membership_manager"
+    >
+        <field name="group_id" ref="membership_extension.group_membership_manager" />
+    </record>
+
+</odoo>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <record id="product_membership_beneficiary" model="product.product">
+        <field name="name">Membership Beneficiary Product</field>
+        <field name="membership_type">variable</field>
+        <field name="membership_category_id" ref="category_beneficiary" />
+        <field name="membership" eval="True" />
+        <field name="type">service</field>
+    </record>
+
+</odoo>

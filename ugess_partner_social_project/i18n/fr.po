@@ -1,0 +1,141 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ugess_partner_social_project
+# Carmen Bianca Bakker <carmen@coopiteasy.be>, 2022.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0beta\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2022-10-04 14:38+0200\n"
+"Last-Translator: Carmen Bianca Bakker <carmen@coopiteasy.be>\n"
+"Language-Team: French <carmen@coopiteasy.be>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Poedit 3.0.1\n"
+
+#. module: ugess_partner_social_project
+#: model:ir.model.fields.selection,name:ugess_partner_social_project.selection__social_project__realization_rate__100
+msgid "100"
+msgstr "100"
+
+#. module: ugess_partner_social_project
+#: model:ir.model.fields.selection,name:ugess_partner_social_project.selection__social_project__realization_rate__25
+msgid "25"
+msgstr "25"
+
+#. module: ugess_partner_social_project
+#: model:ir.model.fields.selection,name:ugess_partner_social_project.selection__social_project__realization_rate__50
+msgid "50"
+msgstr "50"
+
+#. module: ugess_partner_social_project
+#: model:ir.model.fields.selection,name:ugess_partner_social_project.selection__social_project__realization_rate__75
+msgid "75"
+msgstr "75"
+
+#. module: ugess_partner_social_project
+#: model:ir.model.fields,field_description:ugess_partner_social_project.field_social_project__comment
+msgid "Comment"
+msgstr "Commentaire"
+
+#. module: ugess_partner_social_project
+#: model:ir.model,name:ugess_partner_social_project.model_res_partner
+msgid "Contact"
+msgstr "Contact"
+
+#. module: ugess_partner_social_project
+#: model:ir.model.fields,field_description:ugess_partner_social_project.field_social_project__create_uid
+#: model:ir.model.fields,field_description:ugess_partner_social_project.field_social_project_type__create_uid
+msgid "Created by"
+msgstr "Créé par"
+
+#. module: ugess_partner_social_project
+#: model:ir.model.fields,field_description:ugess_partner_social_project.field_social_project__create_date
+#: model:ir.model.fields,field_description:ugess_partner_social_project.field_social_project_type__create_date
+msgid "Created on"
+msgstr "Créé le"
+
+#. module: ugess_partner_social_project
+#: model:ir.model.fields,field_description:ugess_partner_social_project.field_social_project__name
+msgid "Description"
+msgstr "Description"
+
+#. module: ugess_partner_social_project
+#: model:ir.model.fields,field_description:ugess_partner_social_project.field_social_project__display_name
+#: model:ir.model.fields,field_description:ugess_partner_social_project.field_social_project_type__display_name
+msgid "Display Name"
+msgstr "Nom d'affichage"
+
+#. module: ugess_partner_social_project
+#: model:ir.model.fields,field_description:ugess_partner_social_project.field_social_project__end_date
+msgid "End Date"
+msgstr "Date de fin"
+
+#. module: ugess_partner_social_project
+#: model:ir.model.fields,field_description:ugess_partner_social_project.field_social_project__id
+#: model:ir.model.fields,field_description:ugess_partner_social_project.field_social_project_type__id
+msgid "ID"
+msgstr "ID"
+
+#. module: ugess_partner_social_project
+#: model:ir.model.fields,field_description:ugess_partner_social_project.field_social_project____last_update
+#: model:ir.model.fields,field_description:ugess_partner_social_project.field_social_project_type____last_update
+msgid "Last Modified on"
+msgstr "Dernière modification le"
+
+#. module: ugess_partner_social_project
+#: model:ir.model.fields,field_description:ugess_partner_social_project.field_social_project__write_uid
+#: model:ir.model.fields,field_description:ugess_partner_social_project.field_social_project_type__write_uid
+msgid "Last Updated by"
+msgstr "Dernière mise à jour par"
+
+#. module: ugess_partner_social_project
+#: model:ir.model.fields,field_description:ugess_partner_social_project.field_social_project__write_date
+#: model:ir.model.fields,field_description:ugess_partner_social_project.field_social_project_type__write_date
+msgid "Last Updated on"
+msgstr "Dernière mise à jour le"
+
+#. module: ugess_partner_social_project
+#: model:ir.model.fields,field_description:ugess_partner_social_project.field_social_project__partner_id
+msgid "Partner"
+msgstr "Partenaire"
+
+#. module: ugess_partner_social_project
+#: model:ir.model.fields,field_description:ugess_partner_social_project.field_social_project__realization_rate
+msgid "Realization Rate"
+msgstr "Taux de réalisation"
+
+#. module: ugess_partner_social_project
+#: model:ir.model,name:ugess_partner_social_project.model_social_project
+#: model:ir.model.fields,field_description:ugess_partner_social_project.field_res_partner__social_project_ids
+#: model:ir.model.fields,field_description:ugess_partner_social_project.field_res_users__social_project_ids
+#: model_terms:ir.ui.view,arch_db:ugess_partner_social_project.res_partner_view_form
+msgid "Social Project"
+msgstr "Projet social"
+
+#. module: ugess_partner_social_project
+#: model:ir.model,name:ugess_partner_social_project.model_social_project_type
+#: model:ir.ui.menu,name:ugess_partner_social_project.social_project_type_menu
+msgid "Social Project Type"
+msgstr "Type de projet social"
+
+#. module: ugess_partner_social_project
+#: model:ir.model.fields,field_description:ugess_partner_social_project.field_social_project__start_date
+msgid "Start Date"
+msgstr "Date de démarrage"
+
+#. module: ugess_partner_social_project
+#: model:ir.model.fields,field_description:ugess_partner_social_project.field_social_project__type_id
+#: model:ir.model.fields,field_description:ugess_partner_social_project.field_social_project_type__name
+msgid "Type"
+msgstr "Type"
+
+#. module: ugess_partner_social_project
+#: model:ir.actions.act_window,name:ugess_partner_social_project.social_project_type_action
+msgid "social_project_type_action"
+msgstr "social_project_type_action"

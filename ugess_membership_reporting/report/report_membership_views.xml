@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="report_membership_view_tree" model="ir.ui.view">
+        <field name="model">report.membership</field>
+        <field name="inherit_id" ref="membership.report_membership_view_tree" />
+        <field name="arch" type="xml">
+            <!-- REMOVE FIELDS  -->
+            <field name="user_id" position="attributes">
+                <attribute name="invisible">True</attribute>
+            </field>
+            <field name="num_invoiced" position="attributes">
+                <attribute name="invisible">True</attribute>
+            </field>
+            <field name="num_paid" position="attributes">
+                <attribute name="invisible">True</attribute>
+            </field>
+            <field name="tot_earned" position="attributes">
+                <attribute name="invisible">True</attribute>
+            </field>
+            <field name="membership_state" position="attributes">
+                <attribute name="invisible">True</attribute>
+            </field>
+            <!-- HIDE FIELDS BY DEFAULT -->
+            <field name="company_id" position="attributes">
+                <attribute name="optional">hide</attribute>
+            </field>
+            <field name="quantity" position="attributes">
+                <attribute name="optional">hide</attribute>
+            </field>
+            <!-- SHOW FIELDS BY DEFAULT -->
+            <field name="date_to" position="attributes">
+                <attribute name="optional">show</attribute>
+            </field>
+            <field name="membership_id" position="attributes">
+                <attribute name="optional">show</attribute>
+            </field>
+            <field name="membership_state" position="after">
+                <!-- NEW FIELDS DEFAULT SHOW -->
+                <field name="membership_line_state" optional="show" />
+                <!-- NEW FIELDS DEFAULT HIDE -->
+                <field name="expenditure_ceiling" optional="hide" />
+                <field name="social_project_type_id" optional="hide" />
+                <field name="social_project_realization_rate" optional="hide" />
+                <field name="social_worker_id" optional="hide" />
+                <field name="social_organization_id" optional="hide" />
+                <field name="district_id" optional="hide" />
+                <field name="gender" optional="hide" />
+                <field name="age_group" optional="hide" />
+                <field name="total_income" optional="hide" />
+                <field name="total_expenditure" optional="hide" />
+                <field name="number_of_persons_in_household" optional="hide" />
+                <field name="number_of_babies_in_household" optional="hide" />
+                <field name="number_of_children_in_household" optional="hide" />
+                <field name="number_of_adults_in_household" optional="hide" />
+                <field name="number_of_females_in_household" optional="hide" />
+                <field name="number_of_males_in_household" optional="hide" />
+                <field name="number_of_unknown_genders_in_household" optional="hide" />
+                <field name="number_of_other_genders_in_household" optional="hide" />
+                <field name="monthly_savings_per_person" optional="hide" />
+                <field name="daily_savings_per_person" optional="hide" />
+                <field name="main_income_source_household" optional="hide" />
+            </field>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="view_report_membership_search">
+        <field name="model">report.membership</field>
+        <field name="inherit_id" ref="membership.view_report_membership_search" />
+        <field name="arch" type="xml">
+            <!-- REMOVE FILTERS  -->
+            <filter name="forecast" position="attributes">
+                <attribute name="invisible">True</attribute>
+            </filter>
+            <filter name="Revenue" position="attributes">
+                <attribute name="invisible">True</attribute>
+            </filter>
+            <!-- NEW FILTERS  -->
+            <filter name="start_date" position="after">
+                <filter name="filter_end_date" date="date_to" />
+                <filter
+                    string="Adhésion en cours"
+                    name="paid_member_line"
+                    domain="[['membership_line_state', 'in', ['paid']], ['membership_line_start_date', '&lt;', today]]"
+                />
+            </filter>
+            <!-- REMOVE SEARCH TARGET  -->
+            <field name="user_id" position="attributes">
+                <attribute name="invisible">True</attribute>
+            </field>
+            <!-- NEW SEARCH TARGET  -->
+            <field name="user_id" position="after">
+                <field name="social_project_type_id" />
+            </field>
+            <!-- REMOVE GROUP BY  -->
+            <filter name="salesman" position="attributes">
+                <attribute name="invisible">True</attribute>
+            </filter>
+            <!-- NEW GROUP BY  -->
+            <filter name="product" position="before">
+                <filter
+                    string="Catégories d'adhésion"
+                    name="category_ids"
+                    context="{'group_by':'membership_category_ids'}"
+                />
+                <filter
+                    string="Types de projet social"
+                    name="social_project_type"
+                    context="{'group_by':'social_project_type_id'}"
+                />
+                <filter
+                    string="Date de fin"
+                    name="end_date"
+                    context="{'group_by':'date_to:month'}"
+                />
+                <filter
+                    name="expenditure_ceiling_period"
+                    context="{'group_by':'expenditure_ceiling_period'}"
+                />
+            </filter>
+        </field>
+    </record>
+
+        <record model="ir.ui.view" id="view_report_membership_pivot">
+            <field name="model">report.membership</field>
+            <field name="inherit_id" ref="membership.view_report_membership_pivot" />
+            <field name="arch" type="xml">
+                <field name="start_date" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </field>
+                <field name="num_paid" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </field>
+                <field name="num_invoiced" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </field>
+                <field name="tot_earned" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </field>
+                <field name="quantity" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </field>
+            </field>
+        </record>
+
+    <record model="ir.actions.act_window" id="membership.action_report_membership_tree">
+        <field name="view_mode">pivot,graph</field>
+        <field
+            name="context"
+        >{"search_default_category_ids": 1, "search_default_product": 1, "search_default_paid_member_line": 1, 'group_by_no_leaf': 1}</field>
+    </record>
+
+</odoo>

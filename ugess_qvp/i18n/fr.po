@@ -1,0 +1,30 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ugess_qvp
+# Carmen Bianca Bakker <carmen@coopiteasy.be>, 2022.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-02 12:34+0000\n"
+"PO-Revision-Date: 2022-11-02 13:36+0100\n"
+"Last-Translator: Carmen Bianca Bakker <carmen@coopiteasy.be>\n"
+"Language-Team: French <carmen@coopiteasy.be>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1)\n"
+"Language: fr\n"
+"X-Generator: Gtranslator 42.0\n"
+
+#. module: ugess_qvp
+#: model:ir.model,name:ugess_qvp.model_res_partner
+msgid "Contact"
+msgstr "Contact"
+
+#. module: ugess_qvp
+#: model:ir.model.fields,field_description:ugess_qvp.field_res_partner__political_quarter
+#: model:ir.model.fields,field_description:ugess_qvp.field_res_users__political_quarter
+msgid "Political Quarter"
+msgstr "Quartier politique de la ville"

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+    Copyright (C) 2022-Today GRAP (http://www.grap.coop)
+    @author Sylvain LE GAL (https://twitter.com/legalsylvain)
+    License AGPL-3 - See http://www.gnu.org/licenses/agpl-3.0.html
+-->
+<odoo>
+
+    <record
+        id="report_paperformat_label_product_agipa_65"
+        model="report.paperformat.label"
+    >
+        <field name="name">Label Agipa Ref. 118990 x65 (38 x 21,2 mm)</field>
+        <field name="paperformat_id" ref="paperformat_no_margin" />
+        <field name="label_width" eval="38.0" />
+        <field name="label_height" eval="21.2" />
+        <field name="label_padding_top" eval="0" />
+        <field name="label_padding_right" eval="0" />
+        <field name="label_padding_bottom" eval="0" />
+        <field name="label_padding_left" eval="0" />
+        <field name="label_margin_top" eval="0" />
+        <field name="label_margin_right" eval="0" />
+        <field name="label_margin_bottom" eval="0" />
+        <field name="label_margin_left" eval="0" />
+    </record>
+
+</odoo>

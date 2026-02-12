@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="view_partner_form" model="ir.ui.view">
+        <field name="name">view_partner_form</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form" />
+        <field name="arch" type="xml">
+            <page name='personal_information_page' position="after">
+                <page
+                    string="Household"
+                    name="household"
+                    attrs="{'invisible': [('is_company', '=', True)]}"
+                    groups="ugess_partner_household.group_ugess_partner_household_user"
+                >
+                    <group>
+                        <group>
+                            <field name="activate_household_functionality" />
+                        </group>
+                        <group
+                            attrs="{'invisible':[('activate_household_functionality', '=', False)]}"
+                        >
+
+                            <field
+                                name="main_income_source_household"
+                                domain="[('type', '=', 'income')]"
+                            />
+                            <field name="household_situation_id" />
+                        </group>
+                    </group>
+                    <group
+                        string="Data to be displayed in the POS"
+                        attrs="{'invisible':[('activate_household_functionality', '=', False)]}"
+                    >
+                        <field name="number_of_persons_in_household" />
+                        <field name="number_of_babies_in_household" />
+                        <field name="number_of_children_in_household" />
+                        <field name="number_of_adult_in_household" />
+                    </group>
+                    <field
+                        name="household_member_ids"
+                        attrs="{'invisible':[('activate_household_functionality', '=', False)]}"
+                    >
+                        <tree
+                            editable="bottom"
+                            delete="false"
+                            decoration-muted="is_active_member == False"
+                            decoration-it="is_active_member == False"
+                        >
+                            <field name="is_linked_to_partner" invisible="1" />
+                            <field
+                                name="name"
+                                attrs="{'readonly': [('is_linked_to_partner', '=', True)]}"
+                            />
+                            <field
+                                name="birthdate_date"
+                                attrs="{'readonly': [('is_linked_to_partner', '=', True)]}"
+                            />
+                            <field
+                                name="age"
+                                attrs="{'readonly': [('is_linked_to_partner', '=', True)]}"
+                            />
+                            <field name="age_group" />
+                            <field
+                                name="gender"
+                                attrs="{'readonly': [('is_linked_to_partner', '=', True)]}"
+                            />
+                            <field
+                                name="job_position_id"
+                                attrs="{'readonly': [('is_linked_to_partner', '=', True)]}"
+                            />
+                            <field
+                                name="main_income_source"
+                                attrs="{'readonly': [('is_linked_to_partner', '=', True)]}"
+                            />
+                            <field name="is_active_member" widget="boolean_toggle" />
+                        </tree>
+                    </field>
+                </page>
+            </page>
+        </field>
+    </record>
+
+    <record id="view_job_position" model="ir.ui.view">
+        <field name="name">view_job_position</field>
+        <field name="model">res.partner</field>
+        <field
+            name="inherit_id"
+            ref="partner_contact_job_position.view_partner_form_job_position"
+        />
+        <field name="arch" type="xml">
+            <field name="job_position_id" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </field>
+        </field>
+    </record>
+    <record id="view_personal_information_household" model="ir.ui.view">
+        <field name="name">view_personal_information_household</field>
+        <field name="model">res.partner</field>
+        <field
+            name="inherit_id"
+            ref="partner_contact_personal_information_page.personal_information"
+        />
+        <field name="arch" type="xml">
+            <xpath
+                expr="//page[@name='personal_information_page']//group[@name='personal_information_group']"
+                position="inside"
+            >
+                <field
+                    name="job_position_id"
+                    groups="ugess_partner_household.group_ugess_partner_household_user"
+                />
+                <field
+                    name="main_income_source_member"
+                    domain="[('type', '=', 'income')]"
+                    groups="ugess_partner_household.group_ugess_partner_household_user"
+                />
+            </xpath>
+        </field>
+    </record>
+
+
+    <record id="res_partner_search" model="ir.ui.view">
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_res_partner_filter" />
+        <field name="arch" type="xml">
+            <filter name="inactive" position="after">
+                <separator />
+                <filter
+                    string="Households"
+                    name="filter_is_household"
+                    domain="[('activate_household_functionality', '=', True)]"
+                />
+            </filter>
+        </field>
+    </record>
+
+
+    <record id="res_partner_action_household" model="ir.actions.act_window">
+        <field name="name">Households</field>
+        <field name="res_model">res.partner</field>
+        <field name="view_mode">kanban,tree,form,activity</field>
+        <field name="context">{'search_default_filter_is_household': True}</field>
+    </record>
+
+
+    <menuitem
+        id="res_partner_menu_household"
+        name="Households"
+        action="res_partner_action_household"
+        parent="menu_household"
+    />
+
+</odoo>

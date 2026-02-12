@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+    Copyright (C) 2023-Today Akretion
+    @author Pierrick Brun
+    License AGPL-3 - See http://www.gnu.org/licenses/agpl-3.0.html
+-->
+<templates id="template" xml:space="preserve">
+
+    <t
+        t-name="PaymentScreen"
+        t-inherit="point_of_sale.PaymentScreen"
+        t-inherit-mode="extension"
+        owl="1"
+    >
+        <xpath expr="//div[@class='partner-button']" position="after">
+            <div class="button">
+                <i class="fa fa-user" role="img" />
+                <span>
+                    <t t-esc="remainingExpenditureAmountText" />
+                </span>
+            </div>
+            <div class="button">
+                <i class="fa fa-user" role="img" />
+                <span>
+                    <t t-esc="remainingExpenditureUntilText" />
+                </span>
+            </div>
+        </xpath>
+    </t>
+
+</templates>

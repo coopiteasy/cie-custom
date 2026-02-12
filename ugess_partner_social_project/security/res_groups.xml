@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record model="res.groups" id="group_ugess_partner_social_project_user">
+        <field name="name">User</field>
+        <field name="category_id" ref="category_ugess_partner_social_project" />
+    </record>
+    <record model="res.groups" id="group_ugess_partner_social_project_manager">
+        <field name="name">Manager</field>
+        <field name="category_id" ref="category_ugess_partner_social_project" />
+        <field
+            name="implied_ids"
+            eval="[Command.link(ref('group_ugess_partner_social_project_user'))]"
+        />
+    </record>
+</odoo>

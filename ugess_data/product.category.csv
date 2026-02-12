@@ -1,0 +1,110 @@
+id,name,parent_id/id,property_cost_method,property_valuation
+product_category_adhesion,"Adhésions",product.product_category_all,Standard Price,Manual
+product_category_alimentaire,"Alimentaire",product.product_category_all,Standard Price,Manual
+product_category_non_alimentaire,"Non-Alimentaire",product.product_category_all,Standard Price,Manual
+product_category_boissons_non_sucrees,"Boissons non-sucrées",product_category_alimentaire,Standard Price,Manual
+product_category_boissons_non_sucrees_autres,"Boissons à base de thé, plantes, non sucrées",product_category_boissons_non_sucrees,Standard Price,Manual
+product_category_cafe,"Café, thé, tisane",product_category_boissons_non_sucrees,Standard Price,Manual
+product_category_eau,"Eau",product_category_boissons_non_sucrees,Standard Price,Manual
+product_category_laits_vegetaux,"Laits végétaux natures (non rajout de sucre)",product_category_boissons_non_sucrees,Standard Price,Manual
+product_category_boissons_sucrees,"Boissons sucrées",product_category_alimentaire,Standard Price,Manual
+product_category_cappucino,"Cappucino, chocolat en poudre, etc.",product_category_boissons_sucrees,Standard Price,Manual
+product_category_jus,"Jus de fruits",product_category_boissons_sucrees,Standard Price,Manual
+product_category_laits_vegetaux_sucres,"Laits végétaux sucrés",product_category_boissons_sucrees,Standard Price,Manual
+product_category_sodas,"Sodas et limonades",product_category_boissons_sucrees,Standard Price,Manual
+product_category_cereales_feculents,"Céréales et féculents",product_category_alimentaire,Standard Price,Manual
+product_category_cereales_feculents_autres,"Autres céréales et féculents",product_category_cereales_feculents,Standard Price,Manual
+product_category_farines,"Farines",product_category_cereales_feculents,Standard Price,Manual
+product_category_muesli,"Muesli sans sucre,  flocons d'avoine (sans sucre)",product_category_cereales_feculents,Standard Price,Manual
+product_category_pain,"Pain",product_category_cereales_feculents,Standard Price,Manual
+product_category_pates,"Pâtes",product_category_cereales_feculents,Standard Price,Manual
+product_category_pommes_de_terre,"Pommes de terre",product_category_cereales_feculents,Standard Price,Manual
+product_category_quinoa,"Quinoa, épeautre, boulgour, blé, semoule, polenta",product_category_cereales_feculents,Standard Price,Manual
+product_category_riz,"Riz",product_category_cereales_feculents,Standard Price,Manual
+product_category_charcuterie,"Charcuterie et autres produits transformés gras et salés d'origine animale",product_category_alimentaire,Standard Price,Manual
+product_category_charcuterie_autres,"Autres charcuteries",product_category_charcuterie,Standard Price,Manual
+product_category_charcuteries,"Charcuteries",product_category_charcuterie,Standard Price,Manual
+product_category_produits,"Produits transformés de la mer",product_category_charcuterie,Standard Price,Manual
+product_category_condiments,"Condiments et aides culinaires",product_category_alimentaire,Standard Price,Manual
+product_category_condiments_autres,"Autres (cornichons,  olives,  levures,  etc.)",product_category_condiments,Standard Price,Manual
+product_category_bouillons,"Bouillons",product_category_condiments,Standard Price,Manual
+product_category_epices,"Condiments, épices, herbes aromatiques",product_category_condiments,Standard Price,Manual
+product_category_sauces,"Sauces",product_category_condiments,Standard Price,Manual
+product_category_sel,"Sel et poivre",product_category_condiments,Standard Price,Manual
+product_category_vinaigre,"Vinaigres et vinaigrettes",product_category_condiments,Standard Price,Manual
+product_category_oleagineux,"Fruits à coque et fruits oléagineux",product_category_alimentaire,Standard Price,Manual
+product_category_fruits_legumes,"Fruits & Légumes frais et secs",product_category_alimentaire,Standard Price,Manual
+product_category_compotes_non_sucrees,"Compotes (sans sucre ajouté)",product_category_fruits_legumes,Standard Price,Manual
+product_category_conserves,"Conserves de légumes nature",product_category_fruits_legumes,Standard Price,Manual
+product_category_fruits_frais,"Fruits frais",product_category_fruits_legumes,Standard Price,Manual
+product_category_fruits_secs,"Fruits secs",product_category_fruits_legumes,Standard Price,Manual
+product_category_fruits_surgeles,"Fruits surgelés",product_category_fruits_legumes,Standard Price,Manual
+product_category_jus_legumes,"Jus de légumes",product_category_fruits_legumes,Standard Price,Manual
+product_category_legumes_frais,"Légumes frais",product_category_fruits_legumes,Standard Price,Manual
+product_category_legumes_surgeles,"Légumes surgelés",product_category_fruits_legumes,Standard Price,Manual
+product_category_soupes,"Soupes et purées de légumes (sans crème)",product_category_fruits_legumes,Standard Price,Manual
+product_category_legumineuses,"Légumineuses et légumes secs",product_category_alimentaire,Standard Price,Manual
+product_category_legumineuses_conserves,"Conserves de légumineuses",product_category_legumineuses,Standard Price,Manual
+product_category_legumineuses_seches,"Légumineuses sèches",product_category_legumineuses,Standard Price,Manual
+product_category_legumineuses_soupes,"Soupes et purées de légumineuses (sans crème)",product_category_legumineuses,Standard Price,Manual
+product_category_matière_grasse,"Matière grasse",product_category_alimentaire,Standard Price,Manual
+product_category_beurre,"Beurre et margarine",product_category_matière_grasse,Standard Price,Manual
+product_category_cremes,"Crèmes",product_category_matière_grasse,Standard Price,Manual
+product_category_graisses,"Graisses animales",product_category_matière_grasse,Standard Price,Manual
+product_category_huiles,"Huiles",product_category_matière_grasse,Standard Price,Manual
+product_category_plats_cuisines,"Plats et aliments préparés, cuisinés, transformés",product_category_alimentaire,Standard Price,Manual
+product_category_plats_cuisines_autres,"Autres aliments et plats transformés",product_category_plats_cuisines,Standard Price,Manual
+product_category_plats_cuisines_conserves,"Conserves de plats préparés",product_category_plats_cuisines,Standard Price,Manual
+product_category_pates_tartes,"Pâtes à tartes",product_category_plats_cuisines,Standard Price,Manual
+product_category_pizzas,"Pizzas, quiches ou tartes",product_category_plats_cuisines,Standard Price,Manual
+product_category_plats_individuels,"Plats préparés individuels, sandwichs et salades composées",product_category_plats_cuisines,Standard Price,Manual
+product_category_aperitifs,"Produits apéritifs salés",product_category_plats_cuisines,Standard Price,Manual
+product_category_sauces_tomates,"Sauces tomates et autres",product_category_plats_cuisines,Standard Price,Manual
+product_category_alimentaire_bebe,"Produits bébé alimentaire",product_category_alimentaire,Standard Price,Manual
+product_category_bledine,"Blédine (céréale infantile)",product_category_alimentaire_bebe,Standard Price,Manual
+product_category_lait_poudre,"Lait en poudre",product_category_alimentaire_bebe,Standard Price,Manual
+product_category_petits_pots,"Petits pots",product_category_alimentaire_bebe,Standard Price,Manual
+product_category_produits_laitiers,"Produits laitiers",product_category_alimentaire,Standard Price,Manual
+product_category_fromage,"Fromage et fromage blanc",product_category_produits_laitiers,Standard Price,Manual
+product_category_lait,"Lait",product_category_produits_laitiers,Standard Price,Manual
+product_category_produits_laitiers_sucres,"Produits laitiers sucrés",product_category_produits_laitiers,Standard Price,Manual
+product_category_yaourts,"Yaourts",product_category_produits_laitiers,Standard Price,Manual
+product_category_produits_sucres,"Produits sucrés et ou gras",product_category_alimentaire,Standard Price,Manual
+product_category_produits_sucres_autres,"Autres produits sucrés ou gras",product_category_produits_sucres,Standard Price,Manual
+product_category_biscottes,"Biscottes et pain de mie",product_category_produits_sucres,Standard Price,Manual
+product_category_gateaux,"Biscuits et gâteaux",product_category_produits_sucres,Standard Price,Manual
+product_category_brioches,"Brioches et pains au lait",product_category_produits_sucres,Standard Price,Manual
+product_category_chocolats,"Chocolats",product_category_produits_sucres,Standard Price,Manual
+product_category_compotes_sucrees,"Compotes sucrées et fruits au sirop",product_category_produits_sucres,Standard Price,Manual
+product_category_confitures,"Confitures et gelées",product_category_produits_sucres,Standard Price,Manual
+product_category_desserts,"Desserts glacés",product_category_produits_sucres,Standard Price,Manual
+product_category_miel,"Miel",product_category_produits_sucres,Standard Price,Manual
+product_category_pates_tartiner,"Pâtes à tartiner",product_category_produits_sucres,Standard Price,Manual
+product_category_sucres,"Sucres et édulcorants",product_category_produits_sucres,Standard Price,Manual
+product_category_viandes,"Viandes, œufs,  poissons et produits de la mer",product_category_alimentaire,Standard Price,Manual
+product_category_fruits_mer,"Fruits de mer",product_category_viandes,Standard Price,Manual
+product_category_oeufs,"Œufs",product_category_viandes,Standard Price,Manual
+product_category_poissons_conserve,"Poissons en conserve",product_category_viandes,Standard Price,Manual
+product_category_poissons_saumur,"Poissons en saumure",product_category_viandes,Standard Price,Manual
+product_category_poissons_frais,"Poissons frais",product_category_viandes,Standard Price,Manual
+product_category_poissons_surgeles,"Poissons surgelés",product_category_viandes,Standard Price,Manual
+product_category_viandes_viandes,"Viandes",product_category_viandes,Standard Price,Manual
+product_category_viandes_surgelees,"Viandes surgelées",product_category_viandes,Standard Price,Manual
+product_category_hygiene,"Hygiène & Beauté",product_category_non_alimentaire,Standard Price,Manual
+product_category_cosmetiques,"Cosmétiques beauté",product_category_hygiene,Standard Price,Manual
+product_category_dispositifs_medicaux,"Dispositifs médicaux grand public",product_category_hygiene,Standard Price,Manual
+product_category_hygiene_femme,"Hygiène femme",product_category_hygiene,Standard Price,Manual
+product_category_hygiene_produits,"Produits d'hygiène",product_category_hygiene,Standard Price,Manual
+product_category_maison,"Maison & habitat",product_category_non_alimentaire,Standard Price,Manual
+product_category_maison_articles,"Articles de la maison",product_category_maison,Standard Price,Manual
+product_category_entretien_materiel,"Matériel d'entretien",product_category_maison,Standard Price,Manual
+product_category_entretien_produits,"Produits d'entretien",product_category_maison,Standard Price,Manual
+product_category_maison_ustensiles,"Ustensiles de cuisine",product_category_maison,Standard Price,Manual
+product_category_non_alimentaire_bebe,"Produits bébé non-alimentaires",product_category_non_alimentaire,Standard Price,Manual
+product_category_couches,"Couches",product_category_non_alimentaire_bebe,Standard Price,Manual
+product_category_bebe_divers,"Produits bébé divers",product_category_non_alimentaire_bebe,Standard Price,Manual
+product_category_non_alimentaire_divers,"Produits non alimentaires divers",product_category_non_alimentaire,Standard Price,Manual
+product_category_fournitures,"Fournitures scolaires",product_category_non_alimentaire_divers,Standard Price,Manual
+product_category_animaux_produits,"Produits pour animaux",product_category_non_alimentaire_divers,Standard Price,Manual
+product_category_sports,"Articles de sports ou loisirs",product_category_non_alimentaire_divers,Standard Price,Manual
+product_category_vetements,"Vêtements et accessoires de mode",product_category_non_alimentaire_divers,Standard Price,Manual
