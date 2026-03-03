@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+  SPDX-FileCopyrightText: 2026 Coop IT Easy SC
+
+  SPDX-License-Identifier: AGPL-3.0-or-later
+-->
+<odoo>
+    <template
+        id="report_delivery_document"
+        inherit_id="foodhub_custom.report_delivery_document"
+    >
+        <!-- Change Unit Price to Box Price -->
+        <xpath
+            expr="//table[@name='stock_move_table']//t[@t-if]/th[1]"
+            position="attributes"
+        >
+            <attribute name="t-if">False</attribute>
+        </xpath>
+        <xpath
+            expr="//table[@name='stock_move_table']//t[@t-if]/th[1]"
+            position="after"
+        >
+            <th name="th_sm_priceunit"><strong>Box Price</strong></th>
+        </xpath>
+
+        <!-- Add base_unit_price as Price per kg/Unit -->
+        <xpath expr="//th[@name='th_sm_quantity']" position="after">
+            <th name="th_sm_base_unit_price"><strong>Price per kg/Unit</strong></th>
+        </xpath>
+        <xpath
+            expr="//table[@name='stock_move_table']/tbody//t[@t-if]/td[1]"
+            position="before"
+        >
+            <td name="td_base_unit_price">
+                <t
+                    t-set="pricelist"
+                    t-value="o.partner_id.property_product_pricelist"
+                />
+                <t
+                    t-set="combination_info"
+                    t-value="move.product_id._get_combination_info_variant(
+                        add_qty=1,
+                        pricelist=pricelist,
+                    )"
+                />
+                <span
+                    t-out="combination_info['price'] / move.product_id.base_unit_count"
+                    t-options="{'widget': 'monetary', 'display_currency': pricelist.currency_id}"
+                /> / <span t-field="move.product_id.base_unit_name" />
+            </td>
+        </xpath>
+    </template>
+</odoo>
