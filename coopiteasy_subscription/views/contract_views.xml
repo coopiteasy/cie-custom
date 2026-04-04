@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+<!--        <record id="contract_line_form_view" model="ir.ui.view">-->
+<!--            <field name="name">contract.line form view (in contract)</field>-->
+<!--            <field name="model">contract.line</field>-->
+<!--            <field name="inherit_id" ref="contract.contract_line_form_view"/>-->
+<!--            <field name="arch" type="xml">-->
+<!--                <field name="product_id" position="after">-->
+<!--                    <field name="is_support_line"/>-->
+<!--                    <field name="nb_included_hours"/>-->
+<!--                </field>-->
+<!--            </field>-->
+<!--        </record>-->
+
+        <record id="contract_contract_form_view" model="ir.ui.view">
+            <field name="name">contract.contract.form.view</field>
+            <field name="model">contract.contract</field>
+            <field name="inherit_id" ref="contract.contract_contract_form_view"/>
+            <field name="arch" type="xml">
+                <page name="recurring_invoice_line" position="after">
+                    <page name="support_line" string="Support Invoicing">
+                        <field name="support_line_ids"
+                               attrs="{'readonly': [('is_terminated','=',True)]}"
+                        >
+                            <!--                               domain="[('is_support_line', '=', True')]"-->
+                            <tree create="false" delete="false">
+                                <field name="product_id"/>
+                                <field name="is_support_line"/>
+                                <field name="nb_included_hours"/>
+                                <field name="project_id"/>
+                            </tree>
+                        </field>
+                        <!--                               domain="[(product_id.is_support_product, '=', True)]"-->
+                    </page>
+                </page>
+            </field>
+        </record>
+
+    </data>
+</odoo>
