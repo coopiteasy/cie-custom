@@ -1,0 +1,18 @@
+// need more space for the new buttons otherwise they are not clickable
+.pos .pos-branding {
+    max-width: 800px;
+}
+
+// copy of cash-move-button/ticket-button
+a.pos-topheader-button {
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    font-size: medium;
+    color: white;
+}
+
+.pos-topheader-button:hover {
+    background: rgba(0, 0, 0, 0.08);
+    cursor: pointer;
+}
