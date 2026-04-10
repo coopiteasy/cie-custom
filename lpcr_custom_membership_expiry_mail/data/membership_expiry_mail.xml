@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo noupdate="1">
+
+    <record id="mail_template_membership_expiry" model="mail.template">
+        <field name="name">Membership Expiry Reminder</field>
+        <field name="model_id" ref="base.model_res_partner" />
+        <field
+            name="subject"
+        >Déjà un an ou plus que tu viens en cantine: que le temps file...</field>
+        <field name="email_from">{{ (object.company_id.email or user.email) }}</field>
+        <field name="email_to">{{ object.email }}</field>
+        <field name="lang">{{ object.lang }}</field>
+        <field name="auto_delete" eval="True" />
+    <field name="body_html" type="html">
+<div style="margin: 0px; padding: 0px;">
+<p style="font-weight: bold;">
+    Cher.e <t t-out="object.name or ''" />,
+</p>
+<p>
+    Nous t'espérons en forme…
+</p>
+<p style="margin: 0px;">
+    Savais-tu que Les Petites Cantines, c’est près de 125 000 repas servis depuis le début de l’aventure et
+    <ul>
+    <li> 95% des convives considèrent qu’ils ont accès à un repas sain et savoureux</li>
+
+    <li> 76% prennent conscience de certains préjugés et changent de regard</li>
+
+    <li
+                        > 84% ont davantage envie de passer à l’action et de contribuer à construire une société plus conforme à leurs valeurs (Tous les détails de la mesure d’impact sociale
+        <a href="https://www.lespetitescantines.org/notre-impact-social">ici</a>)
+    </li>
+    </ul>
+</p>
+
+<p>
+    Alors, on remet le couvert ?
+    <br />
+    Nous sommes heureux de te compter parmi les adhérents des Petites Cantines et notre petit doigt nous dit que ton adhésion arrive bientôt à échéance.
+</p>
+
+<p style="margin:0px;">
+    Tu as plusieurs possibilités pour y remédier :
+    <ul>
+    <li>Poursuis l’aventure dès maintenant en ré-adhérant via ce lien :
+        <a t-att-href="object.company_id.social_github">ici</a></li>
+
+    <li
+                        >Passe nous voir à la cantine pour partager un repas et ré-adhère à ce moment là.</li>
+    </ul>
+</p>
+
+<p style="font-weight: bold;">
+    Au plaisir de partager un repas avec toi prochainement,
+    <br />
+    Les Petites Cantines
+    <br />
+    <t t-out="object.company_id.street" /><br />
+    <t t-if="object.company_id.street2">
+        <t t-out="object.company_id.street2" /><br />
+    </t>
+    <t t-out="object.company_id.zip" /> <t t-out="object.company_id.city" /><br />
+    <t t-if="object.company_id.state_id">
+        <t t-out="object.company_id.state_id.name" /><br />
+    </t>
+    <t t-out="object.company_id.country_id.name" /><br />
+    <t t-out="object.company_id.phone" />
+</p>
+</div>
+</field>
+</record>
+
+</odoo>
