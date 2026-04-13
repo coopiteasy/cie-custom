@@ -27,6 +27,7 @@ git+https://github.com/beescoop/obeesdoo@12.0#subdirectory=setup/beesdoo_product
 git+https://github.com/beescoop/obeesdoo@12.0#subdirectory=setup/pos_shift_partner_can_shop
 git+https://github.com/beescoop/obeesdoo@12.0#subdirectory=setup/shift_worker_status
 git+https://github.com/beescoop/obeesdoo@12.0#subdirectory=setup/shift
+git+https://github.com/beescoop/obeesdoo@12.0#subdirectory=setup/beesdoo_website_theme
 git+https://github.com/coopiteasy/addons@12.0#subdirectory=setup/sale_order_volume
 git+https://github.com/coopiteasy/addons@12.0#subdirectory=setup/company_supplier_context
 git+https://github.com/coopiteasy/addons@12.0#subdirectory=setup/account_customer_wallet
