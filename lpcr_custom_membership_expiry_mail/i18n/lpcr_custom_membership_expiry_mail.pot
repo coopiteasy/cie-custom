@@ -1,0 +1,93 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* lpcr_custom_membership_expiry_mail
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: lpcr_custom_membership_expiry_mail
+#: model:mail.template,body_html:lpcr_custom_membership_expiry_mail.mail_template_membership_expiry
+msgid ""
+"<div style=\"margin: 0px; padding: 0px;\">\n"
+"<p style=\"font-weight: bold;\">\n"
+"    Cher.e <t t-out=\"object.name or ''\"></t>,\n"
+"</p>\n"
+"<p>\n"
+"    Nous t'espérons en forme…\n"
+"</p>\n"
+"<p style=\"margin: 0px;\">\n"
+"    Savais-tu que Les Petites Cantines, c’est près de 125 000 repas servis depuis le début de l’aventure et\n"
+"    <ul>\n"
+"    <li> 95% des convives considèrent qu’ils ont accès à un repas sain et savoureux</li>\n"
+"\n"
+"    <li> 76% prennent conscience de certains préjugés et changent de regard</li>\n"
+"\n"
+"    <li> 84% ont davantage envie de passer à l’action et de contribuer à construire une société plus conforme à leurs valeurs (Tous les détails de la mesure d’impact sociale\n"
+"        <a href=\"https://www.lespetitescantines.org/notre-impact-social\">ici</a>)\n"
+"    </li>\n"
+"    </ul>\n"
+"</p>\n"
+"\n"
+"<p>\n"
+"    Alors, on remet le couvert ?\n"
+"    <br>\n"
+"    Nous sommes heureux de te compter parmi les adhérents des Petites Cantines et notre petit doigt nous dit que ton adhésion arrive bientôt à échéance.\n"
+"</p>\n"
+"\n"
+"<p style=\"margin:0px;\">\n"
+"    Tu as plusieurs possibilités pour y remédier :\n"
+"    <ul>\n"
+"    <li>Poursuis l’aventure dès maintenant en ré-adhérant via ce lien :\n"
+"        <a t-att-href=\"object.company_id.social_github\">ici</a></li>\n"
+"\n"
+"    <li>Passe nous voir à la cantine pour partager un repas et ré-adhère à ce moment là.</li>\n"
+"    </ul>\n"
+"</p>\n"
+"\n"
+"<p style=\"font-weight: bold;\">\n"
+"    Au plaisir de partager un repas avec toi prochainement,\n"
+"    <br>\n"
+"    Les Petites Cantines\n"
+"    <br>\n"
+"    <t t-out=\"object.company_id.street\"></t><br>\n"
+"    <t t-if=\"object.company_id.street2\">\n"
+"        <t t-out=\"object.company_id.street2\"></t><br>\n"
+"    </t>\n"
+"    <t t-out=\"object.company_id.zip\"></t> <t t-out=\"object.company_id.city\"></t><br>\n"
+"    <t t-if=\"object.company_id.state_id\">\n"
+"        <t t-out=\"object.company_id.state_id.name\"></t><br>\n"
+"    </t>\n"
+"    <t t-out=\"object.company_id.country_id.name\"></t><br>\n"
+"    <t t-out=\"object.company_id.phone\"></t>\n"
+"</p>\n"
+"</div>\n"
+msgstr ""
+
+#. module: lpcr_custom_membership_expiry_mail
+#: model:ir.model,name:lpcr_custom_membership_expiry_mail.model_res_partner
+msgid "Contact"
+msgstr ""
+
+#. module: lpcr_custom_membership_expiry_mail
+#: model:mail.template,subject:lpcr_custom_membership_expiry_mail.mail_template_membership_expiry
+msgid "Déjà un an ou plus que tu viens en cantine: que le temps file..."
+msgstr ""
+
+#. module: lpcr_custom_membership_expiry_mail
+#: model:mail.template,name:lpcr_custom_membership_expiry_mail.mail_template_membership_expiry
+msgid "Membership Expiry Reminder"
+msgstr ""
+
+#. module: lpcr_custom_membership_expiry_mail
+#: model:ir.actions.server,name:lpcr_custom_membership_expiry_mail.ir_cron_membership_expiry_reminder_ir_actions_server
+#: model:ir.cron,cron_name:lpcr_custom_membership_expiry_mail.ir_cron_membership_expiry_reminder
+msgid "Membership: Send Expiry Reminders (1 Month)"
+msgstr ""
