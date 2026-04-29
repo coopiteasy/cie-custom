@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+SPDX-FileCopyrightText: 2026 Coop IT Easy SC
+
+SPDX-License-Identifier: AGPL-3.0-or-later
+-->
+<templates id="template" xml:space="preserve">
+    <t t-name="LpcrPosButtons" owl="1">
+
+        <a
+            class="pos-topheader-button"
+            t-att-href="'/form?company_id=' + companyId"
+            target="_blank"
+        >
+            <i class="fa fa-pencil-square-o" aria-hidden="true" />
+            <span style="padding-left: 10px;" t-if="!env.isMobile">
+                ContactForm
+            </span>
+        </a>
+
+        <a
+            class="pos-topheader-button"
+            href="/web#action=membership_global_member_view.action_global_member"
+            target="_blank"
+        >
+            <i class="fa fa-users" aria-hidden="true" />
+            <span style="padding-left: 10px;" t-if="!env.isMobile">
+                GlobalMemberViewButton
+            </span>
+        </a>
+    </t>
+</templates>

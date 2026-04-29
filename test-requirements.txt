@@ -4,6 +4,7 @@ git+https://github.com/beescoop/obeesdoo@16.0#subdirectory=setup/pos_shift_partn
 git+https://github.com/beescoop/obeesdoo@16.0#subdirectory=setup/product_main_supplier
 git+https://github.com/beescoop/obeesdoo@16.0#subdirectory=setup/shift
 git+https://github.com/coopiteasy/addons@16.0#subdirectory=setup/board_signature
+git+https://github.com/coopiteasy/addons@16.0#subdirectory=setup/membership_global_member_view
 git+https://github.com/coopiteasy/addons@16.0#subdirectory=setup/sale_order_volume
 git+https://github.com/coopiteasy/addons@16.0#subdirectory=setup/subscription_web_access
 git+https://github.com/coopiteasy/addons@16.0#subdirectory=setup/website_sale_product_compatibility
