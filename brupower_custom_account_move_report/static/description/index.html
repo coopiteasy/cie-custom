@@ -372,8 +372,9 @@ ul.auto-toc {
 <p><a class="reference external image-reference" href="https://odoo-community.org/page/development-status"><img alt="Beta" src="https://img.shields.io/badge/maturity-Beta-yellow.png" /></a> <a class="reference external image-reference" href="http://www.gnu.org/licenses/agpl-3.0-standalone.html"><img alt="License: AGPL-3" src="https://img.shields.io/badge/licence-AGPL--3-blue.png" /></a> <a class="reference external image-reference" href="https://github.com/coopiteasy/cie-custom/tree/16.0/brupower_custom_account_move_report"><img alt="coopiteasy/cie-custom" src="https://img.shields.io/badge/github-coopiteasy%2Fcie--custom-lightgray.png?logo=github" /></a></p>
 <p>Brupower custom module for invoices report.</p>
 <ul class="simple">
-<li>Add a text field representing an svg to account.move</li>
-<li>Include this svg at the end of the report of account.move</li>
+<li>Add a binary field to <tt class="docutils literal">account.move</tt> (<tt class="docutils literal">consumption_graph_image</tt>) to store an SVG image</li>
+<li>Include this SVG image at the end of the <tt class="docutils literal">account.move</tt> report</li>
+<li>Add a writable text computed field (<tt class="docutils literal">consumption_graph_svg</tt>) to allow to get and set the SVG image as text</li>
 </ul>
 <p><strong>Table of contents</strong></p>
 <div class="contents local topic" id="contents">

@@ -6,7 +6,7 @@
     "name": "Brupower Custom Account Move Report",
     "summary": "Brupower custom module for invoices report",
     "version": "16.0.1.0.0",
-    "category": "Accounting",
+    "category": "Accounting/Accounting",
     "website": "https://coopiteasy.be",
     "author": "Coop IT Easy SC",
     "maintainers": ["mihien"],

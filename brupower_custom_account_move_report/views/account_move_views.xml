@@ -11,28 +11,9 @@ SPDX-License-Identifier: AGPL-3.0-or-later
         <field name="inherit_id" ref="account.view_move_form" />
         <field name="arch" type="xml">
             <xpath expr="//group[@name='sale_info_group']" position="inside">
-                <field name="show_svg_field" invisible="1" />
-                <label for="show_svg_field" />
-                <button
-                    name="action_toggle_svg_visibility"
-                    type="object"
-                    string="Show SVG Code"
-                    class="oe_highlight"
-                    attrs="{'invisible': [('show_svg_field', '=', True)]}"
-                />
-                <button
-                    name="action_toggle_svg_visibility"
-                    type="object"
-                    string="Hide SVG Code"
-                    class="oe_link"
-                    attrs="{'invisible': [('show_svg_field', '=', False)]}"
-                />
                 <field
-                    name="consumption_graph_svg"
-                    attrs="{'invisible': [('show_svg_field', '=', False)],
-                    'readonly': [('state', 'not in', ['draft'])]}"
-                    nolabel="1"
-                    colspan="2"
+                    name="consumption_graph_image"
+                    attrs="{'readonly': [('state', 'not in', ['draft'])]}"
                 />
             </xpath>
         </field>
