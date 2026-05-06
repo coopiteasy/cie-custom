@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+SPDX-FileCopyrightText: 2026 Coop IT Easy SC
+
+SPDX-License-Identifier: AGPL-3.0-or-later
+-->
+<odoo>
+    <template id="report_invoice_document" inherit_id="account.report_invoice_document">
+        <xpath expr="//div[@id='qrcode']" position="after">
+            <div id="consumption_graph" t-if="o.consumption_graph_image">
+                <img
+                    t-attf-src="data:image/svg+xml;base64,{{o.consumption_graph_image.decode()}}"
+                    style="max-width: 100%"
+                />
+            </div>
+        </xpath>
+    </template>
+</odoo>
