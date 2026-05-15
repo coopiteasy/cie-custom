@@ -1,7 +1,1 @@
-Specifics customizations for BEES coop
-
-* make due date editable when a payment term is set
-* label default_code as product location in product info screen
-* add consignment taxes in product info screen
-* request label printing button in product info screen
-* write in pos.order.note that an email was sent
+Add a message in the PoS order note each time a receipt was sent by email.
