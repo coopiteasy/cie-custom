@@ -1,25 +1,22 @@
-# Copyright 2021 Coop IT Easy SCRL fs
-#   Robin Keunen <robin@coopiteasy.be>
-# License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl.html).
+# SPDX-FileCopyrightText: 2021 Coop IT Easy SC
+# SPDX-FileContributor: Robin Keunen <robin@coopiteasy.be>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
 
-from odoo import api, fields, models
+from odoo import fields, models
 
 
 class PosOrder(models.Model):
     _inherit = "pos.order"
 
-    @api.model
-    def send_mail_receipt(self, pos_reference, email, body_from_ui, force=True):
-        order = self.search([("pos_reference", "=", pos_reference)])
-
-        if order:
-            order.note = "{}\n{} UTC Attempting to send mail receipt ".format(
-                order.note or "", fields.datetime.now()
+    def action_receipt_to_customer(self, name, client, ticket):
+        if self:
+            message = "{date} UTC Attempting to send mail receipt".format(
+                date=fields.datetime.now()
             )
+            if self.note:
+                self.note = "\n".join((self.note, message))
+            else:
+                self.note = message
 
-        return super(PosOrder, self).send_mail_receipt(
-            pos_reference,
-            email,
-            body_from_ui,
-            force=force,
-        )
+        return super().action_receipt_to_customer(name, client, ticket)

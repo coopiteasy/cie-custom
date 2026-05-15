@@ -1,12 +1,13 @@
-# Copyright 2021 Coop IT Easy SCRL fs
-#   Robin Keunen <robin@coopiteasy.be>
-# License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl.html).
+# SPDX-FileCopyrightText: 2021 Coop IT Easy SC
+# SPDX-FileContributor: Robin Keunen <robin@coopiteasy.be>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 {
     "name": "BEES Custom PoS Order Mail Log",
-    "version": "12.0.1.1.0",
+    "version": "16.0.1.0.0",
     "depends": [
         "point_of_sale",
-        "pos_mail_receipt",
     ],
     "author": "Coop IT Easy SC",
     "license": "AGPL-3",
@@ -15,5 +16,4 @@
     "summary": (
         "Add a message in the PoS order note each time a receipt was sent by email"
     ),
-    "installable": True,
 }
