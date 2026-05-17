@@ -22,6 +22,7 @@ Available addons
 addon | version | maintainers | summary
 --- | --- | --- | ---
 [bao_supplier_certificate](bao_supplier_certificate/) | 16.0.1.0.0 | <a href='https://github.com/remytms'><img src='https://github.com/remytms.png' width='32' height='32' style='border-radius:50%;' alt='remytms'/></a> | Custom certificates for supplier of Boucher À Oreilles
+[bees_custom_pos_order_mail_log](bees_custom_pos_order_mail_log/) | 16.0.1.0.0 |  | Add a message in the PoS order note each time a receipt was sent by email
 [bloum_custom_print_zpl](bloum_custom_print_zpl/) | 16.0.1.0.0 |  | Filter ZPL commands to remove instructions unsupported by Bloum's Zebra SD220 printer
 [brupower_custom_account_move_report](brupower_custom_account_move_report/) | 16.0.1.0.0 | <a href='https://github.com/mihien'><img src='https://github.com/mihien.png' width='32' height='32' style='border-radius:50%;' alt='mihien'/></a> | Brupower custom module for invoices report
 [brupower_custom_customer_invoice](brupower_custom_customer_invoice/) | 16.0.2.0.0 | <a href='https://github.com/mihien'><img src='https://github.com/mihien.png' width='32' height='32' style='border-radius:50%;' alt='mihien'/></a> | Add start, end date and contract to customer invoices
