@@ -18,4 +18,4 @@ msgstr ""
 #. module: lpcr_custom_restricted_product_access
 #: model:res.groups,name:lpcr_custom_restricted_product_access.group_product_template_full_rights
 msgid "Creation, modification and deletion of products"
-msgstr ""
+msgstr "Création, modification et suppression de produits"

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <odoo>
     <record id="group_product_template_full_rights" model="res.groups">
-        <field name="name">Full Products Rights</field>
-        <field name="category_id" ref="base.module_category_inventory_inventory" />
+        <field name="name">Creation, modification and deletion of products</field>
+        <field name="category_id" ref="base.module_category_usability" />
     </record>
 
     <!-- Denies access to write, create and delete products for all users -->
     <record id="rule_product_template_user_no_write" model="ir.rule">
-        <field name="name">Product Template: Internal Users Read-Only</field>
+        <field name="name">Product Template: Read-Only</field>
         <field name="model_id" ref="product.model_product_template" />
         <field name="groups" eval="[(4, ref('base.group_user'))]" />
         <field name="domain_force">[(0, '=', 1)]</field>
@@ -19,7 +19,7 @@
 
     <!-- Grant these accesses back to the relevant group -->
     <record id="rule_product_template_full" model="ir.rule">
-        <field name="name">Product Template: All accesses granted</field>
+        <field name="name">Product Template: All accesses</field>
         <field name="model_id" ref="product.model_product_template" />
         <field
             name="groups"
