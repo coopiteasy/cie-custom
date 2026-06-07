@@ -5,7 +5,7 @@
 {
     "name": "LPCR Custom Restricted product Access",
     "summary": "Restrict write, create and delete access for products to a single group",
-    "version": "16.0.1.0.0",
+    "version": "16.0.1.1.0",
     "category": "Uncategorized",
     "website": "https://coopiteasy.be",
     "author": "Coop IT Easy SC",
