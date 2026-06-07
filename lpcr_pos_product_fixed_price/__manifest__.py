@@ -6,7 +6,7 @@
     "name": "LPCR PoS Product Fixed Price",
     "summary": "Add the possibility to set a product as having a fixed price in "
     "the PoS that can only be changed by a manager.",
-    "version": "16.0.1.0.0",
+    "version": "16.0.1.1.0",
     "category": "Point of Sale",
     "website": "https://coopiteasy.be",
     "author": "Coop IT Easy SC, Odoo Community Association (OCA)",
