@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data noupdate="0">
+
+    <!-- User-Menü Override: keine Namen mehr, nur "Mein Konto" -->
+    <template id="supercoop_website_user_menu"
+              name="SUPERCOOP User Menu Override"
+              inherit_id="website.user_menu">
+
+      <!-- Public-Teil ersetzen -->
+      <xpath expr="//t[@t-if='request.env.user._is_public()']" position="replace">
+        <t t-if="request.env.user._is_public()">
+          <ul class="navbar-nav ms-lg-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="/web/login">Anmelden</a>
+            </li>
+          </ul>
+        </t>
+      </xpath>
+
+      <!-- Eingeloggt-Teil ersetzen -->
+      <xpath expr="//t[@t-else='']" position="replace">
+        <t t-else="">
+          <ul class="navbar-nav ms-lg-auto">
+            <li class="nav-item dropdown o_no_autohide_item">
+              <a href="#" role="button"
+                 data-bs-toggle="dropdown"
+                 class="dropdown-toggle nav-link fw-bold">
+                <i class="fa fa-user-circle-o me-1"/>
+                <span>Mein Konto</span>
+              </a>
+              <div role="menu" class="dropdown-menu js_usermenu">
+                <a href="/my/home" role="menuitem" class="dropdown-item ps-3">
+                  <i class="fa fa-fw fa-id-card-o me-1 small text-muted"/> Mein Konto
+                </a>
+                <a href="/my/shift" role="menuitem" class="dropdown-item">
+                  Meine Schichten
+                </a>
+                <div class="dropdown-divider"/>
+                <a id="o_logout" role="menuitem" class="dropdown-item ps-3"
+                   href="/web/session/logout?redirect=/">
+                  <i class="fa fa-fw fa-sign-out me-1 small text-muted"/> Abmelden
+                </a>
+              </div>
+            </li>
+          </ul>
+        </t>
+      </xpath>
+
+    </template>
+
+  </data>
+</odoo>

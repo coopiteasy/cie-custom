@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data noupdate="0">
+
+    <!-- Become-Cooperator Seite: SUPERCOOP-spezifische Logik für Mitglieder vs. Nicht-Mitglieder -->
+    <template id="supercoop_become_cooperator_inherit"
+              name="SUPERCOOP Become Cooperator"
+              inherit_id="cooperator_website.becomecooperator">
+
+      <!-- Ersetze nur den Block, der main_form_template aufruft, um eigene Logik einzufügen -->
+      <xpath expr="//t[@t-call='cooperator_website.main_form_template']" position="replace">
+        <t t-call="cooperator_website.main_form_template">
+
+          <!-- Mitgliedschaft ermitteln -->
+          <t t-set="user" t-value="request.env.user"/>
+          <t t-set="is_public" t-value="user._is_public()"/>
+          <t t-set="partner" t-value="(not is_public) and user.partner_id or False"/>
+          <!-- HINWEIS: Falls das Feld anders heißt (z.B. is_cooperator), hier anpassen -->
+          <t t-set="is_member" t-value="partner and partner.cooperator or False"/>
+
+          <!-- Titel je nach Status -->
+          <t t-if="is_member">
+            <t t-set="title">Zusätzliche Anteile erwerben</t>
+          </t>
+          <t t-else="">
+            <t t-set="title">Der Genossenschaft beitreten</t>
+          </t>
+
+          <!-- Hinweis für bereits eingeloggt + Mitglied -->
+          <t t-if="is_member">
+            <div class="alert alert-info d-flex align-items-center mb-3" role="alert">
+              <i class="fa fa-check-circle me-2"/>
+              <span>Du bist bereits Mitglied bei SUPERCOOP Bremen. Du kannst unten direkt zusätzliche Anteile zeichnen.</span>
+            </div>
+          </t>
+
+          <!-- Login/Bestätigungsmail-Blöcke -->
+          <div class="mb-3 field-login">
+            <label for="email" class="form-label">Email</label>
+            <input class="form-control form-control-sm"
+                   t-attf-class="form-control form-control-sm{{ error and 'email' in error and ' is-invalid' or '' }}"
+                   autocapitalize="off" type="email" name="email" id="email" required="true"
+                   t-att-readonly="logged" t-att-value="email"
+                   placeholder="kontakt@supercoop-bremen.de"/>
+          </div>
+
+          <div t-if="not logged" class="mb-3 field-confirm_login" name="confirm_email_container">
+            <label for="confirm_email" class="form-label">Confirm Email</label>
+            <input t-attf-class="form-control form-control-sm{{ error and 'confirm_email' in error and ' is-invalid' or '' }}"
+                   autocapitalize="off" type="email" name="confirm_email" id="confirm_email" required="true"
+                   t-att-readonly="logged" t-att-value="confirm_email"
+                   placeholder="kontakt@supercoop-bremen.de"/>
+          </div>
+
+          <!-- Rest bleibt wie im Original -->
+          <t t-call="cooperator_website.contact_template"/>
+          <t t-call="cooperator_website.iban_template"/>
+          <t t-call="cooperator_website.address_template"/>
+          <t t-call="cooperator_website.shares_template"/>
+          <t t-call="cooperator_website.rules_template"/>
+
+        </t>
+      </xpath>
+
+    </template>
+
+  </data>
+</odoo>
