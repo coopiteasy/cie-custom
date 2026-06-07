@@ -15,10 +15,10 @@ const PosProductFixedPriceOrderline = (OriginalOrderline) =>
             if (this.price) {
                 if (this.product.is_pos_price_fixed && this.price !== price) {
                     Gui.showPopup("ErrorPopup", {
-                        title: this.pos.env._t("Restricted access to product price."),
+                        title: this.pos.env._t("Restricted access to product price"),
                         body: this.pos.env
                             ._t(
-                                "The following product price can't be changed from the PoS: %(name)s"
+                                "It is not allowed to change the price of this product: %(name)s"
                             )
                             .replace("%(name)s", this.product.display_name),
                     });

@@ -20,8 +20,8 @@
     ],
     "assets": {
         "point_of_sale.assets": [
-            "pos_product_fixed_price/static/src/**/*.js",
-            "pos_product_fixed_price/static/src/**/*.xml",
+            "lpcr_pos_product_fixed_price/static/src/**/*.js",
+            "lpcr_pos_product_fixed_price/static/src/**/*.xml",
         ],
     },
 }
