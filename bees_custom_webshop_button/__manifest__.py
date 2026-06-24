@@ -12,7 +12,7 @@
     "maintainers": ["mihien"],
     "license": "AGPL-3",
     "depends": [
-        "beesdoo_website_theme",
+        "bees_website_theme",
         "cooperator",
         "partner_firstname",
         "website",
