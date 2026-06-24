@@ -18,7 +18,11 @@
         "website",
     ],
     "data": [
-        "views/assets.xml",
         "views/website_templates.xml",
     ],
+    "assets": {
+        "web.assets_frontend": [
+            "bees_custom_webshop_button/static/src/css/website_shopbutton.css",
+        ],
+    },
 }
