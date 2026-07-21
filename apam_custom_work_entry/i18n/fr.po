@@ -1,0 +1,25 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* apam_custom_work_entry
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#. module: apam_custom_work_entry
+#: model:ir.model.fields,field_description:apam_custom_work_entry.field_hr_work_entry__comment
+msgid "Comment"
+msgstr "Commentaire"
+
+#. module: apam_custom_work_entry
+#: model:ir.model,name:apam_custom_work_entry.model_hr_work_entry
+msgid "HR Work Entry"
+msgstr ""
