@@ -24,15 +24,8 @@
         <xpath expr="//td[@name='td_quantity']" position="after">
             <td name="td_base_unit_price" class="text-end">
                 <t t-set="pricelist" t-value="doc.pricelist_id" />
-                <t
-                    t-set="combination_info"
-                    t-value="line.product_id._get_combination_info_variant(
-                        add_qty=1,
-                        pricelist=pricelist,
-                    )"
-                />
                 <span
-                    t-out="combination_info['price'] / line.product_id.base_unit_count"
+                    t-out="line.price_unit / line.product_id.base_unit_count"
                     t-options="{'widget': 'monetary', 'display_currency': pricelist.currency_id}"
                 /> / <span t-field="line.product_id.base_unit_name" />
             </td>
