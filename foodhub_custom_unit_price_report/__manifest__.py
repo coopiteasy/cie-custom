@@ -5,7 +5,7 @@
 {
     "name": "Foodhub Custom Unit Price Report",
     "summary": "add custom unit price and rename Unit Price to Box Price",
-    "version": "16.0.1.0.0",
+    "version": "16.0.1.1.0",
     "category": "Sales",
     "website": "https://coopiteasy.be",
     "author": "Coop IT Easy SC",
