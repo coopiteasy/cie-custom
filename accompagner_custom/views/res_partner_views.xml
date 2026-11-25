@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+SPDX-FileCopyrightText: 2026 Coop IT Easy SC
+
+SPDX-License-Identifier: AGPL-3.0-or-later
+-->
+<odoo>
+    <record id="view_partner_form" model="ir.ui.view">
+        <field name="name">res.partner.form.accompagner.custom</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form" />
+        <field name="arch" type="xml">
+            <xpath
+                expr="//page[@name='sales_purchases']//group[@name='misc']"
+                position="inside"
+            >
+                <field name="social_file_creation_date" widget="date" />
+            </xpath>
+
+            <xpath expr="//span[@name='address_name']" position="before">
+                <field name="social_type" />
+                <field
+                    name="is_social_benefactor"
+                    invisible="social_type != 'accompagner'"
+                />
+                <field name="employee" invisible="social_type != 'accompagner'" />
+                <field
+                    name="is_social_volunteer"
+                    invisible="social_type != 'accompagner'"
+                />
+            </xpath>
+
+            <xpath expr="//page[@name='contact_addresses']" position="before">
+                <page
+                    name='beneficiary'
+                    string="Beneficiary"
+                    invisible="social_type != 'beneficiary'"
+                    groups="accompagner_custom.group_access_social_beneficiary"
+                >
+                    <group>
+                        <field name="social_partner_ids" widget="many2many_tags" />
+                        <field
+                            name="social_beneficiary_properties"
+                            widget="properties"
+                        />
+                    </group>
+                    <group string="Beneficiary Information">
+                        <group>
+                            <field name="social_beneficiary_orientation_id" />
+                            <field name="social_beneficiary_gdpr" />
+                            <field name="social_beneficiary_spoken_language" />
+                            <field
+                                name="social_beneficiary_residence_permit_title_id"
+                            />
+                            <field name="social_beneficiary_contact_person_name" />
+                            <field name="social_beneficiary_contact_person_mobile" />
+                        </group>
+                        <group>
+                            <field name="social_beneficiary_civil_status_id" />
+                            <field name="social_beneficiary_children_count" />
+                            <field name="social_beneficiary_household_type_id" />
+                            <field
+                                name="social_beneficiary_resource_ids"
+                                widget="many2many_tags"
+                            />
+                            <field name="social_beneficiary_belgium_since_date" />
+                            <field name="social_beneficiary_residence_right_id" />
+                        </group>
+                    </group>
+                </page>
+                <page
+                    name='volunteer'
+                    string="Volunteer"
+                    invisible="social_type != 'accompagner' or not is_social_volunteer"
+                >
+                    <group>
+                        <field name="social_volunteer_properties" widget="properties" />
+                    </group>
+                    <group string="Volunteer Information">
+                        <group>
+                            <field name="social_volunteer_professional_status_id" />
+                            <field name="social_volunteer_personal_email" />
+                            <field name="social_volunteer_nationality_country_id" />
+                        </group>
+                        <group>
+                            <field name="social_volunteer_contact_method_id" />
+                            <field
+                                name="social_volunteer_type_ids"
+                                widget="many2many_tags"
+                            />
+                            <field
+                                name="social_volunteer_motivation_ids"
+                                widget="many2many_tags"
+                            />
+                        </group>
+                    </group>
+                    <group string="Volunteer Course">
+                        <field
+                            name="social_volunteer_course_ids"
+                            colspan="2"
+                            nolabel="1"
+                        >
+                            <list editable="bottom">
+                                <field name="start_date" />
+                                <field name="end_date" />
+                                <field name="volunteer_type_id" />
+                                <field name="reason" />
+                            </list>
+                        </field>
+                    </group>
+                </page>
+                <page
+                    name='partner'
+                    string="Partner"
+                    invisible="social_type != 'partner'"
+                >
+                    <group>
+                        <field name="social_beneficiary_ids" widget="many2many_tags" />
+                        <field name="social_partner_properties" widget="properties" />
+                    </group>
+                    <group string="Partner Information">
+                        <field name="social_partner_structure_id" />
+                    </group>
+                </page>
+                <page
+                    name='benefactor'
+                    string="Benefactor"
+                    invisible="social_type != 'accompagner' or not is_social_benefactor"
+                >
+                    <group>
+                        <field
+                            name="social_benefactor_properties"
+                            widget="properties"
+                        />
+                    </group>
+                </page>
+            </xpath>
+            <xpath expr="//page[@name='contact_addresses']" position="attributes">
+                <attribute name="autofocus" />
+            </xpath>
+
+            <!-- Below this point we are only hiding elements for a simpler view -->
+            <xpath expr="//field[@name='parent_id']/.." position="attributes">
+                <attribute
+                    name="invisible"
+                >social_type == 'beneficiary' or social_type == 'accompagner'</attribute>
+            </xpath>
+            <xpath expr="//field[@name='vat']" position="attributes">
+                <attribute
+                    name="invisible"
+                >social_type == 'beneficiary' or social_type == 'accompagner'</attribute>
+            </xpath>
+            <xpath
+                expr="//page[@name='sales_purchases']//group[@name='sale']"
+                position="attributes"
+            >
+                <attribute
+                    name="invisible"
+                >social_type == 'beneficiary' or social_type == 'accompagner'</attribute>
+            </xpath>
+            <xpath
+                expr="//page[@name='sales_purchases']//group[@name='purchase']"
+                position="attributes"
+            >
+                <attribute
+                    name="invisible"
+                >social_type == 'beneficiary' or social_type == 'accompagner'</attribute>
+            </xpath>
+            <xpath
+                expr="//page[@name='sales_purchases']//field[@name='company_registry']"
+                position="attributes"
+            >
+                <attribute
+                    name="invisible"
+                >parent_id or social_type == 'beneficiary' or social_type == 'accompagner'</attribute>
+            </xpath>
+            <xpath
+                expr="//page[@name='sales_purchases']//field[@name='company_id'][@groups='base.group_multi_company']"
+                position="attributes"
+            >
+                <attribute
+                    name="invisible"
+                >parent_id or social_type == 'beneficiary' or social_type == 'accompagner'</attribute>
+            </xpath>
+            <xpath
+                expr="//page[@name='sales_purchases']//field[@name='industry_id']"
+                position="attributes"
+            >
+                <attribute
+                    name="invisible"
+                >not is_company or social_type == 'beneficiary' or social_type == 'accompagner'</attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- contacts -->
+    <record id="contacts.action_contacts" model="ir.actions.act_window">
+        <field name="domain">[('fsm_location', '=', False)]</field>
+    </record>
+
+    <!-- account -->
+    <record id="view_partner_property_form" model="ir.ui.view">
+        <field name="name">res.partner.form.accompagner.custom.account</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="account.view_partner_property_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//page[@name='accounting']" position="attributes">
+                <attribute
+                    name="invisible"
+                >not is_company and parent_id or social_type == 'beneficiary'</attribute>
+            </xpath>
+            <xpath expr="//page[@name='accounting_disabled']" position="attributes">
+                <attribute
+                    name="invisible"
+                >is_company or not parent_id or social_type == 'beneficiary' or social_type == 'accompagner'</attribute>
+            </xpath>
+            <xpath
+                expr="//page[@name='accounting']//group[@id='invoice_send_settings']"
+                position="attributes"
+            >
+                <attribute
+                    name="invisible"
+                >social_type == 'beneficiary' or social_type == 'accompagner'</attribute>
+            </xpath>
+            <xpath
+                expr="//page[@name='accounting']//group[@name='accounting_entries']"
+                position="attributes"
+            >
+                <attribute
+                    name="invisible"
+                >social_type == 'beneficiary' or social_type == 'accompagner'</attribute>
+            </xpath>
+            <xpath
+                expr="//page[@name='accounting']//group[@name='credit_limits']"
+                position="attributes"
+            >
+                <attribute
+                    name="invisible"
+                >social_type == 'beneficiary' or social_type == 'accompagner'</attribute>
+            </xpath>
+            <xpath
+                expr="//page[@name='accounting']//group[@name='accounting_automation']"
+                position="attributes"
+            >
+                <attribute
+                    name="invisible"
+                >social_type == 'beneficiary' or social_type == 'accompagner'</attribute>
+            </xpath>
+            <xpath expr="//group[@name='fiscal_information']" position="attributes">
+                <attribute name="invisible">social_type == 'beneficiary'</attribute>
+            </xpath>
+            <xpath
+                expr="//group[@name='fiscal_information']/field[@name='property_account_position_id']"
+                position="attributes"
+            >
+                <attribute
+                    name="invisible"
+                >social_type == 'beneficiary' or social_type == 'accompagner'</attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- donation_base -->
+    <record id="view_partner_property_form_donation" model="ir.ui.view">
+        <field name="name">res.partner.form.accompagner.custom.donation</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="donation_base.view_partner_property_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='tax_receipt_option']" position="attributes">
+                <attribute
+                    name="invisible"
+                >parent_id or social_type == 'beneficiary'</attribute>
+            </xpath>
+            <xpath
+                expr="//button[@id='donation_tax_receipt_button']"
+                position="attributes"
+            >
+                <attribute
+                    name="invisible"
+                >parent_id or social_type == 'beneficiary'</attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- base_geolocalize -->
+    <record id="view_crm_partner_geo_form" model="ir.ui.view">
+        <field name="name">res.partner.form.accompagner.custom.geolocalize</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base_geolocalize.view_crm_partner_geo_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//page[@name='geo_location']" position="attributes">
+                <attribute
+                    name="invisible"
+                >social_type in ('accompagner', 'beneficiary', 'partner')</attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- fieldservice -->
+    <record id="fieldservice.action_fsm_customer" model="ir.actions.act_window">
+        <field name="domain">[('fsm_location', '=', False)]</field>
+    </record>
+    <record id="fsm_partner_fields" model="ir.ui.view">
+        <field name="name">res.partner.form.accompagner.custom.fieldservice</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="fieldservice.fsm_partner_fields" />
+        <field name="arch" type="xml">
+            <xpath
+                expr="//page[@groups='fieldservice.group_fsm_user_own']"
+                position="attributes"
+            >
+                <attribute
+                    name="invisible"
+                >social_type in ('accompagner', 'beneficiary', 'partner')</attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- partner_contact_personal_information_page -->
+    <record id="personal_information" model="ir.ui.view">
+        <field name="name">National Register Number</field>
+        <field name="model">res.partner</field>
+        <field
+            name="inherit_id"
+            ref="partner_contact_personal_information_page.personal_information"
+        />
+        <field name="arch" type="xml">
+            <xpath expr="//group[@name='personal_information_group']">
+                <field name='national_register_number' />
+            </xpath>
+        </field>
+    </record>
+
+    <!-- website -->
+    <record id="view_partner_form_inherit_website" model="ir.ui.view">
+        <field name="name">res.partner.form.accompagner.custom.website</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="website.view_partner_form_inherit_website" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='website_id']" position="attributes">
+                <attribute name="invisible">social_type == 'beneficiary'</attribute>
+            </xpath>
+        </field>
+    </record>
+</odoo>

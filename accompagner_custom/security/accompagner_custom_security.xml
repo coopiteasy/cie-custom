@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+SPDX-FileCopyrightText: 2026 Coop IT Easy SC
+
+SPDX-License-Identifier: AGPL-3.0-or-later
+-->
+<odoo>
+    <record model="ir.module.category" id="module_category_social_service">
+        <field name="name">Social Service</field>
+        <field name="exclusive" eval="0" />
+        <field name="sequence">53</field>
+    </record>
+
+    <record id="group_access_social_beneficiary" model="res.groups">
+        <field name="name">Access Beneficiary Informations Group</field>
+        <field
+            name="category_id"
+            ref="accompagner_custom.module_category_social_service"
+        />
+        <field
+            name="comment"
+        >Group for users with the permission to access beneficiaries informations.</field>
+    </record>
+
+    <record id="group_social_service_configuration" model="res.groups">
+        <field name="name">Access social services configuration</field>
+        <field
+            name="category_id"
+            ref="accompagner_custom.module_category_social_service"
+        />
+        <field
+            name="comment"
+        >Group for users with the permission to access social service's configuration.</field>
+    </record>
+</odoo>
